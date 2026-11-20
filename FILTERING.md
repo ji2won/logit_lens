@@ -77,5 +77,5 @@
 |---|---|
 | `A_final.csv` | 최종 99행 |
 | `A_candidates_reviewed.csv` | 213행 전체와 검토 열. `keep`(Y/N), `exclude_reason`(제외 이유, `;`로 여러 개)로 확인 가능 |
-| `review_A.py` | 1~3단계 검토 열 생성 |
-| `filter_A.py` | 기준 적용, 최종 대조어 반영, `A_final.csv` 생성 |
+| `review_A.py` | 1~3단계 검토 열 생성(클로드가 작업) |
+| `filter_A.py` | 기준 적용, 최종 대조어 반영, `A_final.csv` 생성(클로드가 작업) |
