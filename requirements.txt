@@ -1,0 +1,11 @@
+# 문항 선별 (annotate/review/filter)
+wordfreq>=3.0
+pandas
+requests
+
+# 실험 (experiment/)
+torch
+transformers
+datasets
+scipy
+matplotlib

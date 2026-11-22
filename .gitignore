@@ -1,0 +1,6 @@
+__pycache__/
+# 큰 실험 산출물 (요약·그림·문항 점수는 커밋 가능)
+results/**/lenses.pt
+results/**/lang_masks.pt
+results/**/lens.csv.gz
+etym_cache.json
