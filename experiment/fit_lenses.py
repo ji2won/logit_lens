@@ -34,8 +34,9 @@ def load_sentences(corpus_dir: Path, n_per_lang: int) -> list[str]:
 
 
 @torch.no_grad()
-def collect(lm: LM, sents, max_tokens, max_pos, rng, stats_device, keep=False):
-    """충분통계 누적. keep=True면 벡터 자체(held-out 평가용)를 float16으로 모아 돌려준다."""
+def collect(lm: LM, sents, max_tokens, max_pos, rng, stats_device, keep=False, layers=None):
+    """충분통계 누적. keep=True면 벡터 자체(held-out 평가용)를 float16으로 모아 돌려준다.
+    layers: xx, xy를 쌓을 층 번호(기본: 최종층 제외 전부). sx는 항상 모든 층."""
     n, sx, xx, xy, kept = 0, None, None, None, []
     for s in sents:
         ids = lm.encode(s)[:max_tokens]
@@ -52,14 +53,16 @@ def collect(lm: LM, sents, max_tokens, max_pos, rng, stats_device, keep=False):
         X = X.to(stats_device).to(torch.float64)   # 장치 이동 먼저 (MPS는 float64 미지원)
         if sx is None:
             L1, _, d = X.shape
+            layers = list(range(L1 - 1)) if layers is None else list(layers)
             sx = torch.zeros(L1, d, dtype=torch.float64, device=stats_device)
-            xx = torch.zeros(L1 - 1, d, d, dtype=torch.float64, device=stats_device)
-            xy = torch.zeros(L1 - 1, d, d, dtype=torch.float64, device=stats_device)
+            xx = torch.zeros(len(layers), d, d, dtype=torch.float64, device=stats_device)
+            xy = torch.zeros(len(layers), d, d, dtype=torch.float64, device=stats_device)
         n += X.shape[1]
         sx += X.sum(1)
-        Xt = X[:-1].transpose(1, 2)                           # [L, d, P]
-        xx.baddbmm_(Xt, X[:-1])
-        xy.baddbmm_(Xt, X[-1].expand(X.shape[0] - 1, -1, -1))
+        Xl = X[layers]                                        # [k, P, d]
+        Xt = Xl.transpose(1, 2)                               # [k, d, P]
+        xx.baddbmm_(Xt, Xl)
+        xy.baddbmm_(Xt, X[-1].expand(len(layers), -1, -1))
     if keep:
         return torch.cat(kept, 1)                             # [L+1, N, d]
     return n, sx, xx, xy
@@ -90,6 +93,8 @@ def main():
     ap.add_argument("--eval-max", type=int, default=3000, help="KL 평가에 쓰는 held-out 벡터 수 상한")
     ap.add_argument("--lambdas", default="1e-4,1e-3,1e-2,1e-1")
     ap.add_argument("--stats-device", default=None, help="충분통계 위치(기본: 모델과 같은 장치)")
+    ap.add_argument("--layer-chunk", type=int, default=None,
+                    help="xx, xy를 한 번에 쌓을 층 수(기본: MPS는 7, 그 외는 전부). 메모리가 모자랄 때 줄인다")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--out-dir", default=None)
     args = ap.parse_args()
@@ -110,39 +115,53 @@ def fit(lm: LM, sents: list[str], out_dir: Path, args):
     # MPS(Apple)는 float64를 지원하지 않으므로 충분통계는 CPU에서 누적
     sd = args.stats_device or ("cpu" if str(lm.device).startswith("mps") else lm.device)
 
-    n, sx, xx, xy = collect(lm, train, args.max_tokens, args.max_pos, rng, sd)
-    H = collect(lm, hold, args.max_tokens, args.max_pos, rng, sd, keep=True)[:, :args.eval_max]
-    L1, d = sx.shape
-    print(f"[fit] 학습 벡터 {n}개 ({len(train)}문장), held-out {H.shape[1]}개, 층 {L1 - 1}, d={d}")
+    # 층을 묶음으로 나눠 여러 번 훑으며 xx, xy를 쌓는다(float64 [k,d,d]만 메모리에 둠).
+    # 매 묶음마다 rng를 같은 상태에서 시작하므로 뽑는 토큰 위치가 같고, 결과는 한 번에 쌓는 것과 같다.
+    L1, _, d = lm.run(lm.encode(train[0])[:4])[0].shape        # 층 수+1, 은닉 차원
+    chunk = getattr(args, "layer_chunk", None) or (7 if str(lm.device).startswith("mps") else L1 - 1)
+    groups = [list(range(i, min(i + chunk, L1 - 1))) for i in range(0, L1 - 1, chunk)]
+    rng_start = rng.getstate()
 
-    mu = sx / n                                               # [L+1, d]
-    C = xx / n - mu[:-1, :, None] * mu[:-1, None, :]
-    Cxy = xy / n - mu[:-1, :, None] * mu[-1][None, None, :]
-    eye = torch.eye(d, dtype=torch.float64, device=sd)
-
-    mu_f = mu.float().to(lm.device)
     W = torch.eye(d).repeat(L1, 1, 1)
     b = torch.zeros(L1, d)
     rows, best_lam = [], []
     lambdas = [float(x) for x in args.lambdas.split(",")]
-    for l in range(L1 - 1):
-        kl_v = kl_to_final(lm, H, l, lambda h: h)
-        kl_m = kl_to_final(lm, H, l, lambda h, l=l: h - mu_f[l])
-        rows += [dict(layer=l, lens="vanilla", kl=kl_v), dict(layer=l, lens="mean", kl=kl_m)]
-        best = None
-        for lam in lambdas:
-            reg = lam * torch.trace(C[l]) / d
-            Wl = torch.linalg.solve(C[l] + reg * eye, Cxy[l])
-            bl = mu[-1] - mu[l] @ Wl
-            Wf, bf = Wl.float().to(lm.device), bl.float().to(lm.device)
-            kl = kl_to_final(lm, H, l, lambda h: h @ Wf + bf)
-            rows.append(dict(layer=l, lens=f"affine_lam{lam:g}", kl=kl))
-            if best is None or kl < best[0]:
-                best = (kl, lam, Wl.float().cpu(), bl.float().cpu())
-        rows.append(dict(layer=l, lens="affine", kl=best[0], lam=best[1]))
-        W[l], b[l] = best[2], best[3]
-        best_lam.append(best[1])
-        print(f"  층 {l:2d}: KL vanilla {kl_v:.3f}  mean {kl_m:.3f}  affine {best[0]:.3f} (lambda {best[1]:g})")
+    H = mu = mu_f = eye = None
+    for gi, layers in enumerate(groups):
+        rng.setstate(rng_start)
+        n, sx, xx, xy = collect(lm, train, args.max_tokens, args.max_pos, rng, sd, layers=layers)
+        if H is None:   # 첫 묶음 직후 rng 상태 = 원래 학습 수집 직후 상태 → held-out 위치도 원래와 같음
+            H = collect(lm, hold, args.max_tokens, args.max_pos, rng, sd, keep=True)[:, :args.eval_max].clone()
+            print(f"[fit] 학습 벡터 {n}개 ({len(train)}문장), held-out {H.shape[1]}개, 층 {L1 - 1}, d={d}, "
+                  f"층 묶음 {len(groups)}개")
+            mu = sx / n                                       # [L+1, d]
+            mu_f = mu.float().to(lm.device)
+            eye = torch.eye(d, dtype=torch.float64, device=sd)
+        # 공분산을 xx, xy 자리에서 층마다 계산(사본·외적 임시값 없음)
+        for j, l in enumerate(layers):
+            xx[j].div_(n).sub_(torch.outer(mu[l], mu[l]))
+            xy[j].div_(n).sub_(torch.outer(mu[l], mu[-1]))
+        for j, l in enumerate(layers):
+            C, Cxy = xx[j], xy[j]
+            kl_v = kl_to_final(lm, H, l, lambda h: h)
+            kl_m = kl_to_final(lm, H, l, lambda h, l=l: h - mu_f[l])
+            rows += [dict(layer=l, lens="vanilla", kl=kl_v), dict(layer=l, lens="mean", kl=kl_m)]
+            best = None
+            for lam in lambdas:
+                reg = lam * torch.trace(C) / d
+                Wl = torch.linalg.solve(C + reg * eye, Cxy)
+                bl = mu[-1] - mu[l] @ Wl
+                Wf, bf = Wl.float().to(lm.device), bl.float().to(lm.device)
+                kl = kl_to_final(lm, H, l, lambda h: h @ Wf + bf)
+                rows.append(dict(layer=l, lens=f"affine_lam{lam:g}", kl=kl))
+                if best is None or kl < best[0]:
+                    best = (kl, lam, Wl.float().cpu(), bl.float().cpu())
+            rows.append(dict(layer=l, lens="affine", kl=best[0], lam=best[1]))
+            W[l], b[l] = best[2], best[3]
+            best_lam.append(best[1])
+            print(f"  층 {l:2d}: KL vanilla {kl_v:.3f}  mean {kl_m:.3f}  affine {best[0]:.3f} (lambda {best[1]:g})",
+                  flush=True)
+        del xx, xy
 
     torch.save({"mu": mu.float().cpu(), "W": W, "b": b, "lambda": best_lam, "n_train_vectors": n},
                out_dir / "lenses.pt")
