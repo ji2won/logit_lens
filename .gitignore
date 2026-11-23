@@ -4,3 +4,4 @@ results/**/lenses.pt
 results/**/lang_masks.pt
 results/**/lens.csv.gz
 etym_cache.json
+logs/
