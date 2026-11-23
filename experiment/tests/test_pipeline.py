@@ -82,6 +82,10 @@ def main():
     bdraft = pd.read_csv(ROOT / "B_candidates_draft.csv", keep_default_na=False)
     tmp = Path(tempfile.mkdtemp())
     bdraft["word_etym"] = ["고유어쌍" if not (h1 or h2) else "혼합" for h1, h2 in zip(bdraft.hanja_target, bdraft.hanja_distractor)]
+    if (ROOT / "B_sense_freq.csv").exists():   # 뜻 빈도 열(4b) 검사용
+        sf = pd.read_csv(ROOT / "B_sense_freq.csv")
+        bdraft = bdraft.merge(sf[["id", "nikl_dom_target", "nikl_dom_ok"]], on="id")
+        bdraft["nikl_dom_ok"] = True
     bdraft.head(12).to_csv(tmp / "B.csv", index=False)
     B = load_B(tmp / "B.csv")
     pd.DataFrame([dict(id="C001", ko="바다", zh="海", en="sea", en_unrelated="chair", zh_unrelated="椅子", etym="고유어"),
@@ -126,7 +130,11 @@ def main():
     assert row.top1.iloc[0] == lm.decode([full.argmax().item()])
     _ = ids
 
+    import experiment.analyze as an
+    an.DATASETS = {**an.DATASETS, "B": tmp / "B.csv"}
     m = analyze(tmp, n_boot=200)
+    if "nikl_dom_target" in bdraft.columns:
+        assert "negative_control_dom" in m
     assert "C" in m and "verdict" in m and "negative_control" in m and "positive_control" in m
     print("\n" + (tmp / "summary.md").read_text("utf-8")[:3000])
     print("\n[OK] 파일:", sorted(p.name for p in tmp.iterdir()))

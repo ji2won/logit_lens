@@ -10,6 +10,9 @@
   5) 고유명사(PROPER)
   6) 대조어 대체(S): annotate 결과에서 CTRL_FREQ_GAP / CTRL_FREQ_ZERO / CTRL_DUP / CTRL_IN_DATASET가 뜬 행.
      첫 실행 뒤 출력되는 목록을 보고 채운다. 제안어는 실행 시 Zipf 차 1.0 이내인지 검사한다.
+     기준 빈도는 zipf_ko_sense: 동음이의어의 wordfreq 빈도는 모든 뜻의 합이므로, B_sense_freq.csv
+     (국립국어원 어휘 의미 분석 말뭉치)에서 그 형태의 명사 출현이 충분하면(share_ok)
+     zipf + log10(해당 뜻 비율)로 낮춘다. 배: 신체 26·곱절 82·선박 4·과일 0 → 과일 뜻은 크게 낮아진다.
 
 판정 값은 A와 같다: Y = 문제 있음(제외), ? = 경계(제외), N 또는 빈칸 = 통과.
 
@@ -95,6 +98,28 @@ PROPER = {'Paris'}
 # id -> ([(단어, 어종)], 메모). 바꿀 대조어 자리에 순서대로 들어간다(filter_B.py).
 S: dict[str, tuple[list[tuple[str, str]], str]] = {
     # 예: 'B001': ([('여객선','한자어')], '버스(5.1) 대체'),
+    # 기준은 zipf_ko_sense(뜻별 보정). 감(과일)·동기(이유)는 맞는 대조어가 없어 비워 둠 → 제외
+    'B001': ([('택시', '외래어')], '버스 5.07 > 뜻 4.03+1'),
+    'B002': ([('바나나', '외래어')], '포도 4.07, 뜻 3.07과 차 1.0 경계'),
+    'B003': ([('얼굴', '고유어')], '눈썹 3.92'),
+    'B010': ([('얘기', '고유어')], '대화 5.13'),
+    'B019': ([('거미', '고유어')], '모기 3.82. 곤충 중 4점대 단어가 없어 거미'),
+    'B020': ([('처벌', '한자어')], '꾸중 빈도 0'),
+    'B026': ([('투지', '한자어')], '의욕 빈도 0'),
+    'B039': ([('변호사', '한자어')], '약사 3.69'),
+    'B040': ([('의견', '한자어')], '계획 5.43'),
+    'B042': ([('회고록', '한자어')], '소설 4.88 > 뜻 3.02+1'),
+    'B046': ([('인구', '한자어')], '가족 5.43'),
+    'B047': ([('나무', '고유어'), ('꽃', '고유어')], '이끼·덩굴 3점대'),
+    'B048': ([('종이', '고유어'), ('끈', '고유어')], '테이프 4.23·가위 3.8'),
+    'B055': ([('화단', '한자어')], '공원 5.11'),
+    'B064': ([('불신', '한자어'), ('냉소', '한자어')], '뜻 2.77. 확신·불안 4점대'),
+    'B069': ([('염색', '한자어')], '매니큐어 3.2'),
+    'B084': ([('동네', '고유어')], '도시 5.42'),
+    'B098': ([('외교관', '한자어')], '특파원 3.45'),
+    'B105': ([('그래프', '외래어')], '사진 5.52'),
+    'B111': ([('흡수', '한자어')], '배설 3.18'),
+    'B117': ([('남편', '고유어')], '며느리 3.9'),
 }
 
 
@@ -117,6 +142,7 @@ def main():
     ap.add_argument("--output", default=str(HERE / "B_candidates_reviewed.csv"))
     ap.add_argument("--cedict", default=str(HERE.parent / "cedict_ts.u8"))
     ap.add_argument("--freq-gap", type=float, default=1.0)
+    ap.add_argument("--sense-freq", default=str(HERE / "B_sense_freq.csv"))
     args = ap.parse_args()
 
     import wordfreq
@@ -125,6 +151,15 @@ def main():
 
     d = pd.read_csv(args.input, keep_default_na=False)
     idx = load_cedict(Path(args.cedict))
+
+    # 뜻별 기준 빈도
+    d['zipf_ko_sense'] = d.zipf_ko_input.astype(float)
+    if Path(args.sense_freq).exists():
+        sf = pd.read_csv(args.sense_freq, keep_default_na=False).set_index('id')
+        for i, r in d.iterrows():
+            if r['id'] in sf.index and str(sf.at[r['id'], 'nikl_share_ok']) == 'True' and float(r['zipf_ko_input']) > 0:
+                d.at[i, 'zipf_ko_sense'] = round(float(r['zipf_ko_input'])
+                                                 + math.log10(float(sf.at[r['id'], 'nikl_share_target'])), 2)
 
     # 1. CEDICT
     def ced(w):
@@ -160,7 +195,10 @@ def main():
     d['proper_noun'] = [('Y' if r.en_target in PROPER or r.en_distractor in PROPER else '') for r in d.itertuples()]
 
     # 6. 대조어 대체 제안
-    need = d.auto_flags.str.contains('CTRL_FREQ_GAP|CTRL_FREQ_ZERO|CTRL_DUP|CTRL_IN_DATASET')
+    def gap_bad(r):
+        zs = [float(z) for z in str(r.zipf_ko_control).split(';')]
+        return any(z == 0 or abs(z - r.zipf_ko_sense) > args.freq_gap for z in zs)
+    need = d.auto_flags.str.contains('CTRL_DUP|CTRL_IN_DATASET') | d.apply(gap_bad, axis=1)
     for c in ['ctrl_suggest', 'ctrl_suggest_zipf', 'ctrl_suggest_etym', 'ctrl_suggest_note']:
         d[c] = ''
     for i, r in d[need].iterrows():
@@ -170,7 +208,7 @@ def main():
         d.at[i, 'ctrl_suggest_etym'] = ';'.join(e for _, e in words)
         d.at[i, 'ctrl_suggest_note'] = note
         for w, _ in words:
-            assert zf(w) > 0 and abs(zf(w) - float(r['zipf_ko_input'])) <= args.freq_gap, (r['id'], w, zf(w))
+            assert zf(w) > 0 and abs(zf(w) - float(r['zipf_ko_sense'])) <= args.freq_gap, (r['id'], w, zf(w))
 
     d.to_csv(args.output, index=False, encoding='utf-8-sig')
     print(f'[done] {d.shape} → {args.output}')
@@ -183,7 +221,7 @@ def main():
     todo = d[need & (d.ctrl_suggest_note == 'TODO')]
     print(f'[S에 대조어 필요] {len(todo)}행')
     for r in todo.itertuples():
-        print(f'  {r.id} {r.ko_input}({r.sense_target}) 입력 {r.zipf_ko_input} | '
+        print(f'  {r.id} {r.ko_input}({r.sense_target}) 입력 {r.zipf_ko_input}→뜻 {r.zipf_ko_sense} | '
               f'대조어 {r.ko_control} = {r.zipf_ko_control} | {r.auto_flags}')
 
 

@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import rankdata
 
-from .config import BIG_REDUCTION, MID_LAYER_RANGE, N_BOOT, RELIABILITY_MIN, RESULTS_DIR, SEED
+from .config import BIG_REDUCTION, DATASETS, MID_LAYER_RANGE, N_BOOT, RELIABILITY_MIN, RESULTS_DIR, SEED
 
 PRIMARY = {"A": "lp_poly", "B": "lp_distractor", "C": "lp_target"}
 KEYS = ["dataset", "id", "task", "version"]
@@ -222,6 +222,29 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
                "B의 간섭은 영어와 무관하므로 r_B ≈ 0이어야 한다. r_B도 크면 렌즈 점수가 영어가 아닌 "
                "'헷갈리는 정도'를 재고 있을 가능성이 있다.\n", md_table(pd.DataFrame(rows)), ""]
         metrics["negative_control"] = rows
+
+    # ---- 4b. B: 뜻 빈도 비율(NIKL)과 간섭
+    rows = []
+    b_path = Path(DATASETS["B"])
+    if b_path.exists() and "nikl_dom_target" in pd.read_csv(b_path, nrows=0).columns:
+        dom = pd.read_csv(b_path, keep_default_na=False)[["id", "nikl_dom_target", "nikl_dom_ok"]]
+        dom = dom.rename(columns={"id": "_bid"})
+        dom = dom[dom.nikl_dom_ok.astype(str) == "True"]
+        dom["dom_distractor"] = 1 - dom.nikl_dom_target.astype(float)
+        for ln in sorted(set(items.lens)):
+            rb = items[(items.dataset == "B") & (items.task == "translate") & (items.lens == ln)]
+            rb = rb.dropna(subset=["I"]).merge(dom, left_on="id", right_on="_bid")
+            if len(rb) < 6:
+                continue
+            r1, l1, h1 = corr_ci(rb.dom_distractor, rb.I, rb.group, n_boot)
+            r2, l2, h2 = corr_ci(rb.S, rb.I, rb.group, n_boot)
+            rows.append({"렌즈": ln, "n": len(rb), "r(방해 뜻 우세도, I) [CI]": ci(r1, l1, h1),
+                         "r(S, I) [CI] (같은 문항)": ci(r2, l2, h2)})
+    if rows:
+        md += ["### 4b. B 뜻 빈도 비율 (국립국어원 어휘 의미 분석 말뭉치)\n",
+               "방해 뜻이 흔할수록 간섭이 커야 정상이다(eDom의 한국어 대응). 두 뜻 합이 적은 단어(dom_ok=False)는 뺐다.\n",
+               md_table(pd.DataFrame(rows)), ""]
+        metrics["negative_control_dom"] = rows
 
     # ---- 5. 어종별
     rows = []

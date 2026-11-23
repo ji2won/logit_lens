@@ -11,6 +11,10 @@
   4. 빈도:    입력어가 wordfreq 목록 밖, 대체 후에도 대조어가 0·차 1.0 초과·중복·데이터셋 단어
   5. 짝:      같은 입력어의 다른 행이 빠지면 함께 뺀다(두 뜻을 대칭으로 비교하기 위해)
 
+뜻 빈도(선택): B_sense_freq.csv(nikl_sense_freq.py 결과)가 있으면 nikl_* 열을 붙인다.
+  --dom-range LO HI 를 주면 dom_ok인 행 중 dom_target이 범위를 벗어나는 단어를 뺀다(DOM_EXTREME).
+  기본은 빼지 않고 열만 붙여 분석에서 공변량으로 쓴다.
+
 사용법
   python filter_B.py
 """
@@ -33,6 +37,8 @@ def main():
     ap.add_argument('--final', default=str(HERE / 'B_final.csv'))
     ap.add_argument('--a-table', default=str(HERE / 'A_candidates_annotated.csv'))
     ap.add_argument('--freq-gap', type=float, default=1.0)
+    ap.add_argument('--sense-freq', default=str(HERE / 'B_sense_freq.csv'))
+    ap.add_argument('--dom-range', type=float, nargs=2, default=None, metavar=('LO', 'HI'))
     args = ap.parse_args()
 
     import wordfreq
@@ -42,7 +48,14 @@ def main():
     d = pd.read_csv(args.reviewed, keep_default_na=False)
     # 이전 실행 결과 열은 다시 계산
     d = d.drop(columns=[c for c in ['exclude_reason', 'keep', 'ko_control_final', 'zipf_ko_control_final',
-                                    'ko_control_changed'] if c in d.columns])
+                                    'ko_control_changed'] if c in d.columns or c.startswith('nikl_')])
+    d = d.drop(columns=[c for c in d.columns if c.startswith('nikl_')])
+    if Path(args.sense_freq).exists():
+        sf = pd.read_csv(args.sense_freq, keep_default_na=False)
+        d = d.merge(sf[['id'] + [c for c in sf.columns if c.startswith('nikl_')]], on='id', how='left')
+        print(f'[sense] {args.sense_freq} 병합 (dom_ok {int((d.nikl_dom_ok.astype(str) == "True").sum())}행)')
+    elif args.dom_range:
+        raise SystemExit('--dom-range에는 B_sense_freq.csv가 필요함 (nikl_sense_freq.py 먼저 실행)')
 
     dataset_words = set(d.ko_input)
     if Path(args.a_table).exists():
@@ -59,7 +72,7 @@ def main():
     fin, finz, chg = [], [], []
     for r in d.itertuples():
         orig = r.ko_control.split(';')
-        zi = float(r.zipf_ko_input)
+        zi = float(getattr(r, 'zipf_ko_sense', r.zipf_ko_input))
         sug = [w for w in r.ctrl_suggest.split(';') if w]
         new = [sug.pop(0) if bad and sug else w for w, bad in zip(orig, bad_slots(orig, zi))]
         fin.append(';'.join(new))
@@ -101,10 +114,10 @@ def main():
         if 'KO_NOT_HOMOGRAPH' in fl:
             out.append('KO_NOT_HOMOGRAPH')
         # 4. 빈도
-        zi = float(r.zipf_ko_input)
-        if zi == 0:
+        if float(r.zipf_ko_input) == 0:
             out.append('FREQ_INPUT_ZERO')
         else:
+            zi = float(getattr(r, 'zipf_ko_sense', r.zipf_ko_input))
             for w, z in zip(r.ko_control_final.split(';'), r.zipf_ko_control_final.split(';')):
                 z = float(z)
                 if z == 0:
@@ -115,6 +128,11 @@ def main():
                     out.append('CTRL_IN_DATASET')
                 if final_cnt[w] > 1:
                     out.append('CTRL_DUP')
+        # 4b. 뜻 빈도 비율(선택)
+        if args.dom_range and str(r.nikl_dom_ok) == 'True':
+            lo, hi = args.dom_range
+            if not lo <= float(r.nikl_dom_target) <= hi:
+                out.append('DOM_EXTREME')
         return ';'.join(dict.fromkeys(out))
 
     d['exclude_reason'] = d.apply(reasons, axis=1)
@@ -134,7 +152,7 @@ def main():
         ('1. 중국어', 'CEDICT|ZH_SHARE'),
         ('2. 영어', 'EN_'),
         ('3. 한국어', 'KO_SENSE|OTHER_SENSE|PROPER|KO_NOT_HOMOGRAPH'),
-        ('4. 빈도·대조어', 'FREQ_|CTRL_'),
+        ('4. 빈도·대조어·뜻 비율', 'FREQ_|CTRL_|DOM_'),
         ('5. 짝', 'PAIR_DROPPED'),
     ]
     print(f'[done] {len(d)}행({d.ko_input.nunique()}단어) → 남은 {len(k)}행({k.ko_input.nunique()}단어)')
