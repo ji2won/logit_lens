@@ -29,7 +29,9 @@ class LM:
         self.norm = next((m for p in _NORM_PATHS if (m := _get(model, p)) is not None), None)
         if self.norm is None:
             raise ValueError("최종 정규화 모듈을 찾지 못함. lm._NORM_PATHS에 경로를 추가하세요.")
-        self.unembed = model.get_output_embeddings()
+        self.unembed = model.get_output_embeddings() or getattr(model, "lm_head", None)
+        if self.unembed is None:   # EXAONE 등 일부 커스텀 코드는 get_output_embeddings가 None
+            raise ValueError("언임베딩(lm_head)을 찾지 못함")
         self.n_layers = model.config.num_hidden_layers
         self._pre_norm = None
         self.norm.register_forward_pre_hook(self._capture)
@@ -41,7 +43,11 @@ class LM:
     def from_pretrained(cls, name: str, device="cuda", dtype=torch.bfloat16):
         from transformers import AutoModelForCausalLM, AutoTokenizer
         tok = AutoTokenizer.from_pretrained(name, trust_remote_code=True)
-        model = AutoModelForCausalLM.from_pretrained(name, torch_dtype=dtype, trust_remote_code=True).to(device)
+        try:
+            model = AutoModelForCausalLM.from_pretrained(name, dtype=dtype, trust_remote_code=True)
+        except TypeError:  # transformers 4.x
+            model = AutoModelForCausalLM.from_pretrained(name, torch_dtype=dtype, trust_remote_code=True)
+        model = model.to(device)
         lm = cls(model, tok, device)
         lm.sanity_check()
         return lm

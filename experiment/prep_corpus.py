@@ -53,8 +53,11 @@ def main():
         with open(path, "w", encoding="utf-8") as f:
             for s in ss:
                 f.write(json.dumps({"lang": lang, "text": s}, ensure_ascii=False) + "\n")
-        print(f"{lang}: {len(ss)}문장 → {path}")
+        print(f"{lang}: {len(ss)}문장 → {path}", flush=True)
 
 
 if __name__ == "__main__":
     main()
+    # datasets 스트리밍의 백그라운드 스레드가 남아 프로세스가 끝나지 않는 경우가 있어 강제 종료
+    import os
+    os._exit(0)

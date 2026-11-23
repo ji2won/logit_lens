@@ -49,7 +49,7 @@ def collect(lm: LM, sents, max_tokens, max_pos, rng, stats_device, keep=False):
         if keep:
             kept.append(X.half().cpu())
             continue
-        X = X.to(stats_device, torch.float64)
+        X = X.to(stats_device).to(torch.float64)   # 장치 이동 먼저 (MPS는 float64 미지원)
         if sx is None:
             L1, _, d = X.shape
             sx = torch.zeros(L1, d, dtype=torch.float64, device=stats_device)
@@ -107,7 +107,8 @@ def fit(lm: LM, sents: list[str], out_dir: Path, args):
     rng.shuffle(sents)
     n_hold = max(1, int(len(sents) * args.holdout))
     hold, train = sents[:n_hold], sents[n_hold:]
-    sd = args.stats_device or lm.device
+    # MPS(Apple)는 float64를 지원하지 않으므로 충분통계는 CPU에서 누적
+    sd = args.stats_device or ("cpu" if str(lm.device).startswith("mps") else lm.device)
 
     n, sx, xx, xy = collect(lm, train, args.max_tokens, args.max_pos, rng, sd)
     H = collect(lm, hold, args.max_tokens, args.max_pos, rng, sd, keep=True)[:, :args.eval_max]

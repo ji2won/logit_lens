@@ -32,11 +32,12 @@ from .lm import LM
 def run_all(lm: LM, datasets: dict[str, list[Item]], tasks: dict[str, list[str]], versions, lenses, out_dir: Path):
     out_dir.mkdir(parents=True, exist_ok=True)
     mask_file = out_dir / "lang_masks.pt"
-    if mask_file.exists():
-        masks = torch.load(mask_file)
-    else:
+    masks = torch.load(mask_file) if mask_file.exists() else {}
+    if "en_word" not in masks:          # 이전 형식 캐시면 다시 만든다
         masks = language_masks(lm)
         torch.save(masks, mask_file)
+    print(f"[masks] 영어 단어 목록 출처: {masks.get('_source')}")
+    masks = {k: v for k, v in masks.items() if not k.startswith("_")}
 
     # 영어 probe 토큰
     words = sorted({w for items in datasets.values() for it in items for w in it.probes.values()})
@@ -55,11 +56,13 @@ def run_all(lm: LM, datasets: dict[str, list[Item]], tasks: dict[str, list[str]]
         for k, it in enumerate(items, 1):
             for task in tasks[ds]:
                 for v in versions:
-                    roles = [("input", it.ko)]
-                    if task != "repeat":
-                        roles += [("control", c) for c in it.controls]
-                    for role, w in roles:
-                        prompt = prompts.build(task, v, w, it.en_hint)
+                    roles = [("input", it.ko, it.en_hint)]
+                    if task == "translate":
+                        roles += [("control", c, "") for c in it.controls]
+                    elif task == "translate_en" and len(it.en_controls) == len(it.controls):
+                        roles += [("control", c, e) for c, e in zip(it.controls, it.en_controls)]
+                    for role, w, en in roles:
+                        prompt = prompts.build(task, v, w, en)
                         key = dict(dataset=ds, id=it.id, group=it.group, etym=it.etym, task=task,
                                    version=v, role=role, word=w)
                         rec, hs = dict(key), None
@@ -101,6 +104,7 @@ def main():
     ap.add_argument("--limit", type=int, default=None, help="데이터셋마다 앞 N문항만 (빠른 점검용)")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--out-dir", default=None)
+    ap.add_argument("--lens-file", default=None, help="기본: <out-dir>/lenses.pt")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir or RESULTS_DIR / args.model.replace("/", "_"))
@@ -112,7 +116,7 @@ def main():
             continue
         datasets[ds] = load(ds, path)[:args.limit]
     lm = LM.from_pretrained(MODELS.get(args.model, args.model), device=args.device)
-    lenses = load_lenses(args.lenses, out_dir / "lenses.pt", device=args.device)
+    lenses = load_lenses(args.lenses, Path(args.lens_file or out_dir / "lenses.pt"), device=args.device)
     run_all(lm, datasets, TASKS, args.versions, lenses, out_dir)
 
 

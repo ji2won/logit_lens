@@ -104,25 +104,66 @@ def probe_logprob(logprobs: torch.Tensor, ids: list[int]) -> torch.Tensor:
 _EN = re.compile(r"^[A-Za-z]{2,}$")
 _HANGUL = re.compile(r"[가-힣]")
 _CJK = re.compile(r"[一-鿿]")
+_SPACE_MARKS = ("Ġ", "▁", " ")   # BPE(Llama-3, Qwen)·SentencePiece의 단어 시작 표시
 
 
-def language_masks(lm) -> dict[str, torch.Tensor]:
-    """어휘 전체를 영어(라틴 문자 2자 이상)/한국어(한글 포함)/중국어(한자 포함, 한글 없음)로 분류."""
+def english_wordlist(top_n: int = 50_000) -> tuple[set[str], str]:
+    """영어 단어 목록. wordfreq가 있으면 빈도 상위 top_n, 없으면 시스템 사전. → (단어 집합, 출처)"""
+    try:
+        import wordfreq
+        return set(wordfreq.top_n_list("en", top_n)), f"wordfreq top {top_n}"
+    except ImportError:
+        pass
+    for path in ("/usr/share/dict/words", "/usr/dict/words"):
+        if Path(path).exists():
+            return {w.strip().lower() for w in open(path, encoding="utf-8", errors="ignore")}, path
+    return set(), "없음(단어 시작 토큰 조건만 적용)"
+
+
+def _in_wordlist(w: str, words: set[str]) -> bool:
+    if not words:
+        return True
+    w = w.lower()
+    if w in words:
+        return True
+    # 시스템 사전에는 굴절형이 없으므로 간단한 어미를 떼어 본다
+    for suf, rep in (("ies", "y"), ("es", ""), ("s", ""), ("ed", ""), ("ed", "e"), ("ing", ""), ("ing", "e")):
+        if w.endswith(suf) and len(w) - len(suf) >= 3 and w[: -len(suf)] + rep in words:
+            return True
+    return False
+
+
+def language_masks(lm) -> dict:
+    """어휘 전체를 언어별로 분류.
+      en       라틴 문자 2자 이상 토큰 전부 (단어 조각·코드 조각 포함, 이전 지표)
+      en_word  단어 시작 토큰(앞 공백)이고, 글자 3자 이상이며, 영어 단어 목록에 있는 토큰
+      ko       한글 포함 / zh 한자 포함·한글 없음
+    """
     V = lm.vocab_size
-    en = torch.zeros(V, dtype=torch.bool)
-    ko = torch.zeros(V, dtype=torch.bool)
-    zh = torch.zeros(V, dtype=torch.bool)
+    words, source = english_wordlist()
+    masks = {k: torch.zeros(V, dtype=torch.bool) for k in ("en", "en_word", "ko", "zh")}
+    raw_tokens = getattr(lm.tok, "convert_ids_to_tokens", None)
     for i in range(V):
-        s = lm.decode([i]).strip()
+        text = lm.decode([i])
+        s = text.strip()
         if _EN.match(s):
-            en[i] = True
+            masks["en"][i] = True
+            raw = raw_tokens(i) if raw_tokens else text
+            starts_word = isinstance(raw, str) and raw.startswith(_SPACE_MARKS) or text.startswith(" ")
+            if starts_word and len(s) >= 3 and _in_wordlist(s, words):
+                masks["en_word"][i] = True
         elif _HANGUL.search(s):
-            ko[i] = True
+            masks["ko"][i] = True
         elif _CJK.search(s):
-            zh[i] = True
-    return {"en": en, "ko": ko, "zh": zh}
+            masks["zh"][i] = True
+    print(f"[masks] 영어 단어 목록: {source}. 토큰 수 " +
+          ", ".join(f"{k} {int(m.sum())}" for k, m in masks.items()))
+    masks["_source"] = source
+    return masks
 
 
 def mass(logprobs: torch.Tensor, mask: torch.Tensor) -> torch.Tensor:
-    """[L+1, V] → [L+1]: 마스크 토큰 확률 합(log)"""
+    """[L+1, V] → [L+1]: 마스크 토큰 확률 합(log). 빈 마스크면 -inf"""
+    if not bool(mask.any()):
+        return torch.full(logprobs.shape[:1], float("-inf"), device=logprobs.device)
     return torch.logsumexp(logprobs[:, mask.to(logprobs.device)], -1)

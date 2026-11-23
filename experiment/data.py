@@ -10,6 +10,9 @@ Item 필드
   group        bootstrap 묶음 단위 (A: 영어 단어, B: 한국어 입력어)
   etym         고유어/한자어/외래어/... (B는 고유어쌍/한자어쌍/혼합)
   en_hint      양성 대조 프롬프트에 넣을 영어 중간 단계
+  en_controls  양성 대조에서 대조어 프롬프트에 넣을 대조어의 영어 (A_control_en.csv 매핑).
+               없으면 translate_en에서는 대조어 프롬프트를 만들지 않는다. 대조어 프롬프트에 문항의 영어를
+               넣으면(여름 + spring) 대조어 쪽 방해어 확률이 부풀어 간섭이 왜곡되기 때문이다.
 """
 from __future__ import annotations
 
@@ -32,6 +35,7 @@ class Item:
     group: str
     etym: str
     en_hint: str = ""
+    en_controls: list[str] = field(default_factory=list)   # 양성 대조용 대조어의 영어 (없으면 간섭 계산 안 함)
     meta: dict = field(default_factory=dict)
 
 
@@ -45,14 +49,23 @@ def _etym_A(e: str) -> str:
     return "모호"  # AMBIG:*, UNKNOWN, NOT_FOUND
 
 
-def load_A(path: Path) -> list[Item]:
+def load_A(path: Path, control_en: Path | None = None) -> list[Item]:
+    """control_en: 대조어 → 영어 매핑 CSV(ko,en). 기본은 A 파일 옆의 A_control_en.csv.
+    매핑이 없는 대조어가 하나라도 있으면 그 문항은 양성 대조 간섭을 계산하지 않는다."""
     d = pd.read_csv(path, keep_default_na=False)
-    return [Item(id=r.id, dataset="A", ko=r.ko_input, controls=_split(r.ko_control_final),
-                 zh_answer=r.zh_answer, zh_distractor=r.zh_distractor,
-                 probes={"poly": r.en}, primary="poly", group=r.en,
-                 etym=_etym_A(r.etym_ko_input), en_hint=r.en,
-                 meta={"direction": r.direction})
-            for r in d.itertuples()]
+    control_en = Path(control_en or Path(path).with_name("A_control_en.csv"))
+    en_map = dict(pd.read_csv(control_en, keep_default_na=False)[["ko", "en"]].values) if control_en.exists() else {}
+    items = []
+    for r in d.itertuples():
+        ctrl = _split(r.ko_control_final)
+        en_ctrl = [en_map.get(c, "") for c in ctrl]
+        items.append(Item(id=r.id, dataset="A", ko=r.ko_input, controls=ctrl,
+                          zh_answer=r.zh_answer, zh_distractor=r.zh_distractor,
+                          probes={"poly": r.en}, primary="poly", group=r.en,
+                          etym=_etym_A(r.etym_ko_input), en_hint=r.en,
+                          en_controls=en_ctrl if all(en_ctrl) else [],
+                          meta={"direction": r.direction}))
+    return items
 
 
 def load_B(path: Path) -> list[Item]:

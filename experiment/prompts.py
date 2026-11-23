@@ -12,7 +12,7 @@ from __future__ import annotations
 # (한국어, 중국어, 영어). 데이터셋 문항·대조어와 겹치면 안 된다(check_fewshot).
 FEWSHOT = [
     ("학교", "学校", "school"),
-    ("하늘", "天空", "sky"),
+    ("거울", "镜子", "mirror"),
     ("친구", "朋友", "friend"),
     ("연필", "铅笔", "pencil"),
     ("창문", "窗户", "window"),

@@ -9,6 +9,7 @@ RESULTS_DIR = ROOT / "results"    # 모델별 결과
 MODELS = {
     "llama3.2-3b": "meta-llama/Llama-3.2-3B",
     "exaone3.5-2.4b": "LGAI-EXAONE/EXAONE-3.5-2.4B-Instruct",
+    "qwen3-1.7b": "Qwen/Qwen3-1.7B",
 }
 
 # 데이터셋 파일과 각 데이터셋에서 돌릴 과제

@@ -32,8 +32,8 @@ KEYS = ["dataset", "id", "task", "version"]
 
 
 # ---------------------------------------------------------------- 점수 계산
-def mid_layers(n_layers: int) -> tuple[int, int]:
-    lo, hi = MID_LAYER_RANGE
+def mid_layers(n_layers: int, layer_range=None) -> tuple[int, int]:
+    lo, hi = layer_range or MID_LAYER_RANGE
     return math.ceil(lo * n_layers), math.floor(hi * n_layers)
 
 
@@ -46,9 +46,9 @@ def interference(out: pd.DataFrame) -> pd.DataFrame:
     return df.reset_index()
 
 
-def lens_scores(lens: pd.DataFrame) -> pd.DataFrame:
+def lens_scores(lens: pd.DataFrame, layer_range=None) -> pd.DataFrame:
     L = int(lens.layer.max())
-    lo, hi = mid_layers(L)
+    lo, hi = mid_layers(L, layer_range)
     rows = []
     for ds, col in PRIMARY.items():
         d = lens[(lens.dataset == ds) & lens.layer.between(lo, hi)]
@@ -110,7 +110,10 @@ def paired_delta(x_ref, x_new, y, p_ref, p_new, groups, n_boot=N_BOOT, seed=SEED
     return (point_dr, *np.nanpercentile(dr, [2.5, 97.5])), (point_red, *np.nanpercentile(red, [2.5, 97.5]))
 
 
-def verdict(red: float, dr_hi: float) -> str:
+def verdict(red: float, dr_hi: float, base_lo: float = 1.0) -> str:
+    """base_lo: 바닐라 렌즈 상관의 95% CI 하한. 0 이하면 비교할 기준 상관이 없으므로 판정하지 않는다."""
+    if base_lo <= 0:
+        return "판정 불가: 바닐라 렌즈에서 상관이 유의하지 않아 '상관 유지/하락'을 가릴 수 없음"
     if red < BIG_REDUCTION:
         return "거의 안 줄었음 → 그 원인은 영어를 만들지 않았다 (가설에 불리)"
     if dr_hi < 0:
@@ -132,13 +135,18 @@ def ci(p, lo, hi):
 
 
 # ---------------------------------------------------------------- 메인 분석
-def analyze(out_dir: Path, n_boot=N_BOOT, plots=True) -> dict:
-    out = pd.read_csv(out_dir / "outputs.csv")
-    lens = pd.read_csv(out_dir / "lens.csv.gz")
+def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") -> dict:
+    """layer_range: 렌즈 점수 구간(비율). tag가 있으면 결과를 <out_dir>/<tag>/에 쓴다(원래 결과 보존)."""
+    src = out_dir
+    if tag:
+        out_dir = out_dir / tag
+        out_dir.mkdir(parents=True, exist_ok=True)
+    out = pd.read_csv(src / "outputs.csv")
+    lens = pd.read_csv(src / "lens.csv.gz")
     n_layers = int(lens.layer.max())
-    lo, hi = mid_layers(n_layers)
+    lo, hi = mid_layers(n_layers, layer_range)
     I = interference(out)
-    S = lens_scores(lens)
+    S = lens_scores(lens, layer_range)
     md, metrics = [f"# 결과 요약 ({out_dir.name})\n",
                    f"층 수 {n_layers}, 렌즈 점수 구간 {lo}–{hi}층, bootstrap {n_boot}회\n"], {}
 
@@ -180,14 +188,19 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True) -> dict:
     if len(a) and "vanilla" in set(a.lens):
         ref = a[a.lens == "vanilla"].set_index("id")
         rows = []
-        for ln in sorted(set(a.lens) - {"vanilla"}):
-            new = a[a.lens == ln].set_index("id").loc[ref.index]
-            (dr, dlo, dhi), (rd, rlo, rhi) = paired_delta(ref.S, new.S, ref.I, ref.p, new.p, ref.group, n_boot)
-            rows.append({"렌즈": ln, "영어 확률(바닐라)": ref.p.mean(), "영어 확률(보정)": new.p.mean(),
-                         "감소율 [CI]": ci(rd, rlo, rhi), "Δr [CI]": ci(dr, dlo, dhi), "판정": verdict(rd, dhi)})
+        for x in ("S", "S_diff"):
+            r0, base_lo, base_hi = corr_ci(ref[x], ref.I, ref.group, n_boot)
+            for ln in sorted(set(a.lens) - {"vanilla"}):
+                new = a[a.lens == ln].set_index("id").loc[ref.index]
+                (dr, dlo, dhi), (rd, rlo, rhi) = paired_delta(ref[x], new[x], ref.I, ref.p, new.p, ref.group, n_boot)
+                rows.append({"x": x, "렌즈": ln, "바닐라 r [CI]": ci(r0, base_lo, base_hi),
+                             "영어 확률(바닐라)": ref.p.mean(), "영어 확률(보정)": new.p.mean(),
+                             "감소율 [CI]": ci(rd, rlo, rhi), "Δr [CI]": ci(dr, dlo, dhi),
+                             "판정": verdict(rd, dhi, base_lo)})
         vt = pd.DataFrame(rows)
         md += ["## 3. 판정 (A, 번역 과제)\n",
-               f"'크게 줄었음' = 감소율 ≥ {BIG_REDUCTION}. '상관 하락' = Δr의 95% CI 상한 < 0.\n", md_table(vt), ""]
+               f"'크게 줄었음' = 감소율 ≥ {BIG_REDUCTION} (S 기준 확률). '상관 하락' = Δr의 95% CI 상한 < 0. "
+               "바닐라 상관의 CI 하한이 0 이하이면 판정하지 않는다.\n", md_table(vt), ""]
         metrics["verdict"] = vt.to_dict("records")
 
     # ---- 4. 음성 대조 (B) vs A
@@ -240,7 +253,7 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True) -> dict:
     c = lens[(lens.dataset == "C") & (lens.role == "input")]
     if len(c):
         mid = c[c.layer.between(lo, hi)]
-        agg = {k: (k, lambda s: np.exp(s).mean()) for k in ("lp_target", "lp_unrelated", "mass_en", "mass_zh", "mass_ko")
+        agg = {k: (k, lambda s: np.exp(s).mean()) for k in ("lp_target", "lp_unrelated", "mass_en", "mass_en_word", "mass_zh", "mass_ko")
                if k in mid}
         tab = mid.groupby(["task", "lens"]).agg(**agg).reset_index()
         md += ["## 7. C: 중간층 평균 확률 (정답 영어 vs 무관 영어, 언어별 확률 질량)\n",
@@ -248,8 +261,27 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True) -> dict:
                md_table(tab, "{:.4f}"), ""]
         metrics["C"] = tab.to_dict("records")
 
+    # ---- 8. 층 구간별 언어 질량 (영어 편향)
+    mcols = [c for c in ("mass_en", "mass_en_word", "mass_zh", "mass_ko") if c in lens]
+    if mcols:
+        q1, q3 = math.ceil(0.25 * n_layers), math.floor(0.75 * n_layers)
+        bands = {f"초반 1–{q1 - 1}": (1, q1 - 1), f"중간 {q1}–{q3}": (q1, q3), f"후반 {q3 + 1}–{n_layers - 1}": (q3 + 1, n_layers - 1)}
+        inp = lens[lens.role == "input"]
+        rows = []
+        for band, (b0, b1) in bands.items():
+            g = inp[inp.layer.between(b0, b1)]
+            for (ds, task, ln), h in g.groupby(["dataset", "task", "lens"]):
+                rows.append({"dataset": ds, "task": task, "lens": ln, "band": band,
+                             **{c.replace("mass_", ""): np.exp(h[c]).mean() for c in mcols}})
+        bt = pd.DataFrame(rows).sort_values(["dataset", "task", "lens"], kind="stable")
+        md += ["## 8. 층 구간별 언어 질량 (입력어 프롬프트 평균 확률)\n",
+               "`en`은 라틴 문자 2자 이상 토큰 전부(단어 조각 포함), `en_word`는 단어 시작 토큰이면서 영어 단어 목록에 "
+               "있는 토큰만 센다. 둘의 차이가 크면 '영어'로 보이던 것의 상당 부분이 단어 조각이다. "
+               "구간은 렌즈 점수 구간 설정과 무관하게 전체 층의 1/4, 3/4로 나눈다.\n", md_table(bt, "{:.3f}"), ""]
+        metrics["language_mass"] = bt.to_dict("records")
+
     # ---- 렌즈 적합도
-    fit_file = out_dir / "lens_fit.csv"
+    fit_file = src / "lens_fit.csv"
     if fit_file.exists():
         f = pd.read_csv(fit_file)
         f = f[f.lens.isin(["vanilla", "mean", "affine"]) & f.layer.between(lo, hi)]
@@ -289,7 +321,7 @@ def make_plots(out_dir: Path, items: pd.DataFrame, lens: pd.DataFrame, lo: int, 
 
     # 층별 곡선: 입력어 프롬프트에서 probe 확률과 영어 질량
     inp = lens[lens.role == "input"]
-    cols = [c for c in inp.columns if c.startswith("lp_") or c == "mass_en"]
+    cols = [c for c in inp.columns if c.startswith("lp_") or c in ("mass_en", "mass_en_word")]
     for (ds, task), g in inp.groupby(["dataset", "task"]):
         use = [c for c in cols if g[c].notna().any()]
         fig, axes = plt.subplots(1, len(use), figsize=(4.2 * len(use), 3.6), squeeze=False)
@@ -313,8 +345,12 @@ def main():
     ap.add_argument("--model", required=True)
     ap.add_argument("--out-dir", default=None)
     ap.add_argument("--n-boot", type=int, default=N_BOOT)
+    ap.add_argument("--layer-range", type=float, nargs=2, default=None, metavar=("LO", "HI"),
+                    help="렌즈 점수 구간(전체 층 대비 비율). 기본: config.MID_LAYER_RANGE")
+    ap.add_argument("--tag", default="", help="결과를 <out-dir>/<tag>/ 아래에 저장")
     args = ap.parse_args()
-    analyze(Path(args.out_dir or RESULTS_DIR / args.model.replace("/", "_")), args.n_boot)
+    analyze(Path(args.out_dir or RESULTS_DIR / args.model.replace("/", "_")), args.n_boot,
+            layer_range=args.layer_range, tag=args.tag)
 
 
 if __name__ == "__main__":

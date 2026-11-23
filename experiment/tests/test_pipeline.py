@@ -109,7 +109,10 @@ def main():
             ["v1", "v2", "v3", "v4"], lenses, tmp)
     out = pd.read_csv(tmp / "outputs.csv")
     lens = pd.read_csv(tmp / "lens.csv.gz")
-    n_prompts = sum((1 + len(it.controls)) * 4 * 2 for it in A) + sum((1 + len(it.controls)) * 4 for it in B) + len(C) * 4 * 2
+    # A translate/translate_en: 입력+대조어(대조어 영어는 A_control_en.csv), B: 입력+대조어, C translate/repeat: 입력만
+    n_a = sum((1 + len(it.controls)) * 4 + (1 + len(it.controls) if it.en_controls else 1) * 4 for it in A)
+    n_prompts = (n_a + sum((1 + len(it.controls)) * 4 for it in B)
+                 + len(C) * 4 * 2)
     assert len(out) == n_prompts, (len(out), n_prompts)
     assert len(lens) == n_prompts * 3 * (lm.n_layers + 1)
     # 바닐라 렌즈의 마지막 층 = 모델 최종 출력
