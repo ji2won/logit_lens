@@ -1,0 +1,222 @@
+﻿id,ko,etym,hanja,zh,en,category,zipf_ko,zipf_en,zipf_zh,cedict_gloss,cedict_ok,cedict_note,sino_same,ko_len,ntok_en_llama,ntok_en_exaone,ntok_en_qwen,auto_flags,en_poly,ko_homograph,keep,ko_unrelated,en_unrelated,zh_unrelated
+C001,바다,고유어,,海,sea,자연,5.0,5.06,4.86,"Hai3: surname Hai || hai3: ocean / sea / CL:個|个[ge4],片[pian4] / great number of people or things / (dialect) numerous",OK,,N,2,1,1,1,,,,Y,문화,culture,文化
+C002,섬,고유어,,岛,island,자연,4.88,5.01,4.85,"dao3: variant of 島|岛[dao3] || dao3: island / CL:個|个[ge4],座[zuo4]",OK,,N,1,1,1,1,,,,Y,춤,dance,舞蹈
+C003,숲,고유어,,森林,forest,자연,4.84,4.7,4.85,sen1 lin2: forest / CL:片[pian4],OK,,N,1,1,1,1,,,,Y,맥주,beer,啤酒
+C004,호수,한자어,湖水,湖,lake,자연,4.47,4.83,4.49,hu2: lake,OK,,N,2,1,1,1,,,,Y,교통,traffic,交通
+C005,무지개,고유어,,彩虹,rainbow,자연,3.93,4.07,4.1,cai3 hong2: rainbow / CL:道[dao4],OK,,N,3,1,1,1,,,,Y,원숭이,monkey,猴子
+C006,천둥,고유어,,雷,thunder,자연,3.72,4.14,4.4,"Lei2: surname Lei || lei2: thunder / (bound form) (military) mine, as in 地雷[di4 lei2] land mine / (coll.) to shock; to stun; to astound / (Tw) (coll.) spoiler / (Tw) (coll.) to reveal plot details to ",OK,,N,2,1,1,1,,,,Y,동물원,zoo,动物园
+C007,번개,고유어,,闪电,lightning,자연,4.16,4.22,4.07,shan3 dian4: lightning / CL:道[dao4],OK,,N,2,1,1,1,,,,Y,나뭇잎,leaf,树叶
+C008,얼음,고유어,,冰,ice,자연,4.33,5.0,4.27,bing1: ice / CL:塊|块[kuai4] / to chill sth / (of an object or substance) to feel cold / (of a person) cold / unfriendly / (slang) methamphetamine || bing1: variant of 冰[bing1],OK,,N,2,1,1,1,,,,Y,주말,weekend,周末
+C009,흙,고유어,,泥土,soil,자연,4.25,4.42,3.67,ni2 tu3: earth; soil; mud; clay,OK,,N,1,1,1,1,,,,Y,분노,anger,愤怒
+C010,진흙,고유어,,泥巴,mud,자연,3.69,4.13,3.38,ni2 ba5: (coll.) mud,OK,,N,2,1,1,1,,,,Y,숙제,homework,作业
+C011,그림자,고유어,,影子,shadow,자연,4.29,4.44,4.12,ying3 zi5: shadow / reflection / (fig.) hint / indication / influence / CL:個|个[ge4],OK,,N,3,1,1,1,,,,Y,행복,happiness,幸福
+C012,이슬,고유어,,露水,dew,자연,3.68,3.52,2.76,lu4 shui3: dew / fig. short-lasting / ephemeral,OK,,N,2,1,1,1,,,,Y,피리,flute,笛子
+C013,사막,한자어,沙漠,沙漠,desert,자연,4.31,4.4,4.39,sha1 mo4: desert / CL:個|个[ge4],OK,,Y,2,1,1,1,EN_POLY_BORDERLINE,?:동사 desert(버리다)와 표기가 같음,,N,,,
+C014,화산,한자어,火山,火山,volcano,자연,3.87,3.76,4.27,huo3 shan1: volcano,OK,,Y,2,1,1,1,,,,Y,공책,notebook,笔记本
+C015,우주,한자어,宇宙,宇宙,universe,자연,5.13,4.59,4.67,yu3 zhou4: universe; cosmos; space,OK,,Y,2,1,1,1,,,,Y,깃발,flag,旗帜
+C016,행성,한자어,行星,行星,planet,자연,4.62,4.68,4.0,xing2 xing1: planet / CL:顆|颗[ke1],OK,,Y,2,1,1,1,,,,Y,설탕,sugar,糖
+C017,해변,한자어,海邊,海滩,beach,자연,4.45,4.92,4.36,hai3 tan1: beach / CL:片[pian4],OK,,N,2,1,1,1,,,,Y,비밀,secret,秘密
+C018,홍수,한자어,洪水,洪水,flood,자연,4.03,4.34,4.28,hong2 shui3: deluge; flood,OK,,Y,2,1,1,1,,,,Y,늑대,wolf,狼
+C019,가뭄,고유어,,干旱,drought,자연,3.6,3.9,3.97,"gan1 han4: drought / (of land, climate etc) arid; dry",OK,,N,2,1,1,1,,,,Y,풍선,balloon,气球
+C020,눈사람,고유어,,雪人,snowman,자연,0.0,3.16,3.28,xue3 ren2: snowman / yeti,OK,,N,3,2,2,2,FREQ_KO_LOW,,,N,,,
+C021,물,고유어,,水,water,자연,5.63,5.52,5.3,Shui3: surname Shui / Shui ethnic group || shui3: water / (after a name) ... River / to swim (used mostly in 會水|会水[hui4 shui3] and 水性[shui3 xing4]) / (coll.) lacking in substance; shoddy / (bound form,OK,,N,1,1,1,1,,,,Y,음악,music,音乐
+C022,기름,고유어,,油,oil,자연,4.3,5.1,4.53,"you2: oil / fat / grease / petroleum / to apply tung oil, paint or varnish / oily / greasy / glib / cunning",OK,,N,2,1,1,1,,,,Y,과학,science,科学
+C023,황금,한자어,黃金,黄金,gold,자연,4.53,5.17,4.73,huang2 jin1: gold / golden (opportunity) / prime (time),OK,,Y,2,1,1,1,,,,Y,세계,world,世界
+C024,연못,혼종어,蓮,池塘,pond,자연,3.76,3.98,3.72,chi2 tang2: pool / pond,OK,,N,2,1,1,1,,,,Y,고래,whale,鲸鱼
+C025,고양이,고유어,,猫,cat,동물,4.84,4.78,4.73,mao1: cat (CL:隻|只[zhi1]) / (dialect) to hide oneself / (loanword) (coll.) modem || mao2: used in 貓腰|猫腰[mao2 yao1],OK,,N,3,1,1,1,,,,Y,경제,economy,经济
+C026,강아지,고유어,,小狗,puppy,동물,4.41,4.0,3.89,xiao3 gou3: pup; puppy,OK,,N,3,1,1,1,,,,Y,밀가루,flour,面粉
+C027,토끼,고유어,,兔子,rabbit,동물,4.42,4.05,4.05,tu4 zi5: hare / rabbit / CL:隻|只[zhi1],OK,,N,2,1,1,1,,,,Y,인형,doll,玩偶
+C028,여우,고유어,,狐狸,fox,동물,4.39,4.66,3.93,hu2 li5: fox; (fig.) sly or crafty person,OK,,N,2,1,1,1,,,,Y,부엌,kitchen,厨房
+C029,늑대,고유어,,狼,wolf,동물,4.46,4.35,4.48,"lang2: wolf / CL:匹[pi3],隻|只[zhi1],條|条[tiao2]",OK,,N,2,1,1,1,,,,Y,무릎,knee,膝盖
+C030,코끼리,고유어,,大象,elephant,동물,4.04,4.08,4.02,da4 xiang4: elephant / CL:頭|头[tou2],OK,,N,3,1,1,1,,,,Y,수염,beard,胡子
+C031,기린,한자어,麒麟,长颈鹿,giraffe,동물,3.8,3.32,3.28,chang2 jing3 lu4: giraffe / CL:隻|只[zhi1],OK,,N,2,2,2,2,,,,Y,해바라기,sunflower,向日葵
+C032,원숭이,고유어,,猴子,monkey,동물,4.07,4.07,4.07,hou2 zi5: monkey / CL:隻|只[zhi1],OK,,N,3,1,1,1,,,,Y,무지개,rainbow,彩虹
+C033,거북,고유어,,乌龟,turtle,동물,3.9,3.91,3.81,wu1 gui1: tortoise / cuckold,OK,tortoise로 풀이되나 turtle 통칭으로 씀. 속어 cuckold 있음,N,2,1,1,1,,,,Y,마늘,garlic,大蒜
+C034,개구리,고유어,,青蛙,frog,동물,3.95,3.89,3.91,qing1 wa1: frog (CL:隻|只[zhi1]) / (old) (slang) ugly guy,OK,,N,3,1,1,1,,,,Y,우산,umbrella,雨伞
+C035,뱀,고유어,,蛇,snake,동물,4.38,4.23,4.42,she2: variant of 蛇[she2] || she2: snake / serpent / CL:條|条[tiao2] || yi2: used in 委蛇[wei1 yi2],OK,,N,1,1,1,1,,,,Y,요리사,chef,厨师
+C036,상어,고유어,,鲨鱼,shark,동물,3.96,4.1,4.14,sha1 yu2: shark,OK,,N,2,1,1,1,,,,Y,밧줄,rope,绳子
+C037,고래,고유어,,鲸鱼,whale,동물,4.14,3.98,3.71,jing1 yu2: whale / CL:條|条[tiao2],OK,,N,2,1,1,1,,,,Y,연못,pond,池塘
+C038,문어,한자어,文魚,章鱼,octopus,동물,3.68,3.46,3.57,zhang1 yu2: octopus,OK,,N,2,2,2,2,,,,Y,참깨,sesame,芝麻
+C039,오징어,고유어,,鱿鱼,squid,동물,3.92,3.44,3.54,you2 yu2: squid,OK,,N,3,1,1,1,,,,Y,국수,noodle,面条
+C040,개미,고유어,,蚂蚁,ant,동물,3.94,3.86,3.94,ma3 yi3: ant,OK,,N,2,1,1,1,,,,Y,봉투,envelope,信封
+C041,모기,고유어,,蚊子,mosquito,동물,3.82,3.61,3.65,wen2 zi5: mosquito,OK,,N,2,1,1,1,,,,Y,당근,carrot,胡萝卜
+C042,부엉이,고유어,,猫头鹰,owl,동물,3.26,3.87,3.54,mao1 tou2 ying1: owl,OK,,N,3,1,1,1,,,,Y,도둑,thief,小偷
+C043,앵무새,혼종어,鸚鵡,鹦鹉,parrot,동물,3.47,3.49,3.68,ying1 wu3: parrot,OK,,Y,3,2,2,2,,,,Y,어부,fisherman,渔夫
+C044,사슴,고유어,,鹿,deer,동물,4.03,4.12,3.94,lu4: deer,OK,,N,2,1,1,1,,,,Y,감자,potato,土豆
+C045,달팽이,고유어,,蜗牛,snail,동물,3.65,3.67,3.64,wo1 niu2: snail / Taiwan pr. [gua1 niu2],OK,,N,3,2,1,2,,,,Y,대나무,bamboo,竹子
+C046,지렁이,고유어,,蚯蚓,worm,동물,3.2,3.77,3.11,qiu1 yin3: (zoology) earthworm,OK,earthworm. worm의 대표 뜻,N,3,1,1,1,,,,Y,흉터,scar,伤疤
+C047,갈매기,고유어,,海鸥,seagull,동물,3.37,3.02,3.21,hai3 ou1: gull; seagull,OK,,N,3,3,2,3,,,,Y,칠판,blackboard,黑板
+C048,얼룩말,고유어,,斑马,zebra,동물,3.07,3.4,3.41,ban1 ma3: zebra / CL:匹[pi3],OK,,N,3,2,1,2,,,,Y,선인장,cactus,仙人掌
+C049,악어,한자어,鰐魚,鳄鱼,crocodile,동물,3.75,3.49,3.73,e4 yu2: alligator; crocodile (CL:條|条[tiao2]),OK,,N,2,2,2,2,,,,Y,삽,shovel,铲子
+C050,돌고래,고유어,,海豚,dolphin,동물,3.89,3.67,3.85,hai3 tun2: dolphin,OK,,N,3,1,1,1,,,,Y,식초,vinegar,醋
+C051,수달,한자어,水獺,水獭,otter,동물,3.62,3.37,2.94,shui3 ta3: otter,OK,,Y,2,2,2,2,,,,Y,치약,toothpaste,牙膏
+C052,나방,고유어,,蛾子,moth,동물,3.42,3.5,2.29,e2 zi5: moth,OK,,N,2,1,1,1,,,,Y,시금치,spinach,菠菜
+C053,무당벌레,고유어,,瓢虫,ladybug,동물,0.0,2.67,2.78,piao2 chong2: ladybug / ladybird,OK,,N,4,2,2,2,FREQ_KO_LOW;FREQ_EN_LOW,,,N,,,
+C054,백조,한자어,白鳥,天鹅,swan,동물,3.7,3.84,3.59,tian1 e2: swan,OK,,N,2,2,2,2,,,,Y,팔꿈치,elbow,手肘
+C055,타조,한자어,駝鳥,鸵鸟,ostrich,동물,3.14,3.05,3.29,tuo2 niao3: ostrich,OK,,N,2,2,2,2,,,,Y,귀걸이,earring,耳环
+C056,멧돼지,고유어,,野猪,boar,동물,3.45,3.3,3.51,ye3 zhu1: wild boar (Sus scrofa) / CL:頭|头[tou2],OK,,N,3,2,1,2,,,,Y,칫솔,toothbrush,牙刷
+C057,물고기,고유어,,鱼,fish,동물,4.31,4.9,4.81,"Yu2: surname Yu || yu2: fish (CL:條|条[tiao2],尾[wei3]) / used in the names of various aquatic animals that are not fish (including abalone 鮑魚|鲍鱼[bao4 yu2], alligators and crocodiles 鱷魚|鳄鱼[e4 yu2] and oc",OK,,N,3,1,1,1,,,,Y,결혼,marriage,结婚
+C058,해파리,고유어,,水母,jellyfish,동물,3.41,3.25,3.41,shui3 mu3: jellyfish / medusa,OK,,N,3,2,2,2,,,,Y,주름,wrinkle,皱纹
+C059,불가사리,고유어,,海星,starfish,동물,0.0,3.0,3.16,hai3 xing1: starfish / sea star,OK,,N,4,2,2,2,FREQ_KO_LOW,,,N,,,
+C060,무릎,고유어,,膝盖,knee,신체,4.59,4.33,3.93,xi1 gai4: knee / (Internet slang) to kneel down (in admiration),OK,,N,2,1,1,1,,,,Y,홍수,flood,洪水
+C061,팔꿈치,고유어,,手肘,elbow,신체,3.67,3.84,3.16,shou3 zhou3: elbow,OK,,N,3,1,1,1,,,,Y,백조,swan,天鹅
+C062,발목,고유어,,脚踝,ankle,신체,4.21,3.97,3.3,jiao3 huai2: ankle,OK,,N,2,1,1,1,,,,Y,갑옷,armor,盔甲
+C063,뺨,고유어,,脸颊,cheek,신체,3.74,3.96,3.61,lian3 jia2: cheek,OK,,N,1,1,1,1,,,,Y,베개,pillow,枕头
+C064,혀,고유어,,舌头,tongue,신체,4.42,4.37,4.16,she2 tou5: tongue / CL:個|个[ge4] / enemy soldier captured for the purpose of extracting information,OK,,N,1,1,1,1,,,,Y,기자,journalist,记者
+C065,배꼽,고유어,,肚脐,navel,신체,3.64,2.95,3.1,du4 qi2: navel,OK,,N,2,2,2,2,FREQ_EN_LOW,,,N,,,
+C066,허파,고유어,,肺,lung,신체,0.0,4.1,3.86,fei4: lung / CL:個|个[ge4],OK,,N,2,1,1,1,FREQ_KO_LOW,,,N,,,
+C067,콩팥,고유어,,肾脏,kidney,신체,3.27,4.03,3.81,shen4 zang4: kidney,OK,,N,2,1,1,1,,,,Y,사다리,ladder,梯子
+C068,머리카락,고유어,,头发,hair,신체,4.26,5.08,4.67,tou2 fa5: hair (on the head),OK,,N,4,1,1,1,,,,Y,평화,peace,和平
+C069,수염,한자어,鬚髥,胡子,beard,신체,4.16,4.07,3.97,"hu2 zi5: beard / mustache or whiskers / facial hair / CL:撮[zuo3],根[gen1] / (coll.) bandit",OK,,N,2,1,1,1,,,,Y,상어,shark,鲨鱼
+C070,피부,한자어,皮膚,皮肤,skin,신체,4.71,4.91,4.7,"pi2 fu1: skin / CL:層|层[ceng2],塊|块[kuai4]",OK,,Y,2,1,1,1,,,,Y,꿈,dream,梦
+C071,손톱,고유어,,指甲,fingernail,신체,3.94,2.73,3.79,zhi3 jia5: fingernail,OK,,N,2,3,2,3,FREQ_EN_LOW,,,N,,,
+C072,콧구멍,고유어,,鼻孔,nostril,신체,3.23,2.77,3.23,bi2 kong3: nostril / CL:隻|只[zhi1],OK,,N,3,2,2,2,FREQ_EN_LOW,,,N,,,
+C073,피,고유어,,血,blood,신체,5.41,5.1,4.77,xue4: blood (CL:滴[di1]) / colloquial pr. [xie3] or [xue3],OK,,N,1,1,1,1,,,,Y,언어,language,语言
+C074,주름,고유어,,皱纹,wrinkle,신체,4.05,3.12,3.55,zhou4 wen2: wrinkle / CL:道[dao4],OK,,N,2,2,2,2,,,,Y,해파리,jellyfish,水母
+C075,흉터,혼종어,凶,伤疤,scar,신체,3.93,3.77,3.37,shang1 ba1: scar / CL:道[dao4],OK,,N,2,1,1,1,,,,Y,교과서,textbook,课本
+C076,상처,한자어,傷處,伤口,wound,신체,4.79,4.24,4.3,shang1 kou3: wound / cut,OK,,N,2,1,1,1,EN_POLY,Y:wind의 과거분사와 표기가 같음,,N,,,
+C077,쌀,고유어,,大米,rice,음식,4.53,4.55,3.98,da4 mi3: (husked) rice,OK,,N,1,1,1,1,,,,Y,야구,baseball,棒球
+C078,국수,고유어,,面条,noodle,음식,3.88,3.42,3.78,mian4 tiao2: noodles,OK,,N,2,2,2,2,,,,Y,빗자루,broom,扫帚
+C079,달걀,고유어,,鸡蛋,egg,음식,4.02,4.46,4.26,"ji1 dan4: (chicken) egg / hen's egg / CL:個|个[ge4],打[da2]",OK,,N,2,1,1,1,,,,Y,군인,soldier,士兵
+C080,소금,고유어,,盐,salt,음식,4.2,4.6,4.34,yan2: salt / CL:粒[li4],OK,,N,2,1,1,1,,,,Y,폭탄,bomb,炸弹
+C081,설탕,한자어,雪糖,糖,sugar,음식,4.18,4.68,4.47,"tang2: sugar / sweets / candy / CL:顆|颗[ke1],塊|块[kuai4] || tang2: carbohydrate; saccharide || tang2: old variant of 糖[tang2]",OK,,N,2,1,1,1,,,,Y,행성,planet,行星
+C082,꿀,고유어,,蜂蜜,honey,음식,4.22,4.37,3.77,feng1 mi4: honey,OK,,N,1,1,1,1,,,,Y,혀,tongue,舌头
+C083,고기,고유어,,肉,meat,음식,4.61,4.63,4.81,rou4: meat / flesh / pulp (of a fruit) / (coll.) (of a fruit) squashy / (of a person) flabby / irresolute / Kangxi radical 130,OK,,N,2,1,1,1,,,,Y,여우,fox,狐狸
+C084,감자,모호,甘藷,土豆,potato,음식,4.28,4.11,4.08,tu3 dou4: potato / (Tw) peanut (CL:顆|颗[ke1]),OK,,N,2,1,1,1,,,,Y,이웃,neighbor,邻居
+C085,당근,모호,唐根,胡萝卜,carrot,음식,4.05,3.62,3.71,hu2 luo2 bo5: carrot,OK,,N,2,1,1,1,,,,Y,모기,mosquito,蚊子
+C086,양파,혼종어,洋,洋葱,onion,음식,3.97,3.89,3.67,yang2 cong1: onion (Allium cepa) / bulb onion,OK,,N,2,1,1,1,,,,Y,개구리,frog,青蛙
+C087,마늘,고유어,,大蒜,garlic,음식,3.8,3.92,3.35,"da4 suan4: garlic / CL:瓣[ban4],頭|头[tou2]",OK,,N,2,1,1,1,,,,Y,거북,turtle,乌龟
+C088,오이,고유어,,黄瓜,cucumber,음식,4.04,3.41,3.64,huang2 gua1: cucumber / CL:條|条[tiao2],OK,,N,2,1,1,1,,,,Y,오징어,squid,鱿鱼
+C089,배추,모호,白菜,白菜,cabbage,음식,3.54,3.55,3.41,"bai2 cai4: Chinese cabbage, esp. napa cabbage (Brassica rapa subsp. pekinensis) / sometimes used to refer to bok choy (Brassica rapa subsp. chinensis) / CL:棵[ke1]",OK,,Y,2,1,1,1,,,,Y,등대,lighthouse,灯塔
+C090,땅콩,고유어,,花生,peanut,음식,3.79,3.9,3.87,hua1 sheng1: peanut / CL:粒[li4],OK,,N,2,1,1,1,,,,Y,가뭄,drought,干旱
+C091,콩,고유어,,豆子,bean,음식,4.41,3.98,3.4,dou4 zi5: bean / pea / CL:顆|颗[ke1],OK,,N,1,1,1,1,,,,Y,잔디,lawn,草坪
+C092,식초,한자어,食醋,醋,vinegar,음식,3.42,3.64,3.7,cu4: vinegar / jealousy (in love rivalry),OK,,N,2,1,1,1,,,,Y,달팽이,snail,蜗牛
+C093,사탕,한자어,砂糖,糖果,candy,음식,4.16,4.29,4.11,tang2 guo3: candy / CL:粒[li4],OK,,N,2,1,1,1,,,,Y,장난감,toy,玩具
+C094,밀가루,고유어,,面粉,flour,음식,3.75,4.0,3.82,mian4 fen3: flour,OK,,N,3,1,1,1,,,,Y,강아지,puppy,小狗
+C095,참깨,고유어,,芝麻,sesame,음식,3.2,3.46,3.61,zhi1 ma5: sesame (seed),OK,,N,2,1,1,1,,,,Y,문어,octopus,章鱼
+C096,포도주,한자어,葡萄酒,葡萄酒,wine,음식,3.78,4.74,3.96,pu2 tao5 jiu3: (grape) wine,OK,,Y,3,1,1,1,,,,Y,종교,religion,宗教
+C097,맥주,한자어,麥酒,啤酒,beer,음식,4.59,4.7,4.25,"pi2 jiu3: beer (loanword) / CL:杯[bei1],瓶[ping2],罐[guan4],桶[tong3],缸[gang1]",OK,,N,2,1,1,1,,,,Y,숲,forest,森林
+C098,자두,고유어,,李子,plum,음식,3.27,3.55,3.46,li3 zi5: plum / CL:個|个[ge4],OK,,N,2,1,1,1,,,,Y,주전자,kettle,水壶
+C099,살구,고유어,,杏子,apricot,음식,0.0,2.98,2.8,xing4 zi5: apricot,OK,,N,2,2,2,2,FREQ_KO_LOW;FREQ_EN_LOW,,,N,,,
+C100,시금치,고유어,,菠菜,spinach,음식,3.24,3.48,3.46,bo1 cai4: spinach (CL:棵[ke1]) / (slang) gambling; gambler (alternative term for 博彩[bo2 cai3]),OK,,N,3,1,1,1,,,,Y,앵무새,parrot,鹦鹉
+C101,상추,모호,生菜,生菜,lettuce,음식,3.4,3.56,2.76,sheng1 cai4: lettuce / raw fresh vegetables / greens,OK,,Y,2,1,1,1,,,,Y,가위,scissors,剪刀
+C102,의자,한자어,椅子,椅子,chair,물건,4.49,4.69,4.09,"yi3 zi5: chair / CL:把[ba3],張|张[zhang1]",OK,,Y,2,1,1,1,,,,Y,작가,writer,作家
+C103,책상,한자어,冊床,书桌,desk,물건,4.34,4.43,3.26,shu1 zhuo1: desk / CL:張|张[zhang1],OK,,N,2,1,1,1,,,,Y,수영,swimming,游泳
+C104,침대,한자어,寢臺,床,bed,물건,4.74,5.07,4.57,"chuang2: bed; couch (furniture that one can lie down on) (CL:張|张[zhang1]) / bed; bottom (of rivers, oceans, gardens etc) / frame; chassis / classifier for blankets, quilts etc || chuang2: variant of 床",OK,,N,2,1,1,1,,,,Y,병원,hospital,医院
+C105,베개,고유어,,枕头,pillow,물건,3.91,3.96,3.91,zhen3 tou5: pillow,OK,,N,2,1,1,1,,,,Y,뺨,cheek,脸颊
+C106,담요,혼종어,毯,毯子,blanket,물건,3.92,4.07,3.13,"tan3 zi5: blanket / CL:條|条[tiao2],張|张[zhang1],床[chuang2],面[mian4]",OK,,N,2,1,1,1,,,,Y,코끼리,elephant,大象
+C107,가위,고유어,,剪刀,scissors,물건,3.8,3.58,3.68,jian3 dao1: scissors / CL:把[ba3],OK,,N,2,1,1,1,,,,Y,상추,lettuce,生菜
+C108,바늘,고유어,,针,needle,물건,3.92,3.98,4.14,"zhen1: needle / pin / injection / stitch / CL:根[gen1],支[zhi1] || zhen1: variant of 針|针[zhen1], needle",OK,,N,2,1,1,1,,,,Y,콩,bean,豆子
+C109,비누,고유어,,肥皂,soap,물건,3.9,4.18,3.59,"fei2 zao4: soap / CL:塊|块[kuai4],條|条[tiao2]",OK,,N,2,1,1,1,,,,Y,과학자,scientist,科学家
+C110,수건,한자어,手巾,毛巾,towel,물건,4.01,3.94,3.86,mao2 jin1: towel / CL:條|条[tiao2],OK,,N,2,1,1,1,,,,Y,백합,lily,百合
+C111,칫솔,혼종어,齒,牙刷,toothbrush,물건,3.64,3.38,3.23,ya2 shua1: toothbrush / CL:把[ba3],OK,,N,2,2,1,2,,,,Y,멧돼지,boar,野猪
+C112,치약,한자어,齒藥,牙膏,toothpaste,물건,3.51,3.37,3.61,ya2 gao1: toothpaste / CL:管[guan3],OK,,N,2,2,1,2,,,,Y,수달,otter,水獭
+C113,우산,한자어,雨傘,雨伞,umbrella,물건,4.05,3.89,3.78,yu3 san3: umbrella / CL:把[ba3],OK,,Y,2,1,1,1,,,,Y,양파,onion,洋葱
+C114,신발,고유어,,鞋子,shoe,물건,4.57,4.24,4.1,xie2 zi5: shoe,OK,,N,2,1,1,1,,,,Y,시험,exam,考试
+C115,지갑,한자어,紙匣,钱包,wallet,물건,4.29,4.15,4.26,qian2 bao1: purse / wallet,OK,,N,2,1,1,1,,,,Y,농부,farmer,农夫
+C116,사다리,고유어,,梯子,ladder,물건,4.18,4.03,3.62,ti1 zi5: ladder; stepladder / (Internet slang) VPN or other tool used to circumvent internet censorship,OK,,N,3,1,1,1,,,,Y,콩팥,kidney,肾脏
+C117,망치,고유어,,锤子,hammer,물건,4.13,4.16,3.53,chui2 zi5: hammer / CL:把[ba3],OK,,N,2,1,1,1,,,,Y,천둥,thunder,雷
+C118,삽,고유어,,铲子,shovel,물건,3.82,3.5,2.93,chan3 zi5: shovel; spade; trowel; spatula (kitchen utensil) / CL:把[ba3],OK,,N,1,1,1,1,,,,Y,악어,crocodile,鳄鱼
+C119,도끼,고유어,,斧头,axe,물건,3.86,3.79,3.53,fu3 tou2: ax / hatchet / CL:柄[bing3],OK,ax(미국 표기) = axe,N,2,1,1,1,,,,Y,소풍,picnic,野餐
+C120,밧줄,고유어,,绳子,rope,물건,3.45,4.06,3.86,sheng2 zi5: cord; string; rope / CL:條|条[tiao2],OK,,N,2,1,1,1,,,,Y,웃음,laughter,笑声
+C121,주전자,한자어,酒煎子,水壶,kettle,물건,3.36,3.54,3.41,shui3 hu2: kettle / canteen / watering can,OK,,N,3,1,1,1,,,,Y,배추,cabbage,白菜
+C122,빗자루,고유어,,扫帚,broom,물건,3.29,3.42,3.32,sao4 zhou5: broom,OK,,N,3,2,1,2,,,,Y,오이,cucumber,黄瓜
+C123,옷,고유어,,衣服,clothes,물건,5.17,4.72,4.9,"yi1 fu5: clothes / CL:件[jian4],套[tao4]",OK,,N,1,1,1,1,,,,Y,박물관,museum,博物馆
+C124,귀걸이,고유어,,耳环,earring,물건,3.72,3.08,3.41,"er3 huan2: earring / CL:隻|只[zhi1],對|对[dui4]",OK,,N,3,2,2,2,,,,Y,타조,ostrich,鸵鸟
+C125,풍선,한자어,風船,气球,balloon,물건,4.02,3.9,3.87,qi4 qiu2: balloon,OK,,N,2,1,1,1,,,,Y,땅콩,peanut,花生
+C126,인형,한자어,人形,玩偶,doll,물건,4.55,4.06,3.63,wan2 ou3: toy figurine / action figure / stuffed animal / doll / (fig.) sb's plaything,OK,,N,2,1,1,1,,,,Y,토끼,rabbit,兔子
+C127,장난감,고유어,,玩具,toy,물건,4.26,4.3,4.48,wan2 ju4: plaything / toy,OK,,N,3,1,1,1,,,,Y,지혜,wisdom,智慧
+C128,피리,고유어,,笛子,flute,물건,3.46,3.52,3.22,di2 zi5: bamboo flute / CL:管[guan3],OK,,N,2,1,1,1,,,,Y,이슬,dew,露水
+C129,깃발,고유어,,旗帜,flag,물건,3.98,4.58,4.43,qi2 zhi4: ensign / flag,OK,,N,2,1,1,1,,,,Y,우주,universe,宇宙
+C130,사진,한자어,寫眞,照片,photo,물건,5.52,4.97,5.48,"zhao4 pian4: photograph / CL:張|张[zhang1],幅[fu2]",OK,photograph = photo,N,2,1,1,1,,,,Y,지식,knowledge,知识
+C131,공책,한자어,空冊,笔记本,notebook,물건,3.14,3.74,4.01,bi3 ji4 ben3: notebook (stationery) (CL:本[ben3]) / (computing) laptop; notebook (abbr. for 筆記本電腦|笔记本电脑[bi3 ji4 ben3 dian4 nao3]),OK,,N,2,1,1,1,,,,Y,화산,volcano,火山
+C132,지우개,고유어,,橡皮,eraser,물건,3.34,2.94,3.31,xiang4 pi2: rubber / an eraser / CL:塊|块[kuai4],OK,,N,3,2,2,2,FREQ_EN_LOW,,,N,,,
+C133,분필,한자어,粉筆,粉笔,chalk,물건,0.0,3.69,3.19,"fen3 bi3: chalk / CL:支[zhi1],段[duan4]",OK,,Y,2,1,1,1,FREQ_KO_LOW,,,N,,,
+C134,칠판,한자어,漆板,黑板,blackboard,물건,3.43,3.02,3.41,"hei1 ban3: blackboard / CL:塊|块[kuai4],個|个[ge4]",OK,,N,2,2,2,2,,,,Y,갈매기,seagull,海鸥
+C135,봉투,한자어,封套,信封,envelope,물건,4.05,3.86,3.86,xin4 feng1: envelope,OK,,N,2,1,1,1,,,,Y,개미,ant,蚂蚁
+C136,선물,한자어,膳物,礼物,gift,물건,5.18,4.78,4.67,"li3 wu4: gift; present / CL:件[jian4],份[fen4]",OK,,N,2,1,1,1,KO_HOMOGRAPH_BORDERLINE,,?:先物(선물 거래)이 뉴스에서 흔함,N,,,
+C137,전화,한자어,電話,电话,phone,물건,5.37,5.3,5.44,dian4 hua4: telephone / CL:部[bu4] / phone call / CL:通[tong1] / phone number,OK,,Y,2,1,1,1,,,,Y,죽음,death,死亡
+C138,바퀴,고유어,,轮子,wheel,물건,4.24,4.5,3.61,lun2 zi5: wheel / (derog.) Falun Gong practitioner / CL:個|个[ge4],OK,,N,2,1,1,1,,,,Y,가수,singer,歌手
+C139,폭탄,한자어,爆彈,炸弹,bomb,물건,4.45,4.6,4.66,"zha4 dan4: bomb / CL:枚[mei2],顆|颗[ke1]",OK,,N,2,1,1,1,,,,Y,소금,salt,盐
+C140,갑옷,혼종어,甲,盔甲,armor,물건,3.77,3.97,3.37,kui1 jia3: armor / body armor and helmet,OK,,N,2,1,1,1,,,,Y,발목,ankle,脚踝
+C141,보석,한자어,寶石,宝石,jewel,물건,4.23,3.68,4.02,"bao3 shi2: precious stone; gem / CL:枚[mei2],顆|颗[ke1]",OK,gem / precious stone = jewel,Y,2,1,1,1,KO_HOMOGRAPH_BORDERLINE,,?:保釋(보석 석방)이 뉴스에서 흔함,N,,,
+C142,달력,혼종어,曆,日历,calendar,물건,3.95,4.3,3.76,"ri4 li4: calendar / CL:張|张[zhang1],本[ben3]",OK,,N,2,1,1,1,,,,Y,사탕,candy,糖果
+C143,부엌,고유어,,厨房,kitchen,장소,3.9,4.65,4.44,chu2 fang2: kitchen / CL:間|间[jian1],OK,,N,2,1,1,1,,,,Y,고기,meat,肉
+C144,침실,한자어,寢室,卧室,bedroom,장소,3.89,4.46,4.03,wo4 shi4: bedroom / CL:間|间[jian1],OK,,N,2,1,1,1,,,,Y,달걀,egg,鸡蛋
+C145,도로,한자어,道路,道路,road,장소,4.93,5.24,5.06,dao4 lu4: road / path / way / CL:條|条[tiao2],OK,,Y,2,1,1,1,KO_HOMOGRAPH_BORDERLINE,,?:부사 '도로'(되돌려)가 흔함,N,,,
+C146,병원,한자어,病院,医院,hospital,장소,5.28,5.07,5.32,"yi1 yuan4: hospital / CL:所[suo3],家[jia1],座[zuo4]",OK,,N,2,1,1,1,,,,Y,침대,bed,床
+C147,도서관,한자어,圖書館,图书馆,library,장소,4.63,4.86,4.66,"tu2 shu1 guan3: library / CL:家[jia1],個|个[ge4]",OK,,Y,3,1,1,1,,,,Y,자유,freedom,自由
+C148,교회,한자어,敎會,教堂,church,장소,5.1,5.16,4.68,"jiao4 tang2: church; chapel / CL:座[zuo4],所[suo3],間|间[jian1]",OK,,N,2,1,1,1,,,,Y,영화,movie,电影
+C149,박물관,한자어,博物館,博物馆,museum,장소,4.62,4.71,4.76,bo2 wu4 guan3: museum,OK,,Y,3,1,1,1,,,,Y,탄생,birth,诞生
+C150,동물원,한자어,動物園,动物园,zoo,장소,3.98,4.14,4.17,dong4 wu4 yuan2: zoo,OK,,Y,3,1,1,1,,,,Y,할머니,grandmother,祖母
+C151,농장,한자어,農場,农场,farm,장소,4.38,4.75,4.56,nong2 chang3: farm,OK,,Y,2,1,1,1,,,,Y,생일,birthday,生日
+C152,대학,한자어,大學,大学,university,장소,5.36,5.39,5.62,"Da4 xue2: the Great Learning, one of the Four Books 四書|四书[Si4 shu1] in Confucianism || da4 xue2: university; college / CL:所[suo3]",OK,,Y,2,1,1,1,,,,Y,역사,history,历史
+C153,궁전,한자어,宮殿,宫殿,palace,장소,4.05,4.45,4.02,gong1 dian4: palace / CL:座[zuo4],OK,,Y,2,1,1,1,,,,Y,수학,math,数学
+C154,도시,한자어,都市,城市,city,장소,5.42,5.61,5.64,cheng2 shi4: city; town / CL:座[zuo4],OK,,N,2,1,1,1,,,,Y,이름,name,名字
+C155,등대,한자어,燈臺,灯塔,lighthouse,장소,3.49,3.55,3.83,deng1 ta3: lighthouse / CL:座[zuo4],OK,,N,2,2,1,2,,,,Y,자두,plum,李子
+C156,아기,고유어,,婴儿,baby,사람,4.89,5.26,4.59,ying1 er2: infant / baby / CL:個|个[ge4] / lead (Pb),OK,,N,2,1,1,1,,,,Y,전쟁,war,战争
+C157,할머니,고유어,,祖母,grandmother,사람,4.66,4.14,3.98,zu3 mu3: father's mother; paternal grandmother,OK,,N,3,1,1,1,,,,Y,망치,hammer,锤子
+C158,할아버지,고유어,,祖父,grandfather,사람,4.57,4.24,4.03,zu3 fu4: father's father / paternal grandfather,OK,,N,4,1,1,1,,,,Y,신발,shoe,鞋子
+C159,아버지,고유어,,父亲,father,사람,5.32,5.26,5.29,fu4 qin1: father / also pr. [fu4 qin5] / CL:個|个[ge4],OK,,N,3,1,1,1,,,,Y,건강,health,健康
+C160,어머니,고유어,,母亲,mother,사람,5.13,5.24,5.31,mu3 qin1: mother,OK,,N,3,1,1,1,,,,Y,법률,law,法律
+C161,군인,한자어,軍人,士兵,soldier,사람,4.68,4.46,4.77,shi4 bing1: soldier / CL:個|个[ge4],OK,,N,2,1,1,1,,,,Y,침실,bedroom,卧室
+C162,농부,한자어,農夫,农夫,farmer,사람,4.04,4.15,4.03,nong2 fu1: peasant / farmer,OK,,Y,2,1,1,1,,,,Y,지갑,wallet,钱包
+C163,요리사,한자어,料理師,厨师,chef,사람,3.89,4.23,4.04,chu2 shi1: cook / chef,OK,,N,3,1,1,1,,,,Y,뱀,snake,蛇
+C164,경찰,한자어,警察,警察,police,사람,5.16,5.33,5.31,jing3 cha2: police; police officer,OK,,Y,2,1,1,1,,,,Y,미래,future,未来
+C165,왕,한자어,王,国王,king,사람,5.25,5.17,4.89,guo2 wang2: king,OK,,N,1,1,1,1,,,,Y,사랑,love,爱
+C166,여왕,한자어,女王,女王,queen,사람,4.48,4.86,4.52,nu:3 wang2: queen,OK,,Y,2,1,1,1,,,,Y,날씨,weather,天气
+C167,공주,한자어,公主,公主,princess,사람,4.87,4.53,4.74,gong1 zhu3: princess,OK,,Y,2,1,1,1,KO_HOMOGRAPH_BORDERLINE,,?:지명 공주(公州),N,,,
+C168,도둑,고유어,,小偷,thief,사람,3.83,3.88,4.03,xiao3 tou1: thief,OK,,N,2,1,1,1,,,,Y,슬픔,sadness,悲伤
+C169,어부,한자어,漁夫,渔夫,fisherman,사람,3.69,3.49,3.52,yu2 fu1: fisherman,OK,,Y,2,2,1,2,,,,Y,나방,moth,蛾子
+C170,가수,한자어,歌手,歌手,singer,사람,4.94,4.52,4.65,ge1 shou3: singer,OK,,Y,2,1,1,1,,,,Y,바퀴,wheel,轮子
+C171,작가,한자어,作家,作家,writer,사람,5.16,4.69,5.08,"zuo4 jia1: author / CL:個|个[ge4],位[wei4]",OK,author = writer,Y,2,1,1,1,,,,Y,의자,chair,椅子
+C172,기자,한자어,記者,记者,journalist,사람,5.03,4.38,5.54,ji4 zhe3: reporter; journalist / CL:個|个[ge4],OK,,Y,2,1,1,1,,,,Y,꿀,honey,蜂蜜
+C173,과학자,한자어,科學者,科学家,scientist,사람,4.42,4.21,4.79,ke1 xue2 jia1: scientist,OK,,N,3,1,1,1,,,,Y,비누,soap,肥皂
+C174,이웃,고유어,,邻居,neighbor,사람,4.51,4.11,4.51,lin2 ju1: neighbor,OK,,N,2,1,1,1,,,,Y,사슴,deer,鹿
+C175,나뭇잎,고유어,,树叶,leaf,식물,3.64,4.22,3.55,shu4 ye4: tree leaves,OK,tree leaves,N,3,1,1,1,,,,Y,번개,lightning,闪电
+C176,해바라기,고유어,,向日葵,sunflower,식물,3.71,3.36,3.36,xiang4 ri4 kui2: sunflower (Helianthus annuus),OK,,N,4,2,1,2,,,,Y,기린,giraffe,长颈鹿
+C177,백합,한자어,百合,百合,lily,식물,3.44,3.95,3.98,bai3 he2: (botany) lily / (ACG) (slang) yuri (genre depicting romantic or intimate relationships between women),OK,,Y,2,2,2,2,,,,Y,수건,towel,毛巾
+C178,대나무,혼종어,竹,竹子,bamboo,식물,3.81,3.65,3.51,"zhu2 zi5: bamboo / CL:棵[ke1],根[gen1]",OK,,N,3,1,1,1,,,,Y,돌고래,dolphin,海豚
+C179,선인장,한자어,仙人掌,仙人掌,cactus,식물,3.3,3.4,3.34,xian1 ren2 zhang3: cactus,OK,,Y,3,2,2,2,,,,Y,얼룩말,zebra,斑马
+C180,잔디,고유어,,草坪,lawn,식물,3.94,3.98,3.7,cao3 ping2: lawn,OK,,N,2,1,1,1,,,,Y,바늘,needle,针
+C181,꿈,고유어,,梦,dream,추상,5.3,4.91,5.01,meng4: dream (CL:場|场[chang2]) / (bound form) to dream,OK,,N,1,1,1,1,,,,Y,피부,skin,皮肤
+C182,사랑,고유어,,爱,love,추상,5.84,5.82,5.86,ai4: to love; to be fond of; to like / affection / to be inclined (to do sth); to tend to (happen),OK,,N,2,1,1,1,,,,Y,도시,city,城市
+C183,평화,한자어,平和,和平,peace,추상,4.94,5.02,5.15,he2 ping2: peace / peaceful,OK,,N,2,1,1,1,,,,Y,머리카락,hair,头发
+C184,전쟁,한자어,戰爭,战争,war,추상,5.22,5.46,5.48,"zhan4 zheng1: war; conflict / CL:場|场[chang2],次[ci4]",OK,,Y,2,1,1,1,,,,Y,경찰,police,警察
+C185,자유,한자어,自由,自由,freedom,추상,5.27,4.86,5.58,zi4 you2: freedom; liberty / free; unrestricted,OK,,Y,2,1,1,1,,,,Y,여왕,queen,女王
+C186,행복,한자어,幸福,幸福,happiness,추상,5.31,4.44,4.84,xing4 fu2: happiness / happy / blessed,OK,,Y,2,1,1,1,,,,Y,그림자,shadow,影子
+C187,슬픔,고유어,,悲伤,sadness,추상,4.36,3.88,4.34,bei1 shang1: sad; sorrowful,OK,형용사 풀이지만 명사로도 씀,N,2,1,1,1,,,,Y,부엉이,owl,猫头鹰
+C188,역사,한자어,歷史,历史,history,추상,5.33,5.39,5.85,"li4 shi3: history / CL:門|门[men2],段[duan4]",OK,,Y,2,1,1,1,,,,Y,대학,university,大学
+C189,음악,한자어,音樂,音乐,music,추상,5.25,5.52,5.34,"yin1 yue4: music / CL:張|张[zhang1],曲[qu3],段[duan4]",OK,,Y,2,1,1,1,,,,Y,물,water,水
+C190,날씨,고유어,,天气,weather,추상,4.71,4.87,4.81,tian1 qi4: weather,OK,,N,2,1,1,1,,,,Y,도서관,library,图书馆
+C191,언어,한자어,言語,语言,language,추상,4.88,5.1,5.33,"yu3 yan2: language / CL:門|门[men2],種|种[zhong3]",OK,,N,2,1,1,1,,,,Y,피,blood,血
+C192,수학,한자어,數學,数学,math,추상,4.69,4.45,4.79,shu4 xue2: mathematics,OK,mathematics = math,Y,2,1,1,1,,,,Y,궁전,palace,宫殿
+C193,과학,한자어,科學,科学,science,추상,5.13,5.12,5.45,"ke1 xue2: science / scientific knowledge / scientific / rational / CL:門|门[men2],個|个[ge4],種|种[zhong3]",OK,,Y,2,1,1,1,,,,Y,기름,oil,油
+C194,나이,고유어,,年龄,age,추상,5.08,5.32,4.85,"nian2 ling2: (a person's) age / CL:把[ba3],個|个[ge4]",OK,,N,2,1,1,1,EN_POLY_BORDERLINE,?:나이 / 시대(the Bronze Age),,N,,,
+C195,이름,고유어,,名字,name,추상,5.7,5.61,5.22,ming2 zi5: name (of a person or thing),OK,,N,2,1,1,1,,,,Y,아버지,father,父亲
+C196,비밀,한자어,秘密,秘密,secret,추상,4.94,4.92,5.02,mi4 mi4: secret; private; confidential; clandestine / a secret,OK,,Y,2,1,1,1,,,,Y,해변,beach,海滩
+C197,웃음,고유어,,笑声,laughter,추상,4.61,4.1,3.89,xiao4 sheng1: laughter,OK,,N,2,1,1,1,,,,Y,담요,blanket,毯子
+C198,건강,한자어,健康,健康,health,추상,4.99,5.44,5.25,jian4 kang1: health / healthy,OK,,Y,2,1,1,1,,,,Y,어머니,mother,母亲
+C199,지식,한자어,知識,知识,knowledge,추상,4.78,4.96,5.18,zhi1 shi5: knowledge / CL:門|门[men2] / intellectual,OK,,Y,2,1,1,1,,,,Y,사진,photo,照片
+C200,지혜,한자어,智慧,智慧,wisdom,추상,4.21,4.3,4.7,zhi4 hui4: wisdom; intelligence,OK,,Y,2,1,1,1,,,,Y,달력,calendar,日历
+C201,분노,한자어,憤怒,愤怒,anger,추상,4.63,4.42,4.64,fen4 nu4: angry / indignant / wrath / ire,OK,angry / wrath. 명사로도 씀,Y,2,1,1,1,,,,Y,흙,soil,泥土
+C202,죽음,고유어,,死亡,death,추상,5.06,5.4,5.2,si3 wang2: to die / death,OK,,N,2,1,1,1,,,,Y,아기,baby,婴儿
+C203,탄생,한자어,誕生,诞生,birth,추상,4.64,4.77,4.57,dan4 sheng1: to be born,OK,to be born. 명사로도 씀,Y,2,1,1,1,,,,Y,옷,clothes,衣服
+C204,결혼,한자어,結婚,结婚,marriage,추상,5.23,4.91,5.0,jie2 hun1: to marry; to get married,OK,to marry. 명사로도 씀,Y,2,1,1,1,,,,Y,물고기,fish,鱼
+C205,생일,한자어,生日,生日,birthday,추상,4.75,4.76,4.66,sheng1 ri4: birthday / CL:個|个[ge4],OK,,Y,2,1,1,1,,,,Y,농장,farm,农场
+C206,주말,한자어,週末,周末,weekend,추상,4.81,4.93,4.65,zhou1 mo4: weekend,OK,,Y,2,1,1,1,,,,Y,얼음,ice,冰
+C207,세계,한자어,世界,世界,world,추상,5.7,5.89,5.96,shi4 jie4: world,OK,,Y,2,1,1,1,,,,Y,전화,phone,电话
+C208,미래,한자어,未來,未来,future,추상,5.04,5.33,5.36,wei4 lai2: future / tomorrow / CL:個|个[ge4] / approaching / coming / pending,OK,,Y,2,1,1,1,,,,Y,왕,king,国王
+C209,문화,한자어,文化,文化,culture,추상,5.43,5.03,5.73,"wen2 hua4: culture / civilization / cultural / CL:個|个[ge4],種|种[zhong3]",OK,,Y,2,1,1,1,,,,Y,바다,sea,海
+C210,종교,한자어,宗敎,宗教,religion,추상,4.83,4.74,5.12,zong1 jiao4: religion,OK,,N,2,1,1,1,,,,Y,포도주,wine,葡萄酒
+C211,법률,한자어,法律,法律,law,추상,4.8,5.46,5.5,"fa3 lu:4: law / CL:條|条[tiao2], 套[tao4], 個|个[ge4]",OK,,Y,2,1,1,1,,,,Y,황금,gold,黄金
+C212,경제,한자어,經濟,经济,economy,추상,5.29,4.87,5.87,jing1 ji4: economy / economic,OK,,Y,2,1,1,1,,,,Y,호수,lake,湖
+C213,교통,한자어,交通,交通,traffic,추상,4.8,4.85,5.13,jiao1 tong1: to be connected / traffic / transportation / communications / liaison,OK,,Y,2,1,1,1,,,,Y,고양이,cat,猫
+C214,소풍,한자어,逍風,野餐,picnic,추상,3.79,3.8,3.42,ye3 can1: picnic / to have a picnic,OK,,N,2,1,1,1,,,,Y,도끼,axe,斧头
+C215,숙제,한자어,宿題,作业,homework,추상,4.24,4.13,4.67,zuo4 ye4: school assignment / homework / work / task / operation / CL:個|个[ge4] / to operate,OK,,N,2,1,1,1,,,,Y,진흙,mud,泥巴
+C216,시험,한자어,試驗,考试,exam,추상,5.02,4.26,4.91,kao3 shi4: to take an exam / exam / CL:次[ci4],OK,,N,2,1,1,1,,,,Y,할아버지,grandfather,祖父
+C217,교과서,한자어,敎科書,课本,textbook,추상,4.34,3.77,3.9,ke4 ben3: textbook / CL:本[ben3],OK,,N,3,1,1,1,,,,Y,지렁이,worm,蚯蚓
+C218,영화,한자어,映畫,电影,movie,추상,5.59,5.16,5.71,dian4 ying3: movie; film / CL:部[bu4],OK,,N,2,1,1,1,,,,Y,교회,church,教堂
+C219,야구,한자어,野球,棒球,baseball,추상,4.97,4.54,4.09,"bang4 qiu2: baseball / CL:個|个[ge4],隻|只[zhi1]",OK,,N,2,1,1,1,,,,Y,쌀,rice,大米
+C220,수영,한자어,水泳,游泳,swimming,추상,4.43,4.43,4.49,you2 yong3: swimming / to swim,OK,,N,2,1,1,1,,,,Y,책상,desk,书桌
+C221,춤,고유어,,舞蹈,dance,추상,4.73,4.93,4.62,wu3 dao3: dance (performance art) / dancing,OK,,N,1,1,1,1,,,,Y,섬,island,岛

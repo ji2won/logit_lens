@@ -105,12 +105,14 @@ I = log p(방해어 | 입력어 프롬프트) − 평균_c log p(방해어 | 대
 - 렌즈 점수 구간은 `analyze.py --layer-range LO HI --tag 이름`으로 바꿔 `results/<모델>/<이름>/`에 따로 저장할 수 있다. 지금 결과는 기본(25–75%)과 `late`(75–97%) 두 가지다.
 - 영어 질량 `mass_en_word`의 단어 목록은 wordfreq가 있으면 상위 5만 단어, 없으면 시스템 사전을 쓴다(실행 로그에 출처가 찍힘).
 
-## 데이터셋 C 형식 (아직 없음)
+## 데이터셋 C
 
-`C_final.csv`가 있으면 자동으로 포함된다. 열: `id, ko, zh, en, en_unrelated, zh_unrelated, etym`
+`C_final.csv`(204문항)가 있으면 자동으로 포함된다. 로더가 읽는 열: `id, ko, zh, en, en_unrelated, zh_unrelated, etym`.
+무관 단어는 다른 C 문항을 순열로 배정한 것이라 정답 영어와 같은 단어 집합이다. 설계와 선별은 `FILTERING_C.md`.
+아직 C를 넣고 모델을 다시 돌리지는 않았다.
 
 ## 아직 안 한 것
 
 - FLORES-200 병렬 문장을 이용한 영어 방향 제거 실험
-- 데이터셋 C 작성
+- 데이터셋 C를 넣은 실제 모델 실행
 - 실제 모델 실행: 가짜 모델로 파이프라인이 끝까지 도는 것만 확인함
