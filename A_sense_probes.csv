@@ -1,0 +1,100 @@
+id,en,sense_target,sense_distractor,zh_answer,zh_distractor,en_target_sense,en_distractor_sense,ok,distractor_fit,note
+A001,spring,season,coil,春天,弹簧,season,coil,,exact,
+A002,fall,season (autumn),waterfall,秋天,瀑布,autumn,cascade,,exact,waterfall은 fall 형태를 포함해 제외
+A003,bat,animal,sports club,蝙蝠,球棒,animal,baseball,,related,배트만 가리키는 단어가 없음; mammal는 여러 토큰이라 animal로 바꿈
+A004,crane,bird,machine,鹤,起重机,bird,construction,,related,hoist는 여러 토큰이라 construction로 바꿈
+A006,palm,hand,tree,手掌,棕榈树,hand,coconut,,related,
+A009,bow,weapon,ribbon knot,弓,蝴蝶结,arrow,ribbon,,related,
+A010,club,organization,weapon,俱乐部,棍棒,society,weapon,,related,cudgel는 여러 토큰이라 weapon로 바꿈
+A013,iron,metal,appliance,铁,熨斗,metal,laundry,,related,ironing은 iron 형태를 포함해 제외
+A014,key,lock,piano,钥匙,琴键,lock,piano,,related,
+A015,letter,mail,alphabet,信件,字母,mail,alphabet,,related,
+A016,match,stick,contest,火柴,比赛,fire,contest,,exact,matchstick은 match 형태를 포함해 제외
+A020,plant,vegetation,factory,植物,工厂,vegetation,factory,,exact,
+A021,pupil,eye,student,瞳孔,学生,eye,student,,exact,
+A022,ring,jewelry,bell sound,戒指,铃声,jewelry,bell,,related,chime는 여러 토큰이라 bell로 바꿈
+A023,rock,stone,music,岩石,摇滚乐,stone,punk,,related,
+A026,star,celestial,celebrity,星星,明星,planet,celebrity,,exact,
+A029,cricket,insect,sport,蟋蟀,板球,insect,sport,,related,grasshopper는 여러 토큰이라 insect로 바꿈; wicket는 여러 토큰이라 sport로 바꿈
+A031,coach,trainer,carriage,教练,马车,trainer,carriage,,exact,
+A033,chest,body,box,胸部,箱子,torso,box,,exact,
+A034,cell,biology,prison,细胞,牢房,membrane,prison,,exact,
+A036,mint,herb,coin factory,薄荷,造币厂,herb,coin,,related,peppermint는 mint 형태를 포함해 제외
+A038,pit,hole,fruit stone,坑,果核,hole,seed,,related,
+A042,suit,clothing,lawsuit,西装,诉讼,jacket,litigation,,exact,lawsuit는 suit 형태를 포함해 제외
+A044,yard,garden,unit,院子,码,garden,inch,,related,
+A046,bill,beak,invoice,鸟嘴,账单,bird,invoice,,exact,beak는 여러 토큰이라 bird로 바꿈
+A050,case,legal,container,案件,箱子,trial,container,,exact,
+A051,deck,ship,cards,甲板,一副牌,ship,cards,,related,
+A052,digit,finger,number,手指,数字,finger,number,,exact,
+A053,engagement,marriage,battle,订婚,交战,wedding,battle,,exact,
+A056,game,hunting prey,play,猎物,游戏,prey,play,,exact,
+A057,glasses,eyewear,cups,眼镜,玻璃杯,lens,cups,,exact,spectacles는 여러 토큰이라 lens로 바꿈
+A060,log,wood,record,原木,日志,timber,diary,,exact,
+A062,note,memo,music,便条,音符,memo,melody,,related,
+A063,orange,fruit,color,橙子,橙色,citrus,color,,related,
+A066,pool,swimming,billiards,游泳池,台球,swimming,cue,,related,billiards는 여러 토큰이라 cue로 바꿈
+A068,racket,sports,noise,球拍,喧闹声,tennis,noise,,exact,
+A072,story,tale,floor,故事,楼层,tale,floor,,exact,
+A073,tip,gratuity,end,小费,尖端,waiter,end,,exact,gratuity는 여러 토큰이라 waiter로 바꿈
+A074,top,toy,summit,陀螺,顶部,toy,summit,,exact,
+A078,bar,pub,rod,酒吧,棒,pub,rod,,exact,
+A081,diamond,gem,shape,钻石,菱形,gem,shape,,related,rhombus는 여러 토큰이라 shape로 바꿈
+A084,interest,finance,curiosity,利息,兴趣,loan,curiosity,,exact,
+A086,litter,trash,offspring,垃圾,一窝幼崽,trash,offspring,,exact,
+A089,plot,story,land,情节,地块,narrative,land,,exact,
+A091,sage,herb,wise man,鼠尾草,圣人,herb,wise,,exact,
+A092,staff,personnel,stick,员工,拐杖,employees,cane,,exact,
+A095,term,semester,word,学期,术语,semester,vocabulary,,related,terminology는 term 형태를 포함해 제외
+A096,vessel,ship,blood,船只,血管,ship,artery,,exact,
+A099,ear,body,grain,耳朵,穗,listen,wheat,,related,
+A104,cape,clothing,land,斗篷,海角,cloak,peninsula,,exact,
+A105,gum,mouth,candy,牙龈,口香糖,teeth,candy,,related,
+A108,nut,food,hardware,坚果,螺母,almond,bolt,,related,
+A113,tablet,medicine,computer,药片,平板电脑,pill,computer,,related,
+A115,turkey,bird,country,火鸡,土耳其,chicken,Istanbul,,related,
+A116,plane,aircraft,tool,飞机,刨子,aircraft,wood,,related,airplane은 plane 형태를 포함해 제외; carpentry는 여러 토큰이라 wood로 바꿈
+A117,poker,game,tool,扑克,拨火棍,casino,fireplace,,related,
+A118,iris,eye,flower,虹膜,鸢尾花,eye,flower,,related,
+A119,lash,eye,whip,睫毛,鞭打,eye,whip,,exact,eyelash는 lash 형태를 포함해 제외
+A120,ward,hospital,person,病房,被监护人,hospital,guardian,,related,
+A122,mold,fungus,form,霉菌,模具,fungus,template,,exact,
+A127,rocket,vehicle,plant,火箭,芝麻菜,spacecraft,lettuce,,related,arugula는 여러 토큰이라 lettuce로 바꿈
+A128,boot,footwear,car,靴子,后备箱,shoe,trunk,,exact,
+A131,tie,clothing,draw,领带,平局,collar,deadlock,,exact,necktie는 tie 형태를 포함해 제외; stalemate는 여러 토큰이라 deadlock로 바꿈
+A132,chip,computer,food,芯片,薯片,semiconductor,potato,,related,crisps는 여러 토큰이라 potato로 바꿈
+A135,tank,military,container,坦克,水箱,army,container,,exact,
+A139,wave,water,gesture,波浪,挥手,ocean,gesture,,related,
+A140,box,container,sport,箱子,拳击,container,punch,,related,boxing은 box 형태를 포함해 제외
+A141,kid,child,goat,孩子,小山羊,child,goat,,related,
+A144,toast,bread,drink,吐司,干杯,bread,cheers,,exact,
+A147,mass,church,physics,弥撒,质量,church,weight,,exact,
+A150,monitor,screen,lizard,显示器,巨蜥,screen,lizard,,related,
+A157,lid,pot,eye,盖子,眼睑,cover,eye,,related,eyelid는 lid 형태를 포함해 제외
+A158,crown,king,tooth,王冠,牙冠,king,tooth,,related,
+A159,spine,body,book,脊椎,书脊,backbone,book,,related,
+A163,corn,grain,foot,玉米,鸡眼,maize,blister,,related,callus는 여러 토큰이라 blister로 바꿈
+A164,port,harbor,wine,港口,波特酒,harbor,wine,,related,
+A165,sound,noise,strait,声音,海峡,noise,channel,,related,strait는 여러 토큰이라 channel로 바꿈
+A167,square,shape,plaza,正方形,广场,rectangle,plaza,,exact,
+A168,record,music,data,唱片,记录,vinyl,data,,related,
+A170,magazine,publication,weapon,杂志,弹匣,journal,ammunition,,related,
+A176,straw,drinking,hay,吸管,稻草,drinking,hay,,exact,
+A178,washer,machine,hardware,洗衣机,垫圈,laundry,screw,,related,gasket는 여러 토큰이라 screw로 바꿈
+A181,drone,aircraft,bee,无人机,雄蜂,aircraft,bee,,related,
+A184,bowl,dish,sport,碗,保龄球,dish,pins,,related,bowling은 bowl 형태를 포함해 제외
+A186,cast,medical,actors,石膏,演员阵容,plaster,actors,,related,
+A188,hide,skin,verb only,兽皮,躲藏,leather,conceal,,exact,
+A190,duck,bird,cotton fabric,鸭子,帆布,goose,canvas,,exact,
+A192,bridge,structure,card game,桥梁,桥牌,river,cards,,related,viaduct는 여러 토큰이라 river로 바꿈
+A194,club,golf,organization,球杆,俱乐部,golf,society,,exact,
+A195,bat,sports club,animal,球棒,蝙蝠,baseball,animal,,related,mammal는 여러 토큰이라 animal로 바꿈
+A202,scale,weighing,fish,秤,鳞片,weigh,fish,,related,
+A203,pupil,student,eye,学生,瞳孔,student,eye,,exact,
+A204,plant,factory,vegetation,工厂,植物,factory,vegetation,,exact,
+A205,match,contest,stick,比赛,火柴,contest,fire,,related,
+A206,letter,alphabet,mail,字母,信件,alphabet,mail,,related,
+A207,cell,prison,biology,牢房,细胞,prison,membrane,,related,
+A208,key,piano,lock,琴键,钥匙,piano,lock,,related,
+A211,story,floor,tale,楼层,故事,floor,tale,,exact,
+A213,interest,curiosity,finance,兴趣,利息,curiosity,loan,,related,
