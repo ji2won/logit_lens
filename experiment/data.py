@@ -82,7 +82,7 @@ def load_B(path: Path) -> list[Item]:
 
 
 def load_C(path: Path) -> list[Item]:
-    """C 스키마(아직 미작성): id, ko, zh, en, en_unrelated, zh_unrelated, etym
+    """C 스키마: id, ko, zh, en, en_unrelated, zh_unrelated, etym (C_final.csv, 나머지 열은 메타데이터)
     대조어가 없으므로 간섭은 계산하지 않고, 렌즈에서 정답 영어(sea)와 무관 영어(chair)를 비교한다."""
     d = pd.read_csv(path, keep_default_na=False)
     return [Item(id=r.id, dataset="C", ko=r.ko, controls=[],
