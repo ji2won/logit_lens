@@ -12,7 +12,8 @@ outputs.csv는 정답·방해어의 확률만 기록하므로, 모델이 실제�
   exact        답 == 정답
   distractor   답 == 방해어
   contains_*   답에 정답/방해어가 들어 있음 (春天来了 같은 경우)
-B는 맥락이 없으므로 두 뜻(정답·방해어) 중 하나면 맞은 것으로 따로 센다(either).
+B translate는 맥락이 없으므로 두 뜻(정답·방해어) 중 하나면 맞은 것으로 따로 센다(either).
+B translate_ctx는 예문으로 뜻을 정해 주므로 정답 일치가 맞음이다.
 """
 from __future__ import annotations
 
@@ -27,7 +28,7 @@ from .config import DATASETS, MODELS, RESULTS_DIR, VERSIONS
 from .data import load
 from .lm import LM
 
-TASKS = {"A": ["translate", "translate_en"], "B": ["translate"]}
+TASKS = {"A": ["translate", "translate_en"], "B": ["translate", "translate_ctx"]}
 _STRIP = " \t\r\n。，、．.,:：;；!?！？\"'“”‘’「」『』()（）[]【】"
 
 
@@ -59,19 +60,30 @@ def judge(df: pd.DataFrame, special=()) -> pd.DataFrame:
     return df
 
 
-def run(lm: LM, datasets, versions, max_new: int, out_dir: Path):
+def run(lm: LM, datasets, versions, max_new: int, out_dir: Path, only=None):
     rows = []
     for ds, items in datasets.items():
         for k, it in enumerate(items, 1):
             for task in TASKS[ds]:
+                if only and task not in only:
+                    continue
+                if task == "translate_ctx" and not it.ctx:
+                    continue
                 for v in versions:
-                    raw = greedy(lm, prompts.build(task, v, it.ko, it.en_hint), max_new)
+                    raw = greedy(lm, prompts.build(task, v, it.ko, it.en_hint, it.ctx), max_new)
                     rows.append(dict(dataset=ds, id=it.id, group=it.group, etym=it.etym, task=task, version=v,
                                      word=it.ko, zh_answer=it.zh_answer, zh_distractor=it.zh_distractor, raw=raw))
             if k % 10 == 0 or k == len(items):
                 print(f"  [{ds}] {k}/{len(items)}", flush=True)
-    df = judge(pd.DataFrame(rows))
-    df.to_csv(out_dir / "generations.csv", index=False)
+    df = judge(pd.DataFrame(rows), lm.tok.all_special_tokens)
+    gen_file = out_dir / "generations.csv"
+    if only and gen_file.exists():   # 일부 과제만 돌렸으면 기존 결과에서 그 과제만 바꿔 끼운다(기존 판정은 그대로)
+        old = pd.read_csv(gen_file, keep_default_na=False)
+        for c in ("exact", "distractor", "contains_answer", "contains_distractor"):
+            old[c] = old[c].astype(str) == "True"
+        old = old[~(old.task.isin(only) & old.dataset.isin(df.dataset.unique()))]
+        df = pd.concat([old, df], ignore_index=True)
+    df.to_csv(gen_file, index=False)
     return df
 
 
@@ -84,9 +96,15 @@ def summarize(df: pd.DataFrame, model: str) -> str:
         other = ~(g.contains_answer | g.contains_distractor)
         out.append(f"| {ds} | {task} | {len(g)} | {g.exact.mean():.3f} | {g.distractor.mean():.3f} | "
                    f"{g.contains_answer.mean():.3f} | {g.contains_distractor.mean():.3f} | {other.mean():.3f} |")
-    b = df[df.dataset == "B"]
+    b = df[(df.dataset == "B") & (df.task == "translate")]
     if len(b):
-        out += ["", f"B 두 뜻 중 하나와 일치: {(b.exact | b.distractor).mean():.3f} (n={len(b)})"]
+        out += ["", f"B translate 두 뜻 중 하나와 일치: {(b.exact | b.distractor).mean():.3f} (n={len(b)})"]
+    bc = df[(df.dataset == "B") & (df.task == "translate_ctx")]
+    if len(bc):
+        out += ["", "## B translate_ctx 프롬프트 버전별 (예문으로 정한 뜻이 정답)", "",
+                "| version | 정답 일치 | 방해어 일치 |", "|---|---|---|"]
+        for v, g in bc.groupby("version"):
+            out.append(f"| {v} | {g.exact.mean():.3f} | {g.distractor.mean():.3f} |")
     out += ["", "## 프롬프트 버전별 정답 일치 (A translate)", "", "| version | 정답 일치 | 방해어 일치 |", "|---|---|---|"]
     for v, g in df[(df.dataset == "A") & (df.task == "translate")].groupby("version"):
         out.append(f"| {v} | {g.exact.mean():.3f} | {g.distractor.mean():.3f} |")
@@ -104,6 +122,7 @@ def main():
     ap.add_argument("--model", required=True)
     ap.add_argument("--datasets", nargs="+", default=list(TASKS))
     ap.add_argument("--versions", nargs="+", default=VERSIONS)
+    ap.add_argument("--tasks", nargs="+", default=None, help="이 과제만 생성하고 기존 generations.csv의 같은 과제를 바꿔 끼운다")
     ap.add_argument("--limit", type=int, default=None)
     ap.add_argument("--max-new", type=int, default=12)
     ap.add_argument("--device", default="cuda")
@@ -123,7 +142,7 @@ def main():
         return
     datasets = {ds: load(ds, DATASETS[ds])[:args.limit] for ds in args.datasets if Path(DATASETS[ds]).exists()}
     lm = LM.from_pretrained(MODELS.get(args.model, args.model), device=args.device)
-    df = run(lm, datasets, args.versions, args.max_new, out_dir)
+    df = run(lm, datasets, args.versions, args.max_new, out_dir, args.tasks)
     (out_dir / "generation_summary.md").write_text(summarize(df, args.model), "utf-8")
     print(f"[done] {len(df)}개 → {out_dir / 'generation_summary.md'}")
 

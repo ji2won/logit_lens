@@ -40,7 +40,8 @@ def run_all(lm: LM, datasets: dict[str, list[Item]], tasks: dict[str, list[str]]
     masks = {k: v for k, v in masks.items() if not k.startswith("_")}
 
     # 영어 probe 토큰
-    words = sorted({w for items in datasets.values() for it in items for w in it.probes.values()})
+    # probe 값은 단어 하나 또는 공백으로 구분한 단어 묶음(A의 뜻별 probe). 묶음은 단어들의 첫 토큰 후보를 합친다.
+    words = sorted({w for items in datasets.values() for it in items for v in it.probes.values() for w in v.split()})
     probe_ids, probe_rows = {}, []
     for w in words:
         ids, single = probe_token_ids(lm, w)
@@ -49,20 +50,31 @@ def run_all(lm: LM, datasets: dict[str, list[Item]], tasks: dict[str, list[str]]
                                tokens=" | ".join(repr(lm.decode([i])) for i in ids), single_token=single))
     pd.DataFrame(probe_rows).to_csv(out_dir / "probes.csv", index=False)
 
+    def item_probe_ids(it: Item) -> dict[str, list[int]]:
+        ids = {name: sorted({i for w in v.split() for i in probe_ids[w]}) for name, v in it.probes.items()}
+        if "sense_t" in ids and "sense_d" in ids:      # 두 뜻 묶음이 같은 토큰(조각)을 공유하면 양쪽에서 뺀다
+            shared = set(ids["sense_t"]) & set(ids["sense_d"])
+            ids["sense_t"] = [i for i in ids["sense_t"] if i not in shared]
+            ids["sense_d"] = [i for i in ids["sense_d"] if i not in shared]
+        return ids
+
     out_rows, lens_rows = [], []
     n_layers = lm.n_layers
     for ds, items in datasets.items():
         prompts.check_fewshot(items)
         for k, it in enumerate(items, 1):
+            pids = item_probe_ids(it)
             for task in tasks[ds]:
+                if task == "translate_ctx" and not it.ctx:
+                    continue
                 for v in versions:
                     roles = [("input", it.ko, it.en_hint)]
-                    if task == "translate":
+                    if task in ("translate", "translate_ctx"):
                         roles += [("control", c, "") for c in it.controls]
                     elif task == "translate_en" and len(it.en_controls) == len(it.controls):
                         roles += [("control", c, e) for c, e in zip(it.controls, it.en_controls)]
                     for role, w, en in roles:
-                        prompt = prompts.build(task, v, w, en)
+                        prompt = prompts.build(task, v, w, en, it.ctx)
                         key = dict(dataset=ds, id=it.id, group=it.group, etym=it.etym, task=task,
                                    version=v, role=role, word=w)
                         rec, hs = dict(key), None
@@ -79,8 +91,8 @@ def run_all(lm: LM, datasets: dict[str, list[Item]], tasks: dict[str, list[str]]
 
                         for lens in lenses:
                             lp_all = lens_logprobs(lm, lens, hs)
-                            cols = {f"lp_{name}": probe_logprob(lp_all, probe_ids[word]).tolist()
-                                    for name, word in it.probes.items()}
+                            cols = {f"lp_{name}": probe_logprob(lp_all, ids).tolist()
+                                    for name, ids in pids.items() if ids}
                             cols.update({f"mass_{lang}": mass(lp_all, m).tolist() for lang, m in masks.items()})
                             top1 = lp_all.argmax(-1).tolist()
                             for l in range(n_layers + 1):
@@ -101,6 +113,7 @@ def main():
     ap.add_argument("--datasets", nargs="+", default=list(DATASETS))
     ap.add_argument("--versions", nargs="+", default=VERSIONS)
     ap.add_argument("--lenses", nargs="+", default=LENSES)
+    ap.add_argument("--tasks", nargs="+", default=None, help="이 과제만 돌린다 (예: translate_ctx). 기본: config.TASKS 전부")
     ap.add_argument("--limit", type=int, default=None, help="데이터셋마다 앞 N문항만 (빠른 점검용)")
     ap.add_argument("--device", default="cuda")
     ap.add_argument("--out-dir", default=None)
@@ -117,7 +130,8 @@ def main():
         datasets[ds] = load(ds, path)[:args.limit]
     lm = LM.from_pretrained(MODELS.get(args.model, args.model), device=args.device)
     lenses = load_lenses(args.lenses, Path(args.lens_file or out_dir / "lenses.pt"), device=args.device)
-    run_all(lm, datasets, TASKS, args.versions, lenses, out_dir)
+    tasks = {ds: [t for t in ts if not args.tasks or t in args.tasks] for ds, ts in TASKS.items()}
+    run_all(lm, datasets, tasks, args.versions, lenses, out_dir)
 
 
 if __name__ == "__main__":

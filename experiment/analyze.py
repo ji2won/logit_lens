@@ -203,24 +203,29 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
                "바닐라 상관의 CI 하한이 0 이하이면 판정하지 않는다.\n", md_table(vt), ""]
         metrics["verdict"] = vt.to_dict("records")
 
-    # ---- 4. 음성 대조 (B) vs A
+    # ---- 4. 음성 대조 (B) vs A. B는 맥락 없음(translate)과 예문(translate_ctx) 두 조건
     rows = []
-    for ln in sorted(set(items.lens)):
-        ra = items[(items.dataset == "A") & (items.task == "translate") & (items.lens == ln)].dropna(subset=["I"])
-        rb = items[(items.dataset == "B") & (items.task == "translate") & (items.lens == ln)].dropna(subset=["I"])
-        if len(ra) < 3 or len(rb) < 3:
-            continue
-        rng = np.random.default_rng(SEED)
-        da = [_spearman(ra.S.values[i], ra.I.values[i]) for i in _boot_index(ra.group.values, rng, n_boot)]
-        db = [_spearman(rb.S.values[i], rb.I.values[i]) for i in _boot_index(rb.group.values, rng, n_boot)]
-        diff = np.array(da) - np.array(db)
-        rows.append({"렌즈": ln, "r_A": _spearman(ra.S, ra.I), "r_B": _spearman(rb.S, rb.I),
-                     "r_A - r_B [CI]": ci(_spearman(ra.S, ra.I) - _spearman(rb.S, rb.I),
-                                          *np.nanpercentile(diff, [2.5, 97.5]))})
+    for tb in ("translate", "translate_ctx"):
+        for ln in sorted(set(items.lens)):
+            ra = items[(items.dataset == "A") & (items.task == "translate") & (items.lens == ln)].dropna(subset=["I"])
+            rb = items[(items.dataset == "B") & (items.task == tb) & (items.lens == ln)].dropna(subset=["I"])
+            if len(ra) < 3 or len(rb) < 3:
+                continue
+            rng = np.random.default_rng(SEED)
+            da = [_spearman(ra.S.values[i], ra.I.values[i]) for i in _boot_index(ra.group.values, rng, n_boot)]
+            db = [_spearman(rb.S.values[i], rb.I.values[i]) for i in _boot_index(rb.group.values, rng, n_boot)]
+            diff = np.array(da) - np.array(db)
+            rows.append({"B 과제": tb, "렌즈": ln, "n_B": len(rb), "B 평균 간섭": rb.I.mean(),
+                         "B 평균 영어 확률": rb.p.mean(), "r_A": _spearman(ra.S, ra.I), "r_B": _spearman(rb.S, rb.I),
+                         "r_A - r_B [CI]": ci(_spearman(ra.S, ra.I) - _spearman(rb.S, rb.I),
+                                              *np.nanpercentile(diff, [2.5, 97.5]))})
     if rows:
         md += ["## 4. 음성 대조: B(한국어 동음이의어)\n",
                "B의 간섭은 영어와 무관하므로 r_B ≈ 0이어야 한다. r_B도 크면 렌즈 점수가 영어가 아닌 "
-               "'헷갈리는 정도'를 재고 있을 가능성이 있다.\n", md_table(pd.DataFrame(rows)), ""]
+               "'헷갈리는 정도'를 재고 있을 가능성이 있다. translate_ctx는 예문으로 뜻을 정해 준 조건이다"
+               "(시장에서 배/복숭아 한 상자를 샀다). 이때 간섭은 '뜻이 정해졌는데도 같은 표기 때문에 남는 "
+               "다른 뜻'이므로 A(한국어로는 뜻이 하나, 영어 다의어로 새는 방해어)와 구조가 맞는다.\n",
+               md_table(pd.DataFrame(rows)), ""]
         metrics["negative_control"] = rows
 
     # ---- 4b. B: 뜻 빈도 비율(NIKL)과 간섭
@@ -231,15 +236,16 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
         dom = dom.rename(columns={"id": "_bid"})
         dom = dom[dom.nikl_dom_ok.astype(str) == "True"]
         dom["dom_distractor"] = 1 - dom.nikl_dom_target.astype(float)
-        for ln in sorted(set(items.lens)):
-            rb = items[(items.dataset == "B") & (items.task == "translate") & (items.lens == ln)]
-            rb = rb.dropna(subset=["I"]).merge(dom, left_on="id", right_on="_bid")
-            if len(rb) < 6:
-                continue
-            r1, l1, h1 = corr_ci(rb.dom_distractor, rb.I, rb.group, n_boot)
-            r2, l2, h2 = corr_ci(rb.S, rb.I, rb.group, n_boot)
-            rows.append({"렌즈": ln, "n": len(rb), "r(방해 뜻 우세도, I) [CI]": ci(r1, l1, h1),
-                         "r(S, I) [CI] (같은 문항)": ci(r2, l2, h2)})
+        for tb in ("translate", "translate_ctx"):
+            for ln in sorted(set(items.lens)):
+                rb = items[(items.dataset == "B") & (items.task == tb) & (items.lens == ln)]
+                rb = rb.dropna(subset=["I"]).merge(dom, left_on="id", right_on="_bid")
+                if len(rb) < 6:
+                    continue
+                r1, l1, h1 = corr_ci(rb.dom_distractor, rb.I, rb.group, n_boot)
+                r2, l2, h2 = corr_ci(rb.S, rb.I, rb.group, n_boot)
+                rows.append({"B 과제": tb, "렌즈": ln, "n": len(rb), "r(방해 뜻 우세도, I) [CI]": ci(r1, l1, h1),
+                             "r(S, I) [CI] (같은 문항)": ci(r2, l2, h2)})
     if rows:
         md += ["### 4b. B 뜻 빈도 비율 (국립국어원 어휘 의미 분석 말뭉치)\n",
                "방해 뜻이 흔할수록 간섭이 커야 정상이다(eDom의 한국어 대응). 두 뜻 합이 적은 단어(dom_ok=False)는 뺐다.\n",
@@ -249,10 +255,10 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
     # ---- 5. 어종별
     rows = []
     for (ds, task, ln, et), g in items.dropna(subset=["I"]).groupby(["dataset", "task", "lens", "etym"]):
-        if task != "translate" or len(g) < 8:
+        if task not in ("translate", "translate_ctx") or len(g) < 8:
             continue
         r, lo_, hi_ = corr_ci(g.S, g.I, g.group, n_boot)
-        rows.append(dict(dataset=ds, lens=ln, etym=et, n=len(g), r=r, ci_lo=lo_, ci_hi=hi_,
+        rows.append(dict(dataset=ds, task=task, lens=ln, etym=et, n=len(g), r=r, ci_lo=lo_, ci_hi=hi_,
                          mean_I=g.I.mean(), mean_p=g.p.mean()))
     if rows:
         md += ["## 5. 어종별 (8문항 이상인 집단만)\n",

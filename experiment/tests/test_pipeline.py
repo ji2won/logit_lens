@@ -87,7 +87,13 @@ def main():
         bdraft = bdraft.merge(sf[["id", "nikl_dom_target", "nikl_dom_ok"]], on="id")
         bdraft["nikl_dom_ok"] = True
     bdraft.head(12).to_csv(tmp / "B.csv", index=False)
+    # 예문 틀: 앞 10행만 붙여 ctx가 없는 문항은 translate_ctx를 건너뛰는지도 본다
+    pd.DataFrame({"id": bdraft.id.head(10), "ctx": "어제 {W}{을/를} 보았다."}).to_csv(tmp / "B_ctx.csv", index=False)
     B = load_B(tmp / "B.csv")
+    assert sum(bool(it.ctx) for it in B) == 10
+    assert prompts.build("translate_ctx", "v4", "배", ctx="{W}{을/를} 샀다.").endswith("「배를 샀다.」에서 「배」의 중국어는「")
+    assert prompts.fill("{W}{으로/로} {W}{와/과}", "연필") == "연필로 연필과"
+    assert prompts.fill("{W}{으로/로} {W}{이/가}", "부인") == "부인으로 부인이"
     pd.DataFrame([dict(id="C001", ko="바다", zh="海", en="sea", en_unrelated="chair", zh_unrelated="椅子", etym="고유어"),
                   dict(id="C002", ko="산", zh="山", en="mountain", en_unrelated="spoon", zh_unrelated="勺子", etym="고유어")]
                  ).to_csv(tmp / "C.csv", index=False)
@@ -96,6 +102,7 @@ def main():
     corpus = ["봄이 오면 꽃이 핀다.", "春天来了，花开了。", "한국어 문장입니다.", "这是中文句子。"] * 10
     texts = corpus + [prompts.build(t, v, it.ko, it.en_hint) + it.zh_answer + it.zh_distractor
                       for it in A + B + C for t in ("translate", "translate_en", "repeat") for v in ("v1", "v2", "v3", "v4")]
+    texts += [prompts.build("translate_ctx", v, it.ko, ctx="어제 {W}{을/를} 보았다.") + "을를" for it in B for v in ("v1", "v2", "v3", "v4")]
     texts += [c for it in A + B + C for c in it.controls] + [w for it in A + B + C for w in it.probes.values()]
     tok = CharTokenizer(texts)
     lm = LM(FakeLM(len(tok.itos)), tok, "cpu")
@@ -109,13 +116,13 @@ def main():
     p = torch.load(tmp / "lenses.pt")
     assert torch.allclose(p["W"][-1], torch.eye(p["W"].shape[-1]))
 
-    run_all(lm, {"A": A, "B": B, "C": C}, {"A": ["translate", "translate_en"], "B": ["translate"], "C": ["translate", "repeat"]},
+    run_all(lm, {"A": A, "B": B, "C": C}, {"A": ["translate", "translate_en"], "B": ["translate", "translate_ctx"], "C": ["translate", "repeat"]},
             ["v1", "v2", "v3", "v4"], lenses, tmp)
     out = pd.read_csv(tmp / "outputs.csv")
     lens = pd.read_csv(tmp / "lens.csv.gz")
     # A translate/translate_en: 입력+대조어(대조어 영어는 A_control_en.csv), B: 입력+대조어, C translate/repeat: 입력만
     n_a = sum((1 + len(it.controls)) * 4 + (1 + len(it.controls) if it.en_controls else 1) * 4 for it in A)
-    n_prompts = (n_a + sum((1 + len(it.controls)) * 4 for it in B)
+    n_prompts = (n_a + sum((1 + len(it.controls)) * 4 * (2 if it.ctx else 1) for it in B)
                  + len(C) * 4 * 2)
     assert len(out) == n_prompts, (len(out), n_prompts)
     assert len(lens) == n_prompts * 3 * (lm.n_layers + 1)

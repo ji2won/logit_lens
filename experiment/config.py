@@ -20,7 +20,7 @@ DATASETS = {
 }
 TASKS = {
     "A": ["translate", "translate_en"],   # translate_en = 양성 대조(영어 중간 단계를 프롬프트에 넣음)
-    "B": ["translate"],                   # 음성 대조
+    "B": ["translate", "translate_ctx"],  # 음성 대조. translate_ctx = 예문으로 뜻을 정해 준 조건(B_ctx.csv)
     "C": ["translate", "repeat"],         # 무관한 영어가 오르는지 + 반복 과제
 }
 VERSIONS = ["v1", "v2", "v3", "v4"]       # 프롬프트 4가지
