@@ -3239,3 +3239,483 @@ B,B120,수면,한자어쌍,translate,v3,수면,水面,睡眠,"睡眠
 ",睡眠,False,True,False,True
 B,B120,수면,한자어쌍,translate,v4,수면,水面,睡眠,"睡眠」
 「수영」의 중국어는「",睡眠,False,True,False,True
+B,B001,배,고유어쌍,translate_ctx,v1,배,船,梨,"船
+문장：그녀는 책을 읽고",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v2,배,船,梨,"船
+그는 책을 읽고 있다. / 책",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v3,배,船,梨,"船
+句子：그녀는 책을 읽고",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v4,배,船,梨,"船」
+「그는 책을 읽고 있다.」",船,True,False,True,False
+B,B002,배,고유어쌍,translate_ctx,v1,배,梨,船,"船
+문장：집에 가는 길에 비",船,False,True,False,True
+B,B002,배,고유어쌍,translate_ctx,v2,배,梨,船,"船
+그는 책을 읽고 있다. / 책",船,False,True,False,True
+B,B002,배,고유어쌍,translate_ctx,v3,배,梨,船,"船
+句子：그녀는 책을 읽고",船,False,True,False,True
+B,B002,배,고유어쌍,translate_ctx,v4,배,梨,船,"船」
+「그는 책을 읽고 있다.」",船,False,True,False,True
+B,B003,눈,고유어쌍,translate_ctx,v1,눈,眼睛,雪,"眼
+문장：그녀는 학교에 가는",眼,False,False,False,False
+B,B003,눈,고유어쌍,translate_ctx,v2,눈,眼睛,雪,"眼睛
+그는 책을 읽고 있다. / 책",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v3,눈,眼睛,雪,"眼睛
+句子：그녀는 학교에 가는",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v4,눈,眼睛,雪,"眼睛」
+「그는 책을 읽고 있다.」",眼睛,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v1,눈,雪,眼睛,"雪
+문장：그녀는 학교에 가는",雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v2,눈,雪,眼睛,"雪
+아침에 나가 보니 눈이 온 세",雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v3,눈,雪,眼睛,"雪
+句子：그녀는 학교에 가기",雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v4,눈,雪,眼睛,"雪」
+「그는 책을 읽고 있다.」",雪,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v1,밤,夜晚,栗子,"夜
+문장：그녀는 학교에 가는",夜,False,False,False,False
+B,B005,밤,고유어쌍,translate_ctx,v2,밤,夜晚,栗子,"夜
+그는 책을 읽고 있다. / 책",夜,False,False,False,False
+B,B005,밤,고유어쌍,translate_ctx,v3,밤,夜晚,栗子,"夜
+句子：그녀는 책을 읽고",夜,False,False,False,False
+B,B005,밤,고유어쌍,translate_ctx,v4,밤,夜晚,栗子,"夜」
+「그는 책을 읽고 있다.」",夜,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v1,밤,栗子,夜晚,"夜
+문장：그녀는 책을 읽고",夜,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v2,밤,栗子,夜晚,"夜
+다음 문장에 쓰인 한국어 단",夜,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v3,밤,栗子,夜晚,"夜
+句子：그녀는 책을 읽고",夜,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v4,밤,栗子,夜晚,"夜」
+「그는 책을 읽고 있다.」",夜,False,False,False,False
+B,B009,말,고유어쌍,translate_ctx,v1,말,马,话,"马
+문장：그녀는 학교에 가는",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v2,말,马,话,"马
+다음 문장에 쓰인 한국어 단",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v3,말,马,话,"马
+句子：그녀는 학교에 가는",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v4,말,马,话,"马」
+「그는 학교에 가는 길에 비",马,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v1,말,话,马,"话
+문장：그의 말은 길고 어려",话,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v2,말,话,马,"话
+그는 학교에 가는 길에 비가",话,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v3,말,话,马,"话
+句子：그의 말은 길고 어려",话,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v4,말,话,马,"话」
+「그는 학교에 가는 길에 비",话,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v1,차,车,茶,"汽车
+문장：그녀는 책을 읽었다",汽车,False,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v2,차,车,茶,"汽车
+다음 문장에 쓰인 한국어 단",汽车,False,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v3,차,车,茶,"车
+句子：그녀는 책을 읽었다",车,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v4,차,车,茶,"汽车」
+「그는 책을 읽고 있다.」",汽车,False,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v1,차,茶,车,"茶
+문장：그녀는 책을 읽고",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v2,차,茶,车,"茶
+다음 문장에 쓰인 한국어 단",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v3,차,茶,车,"茶
+句子：그녀는 책을 읽고",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v4,차,茶,车,"茶」
+「그는 책을 읽고 있다.」",茶,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v1,병,瓶子,病,"瓶子
+문장：그녀는 책을 읽",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v2,병,瓶子,病,"瓶子
+다음 문장에 쓰인 한국어",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v3,병,瓶子,病,"瓶子
+句子：그녀는 책을 읽",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v4,병,瓶子,病,"瓶子」
+「그는 책을 읽고 있다.",瓶子,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v1,병,病,瓶子,"病
+문장：그녀는 학교에 가는",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v2,병,病,瓶子,"病
+그는 학교에 가는 길에 비가",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v3,병,病,瓶子,"病
+句子：그녀는 학교에 가는",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v4,병,病,瓶子,"病」
+「그는 학교에 가는 길에 비",病,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v1,사과,苹果,道歉,"苹果
+문장：그녀는 책을 읽고",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v2,사과,苹果,道歉,"苹果
+그는 책을 읽고 있다. / 책",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v3,사과,苹果,道歉,"苹果
+句子：그녀는 책을 읽고",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v4,사과,苹果,道歉,"苹果」
+「그는 책을 읽고 있다.」",苹果,True,False,True,False
+B,B016,사과,한자어쌍,translate_ctx,v1,사과,道歉,苹果,"苹果
+문장：그녀는 학교에 가는",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v2,사과,道歉,苹果,"苹果
+그는 책을 읽고 있다. / 책",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v3,사과,道歉,苹果,"苹果
+句子：그녀는 학교에 가는",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v4,사과,道歉,苹果,"苹果」
+「그는 학교에 가는 길에 비",苹果,False,True,False,True
+B,B017,굴,혼합,translate_ctx,v1,굴,牡蛎,洞穴,"蛤
+문장：그녀는 학교에 가",蛤,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v2,굴,牡蛎,洞穴,"虾
+다음 문장에 쓰인 한국어",虾,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v3,굴,牡蛎,洞穴,"蛤蜊
+句子：그녀는 학교",蛤蜊,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v4,굴,牡蛎,洞穴,"海鲜」
+「그는 책을 읽고 있다.",海鲜,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v1,굴,洞穴,牡蛎,"洞穴
+문장：그녀는 학교에 가",洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v2,굴,洞穴,牡蛎,"洞
+그는 학교에 가는 길에 비가",洞,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v3,굴,洞穴,牡蛎,"洞穴
+句子：그녀는 학교에 가",洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v4,굴,洞穴,牡蛎,"洞」
+「그는 학교에 가는 길에 비",洞,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v1,벌,蜜蜂,惩罚,"蜂
+문장：그녀는 학교에 가",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v2,벌,蜜蜂,惩罚,"蜂
+그는 책을 읽고 있다. /",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v3,벌,蜜蜂,惩罚,"蜂
+句子：그녀는 책을 읽",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v4,벌,蜜蜂,惩罚,"蜂」
+「그는 책을 읽고 있다.",蜂,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v1,벌,惩罚,蜜蜂,"罚
+문장：그 학생은 선생님에게서",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v2,벌,惩罚,蜜蜂,"罚
+그 학생은 선생님에게서 벌을 받",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v3,벌,惩罚,蜜蜂,"罚
+句子：그 학생은 선생님에게서",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v4,벌,惩罚,蜜蜂,"罚款」
+「그 학생은 선생님에게서 벌",罚款,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v1,사기,诈骗,士气,"骗子
+문장：그는 사기 �",骗子,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v2,사기,诈骗,士气,"骗子
+그는 사기 혐의로",骗子,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v3,사기,诈骗,士气,"骗子
+句子：그는 학교에 가",骗子,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v4,사기,诈骗,士气,"骗子」
+「그는 사기 혐의",骗子,False,False,False,False
+B,B026,사기,한자어쌍,translate_ctx,v1,사기,士气,诈骗,"士气
+문장：그녀는 학교에 가",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v2,사기,士气,诈骗,"士气
+그는 학교에 가는 길에 비",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v3,사기,士气,诈骗,"士气
+句子：그녀는 학교에 가",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v4,사기,士气,诈骗,"士气」
+「그는 학교에 가는 길에",士气,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v1,의사,医生,意图,"医生
+문장：그는 학교에 가는",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v2,의사,医生,意图,"医生
+그는 학교에 가는 길에 비",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v3,의사,医生,意图,"医生
+句子：그는 학교에 가는",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v4,의사,医生,意图,"医生」
+「그는 학교에 가는 길에",医生,True,False,True,False
+B,B040,의사,한자어쌍,translate_ctx,v1,의사,意图,医生,"意见
+문장：그는 자신의 의사를 분명",意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v2,의사,意图,医生,"意见
+그는 자신의 의사를 분명히 밝�",意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v3,의사,意图,医生,"意见
+句子：그는 자신의 의사를 분명",意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v4,의사,意图,医生,"意见」
+「그는 자신의 의사를 분명히 밝",意见,False,False,False,False
+B,B041,전기,한자어쌍,translate_ctx,v1,전기,电,传记,"电力
+문장：그녀는 학교에 가",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v2,전기,电,传记,"电力
+그는 책을 읽고 있다. /",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v3,전기,电,传记,"电
+句子：그녀는 학교에 가기",电,True,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v4,전기,电,传记,"电力」
+「그는 책을 읽고 있다.",电力,False,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v1,전기,传记,电,"传记
+문장：그녀는 학교에 가",传记,True,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v2,전기,传记,电,"传记
+그는 책을 읽고 있다. /",传记,True,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v3,전기,传记,电,"书籍
+句子：그녀는 학교에 가",书籍,False,False,False,False
+B,B042,전기,한자어쌍,translate_ctx,v4,전기,传记,电,"传记」
+「그는 학교에 가는 길에",传记,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v1,가구,家具,住户,"家具
+문장：그녀는 책을 읽",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v2,가구,家具,住户,"家具
+그녀는 책을 읽고 있다.",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v3,가구,家具,住户,"家具
+句子：그녀는 책을 읽",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v4,가구,家具,住户,"家具」
+「그는 책을 읽고 있다.",家具,True,False,True,False
+B,B046,가구,한자어쌍,translate_ctx,v1,가구,住户,家具,"家具
+문장：그녀는 학교에 가",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v2,가구,住户,家具,"家具
+그는 학교에 가는 길에 비",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v3,가구,住户,家具,"家具
+句子：이번 주에 시험을",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v4,가구,住户,家具,"家具」
+「그는 학교에 가는 길에",家具,False,True,False,True
+B,B047,풀,고유어쌍,translate_ctx,v1,풀,草,胶水,"草
+문장：그녀는 책을 읽고",草,True,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v2,풀,草,胶水,"草
+그는 책을 읽고 있다. / 책",草,True,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v3,풀,草,胶水,"草
+句子：그녀는 책을 읽고",草,True,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v4,풀,草,胶水,"草」
+「그는 책을 읽고 있다.」",草,True,False,True,False
+B,B048,풀,고유어쌍,translate_ctx,v1,풀,胶水,草,"草
+문장：그녀는 책을 읽고",草,False,True,False,True
+B,B048,풀,고유어쌍,translate_ctx,v2,풀,胶水,草,"花
+그녀는 책을 읽고 있다. /",花,False,False,False,False
+B,B048,풀,고유어쌍,translate_ctx,v3,풀,胶水,草,"草
+句子：책을 읽고 잠을 자",草,False,True,False,True
+B,B048,풀,고유어쌍,translate_ctx,v4,풀,胶水,草,"草」
+「그녀는 책을 읽고 있다.",草,False,True,False,True
+B,B051,바람,고유어쌍,translate_ctx,v1,바람,风,愿望,"风
+문장：그녀는 책을 읽고",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v2,바람,风,愿望,"风
+그는 책을 읽고 있다. / 책",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v3,바람,风,愿望,"风
+句子：그녀는 빨간색의",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v4,바람,风,愿望,"风」
+「그는 책을 읽고 있다.」",风,True,False,True,False
+B,B052,바람,고유어쌍,translate_ctx,v1,바람,愿望,风,"风
+문장：그녀는 학교에 가는",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v2,바람,愿望,风,"风
+그는 책을 읽고 있다. / 책",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v3,바람,愿望,风,"风
+句子：새벽에 일어나서 책",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v4,바람,愿望,风,"风」
+「그는 책을 읽고 있다.」",风,False,True,False,True
+B,B053,거리,혼합,translate_ctx,v1,거리,街道,距离,"街
+문장：그녀는 학교에 가는",街,False,False,False,False
+B,B053,거리,혼합,translate_ctx,v2,거리,街道,距离,"街道
+그는 학교에 가는 길에 비가",街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v3,거리,街道,距离,"街
+句子：그녀는 학교에 가는",街,False,False,False,False
+B,B053,거리,혼합,translate_ctx,v4,거리,街道,距离,"街道」
+「그는 학교에 가는 길에 비",街道,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v1,거리,距离,街道,"距离
+문장：그녀는 학교에 가기",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v2,거리,距离,街道,"距离
+그는 책을 읽고 있다. / 책",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v3,거리,距离,街道,"距离
+句子：그녀는 학교에 가기",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v4,거리,距离,街道,"距离」
+「그녀는 학교에 가는 길에",距离,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v1,정원,花园,名额,"花园
+문장：그녀는 책을 읽",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v2,정원,花园,名额,"花园
+그는 책을 읽고 있다. /",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v3,정원,花园,名额,"花园
+句子：그녀는 책을 읽",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v4,정원,花园,名额,"花园」
+「그는 책을 읽고 있다.",花园,True,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v1,정원,名额,花园,"种数
+문장：그녀는 학교에 가",种数,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v2,정원,名额,花园,"园子
+그는 학교에 가는 길에 비",园子,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v3,정원,名额,花园,"园地
+句子：학교에 가는 길에",园地,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v4,정원,名额,花园,"学生」
+「그는 학교에 가는 길에 비",学生,False,False,False,False
+B,B059,사고,한자어쌍,translate_ctx,v1,사고,事故,思考,"事故
+문장：그녀는 학교에 가기",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v2,사고,事故,思考,"事故
+그는 학교에 가는 길에 비가",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v3,사고,事故,思考,"事故
+句子：그녀는 학교에 가기",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v4,사고,事故,思考,"事故」
+「그는 학교에 가는 길에 비",事故,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v1,사고,思考,事故,"思维
+문장：그는 학교에 가는",思维,False,False,False,False
+B,B060,사고,한자어쌍,translate_ctx,v2,사고,思考,事故,"思维
+그는 학교에 가는 길에 비",思维,False,False,False,False
+B,B060,사고,한자어쌍,translate_ctx,v3,사고,思考,事故,"思维
+句子：그는 학교에 가는",思维,False,False,False,False
+B,B060,사고,한자어쌍,translate_ctx,v4,사고,思考,事故,"思维」
+「그는 학교에 가는 길에",思维,False,False,False,False
+B,B063,회의,한자어쌍,translate_ctx,v1,회의,会议,怀疑,"会议
+문장：그녀는 책을 읽고",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v2,회의,会议,怀疑,"会议
+그는 책을 읽고 있다. / 책",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v3,회의,会议,怀疑,"会议
+句子：그녀는 학교에 가기",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v4,회의,会议,怀疑,"会议」
+「그는 책을 읽고 있다.」",会议,True,False,True,False
+B,B064,회의,한자어쌍,translate_ctx,v1,회의,怀疑,会议,"会议
+문장：그녀는 학교에 가는",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v2,회의,怀疑,会议,"会议
+그는 학교에 가는 길에 비가",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v3,회의,怀疑,会议,"会议
+句子：그녀는 학교에 가는",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v4,회의,怀疑,会议,"会议」
+「그는 그날 밤에 집에 돌아",会议,False,True,False,True
+B,B065,신부,한자어쌍,translate_ctx,v1,신부,新娘,神父,"新娘
+문장：그녀는 학교에 가",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v2,신부,新娘,神父,"新娘
+다음 문장에 쓰인 한국어",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v3,신부,新娘,神父,"新娘
+句子：그녀는 학교에 가",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v4,신부,新娘,神父,"新娘」
+「그는 학교에 가는 길에",新娘,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v1,신부,神父,新娘,"神父
+문장：그는 학교를 졸업하고",神父,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v2,신부,神父,新娘,"神父
+그는 학교를 졸업하고 직장을 찾",神父,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v3,신부,神父,新娘,"神父
+句子：그는 학교에 가는",神父,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v4,신부,神父,新娘,"神父」
+「그는 학교를 졸업하고 직장을",神父,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v1,화장,化妆,火葬,"化妆
+문장：그녀는 화장",化妆,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v2,화장,化妆,火葬,"化妆品
+그는 책을 읽고 있다",化妆品,False,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v3,화장,化妆,火葬,"化妆
+句子：그녀는 책을",化妆,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v4,화장,化妆,火葬,"化妆」
+「그는 책을 읽고 있다",化妆,True,False,True,False
+B,B070,화장,한자어쌍,translate_ctx,v1,화장,火葬,化妆,"葬礼
+문장：그녀는 학교에",葬礼,False,False,False,False
+B,B070,화장,한자어쌍,translate_ctx,v2,화장,火葬,化妆,"殡仪馆
+그는 학교에 가는 길",殡仪馆,False,False,False,False
+B,B070,화장,한자어쌍,translate_ctx,v3,화장,火葬,化妆,"葬礼
+句子：그녀는 학교에",葬礼,False,False,False,False
+B,B070,화장,한자어쌍,translate_ctx,v4,화장,火葬,化妆,"葬礼」
+「그는 학교에 가는 길",葬礼,False,False,False,False
+B,B081,대가,한자어쌍,translate_ctx,v1,대가,代价,大师,"代价
+문장：그녀는 학교에 가",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v2,대가,代价,大师,"代价
+그는 학교에 가는 길에 비",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v3,대가,代价,大师,"报酬
+句子：그녀는 학교에",报酬,False,False,False,False
+B,B081,대가,한자어쌍,translate_ctx,v4,대가,代价,大师,"损失」
+「그는 학교에 가는 길에",损失,False,False,False,False
+B,B082,대가,한자어쌍,translate_ctx,v1,대가,大师,代价,"大师
+문장：그는 서예 분야의",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v2,대가,大师,代价,"大师
+그는 학교에 가는 길에 비",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v3,대가,大师,代价,"大师
+句子：그는 학교에 가는",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v4,대가,大师,代价,"大师」
+「그는 서예 분야의 대가",大师,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v1,고장,故障,家乡,"故障
+문장：그녀는 학교에 가",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v2,고장,故障,家乡,"故障
+그는 책을 읽고 있다. /",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v3,고장,故障,家乡,"故障
+句子：그녀는 책을 읽",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v4,고장,故障,家乡,"故障」
+「그는 책을 읽고 있다.",故障,True,False,True,False
+B,B084,고장,혼합,translate_ctx,v1,고장,家乡,故障,"地名
+문장：그는 인삼으로 유",地名,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v2,고장,家乡,故障,"地
+그는 학교를 졸업했다. / 학교→",地,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v3,고장,家乡,故障,"地方
+句子：그는 인삼으로 유명",地方,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v4,고장,家乡,故障,"地名」
+「그는 인삼으로 유명한",地名,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v1,감사,感谢,审计,"感谢
+문장：그녀는 학교에 가",感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v2,감사,感谢,审计,"感谢
+학교에 가는 길에 비가 내",感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v3,감사,感谢,审计,"感谢
+句子：그녀는 학교에 가",感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v4,감사,感谢,审计,"感谢」
+「그는 책을 읽고 있다.",感谢,True,False,True,False
+B,B094,감사,한자어쌍,translate_ctx,v1,감사,审计,感谢,"检查
+문장：그녀는 학교에 가는",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v2,감사,审计,感谢,"检查
+그는 학교에 다니는 동안 친구를",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v3,감사,审计,感谢,"检查
+句子：그녀는 학교에 가기",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v4,감사,审计,感谢,"检查」
+「그는 학교에 가는 길에 비",检查,False,False,False,False
+B,B097,사자,한자어쌍,translate_ctx,v1,사자,狮子,使者,"狮子
+문장：그녀는 학교에",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v2,사자,狮子,使者,"狮子
+그는 책을 읽고 있다.",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v3,사자,狮子,使者,"狮子
+句子：그녀는 책을",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v4,사자,狮子,使者,"狮子」
+「그는 학교에 가는 길",狮子,True,False,True,False
+B,B098,사자,한자어쌍,translate_ctx,v1,사자,使者,狮子,"狮子
+문장：그는 책을 읽",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v2,사자,使者,狮子,"狮子
+그는 책을 읽고 있다.",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v3,사자,使者,狮子,"狮子
+句子：그는 책을 읽",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v4,사자,使者,狮子,"狮子」
+「그는 학교에 가는 길",狮子,False,True,False,True
+B,B105,지도,한자어쌍,translate_ctx,v1,지도,地图,指导,"地图
+문장：그녀는 책을 읽",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v2,지도,地图,指导,"地图
+그는 책을 읽고 있다. /",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v3,지도,地图,指导,"地图
+句子：그녀는 책을 읽",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v4,지도,地图,指导,"地图」
+「그는 책을 읽고 있다.",地图,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v1,지도,指导,地图,"指示
+문장：그녀는 책을 읽",指示,False,False,False,False
+B,B106,지도,한자어쌍,translate_ctx,v2,지도,指导,地图,"指导
+그는 책을 읽고 있다. / 책",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v3,지도,指导,地图,"指导
+句子：그녀는 책을 읽고",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v4,지도,指导,地图,"指导」
+「그는 학교에 가는 길에 비",指导,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v1,소화,消化,灭火,"消化
+문장：그녀는 학교에 가",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v2,소화,消化,灭火,"消化
+그는 책을 읽고 있다. /",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v3,소화,消化,灭火,"消化
+句子：그녀는 학교에 가",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v4,소화,消化,灭火,"消化」
+「그는 학교에 가는 길에",消化,True,False,True,False
+B,B112,소화,한자어쌍,translate_ctx,v1,소화,灭火,消化,"消防
+문장：그녀는 학교에 가",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v2,소화,灭火,消化,"消防
+그는 학교에 가는 길에 비",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v3,소화,灭火,消化,"消防
+句子：그녀는 학교에 가",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v4,소화,灭火,消化,"消防」
+「그는 학교에 가는 길에",消防,False,False,False,False
+B,B115,가사,한자어쌍,translate_ctx,v1,가사,歌词,家务,"歌词
+문장：그녀는 학교에 가",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v2,가사,歌词,家务,"歌词
+그는 책을 읽고 있다. /",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v3,가사,歌词,家务,"歌词
+句子：그녀는 학교에 가",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v4,가사,歌词,家务,"歌词」
+「그는 책을 읽고 있다.",歌词,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v1,가사,家务,歌词,"歌曲
+문장：그녀는 학교에 가",歌曲,False,False,False,False
+B,B116,가사,한자어쌍,translate_ctx,v2,가사,家务,歌词,"家务
+그는 책을 읽고 있다. /",家务,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v3,가사,家务,歌词,"歌曲
+句子：그녀는 책을 읽",歌曲,False,False,False,False
+B,B116,가사,한자어쌍,translate_ctx,v4,가사,家务,歌词,"家务」
+「그는 책을 읽고 있다.",家务,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v1,부인,妻子,否认,"妻子
+문장：그녀는 학교에 가",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v2,부인,妻子,否认,"妻子
+그는 책을 읽고 있다. /",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v3,부인,妻子,否认,"妻子
+句子：그녀는 학교에 가",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v4,부인,妻子,否认,"妻子」
+「그는 학교에 가는 길에",妻子,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v1,부인,否认,妻子,"否认
+문장：그는 책을 읽고",否认,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v2,부인,否认,妻子,"否认
+그는 학교에 가는 길에 비",否认,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v3,부인,否认,妻子,"否认
+句子：그녀는 책을 읽",否认,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v4,부인,否认,妻子,"否认」
+「그는 학교에 가는 길에",否认,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v1,수면,睡眠,水面,"睡眠
+문장：그녀는 학교에 가",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v2,수면,睡眠,水面,"睡眠
+그는 책을 읽고 있다. /",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v3,수면,睡眠,水面,"睡眠
+句子：그녀는 학교에 가",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v4,수면,睡眠,水面,"睡眠」
+「그는 책을 읽고 있다.",睡眠,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v1,수면,水面,睡眠,"水面
+문장：그녀는 학교에 가",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v2,수면,水面,睡眠,"水面
+그는 책을 읽고 있다. /",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v3,수면,水面,睡眠,"水面
+句子：그녀는 책을 읽",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v4,수면,水面,睡眠,"水面」
+「그는 책을 읽고 있다.",水面,True,False,True,False
