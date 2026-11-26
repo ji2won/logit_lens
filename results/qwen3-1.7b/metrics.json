@@ -195,6 +195,132 @@
    "measure": "렌즈 S_diff (vanilla)",
    "alpha": 0.9821329823390821,
    "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S (affine)",
+   "alpha": 0.9630201598537511,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S_diff (affine)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S (mean)",
+   "alpha": 0.8649200431150452,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S_diff (mean)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S (vanilla)",
+   "alpha": 0.8084096623433952,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "measure": "렌즈 S_diff (vanilla)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S (affine)",
+   "alpha": 0.9262186510141804,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S_diff (affine)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S (mean)",
+   "alpha": 0.9695105810801172,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S_diff (mean)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S (vanilla)",
+   "alpha": 0.9469118084278678,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "measure": "렌즈 S_diff (vanilla)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S (affine)",
+   "alpha": 0.9618585578780123,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S_diff (affine)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S (mean)",
+   "alpha": 0.9774857802823167,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S_diff (mean)",
+   "alpha": NaN,
+   "통과": "X"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S (vanilla)",
+   "alpha": 0.9689760429233203,
+   "통과": "O"
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "measure": "렌즈 S_diff (vanilla)",
+   "alpha": NaN,
+   "통과": "X"
   }
  ],
  "correlation": [
@@ -993,6 +1119,98 @@
    "r [CI]": "0.141 [-0.053, 0.330]"
   }
  ],
+ "C": [
+  {
+   "task": "repeat",
+   "lens": "affine",
+   "lp_target": 6.800375649253362e-05,
+   "lp_unrelated": 6.477649055521474e-05,
+   "mass_en": 0.040702588748803316,
+   "mass_en_word": 0.012302015059886666,
+   "mass_zh": 0.10987078711206122,
+   "mass_ko": 0.25955445054403004
+  },
+  {
+   "task": "repeat",
+   "lens": "mean",
+   "lp_target": 0.002162115366114014,
+   "lp_unrelated": 8.300642433012003e-05,
+   "mass_en": 0.35612843132866245,
+   "mass_en_word": 0.058390453097560614,
+   "mass_zh": 0.4087981971447374,
+   "mass_ko": 0.00452612904727905
+  },
+  {
+   "task": "repeat",
+   "lens": "vanilla",
+   "lp_target": 0.0003811695891946941,
+   "lp_unrelated": 0.00023564159137598524,
+   "mass_en": 0.34909150554056656,
+   "mass_en_word": 0.023721701149746883,
+   "mass_zh": 0.10549615872530325,
+   "mass_ko": 0.0023853758959281
+  },
+  {
+   "task": "translate",
+   "lens": "affine",
+   "lp_target": 9.097319372171384e-05,
+   "lp_unrelated": 6.174156467350779e-05,
+   "mass_en": 0.020164340225065903,
+   "mass_en_word": 0.005933454031805747,
+   "mass_zh": 0.3445993370029598,
+   "mass_ko": 0.030374038160961358
+  },
+  {
+   "task": "translate",
+   "lens": "mean",
+   "lp_target": 0.00449754685579895,
+   "lp_unrelated": 2.3866578593602915e-05,
+   "mass_en": 0.2954765329385911,
+   "mass_en_word": 0.045531280049509314,
+   "mass_zh": 0.5852104342494372,
+   "mass_ko": 0.0058217405781578
+  },
+  {
+   "task": "translate",
+   "lens": "vanilla",
+   "lp_target": 0.002292912972275289,
+   "lp_unrelated": 0.0002952190091568464,
+   "mass_en": 0.27717958333546494,
+   "mass_en_word": 0.026135644494975747,
+   "mass_zh": 0.34211207092374296,
+   "mass_ko": 0.002291817355374977
+  },
+  {
+   "task": "translate_to_en",
+   "lens": "affine",
+   "lp_target": 0.00710225617406047,
+   "lp_unrelated": 0.0005849764462134396,
+   "mass_en": 0.05271522351649036,
+   "mass_en_word": 0.0071977112578538605,
+   "mass_zh": 0.08122145064313895,
+   "mass_ko": 0.025972511762244
+  },
+  {
+   "task": "translate_to_en",
+   "lens": "mean",
+   "lp_target": 0.0363974653550064,
+   "lp_unrelated": 0.00013725661843616606,
+   "mass_en": 0.45971129274287786,
+   "mass_en_word": 0.09735119131453335,
+   "mass_zh": 0.3769003073670288,
+   "mass_ko": 0.0015730533403186234
+  },
+  {
+   "task": "translate_to_en",
+   "lens": "vanilla",
+   "lp_target": 0.026183226126265665,
+   "lp_unrelated": 0.0006732056674257816,
+   "mass_en": 0.4445358804726155,
+   "mass_en_word": 0.04760483559689575,
+   "mass_zh": 0.11353779225951428,
+   "mass_ko": 0.0015569605977589958
+  }
+ ],
  "language_mass": [
   {
    "dataset": "A",
@@ -1353,6 +1571,276 @@
    "en_word": 0.009926239768661195,
    "zh": 0.9811548873155551,
    "ko": 0.00027720732034516014
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "affine",
+   "band": "초반 1–6",
+   "en": 0.0770642018978981,
+   "en_word": 0.02117216470152482,
+   "zh": 0.20893134622350792,
+   "ko": 0.24872785236968298
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "affine",
+   "band": "중간 7–21",
+   "en": 0.040702588748803316,
+   "en_word": 0.012302015059886666,
+   "zh": 0.10987078711206122,
+   "ko": 0.25955445054403004
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "affine",
+   "band": "후반 22–27",
+   "en": 0.0025525199464399135,
+   "en_word": 0.0005066153425806605,
+   "zh": 0.0013678074046322428,
+   "ko": 0.970700578833465
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "mean",
+   "band": "초반 1–6",
+   "en": 0.26831894340891554,
+   "en_word": 0.02740093515852054,
+   "zh": 0.4240718397327019,
+   "ko": 0.004306366064205755
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "mean",
+   "band": "중간 7–21",
+   "en": 0.35612843132866245,
+   "en_word": 0.058390453097560614,
+   "zh": 0.4087981971447374,
+   "ko": 0.00452612904727905
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "mean",
+   "band": "후반 22–27",
+   "en": 0.2991785873616111,
+   "en_word": 0.01639974542235588,
+   "zh": 0.1480964690282778,
+   "ko": 0.45141626532598783
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "vanilla",
+   "band": "초반 1–6",
+   "en": 0.5600819277514205,
+   "en_word": 0.010944516107924468,
+   "zh": 0.05891128079398131,
+   "ko": 0.0029154189487505832
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "vanilla",
+   "band": "중간 7–21",
+   "en": 0.34909150554056656,
+   "en_word": 0.023721701149746883,
+   "zh": 0.10549615872530325,
+   "ko": 0.0023853758959281
+  },
+  {
+   "dataset": "C",
+   "task": "repeat",
+   "lens": "vanilla",
+   "band": "후반 22–27",
+   "en": 0.09106065922340338,
+   "en_word": 0.00961586651585738,
+   "zh": 0.16309845414163318,
+   "ko": 0.5088775865471741
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "affine",
+   "band": "초반 1–6",
+   "en": 0.06800724764585829,
+   "en_word": 0.01687141961475945,
+   "zh": 0.265239288533692,
+   "ko": 0.2231322977276143
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "affine",
+   "band": "중간 7–21",
+   "en": 0.020164340225065903,
+   "en_word": 0.005933454031805747,
+   "zh": 0.3445993370029598,
+   "ko": 0.030374038160961358
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "affine",
+   "band": "후반 22–27",
+   "en": 0.0064381074320676935,
+   "en_word": 0.004723110951592305,
+   "zh": 0.9920943896686631,
+   "ko": 0.00012540145043658086
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "mean",
+   "band": "초반 1–6",
+   "en": 0.24405563481673564,
+   "en_word": 0.020947593400243904,
+   "zh": 0.482273219671697,
+   "ko": 0.004957179456410927
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "mean",
+   "band": "중간 7–21",
+   "en": 0.2954765329385911,
+   "en_word": 0.045531280049509314,
+   "zh": 0.5852104342494372,
+   "ko": 0.0058217405781578
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "mean",
+   "band": "후반 22–27",
+   "en": 0.06707626458999746,
+   "en_word": 0.062311562026553136,
+   "zh": 0.9321762647570696,
+   "ko": 1.0801793751696802e-05
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "vanilla",
+   "band": "초반 1–6",
+   "en": 0.5321633241731146,
+   "en_word": 0.010586832222647249,
+   "zh": 0.07881796518759017,
+   "ko": 0.002370475565526714
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "vanilla",
+   "band": "중간 7–21",
+   "en": 0.27717958333546494,
+   "en_word": 0.026135644494975747,
+   "zh": 0.34211207092374296,
+   "ko": 0.002291817355374977
+  },
+  {
+   "dataset": "C",
+   "task": "translate",
+   "lens": "vanilla",
+   "band": "후반 22–27",
+   "en": 0.04138796081337267,
+   "en_word": 0.038284732637517443,
+   "zh": 0.9547535775095755,
+   "ko": 0.00011655856671665789
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "affine",
+   "band": "초반 1–6",
+   "en": 0.07972501375358551,
+   "en_word": 0.01844598436175932,
+   "zh": 0.21727016495782558,
+   "ko": 0.2394108308086417
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "affine",
+   "band": "중간 7–21",
+   "en": 0.05271522351649036,
+   "en_word": 0.0071977112578538605,
+   "zh": 0.08122145064313895,
+   "ko": 0.025972511762244
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "affine",
+   "band": "후반 22–27",
+   "en": 0.7652220974023551,
+   "en_word": 0.1424020062614053,
+   "zh": 0.05631218271222418,
+   "ko": 0.00038983486595258073
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "mean",
+   "band": "초반 1–6",
+   "en": 0.30414786182404757,
+   "en_word": 0.03226349147956941,
+   "zh": 0.3877476508394408,
+   "ko": 0.005930550968311787
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "mean",
+   "band": "중간 7–21",
+   "en": 0.45971129274287786,
+   "en_word": 0.09735119131453335,
+   "zh": 0.3769003073670288,
+   "ko": 0.0015730533403186234
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "mean",
+   "band": "후반 22–27",
+   "en": 0.8654939568992948,
+   "en_word": 0.6441937938195396,
+   "zh": 0.12653419257256548,
+   "ko": 3.825540540376133e-05
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "vanilla",
+   "band": "초반 1–6",
+   "en": 0.6104716677142048,
+   "en_word": 0.007637305460474548,
+   "zh": 0.0397332040869728,
+   "ko": 0.0023884674870600343
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "vanilla",
+   "band": "중간 7–21",
+   "en": 0.4445358804726155,
+   "en_word": 0.04760483559689575,
+   "zh": 0.11353779225951428,
+   "ko": 0.0015569605977589958
+  },
+  {
+   "dataset": "C",
+   "task": "translate_to_en",
+   "lens": "vanilla",
+   "band": "후반 22–27",
+   "en": 0.7874446754010994,
+   "en_word": 0.6107756926468876,
+   "zh": 0.14478669596934005,
+   "ko": 0.00012598135143947594
   }
  ]
 }

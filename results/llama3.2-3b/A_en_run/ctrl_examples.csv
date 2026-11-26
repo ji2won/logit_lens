@@ -1,0 +1,133 @@
+id,단어,영어_15to21,중어_L27,중어_L28,최종1위
+A001,●봄,spring25 season3 autumn1 seasons1,春6 夏0,春97 夏1 早0,春 春 春 春
+A001,여름,summer24 summers7 season2 sunshine2,夏10,夏97 春0 炎0,夏 夏 夏 夏
+A001,가을,autumn44 season2 seasons1 winter0,秋2,秋92 黄0 冬0,秋 秋 秋 秋
+A003,●박쥐,bats44 bat11 vampire3 vamp0,大1,大2 飞2 小1,� � � �
+A003,다람쥐,squirrel13 rodents1 squir1 quirrel1,松5 小2 大1,松26 树8 小7,松 松 松 松
+A003,고슴도치,frogs4 frog2 rat1 rabbit1,小1,跳8 狐6 青5,狐 � 跳 �
+A006,●손바닥,palm16 hand7 palms4 hands3,手30 大1 小1,手90 掌5 拳1,手 手 手 手
+A006,손등,hand7 palm6 hands6 fingertips3,手27 小1 额0,手72 掌5 脸3,手 手 手 手
+A006,손목,wrist25 wrists9 arm2 cuff0,手11 腕3 上0,手63 腕32 小0,手 手 手 手
+A010,●동아리,club20 clubs19 groups1 group1,社11 爱1 小0,社58 同4 团3,社 社 社 社
+A010,모임,meeting6 meetings4 gatherings2 rendez1,聚9 集7 会4,聚64 会议10 集7,聚 聚 聚 聚
+A010,동호회,club23 clubs6 group2 hobby1,同7 社3 爱1,同40 社14 团4,同 � 同 �
+A014,●열쇠,keys30 key5 lock5 unlock4,锁8,锁21 键1 门0,� � � �
+A014,빗,rain27 weather10 precipitation4 rainfall1,雨8 天0 小0,雨95 天0 窗0,雨 雨 雨 雨
+A014,동전,coin22 coins18 currency2 money1,硬0 钱0,硬63 钱22 币2,硬 硬 硬 硬
+A015,●편지,letter27 letters4 mail2 postage1,信44 邮1 封1,信95 邮1 写0,信 信 信 信
+A015,메일,mail31 mailbox4 mails3 -mail1,邮23 信10,邮53 信41 电子2,邮 信 邮 邮
+A015,택배,delivery14 postage3 parcel2 postal2,快10 包7 邮5,快34 包32 邮28,包 包 快 快
+A022,●반지,rings16 ring14 bracelet4 jewelry3,戒3,戒79 手5 项3,戒 戒 戒 戒
+A022,목걸이,necklace49 wear2 jewelry2 bracelet2,项14 首1 項0,项80 珠2 首2,项 项 项 项
+A022,팔찌,bracelet31 wrist8 bracelets6 wear2,手3 腕2 项1,手65 项13 戒6,手 手 手 手
+A023,●바위,rock12 stone8 rocks7 stones1,石33 大2 岩2,石60 岩28 大4,石 石 石 石
+A023,모래,sand41 sands4 sandy1 beach0,沙46 砂1 白0,沙87 砂5 黄1,沙 沙 沙 沙
+A023,자갈,stone16 stones14 gravel3 pavement2,石29 小2 大0,石58 碎8 砂7,石 石 石 石
+A034,●세포,cells28 cell6 cellular0 microscopic0,细胞10 細1 单1,细胞98 单0 細0,细胞 细胞 细胞 细胞
+A034,혈액,blood29 bloodstream1 -blood0 plasma0,血45 鲜0,血99 鲜0 液0,血 血 血 血
+A034,근육,muscle32 muscles25 muscular10 mus1,肌1,肌95 筋3 骨0,肌 肌 肌 肌
+A038,●구덩이,pit6 excavation2 excav2 dug2,小1,土5 洞4 池4,� � � �
+A038,동굴,cave21 caves15 underground3 cavern2,洞21 地0,洞97 地0 岩0,洞 洞 洞 洞
+A038,웅덩이,pudd6 pit2 mud1 foss0,小2 大2 地0,泥10 土9 洞5,� � 泥 �
+A042,●정장,dress20 suit10 wearing3 suits3,西10 礼1,西64 礼10 制3,西 西 西 西
+A042,외투,coat12 waterproof3 protective3 jacket2,外3 大1,外48 围5 大3,外 外 外 外
+A042,치마,pants11 trousers7 dresses5 underwear2,长2 大1 短1,长4 短1 连1,� � � �
+A044,●마당,garden12 outdoors9 courtyard8 outdoor7,院7 花1 前1,院48 花17 庭12,院 院 院 院
+A044,정원,garden23 gardens18 greenhouse1 gardening0,花40 园3 庭0,花78 园17 庭2,花 花 花 花
+A044,울타리,fences31 fence18 fencing3 fenced1,围9 网5,围52 栏12 铁9,围 围 围 围
+A051,●갑판,deck13 floor4 floors1 decks1,甲53 船5 天1,甲70 船17 板1,甲 甲 甲 甲
+A051,돛,sail11 sails6 tent2 sailing1,船1 网0,船3 风0 网0,� � � �
+A051,닻,door0 doors0 extractor0 windows0,小1 窗1 门1,门4 窗4 桌3,� 门 � 船
+A057,●안경,glasses28 sunglasses21 ey9 lenses1,眼18,眼98 眼睛0 墨0,眼 眼 眼 眼
+A057,모자,protective10 hat5 hats3 sunglasses1,帽32 墨0,帽82 头3 墨2,帽 帽 帽 帽
+A057,장갑,gloves34 protective8 wearing1 glove1,手78,手98 护0 防0,手 手 手 手
+A063,●오렌지,oranges19 orange11 citrus5 cit2,,西0 洋0 苹果0,� � � �
+A063,귤,oranges17 fruit12 citrus8 cit4,,葡4 苹果2 西1,� � � �
+A063,포도,fruit23 grapes6 fruits5 apple1,葡4 苹果3 水2,葡72 苹果18 水3,葡 葡 葡 葡
+A068,●라켓,tennis25 racket3 volleyball1 equipments0,网5 拍0,网50 拍20 羽4,网 网 网 网
+A068,그물,net13 mesh4 nets1 trap1,网38 網1,网85 網2 蛛1,网 网 网 网
+A068,헬멧,helmet27 helmets10 protective4 helm1,头2,头36 钢6 防5,头 头 头 头
+A072,●이야기,story27 stories3 -story2 narrative2,故事3 小1,故事94 讲1 话1,故事 故事 故事 故事
+A072,소설,novels23 fiction9 novel4 literature2,小7 小说1,小说84 小10 故事3,小说 小说 小说 小说
+A072,노래,song10 singing7 songs6 music4,歌21 唱9,歌82 唱13 音乐2,歌 歌 歌 歌
+A073,●팁,tips11 tip11 -tip1 tipping1,小12 礼1,小23 提5 礼4,小 小 小 小
+A073,요금,fees47 fee2 expenses1 cost1,费用1 费1,费用31 费12 租12,费用 费用 费用 费用
+A073,월급,monthly27 salary19 wages14 paycheck12,工37 月3,工54 月11 收入1,工 工 工 工
+A081,●다이아몬드,diamonds29 diamond25 iamond0 gem0,,宝1 珍0 大0,� � � �
+A081,진주,necklace11 jewelry6 beads2 pearl1,项1 珍1 母1,珍30 珠16 玉5,珠 珍 珍 珍
+A081,루비,ruby23 jewel0 kun0 red0,红2,红50 宝3 珍2,红 红 红 红
+A092,●직원,employees20 employee18 staff6 worker1,员5 工作2,员54 职25 工作7,员 员 员 员
+A092,사장,boss20 owner4 ceo4 chairman2,老14 总2 主1,经理43 老20 总11,经理 经理 经理 经理
+A092,손님,guest34 guests20 visitor11 visitors4,客42 来2,客98 访1 来0,客 客 客 客
+A113,●알약,pills17 tablets9 medicine9 tablet5,糖3 片2 药1,药56 糖20 片5,药 药 药 药
+A113,물약,medicine50 medicines11 medic2 medication1,药2 中0 止0,药90 止2 中1,药 药 药 药
+A113,주사,medicine4 doctor1 medic0 medicines0,针9,针23 注11 药4,针 针 针 针
+A117,●포커,poker39 gambling2 blackjack2 games1,,麻5 牌4 黑1,� � � �
+A117,체스,chess44 playing1 juego0 playable0,象0,象29 棋15 国际12,象 象 象 象
+A117,바둑,chess32 playing1 board1 game1,围13 象2 将2,棋27 围26 象15,围 围 围 棋
+A120,●병동,ward12 room9 rooms8 hospital2,病79 科0 大0,病96 楼1 床1,病 病 病 病
+A120,응급실,emergency56 hospital2 medical1 emergencies1,急5 病0,急87 紧5 医院2,急 急 急 急
+A120,수술실,clinic9 surgery8 surgical3 clinics2,手14 病5,手83 病7 操作1,手 手 手 手
+A127,●로켓,rocket27 rockets11 spacecraft1 spaceship1,火35,火95 导1 飞1,火 火 火 火
+A127,비행기,airplane33 airplanes22 aircraft3 aer1,飞3,飞96 机1 飛1,飞 飞 飞 飞
+A127,우주선,spacecraft39 spaceship11 astronauts2 astronaut2,航5 宇3,航27 宇26 太24,航 宇 航 太
+A131,●넥타이,tie8 shirt6 neck6 suit2,领9 西0,领95 西2 围1,领 领 领 领
+A131,허리띠,belt13 belts6 waist4 ties3,腰12 带8 领4,腰54 领13 带11,腰 腰 腰 腰
+A131,목도리,hat4 protective2 hats1 head1,帽17 头2 围1,帽44 头12 围11,帽 帽 帽 帽
+A132,●반도체,semiconductor20 electronics3 chip2 silicon1,半2 集2 晶1,半84 集5 晶3,半 半 半 半
+A132,회로,circuit26 circuits15 wiring3 electrical1,电12,电87 线2 路1,电 电 电 电
+A132,배터리,battery37 batteries14 batter1 electricity1,电13,电95 充1 電0,电 电 电 电
+A135,●탱크,tank35 tanks10 -tank2 tanker0,坦0,油20 水18 坦13,油 油 水 坦
+A135,대포,artillery13 cannon7 cannons4 gun2,大38 炮6,炮39 大37 火11,大 炮 大 炮
+A135,장갑차,armored6 protective6 ambulance2 emergency1,警2 大1 小1,救25 警8 防5,� 救 � 救
+A139,●파도,waves37 wave4 ocean1 sea0,波12 浪5 海2,浪49 波29 海13,浪 浪 浪 浪
+A139,바람,wind42 winds1 weather1 blowing0,风3 風0,风96 吹0 風0,风 风 风 风
+A139,구름,clouds57 cloud4 weather2 sky0,云18 天2 雲1,云89 雲3 天3,云 云 云 云
+A140,●상자,box28 boxes12 -box1 container0,箱53 盒9 抽1,箱72 盒23 包1,箱 箱 箱 箱
+A140,가방,bag16 backpack12 bags5 luggage5,包28 背1,包69 背8 手7,包 包 包 包
+A140,바구니,basket19 baskets3 bag2 cart2,小1,购6 纸4 手2,� � � �
+A144,●토스트,toast14 breakfast5 toaster2 biscuits1,面0,吐22 面2 热1,吐 � 吐 �
+A144,샌드위치,sandwich20 sandwiches14 hamburger0 salad0,三5 面3 汉3,三34 汉15 沙2,三 三 三 三
+A144,팬케이크,cake25 cakes1 pie0 cupcakes0,蛋15 面2 生0,蛋84 面1 巧1,蛋 蛋 蛋 蛋
+A150,●모니터,screen12 monitors7 monitor7 computer5,显示2 监1 液0,显示45 电脑19 电视9,显示 显示 显示 显示
+A150,키보드,keyboard47 keyboards7 computer1 keypad0,键38,键96 电脑1 计算0,键 键 键 键
+A150,스피커,speakers33 speaker11 amplifier0 -spe0,,扬30 音5 话3,� � � �
+A157,●뚜껑,lid14 lids6 removable3 sealing2,盖26 瓶0,盖90 瓶1 口0,盖 盖 盖 盖
+A157,손잡이,handles10 hand5 handle4 -handle1,手9 扶1 把1,手42 扶15 把6,手 手 手 手
+A157,마개,curtains7 curtain5 protective1 door1,网11 窗4,窗19 网10 门3,� � � �
+A158,●왕관,crown27 coron2 crow1 throne1,王42 皇3 桂0,王76 皇11 冠5,王 王 王 王
+A158,반지,rings16 ring14 bracelet4 jewelry3,戒3,戒79 手5 项3,戒 戒 戒 戒
+A158,목걸이,necklace49 wear2 jewelry2 bracelet2,项14 首1 項0,项80 珠2 首2,项 项 项 项
+A159,●척추,spine18 bones6 spinal3 backbone1,腰0,腰4 骨3 背1,� � � �
+A159,갈비뼈,ribs7 bone5 bones3 slaughtered3,排3 牛2 羊0,牛26 羊9 排6,牛 牛 牛 牛
+A159,골반,legs9 pelvic5 leg3 abdomen2,大17 小4 下1,大10 小5 股3,� � � �
+A163,●옥수수,corn18 wheat7 maize2 rice1,大46 小3 玉2,玉77 大13 小3,玉 玉 玉 玉
+A163,보리,wheat9 grains8 rice6 millet4,大41 小5,大37 小14 麦13,大 大 大 大
+A163,밀,wheat2 grains1 grain1 seeds1,米2 小1 锁1,米8 锁7 麦3,锁 米 锁 麦
+A164,●항구,port13 harbor8 ports3 docking2,码2 港1,港76 码18 海3,港 港 港 港
+A164,공항,airport57 airports6 airplanes1 aer1,空2 机场2,机场96 飞1 空0,机场 机场 机场 机场
+A164,역,railway14 train4 transit2 station2,站0,站33 车16 火13,站 桥 站 站
+A165,●소리,sound10 noises10 sounds8 noise4,声音8 声1 音1,声音93 声3 音2,声音 声音 声音 声音
+A165,냄새,smells27 smell20 aroma8 odor6,气3 香2 味1,气45 味23 香6,气 � 气 气
+A165,빛,sunlight16 sunshine9 lights3 light3,光12 阳1,光92 阳4 灯1,光 光 光 光
+A167,●정사각형,square20 rectangle12 rectangular7 rectangles4,正43 平1 四1,正72 方14 四2,正 正 正 正
+A167,동그라미,circle23 circles9 round1 circular1,圆21 小0,圆92 小1 圈1,圆 圆 圆 圆
+A167,삼각형,triangle16 triangles7 rectangle3 rectangles2,三52 直0,三98 平0 正0,三 三 三 三
+A170,●잡지,magazine27 magazines17 newspaper3 newspapers1,杂6,杂77 报20 雑0,杂 报 杂 杂
+A170,신문,newspaper27 newspapers20 newsp2 news2,报19 新1,报98 新闻1 報0,报 报 报 报
+A170,책,books33 book12 -books1 -book1,书3 本2 图0,书87 图7 本2,书 书 书 书
+A178,●세탁기,washing24 washer10 laundry5 laundering1,洗51,洗97 衣1 干0,洗 洗 洗 洗
+A178,냉장고,refrigerator50 refriger8 freezer0 fridge0,冰77 冷1,冰95 冷4 电0,冰 冰 冰 冰
+A178,청소기,cleaning50 cleaner7 cleaners2 clean1,吸11 清2,吸68 扫4 除2,吸 吸 吸 吸
+A181,●드론,drones14 uav13 drone8 unmanned4,无1 直0 小0,无63 飞5 直3,无 无 无 无
+A181,헬리콥터,helicopter34 helicopters13 helicopt2 airplanes1,直19,直88 旋1 螺1,直 直 直 直
+A181,비행기,airplane33 airplanes22 aircraft3 aer1,飞3,飞96 机1 飛1,飞 飞 飞 飞
+A190,●오리,ducks4 duck3 chickens2 pige2,小3 公1 大1,麻2 小2 鸡1,� � � �
+A190,거위,bird4 turkey4 chicken3 chickens3,天5 母2 大1,鸡7 天7 乌2,� � � �
+A190,닭,chickens21 poultry12 chicken7 oultry2,鸡16 母7 公6,鸡67 母4 公1,鸡 鸡 鸡 鸡
+A192,●교량,bridge39 bridges20 crossing0 transportation0,桥16 橋1,桥94 大1 橋1,桥 桥 桥 桥
+A192,터널,tunnel40 tunnels9 unnel1 passage1,,洞0 山0 通0,� � � �
+A192,운하,canal19 river7 rivers1 irrigation1,水4 河3 航1,水30 运24 河20,水 河 运 水
+A213,●관심,interest19 attention3 interests2 interested2,关1 感1 注意0,兴31 关25 注意18,关 兴 注意 关
+A213,흥미,interesting25 interest3 fascinating2 curiosity1,有25 趣2 精1,有40 趣24 兴14,有 有 有 有
+A213,열정,enthusiasm22 enthus8 passion2 zeal2,热35 情10 激6,热86 激10 情2,热 热 热 热

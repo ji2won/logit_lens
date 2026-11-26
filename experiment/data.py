@@ -100,7 +100,9 @@ def load_C(path: Path) -> list[Item]:
     d = pd.read_csv(path, keep_default_na=False)
     return [Item(id=r.id, dataset="C", ko=r.ko, controls=[],
                  zh_answer=r.zh, zh_distractor=r.zh_unrelated,
-                 probes={"target": r.en, "unrelated": r.en_unrelated}, primary="target",
+                 probes={"target": r.en, "unrelated": r.en_unrelated,
+                         "zh_target": r.zh, "zh_unrelated": r.zh_unrelated},   # 중국어는 첫 토큰
+                 primary="target",
                  group=r.ko, etym=getattr(r, "etym", ""), en_hint=r.en)
             for r in d.itertuples()]
 

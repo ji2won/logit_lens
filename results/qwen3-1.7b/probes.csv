@@ -1,13 +1,35 @@
 word,token_ids,tokens,single_token
 accident,4475 11423 14603 75504,'acc' | ' accident' | 'Acc' | ' Accident',True
+anger,4003 7416 10743 19234,'anger' | ' Ang' | 'Ang' | ' anger',True
+ankle,1180 1527 2082 38348,'ank' | ' An' | 'An' | ' ankle',True
+ant,517 3196 6755 17117,'ant' | ' ant' | ' Ant' | 'Ant',True
 apology,391 5232 10611 40158,'ap' | ' Ap' | 'Ap' | ' apology',True
 apple,8162 22377 23268 26567,' Apple' | 'apple' | ' apple' | 'Apple',True
+armor,20033 31183 42548 62882,' armor' | ' Armor' | 'armor' | 'Armor',True
 audit,24275 47646 48545 74516,' audit' | ' Audit' | 'audit' | 'Audit',True
+axe,32 49739 50464 71851,'A' | 'axe' | ' axe' | ' Axe',True
+baby,8770 20617 59760 77964,' baby' | ' Baby' | 'Baby' | 'baby',True
+balloon,13313 19420 37889 46756,'bal' | ' Bal' | 'Bal' | ' balloon',True
+bamboo,33 58882 80567 96928,'B' | ' bamboo' | 'bam' | ' Bamboo',True
 bar,2257 3428 3619 4716,'bar' | 'Bar' | ' bar' | ' Bar',True
+baseball,3152 3978 19507 37158,'base' | 'Base' | ' baseball' | ' Baseball',True
 bat,13718 15743 16098 58400,'bat' | ' bat' | ' Bat' | 'Bat',True
+beach,1371 3430 11321 12721,'be' | 'Be' | ' beach' | ' Beach',True
+bean,10437 17479 20427 33723,'Bean' | 'bean' | ' bean' | ' Bean',True
+beard,1371 3430 47688 87430,'be' | 'Be' | ' beard' | ' Beard',True
+bed,2721 4845 13093 15686,'bed' | ' bed' | ' Bed' | 'Bed',True
+bedroom,2721 13829 15686 32855,'bed' | ' bedroom' | 'Bed' | ' Bedroom',True
 bee,33 32031 37228 37430,'B' | 'bee' | ' bee' | ' Bee',True
+beer,12883 33384 47795 89228,' beer' | ' Beer' | 'beer' | 'Beer',True
 bill,4031 8596 27476 29642,' bill' | ' Bill' | 'Bill' | 'bill',True
 biography,8221 36096 47245 78169,'bi' | 'Bi' | ' biography' | ' Biography',True
+birth,7194 27713 31478 35027,' birth' | 'birth' | 'Birth' | ' Birth',True
+birthday,15198 36240 51265 76561,' birthday' | ' Birthday' | 'birthday' | 'Birthday',True
+blackboard,3691 5235 11453 14417,' black' | ' Black' | 'black' | 'Black',False
+blanket,10189 22770 38039 42441,'blank' | 'Blank' | ' blanket' | ' Blank',True
+blood,6543 20070 50005 51486,' blood' | ' Blood' | 'blood' | 'Blood',True
+boar,708 749 1233 2516,' bo' | 'bo' | 'Bo' | ' Bo',False
+bomb,12764 32809 78344 91726,' bomb' | ' Bomb' | 'bomb' | 'Bomb',True
 boot,4619 10459 15004 17919,'boot' | ' boot' | ' Boot' | 'Boot',True
 bottle,33 65 16486 53985,'B' | 'b' | ' bottle' | ' Bottle',True
 bow,15273 15439 18436 86692,' bow' | 'bow' | ' Bow' | 'Bow',True
@@ -16,135 +38,521 @@ box,1611 2011 3745 8261,'Box' | 'box' | ' box' | ' Box',True
 breakdown,8960 15623 22524 29985,'break' | ' Break' | 'Break' | ' breakdown',True
 bride,33 1323 41347 77060,'B' | 'br' | ' bride' | ' Bride',True
 bridge,13709 14164 19874 32848,'bridge' | ' bridge' | ' Bridge' | 'Bridge',True
+broom,33 65 425 2896,'B' | 'b' | ' B' | ' bro',False
+cabbage,34 66 356 73773,'C' | 'c' | ' C' | ' cabbage',True
+cactus,34 66 272 356,'C' | 'c' | ' c' | ' C',False
+calendar,13168 16841 19882 26258,' calendar' | ' Calendar' | 'Calendar' | 'calendar',True
+candy,34 66 31556 48428,'C' | 'c' | ' candy' | ' Candy',True
 capacity,8654 29392 37387 40110,' capacity' | 'Capacity' | 'capacity' | ' Capacity',True
 cape,34 5330 28615 64292,'C' | 'cape' | ' Cape' | ' cape',True
 car,1803 3261 6918 8852,' car' | ' Car' | 'car' | 'Car',True
+carrot,3261 6918 8852 74194,' Car' | 'car' | 'Car' | ' carrot',True
 case,1142 4207 5638 11538,' case' | 'Case' | 'case' | ' Case',True
 cast,3829 6311 11264 18714,'cast' | ' cast' | ' Cast' | 'Cast',True
+cat,4616 8251 17358 26801,'cat' | ' cat' | ' Cat' | 'Cat',True
 cave,34 66 25385 49392,'C' | 'c' | ' cave' | ' Cave',True
 cell,2779 3599 5873 13972,' cell' | 'Cell' | 'cell' | ' Cell',True
+chair,10496 16090 34196 84195,' chair' | ' Chair' | 'chair' | 'Chair',True
+cheek,1528 8436 26843 40703,'che' | ' Che' | 'Che' | ' cheek',True
+chef,29706 35975 75079 93903,' chef' | ' Chef' | 'chef' | 'Chef',True
 chest,34 15138 26320 41771,'C' | ' chest' | 'chest' | ' Chest',True
 chestnut,34 15138 26320 41771,'C' | ' chest' | 'chest' | ' Chest',False
 chip,16392 29662 30913 56417,' chip' | 'chip' | ' Chip' | 'Chip',True
+church,8817 9257 64194 83810,' church' | ' Church' | 'church' | 'Church',True
+city,3283 4311 8926 12730,' city' | ' City' | 'city' | 'City',True
+clothes,15097 32578 51236 76524,' clothes' | 'clo' | 'Clo' | ' Clothes',True
 club,6335 10140 19862 53749,' club' | ' Club' | 'club' | 'Club',True
 coach,7247 27176 72694 88093,' coach' | ' Coach' | 'Coach' | 'coach',True
 corn,13776 21330 38630 90541,' corn' | ' Corn' | 'corn' | 'Corn',True
 crane,5082 16001 72899 72947,'cr' | 'Cr' | ' Crane' | ' crane',True
 cremation,34 356 837 70196,'C' | ' C' | 'cre' | ' crem',False
 cricket,5082 16001 35999 57919,'cr' | 'Cr' | ' cricket' | ' Cricket',True
+crocodile,14093 24592 37884 95041,' cro' | ' Cro' | 'cro' | 'Cro',False
 crown,34 66 26533 28643,'C' | 'c' | ' crown' | ' Crown',True
+cucumber,34 66 356 64932,'C' | 'c' | ' C' | ' cucumber',True
+culture,7674 20397 25811 69805,' culture' | ' Culture' | 'Culture' | 'culture',True
+dance,35 15254 29604 98875,'D' | ' dance' | ' Dance' | 'dance',True
+death,4545 15911 39258 61907,' death' | ' Death' | 'Death' | 'death',True
 deck,9530 28416 33425 39368,' deck' | ' Deck' | 'deck' | 'Deck',True
+deer,1912 38049 63091 96262,'De' | ' deer' | ' Deer' | 'deer',True
 denial,5183 9774 23619 33913,'den' | ' Den' | 'Den' | ' denial',True
+desk,18010 38694 50069 69521,' desk' | ' Desk' | 'desk' | 'Desk',True
+dew,35 67 49300 66432,'D' | 'd' | ' Dew' | ' dew',True
 diamond,22205 24334 76510 88576,' diamond' | ' Diamond' | 'Diamond' | 'diamond',True
 digestion,36339 45217 53289 73402,'digest' | 'Digest' | ' Digest' | ' digestion',True
 digit,15723 34934 36420 71465,' digit' | 'digit' | 'Digit' | ' Digit',True
 distance,6010 14778 19348 31135,' distance' | 'Distance' | 'distance' | ' Distance',True
 doctor,10668 18635 36983 42724,' doctor' | ' Doctor' | 'doctor' | 'Doctor',True
+doll,35 7649 38757 77189,'D' | ' doll' | ' Doll' | 'doll',True
+dolphin,35 67 94996 98169,'D' | 'd' | ' Dolphin' | ' dolphin',True
 doubt,35 67 10492 54864,'D' | 'd' | ' doubt' | ' Doub',True
+dream,7904 17829 56191 64354,' dream' | ' Dream' | 'dream' | 'Dream',True
 drone,3612 8847 26713 73481,'dr' | 'Dr' | ' drone' | ' Drone',True
+drought,35 67 422 36746,'D' | 'd' | ' D' | ' drought',True
 duck,35 35985 45770 72970,'D' | ' duck' | ' Duck' | 'duck',True
 ear,682 2430 6809 17813,'ear' | ' ear' | ' Ear' | 'Ear',True
+earring,36 384 468 682,'E' | ' e' | ' E' | 'ear',False
+economy,36 68 8584 37561,'E' | 'e' | ' economy' | ' Economy',True
+egg,36 18636 28368 41213,'E' | ' egg' | 'egg' | ' Egg',True
+elbow,301 3984 6582 45711,'el' | ' El' | 'El' | ' elbow',True
 electricity,17728 63365 64865 73356,' electricity' | 'electric' | 'Electric' | ' Electricity',True
+elephant,10068 45339 45740 78089,'ele' | 'Ele' | ' elephant' | ' Elephant',True
 engagement,826 4106 19805 59363,'eng' | 'Eng' | ' engagement' | ' Engagement',True
+envelope,268 2925 34398 62712,'en' | ' En' | ' envelope' | 'Envelope',True
+exam,7006 32310 41616 66694,' exam' | ' Exam' | 'exam' | 'Exam',True
 expert,6203 32157 73887 74292,' expert' | ' Expert' | 'expert' | 'Expert',True
 extinguishing,427 840 1374 55707,'ext' | 'Ex' | ' Ex' | ' extingu',False
 eye,7912 18958 27829 50058,' eye' | 'eye' | ' Eye' | 'Eye',True
 fall,4399 13464 14785 49772,' fall' | 'fall' | ' Fall' | 'Fall',True
+farm,8785 18438 65811 70994,' farm' | ' Farm' | 'farm' | 'Farm',True
+farmer,23559 32887 36400 67464,'far' | 'Far' | ' farmer' | ' Farmer',True
+father,6981 20322 23017 61316,' father' | ' Father' | 'father' | 'Father',True
+fish,7640 16608 18170 64541,' fish' | ' Fish' | 'fish' | 'Fish',True
+fisherman,7640 16608 18170 64541,' fish' | ' Fish' | 'fish' | 'Fish',False
+flag,5181 9903 12135 22666,' flag' | 'flag' | 'Flag' | ' Flag',True
+flood,37 69 17726 56127,'F' | 'f' | ' flood' | ' Flood',True
+flour,1489 3882 19828 89028,'fl' | 'Fl' | ' flour' | ' Flour',True
+flute,1489 2988 3882 95712,'fl' | ' Fl' | 'Fl' | ' flute',True
+forest,13638 19988 49578 50655,' forest' | ' Forest' | 'Forest' | 'forest',True
+fox,13282 15011 38835 47314,' Fox' | 'fox' | ' fox' | 'Fox',True
 fraud,16124 42289 65947 78056,' fraud' | 'fra' | ' Fraud' | 'Fra',True
+freedom,11290 24327 24716 85772,' freedom' | ' Freedom' | 'fre' | 'Freedom',True
+frog,37 59881 71419 85982,'F' | ' frog' | ' Frog' | 'frog',True
 furniture,37 69 14549 29239,'F' | 'f' | ' furniture' | ' Furniture',True
+future,3853 12498 21055 24206,' future' | ' Future' | 'future' | 'Future',True
 game,1809 4050 4868 5804,' game' | ' Game' | 'Game' | 'game',True
 garden,38 70 13551 19021,'G' | 'g' | ' garden' | ' Garden',True
+garlic,12164 30635 43930 94725,'gar' | ' garlic' | 'Gar' | ' Garlic',True
+giraffe,38 70 40289 46935,'G' | 'g' | ' gir' | ' Gir',False
 glasses,38 70 28147 98266,'G' | 'g' | ' glasses' | ' Glasses',True
 glue,6072 8280 31541 37461,'gl' | ' Gl' | 'Gl' | ' glue',True
+gold,6623 7421 25434 34537,' gold' | ' Gold' | 'Gold' | 'gold',True
+grandfather,10304 37850 40151 52666,' Grand' | ' grandfather' | 'Grand' | 'grand',True
+grandmother,10304 38184 40151 52666,' Grand' | ' grandmother' | 'Grand' | 'grand',True
 grass,6464 16359 39946 53354,'Gr' | ' grass' | ' Grass' | 'grass',True
 gratitude,901 2825 6464 45035,'gr' | ' Gr' | 'Gr' | ' gratitude',True
 guidance,16686 18821 23448 81561,'Guid' | ' guidance' | 'guid' | ' Guidance',True
 gum,38 70 41265 74489,'G' | 'g' | ' gum' | ' Gum',True
+hair,6869 25697 50629 69693,' hair' | ' Hair' | 'hair' | 'Hair',True
+hammer,23457 36894 39941 45334,' hammer' | ' Hammer' | 'Ham' | 'hammer',True
+happiness,39 71 23009 78144,'H' | 'h' | ' happiness' | ' Happiness',True
+health,2820 6267 12120 14542,' health' | ' Health' | 'health' | 'Health',True
 hide,8559 10265 21692 25590,'hide' | ' hide' | 'Hide' | ' Hide',True
+history,3840 11099 13424 18844,' history' | ' History' | 'History' | 'history',True
+homework,28459 34840 49642 82713,' homework' | 'hom' | 'Hom' | ' Homework',True
+honey,39 71 25744 39615,'H' | 'h' | ' honey' | ' Honey',True
 horse,39 15223 33292 59675,'H' | ' horse' | ' Horse' | 'horse',True
+hospital,8777 15079 70027 81466,' hospital' | ' Hospital' | 'hospital' | 'Hospital',True
 household,7675 13732 28607 75973,'house' | ' household' | 'House' | ' Household',True
 housework,3753 4678 7675 28607,' house' | ' House' | 'house' | 'House',False
+ice,558 9853 19939 51330,'ice' | ' ice' | ' Ice' | 'Ice',True
 illness,483 12516 17125 51715,'ill' | ' Ill' | ' illness' | 'Ill',True
 intention,396 1072 1333 14602,'int' | 'Int' | ' Int' | ' intention',True
 interest,2734 12724 24106 34556,' interest' | 'interest' | ' Interest' | 'Interest',True
 iris,40 41946 63942 65721,'I' | 'iris' | ' iris' | ' Iris',True
 iron,2475 11001 16570 46393,'iron' | ' iron' | ' Iron' | 'Iron',True
+island,285 3872 10720 12922,'is' | 'Is' | ' Island' | ' island',True
+jellyfish,41 73 51341 73139,'J' | 'j' | ' jelly' | ' Jelly',False
+journalist,9936 22825 42518 43494,' Journal' | ' journalist' | 'journal' | 'Journal',True
+kettle,42 74 730 72318,'K' | 'k' | ' K' | ' kettle',True
 key,792 1376 1592 5309,'key' | ' key' | 'Key' | ' Key',True
 kid,10369 31566 63281 98508,' kid' | ' Kid' | 'kid' | 'Kid',True
+kidney,31566 37942 63281 98508,' Kid' | ' kidney' | 'kid' | 'Kid',True
+king,6210 10566 11477 33555,' King' | 'king' | ' king' | 'King',True
+kitchen,74 9780 19354 84583,'k' | ' kitchen' | ' Kitchen' | 'Kitchen',True
+knee,42 74 21381 97212,'K' | 'k' | ' knee' | ' Knee',True
+knowledge,6540 31925 80334 89053,' knowledge' | ' Knowledge' | 'Knowledge' | 'knowledge',True
+ladder,43 75 444 35765,'L' | 'l' | ' L' | ' ladder',True
+lake,11678 21800 62110 81289,' Lake' | ' lake' | 'lake' | 'Lake',True
+language,4128 11434 11528 13806,' language' | ' Language' | 'language' | 'Language',True
 lash,43 444 24686 97281,'L' | ' L' | 'lash' | ' lash',True
+laughter,4929 8747 42114 51783,' La' | 'La' | ' laughter' | 'laughter',True
+law,2329 7506 19915 38066,' law' | ' Law' | 'law' | 'Law',True
+lawn,43 75 36025 68392,'L' | 'l' | ' lawn' | ' Lawn',True
+leaf,15933 24153 26869 31461,' leaf' | 'leaf' | ' Leaf' | 'Leaf',True
 letter,6524 9451 26659 34264,' letter' | 'letter' | ' Letter' | 'Letter',True
+lettuce,43 6771 27064 70555,'L' | ' Let' | 'lett' | ' lettuce',True
+library,6733 11635 16915 18065,' library' | ' Library' | 'Library' | 'library',True
 lid,43 26334 61206 80609,'L' | ' lid' | 'lid' | ' Lid',True
+lighthouse,43 75 326 444,'L' | 'l' | ' l' | ' L',False
+lightning,4145 13911 32438 33844,'light' | 'Light' | ' lightning' | ' Lightning',True
+lily,43 75 326 47290,'L' | 'l' | ' l' | ' Lily',False
 lion,43 32099 39032 78151,'L' | ' Lion' | ' lion' | 'lion',True
 litter,43 75 444 38582,'L' | 'l' | ' L' | ' litter',True
 log,839 1487 2201 2835,'log' | ' log' | 'Log' | ' Log',True
+love,2948 10689 28251 30053,' love' | ' Love' | 'Love' | 'love',True
 lyrics,398 23261 47312 56243,'ly' | ' lyrics' | 'Ly' | ' Lyrics',True
 magazine,14418 21451 30506 32915,' magazine' | ' Magazine' | 'mag' | 'Mag',True
 makeup,6927 8078 26551 72914,'make' | 'Make' | ' makeup' | ' Makeup',True
 map,2186 2227 2415 5027,'map' | 'Map' | ' map' | ' Map',True
+marriage,5612 10866 12061 46099,'mar' | ' marriage' | 'Mar' | ' Marriage',True
 mass,3072 9167 25824 26331,' mass' | ' Mass' | 'Mass' | 'mass',True
 match,2432 6347 8331 14152,' match' | 'match' | 'Match' | ' Match',True
+math,4149 6888 8815 10374,' Math' | ' math' | 'Math' | 'math',True
+meat,2660 7823 13041 44865,'me' | 'Me' | ' meat' | ' Meat',True
 meeting,6438 29055 61249 64576,' meeting' | ' Meeting' | 'meeting' | 'Meeting',True
 messenger,76 41519 49496 87626,'m' | ' Messenger' | ' messenger' | 'Messenger',True
 mint,44 28337 41310 67791,'M' | ' mint' | ' Mint' | 'mint',True
 mold,44 76 28461 54163,'M' | 'm' | ' mold' | ' Mold',True
 monitor,8718 23519 30098 32225,' monitor' | ' Monitor' | 'Monitor' | 'monitor',True
+monkey,38703 57837 96016 96838,' monkey' | ' Monkey' | 'monkey' | 'Monkey',True
 morale,8446 41678 56802 62583,' Mor' | 'Mor' | 'mor' | ' morale',True
+mosquito,8631 12562 49546 76306,'mos' | ' Mos' | ' mosquito' | 'Mos',True
+moth,44 6050 67404 97078,'M' | ' Mo' | 'moth' | ' moth',True
+mother,6554 21043 26412 58878,' mother' | ' Mother' | 'mother' | 'Mother',True
+movie,5700 13944 19668 20032,' movie' | ' Movie' | 'Movie' | 'movie',True
+mud,44 76 26183 68340,'M' | 'm' | ' mud' | ' Mud',True
+museum,44 76 16328 23971,'M' | 'm' | ' Museum' | ' museum',True
+music,4627 10717 24128 31161,' music' | ' Music' | 'Music' | 'music',True
+name,606 675 829 3988,'name' | 'Name' | ' name' | ' Name',True
+needle,23657 30309 59519 88800,'Need' | ' needle' | 'needle' | ' Needle',True
+neighbor,9565 36469 88109 97163,' neighbor' | 'neighbor' | 'Neighbor' | ' Neighbor',True
 night,3729 9287 12826 50437,' night' | 'night' | ' Night' | 'Night',True
+noodle,45 77 451 45795,'N' | 'n' | ' N' | ' nood',False
 note,5185 7036 9112 9974,' note' | ' Note' | 'Note' | 'note',True
+notebook,9112 9974 37166 68655,'Note' | 'note' | ' notebook' | ' Notebook',True
 nut,9979 18372 23333 78470,' nut' | ' Nut' | 'nut' | 'Nut',True
+octopus,4915 18053 18491 41692,' Oct' | 'Oct' | ' oct' | 'oct',False
+oil,5590 15526 73813 76909,' oil' | ' Oil' | 'oil' | 'Oil',True
+onion,263 1925 37327 85935,'on' | 'On' | ' onion' | ' Onion',True
 orange,18575 21958 34164 41969,' orange' | ' Orange' | 'orange' | 'Orange',True
+ostrich,46 78 506 65994,'O' | 'o' | ' O' | ' ostr',False
+otter,354 14147 30576 84795,'ot' | ' ot' | ' Ot' | 'Ot',False
+owl,46 9605 52269 73695,'O' | 'owl' | ' owl' | ' Owl',True
 oyster,46 78 297 506,'O' | 'o' | ' o' | ' O',False
+palace,19308 19980 30296 43339,'pal' | 'Pal' | ' Palace' | ' palace',True
 palm,47 79 32452 32478,'P' | 'p' | ' palm' | ' Palm',True
+parrot,1346 1732 4270 4272,' par' | 'par' | ' Par' | 'Par',False
+peace,8919 25803 54125 84643,' peace' | ' Peace' | 'peace' | 'Peace',True
+peanut,47 375 49833 92944,'P' | 'pe' | ' peanut' | ' Peanut',True
 pear,8015 23041 37690 91040,'pear' | ' Pear' | ' pear' | 'Pear',True
+phone,4540 4844 6939 14307,' phone' | 'phone' | 'Phone' | ' Phone',True
+photo,6548 10463 10828 11556,' photo' | 'Photo' | ' Photo' | 'photo',True
+picnic,15587 25898 33805 54462,'pic' | ' Pic' | 'Pic' | ' picnic',True
+pillow,47 42325 49846 80735,'P' | ' pillow' | 'pill' | ' Pillow',True
 pit,47 19838 32586 38979,'P' | ' pit' | 'pit' | ' Pit',True
 plane,11031 19025 34570 43044,' plane' | 'plane' | 'Plane' | ' Plane',True
+planet,11580 28835 50074 59634,' planet' | ' Planet' | 'planet' | 'Planet',True
 plant,6008 17838 20827 54647,' plant' | ' Plant' | 'plant' | 'Plant',True
 plot,4469 7089 25605 26033,'plot' | ' plot' | 'Plot' | ' Plot',True
+plum,500 2120 41172 83309,'pl' | 'Pl' | ' plum' | ' Plum',True
 poker,47 79 20814 37568,'P' | 'p' | ' poker' | ' Poker',True
+police,4282 9896 10082 22202,' police' | 'pol' | ' Police' | 'Police',True
+pond,47 3511 35570 70865,'P' | 'pond' | ' pond' | ' Pond',True
 pool,7314 10285 10551 22728,' pool' | 'pool' | 'Pool' | ' Pool',True
 port,403 2635 5776 7084,'port' | ' port' | ' Port' | 'Port',True
+potato,19099 38734 44616 77603,'pot' | ' potato' | 'Pot' | ' Potato',True
 price,3349 6555 6972 8483,' price' | 'price' | 'Price' | ' Price',True
 priest,27086 48903 68608 92878,' priest' | ' Priest' | 'pri' | 'Pri',True
 punishment,47 24093 30436 64907,'P' | ' punishment' | ' Pun' | 'pun',True
 pupil,47 79 393 59972,'P' | 'p' | ' P' | ' pupil',True
+puppy,47 79 41189 95533,'P' | 'p' | ' puppy' | ' Puppy',True
+queen,16259 27906 52006 93114,' Queen' | ' queen' | 'Queen' | 'queen',True
+rabbit,49 38724 48331 86345,'R' | ' rabbit' | ' Rabbit' | 'rabbit',True
 racket,49 81 431 81512,'R' | 'r' | ' R' | ' racket',True
+rainbow,29093 46645 47613 59039,'rain' | ' Rainbow' | ' rainbow' | 'Rain',True
 record,3255 6471 8548 13583,' record' | 'Record' | 'record' | ' Record',True
 region,3943 5537 14091 17152,'region' | ' region' | 'Region' | ' Region',True
+religion,3748 6740 13587 43093,'rel' | 'Rel' | ' religion' | ' Religion',True
+rice,49 19653 23120 29516,'R' | ' rice' | 'rice' | ' Rice',True
 ring,10058 12640 21525 43466,' ring' | 'ring' | ' Ring' | 'Ring',True
 rock,6946 9127 20521 35052,' rock' | ' Rock' | 'rock' | 'Rock',True
 rocket,24306 39218 46790 80017,' rocket' | ' Rocket' | 'rocket' | 'Rocket',True
+rope,49 299 33420 97896,'R' | 'ro' | ' rope' | ' Rope',True
+sadness,30681 50878 59665 82114,' Sad' | ' sadness' | 'Sad' | 'sad',True
 sage,50 82 38261 53284,'S' | 's' | ' sage' | ' Sage',True
+salt,12021 27040 42226 47318,' salt' | ' Salt' | 'salt' | 'Salt',True
 scale,5452 6947 12445 24613,' scale' | 'Scale' | 'scale' | ' Scale',True
+scar,22290 24513 29660 94956,' scar' | 'scar' | ' Scar' | 'Scar',True
+science,8038 9965 35400 39557,' science' | ' Science' | 'Science' | 'science',True
+scientist,27468 50565 55347 67309,' scientist' | 'Scient' | 'scient' | ' Scientist',True
+scissors,2388 2463 3326 71624,'sc' | ' Sc' | 'Sc' | ' scissors',True
+sea,9396 15029 36441 59161,' sea' | ' Sea' | 'sea' | 'Sea',True
+seagull,325 511 1345 1514,'se' | ' se' | ' Se' | 'Se',False
+secret,6234 8599 19773 20474,' secret' | ' Secret' | 'Secret' | 'secret',True
+sesame,50 9275 62927 91123,'S' | 'ses' | ' Ses' | ' sesame',True
+shadow,12455 23667 24298 32952,' shadow' | 'Shadow' | ' Shadow' | 'shadow',True
+shark,927 2016 43792 60436,'sh' | 'Sh' | ' shark' | ' Shark',True
 ship,5270 8284 26803 29624,'ship' | ' ship' | ' Ship' | 'Ship',True
+shoe,927 2016 28977 67081,'sh' | 'Sh' | ' shoe' | ' Shoe',True
+shovel,927 1417 2016 91991,'sh' | ' Sh' | 'Sh' | ' shovel',True
+singer,50 82 22757 54670,'S' | 's' | ' singer' | ' Singer',True
+skin,6787 26951 36182 37186,' skin' | ' Skin' | 'skin' | 'Skin',True
 sleep,6084 23774 25809 41745,' sleep' | ' Sleep' | 'sleep' | 'Sleep',True
+snail,4131 9613 13059 20720,' sn' | 'sn' | ' Sn' | 'Sn',False
+snake,25265 39656 72139 83420,' snake' | ' Snake' | 'snake' | 'Snake',True
 snow,11794 18901 62285 74478,' snow' | ' Snow' | 'Snow' | 'snow',True
+soap,26785 35012 60631 95531,' soap' | 'soap' | ' Soap' | 'Soap',True
+soil,704 4416 17171 75519,'so' | 'So' | ' soil' | ' Soil',True
+soldier,26110 52429 54012 62478,' soldier' | ' Soldier' | 'Sold' | 'sold',True
 sound,5112 14594 16103 27532,' sound' | ' Sound' | 'Sound' | 'sound',True
 speech,8806 38741 55625 88225,' speech' | ' Speech' | 'Speech' | 'speech',True
+spinach,40685 41582 41738 67698,' Spin' | 'spin' | 'Spin' | ' spinach',True
 spine,2154 3089 6406 34676,'sp' | ' Sp' | 'Sp' | ' spine',True
 spring,10464 12252 25150 29223,' spring' | ' Spring' | 'Spring' | 'spring',True
 square,9334 15619 33271 37476,' square' | ' Square' | 'Square' | 'square',True
+squid,50 20084 89175 97407,'S' | ' Squ' | ' squid' | 'squ',True
 staff,5570 16951 27122 33211,' staff' | ' Staff' | 'staff' | 'Staff',True
 star,6774 7679 11870 12699,' star' | ' Star' | 'star' | 'Star',True
 story,3364 15106 17938 26485,' story' | ' Story' | 'Story' | 'story',True
 straw,495 2580 30007 56844,'str' | 'Str' | ' straw' | ' Straw',True
 street,6686 8592 27351 34547,' Street' | ' street' | 'street' | 'Street',True
+sugar,82 13163 30919 83414,'s' | ' sugar' | ' Sugar' | 'Sugar',True
 suit,7781 32611 62898 72040,' suit' | ' Suit' | 'Suit' | 'suit',True
+sunflower,7015 8059 30092 39519,' sun' | ' Sun' | 'Sun' | 'sun',False
 surface,7329 23697 26963 39746,' surface' | 'Surface' | ' Surface' | 'surface',True
+swan,2021 2280 13218 43401,' sw' | 'sw' | 'Sw' | ' Swan',False
+swimming,2280 13218 23380 74700,'sw' | 'Sw' | ' swimming' | ' Swimming',True
 tablet,2556 20697 57303 98693,'Table' | ' tablet' | ' Tablet' | 'tablet',True
 tank,12896 31394 66033 85171,' tank' | ' Tank' | 'Tank' | 'tank',True
 tea,6639 15243 30025 81594,'Te' | ' tea' | ' Tea' | 'tea',True
 term,4647 4991 17249 17519,' term' | 'term' | 'Term' | ' Term',True
+textbook,1178 1318 2918 55085,'Text' | 'text' | ' Text' | ' textbook',True
+thief,339 1001 57735 85598,'th' | 'Th' | ' thief' | ' Thief',True
 thinking,7274 52289 82260 93945,' thinking' | ' Thinking' | 'thinking' | 'Thinking',True
+thunder,339 26691 36843 95912,'th' | ' Thunder' | ' thunder' | 'Thunder',True
 tie,51 18131 48731 58725,'T' | ' tie' | 'tie' | ' Tie',True
 tip,11552 13145 16011 29873,' tip' | 'tip' | 'Tip' | ' Tip',True
 toast,9609 17346 22405 52101,' Toast' | 'Toast' | ' toast' | 'toast',True
+tongue,51 83 24459 50391,'T' | 't' | ' tongue' | ' Tong',True
+toothbrush,983 1249 25507 82399,'to' | 'To' | ' tooth' | ' Tooth',False
+toothpaste,983 1249 25507 82399,'to' | 'To' | ' tooth' | ' Tooth',False
 top,1909 3481 5366 6909,' top' | 'top' | 'Top' | ' Top',True
+towel,51 83 40393 42613,'T' | 't' | ' Tow' | ' towel',True
+toy,21357 21603 67970 81225,' toy' | ' Toy' | 'Toy' | 'toy',True
+traffic,9442 36981 53987 87229,' traffic' | ' Traffic' | 'traffic' | 'Traffic',True
 turkey,17009 44305 65367 72719,' Turkey' | ' turkey' | 'tur' | 'Turkey',True
+turtle,51 36089 66806 81109,'T' | ' turtle' | ' Turtle' | 'turtle',True
+umbrella,52 3551 47898 65959,'U' | 'umb' | ' umbrella' | ' Umb',True
+universe,359 1806 15494 28749,'un' | 'Un' | ' universe' | ' Universe',True
+university,359 3822 12103 30172,'un' | ' University' | ' university' | 'University',True
 vessel,53 85 647 26182,'V' | 'v' | ' V' | ' vessel',True
+vinegar,53 46105 49695 61201,'V' | ' vinegar' | ' Vine' | 'vine',True
+volcano,10882 12536 36361 65206,' Vol' | 'vol' | 'Vol' | ' volcano',True
+wallet,15085 35735 36483 38259,' wallet' | 'wallet' | ' Wallet' | 'Wallet',True
+war,4116 5004 11455 28684,' war' | ' War' | 'war' | 'War',True
 ward,54 1606 25657 26640,'W' | 'ward' | ' ward' | ' Ward',True
 washer,54 47297 52892 96082,'W' | 'washer' | ' washer' | ' Washer',True
+water,3015 9959 12987 28253,' water' | ' Water' | 'water' | 'Water',True
 wave,12060 30398 31318 51682,' wave' | 'wave' | ' Wave' | 'Wave',True
+weather,9104 15206 22629 28981,' weather' | 'weather' | ' Weather' | 'Weather',True
+weekend,9001 10264 17053 47434,' weekend' | 'week' | 'Week' | ' Weekend',True
+whale,1312 1639 50019 96002,'wh' | 'Wh' | ' whale' | ' Whale',True
+wheel,13284 32342 38590 44207,' wheel' | ' Wheel' | 'wheel' | 'Wheel',True
 wife,54 7403 42408 47741,'W' | ' wife' | ' Wife' | 'wife',True
 wind,9956 19154 22087 58818,' wind' | 'wind' | ' Wind' | 'Wind',True
+wine,54 13078 31826 71437,'W' | ' wine' | ' Wine' | 'wine',True
+wisdom,23389 48043 56101 78748,' wisdom' | 'wis' | ' Wisdom' | 'Wis',True
 wish,54 6426 37647 81099,'W' | ' wish' | ' Wish' | 'wish',True
+wolf,25230 36542 76230 95434,' Wolf' | ' wolf' | 'wolf' | 'Wolf',True
+world,1879 4337 10134 14615,' world' | ' World' | 'World' | 'world',True
+worm,54 34211 55641 73030,'W' | ' worm' | 'worm' | ' Worm',True
+wrinkle,54 3112 18718 31630,'W' | ' wr' | 'wr' | ' Wr',False
+writer,6492 6916 18189 29404,'Writer' | ' writer' | 'writer' | ' Writer',True
 yard,56 17428 19515 38237,'Y' | 'yard' | ' yard' | ' Yard',True
+zebra,57 1147 1863 2986,'Z' | ' z' | ' Z' | 'ze',False
+zoo,57 89 40860 40914,'Z' | 'z' | ' Zoo' | ' zoo',True
+世界,99489,'世界',False
+乌龟,100444,'乌',False
+书桌,90286,'书',False
+交通,99735,'交通',False
+仙人掌,100717,'仙',False
+伤疤,99616,'伤',False
+作业,104147,'作业',False
+作家,105022,'作家',False
+信封,21317,'信',False
+健康,99722,'健康',False
+兔子,111680,'兔子',False
+农场,108447,'农场',False
+农夫,99288,'农',False
+冰,100038,'冰',False
+剪刀,102634,'剪',False
+动物园,117431,'动物园',False
+医院,100634,'医院',False
+博物馆,104646,'博物馆',False
+卧室,107832,'卧室',False
+历史,100022,'历史',False
+厨师,114396,'厨师',False
+厨房,105010,'厨房',False
+名字,101419,'名字',False
+向日葵,69041,'向',False
+周末,105648,'周末',False
+和平,104939,'和平',False
+啤酒,106503,'啤酒',False
+国王,107894,'国王',False
+图书馆,106036,'图书馆',False
+土豆,109971,'土豆',False
+城市,99490,'城市',False
+士兵,106598,'士兵',False
+大学,99562,'大学',False
+大米,110319,'大米',False
+大蒜,115436,'大蒜',False
+大象,116438,'大象',False
+天气,104307,'天气',False
+天鹅,112284,'天鹅',False
+头发,104994,'头发',False
+女王,112086,'女王',False
+婴儿,102833,'婴儿',False
+宇宙,105339,'宇宙',False
+宗教,105358,'宗教',False
+宫殿,117485,'宫殿',False
+小偷,30709,'小',False
+小狗,115441,'小狗',False
+岛,99825,'岛',False
+干旱,118898,'干旱',False
+幸福,101954,'幸福',False
+床,99830,'床',False
+彩虹,112609,'彩虹',False
+影子,57222,'影',False
+悲伤,110597,'悲伤',False
+愤怒,108299,'愤怒',False
+战争,104304,'战争',False
+手肘,44934,'手',False
+扫帚,99864,'扫',False
+教堂,109326,'教堂',False
+数学,104552,'数学',False
+文化,99348,'文化',False
+斑马,100876,'斑',False
+斧头,112541,'斧',False
+旗帜,110703,'旗帜',False
+日历,8903,'日',False
+智慧,101934,'智慧',False
+未来,100353,'未来',False
+李子,100339,'李',False
+枕头,115437,'枕头',False
+树叶,114171,'树叶',False
+梦,99815,'梦',False
+梯子,100546,'梯',False
+棒球,102321,'棒',False
+森林,102258,'森林',False
+椅子,110202,'椅子',False
+歌手,107434,'歌手',False
+死亡,102161,'死亡',False
+母亲,102079,'母亲',False
+毛巾,111869,'毛巾',False
+毯子,103537,'毯',False
+气球,99180,'气',False
+水,52510,'水',False
+水壶,52510,'水',False
+水母,52510,'水',False
+水獭,52510,'水',False
+池塘,100230,'池',False
+油,99318,'油',False
+法律,100376,'法律',False
+泥土,114411,'泥土',False
+泥巴,100846,'泥',False
+洋葱,117956,'洋葱',False
+洪水,108392,'洪水',False
+海,55135,'海',False
+海滩,113341,'海滩',False
+海豚,55135,'海',False
+海鸥,55135,'海',False
+渔夫,100938,'渔',False
+游泳,107140,'游泳',False
+湖,99529,'湖',False
+火山,111136,'火山',False
+灯塔,100183,'灯',False
+炸弹,114136,'炸弹',False
+照片,102184,'照片',False
+爱,99242,'爱',False
+父亲,102037,'父亲',False
+牙刷,100446,'牙',False
+牙膏,100446,'牙',False
+狐狸,114647,'狐狸',False
+狼,104522,'狼',False
+猫,100472,'猫',False
+猫头鹰,100472,'猫',False
+猴子,113321,'猴子',False
+玩偶,99366,'玩',False
+玩具,106346,'玩具',False
+生日,105511,'生日',False
+生菜,21287,'生',False
+电影,100378,'电影',False
+电话,87805,'电话',False
+白菜,111822,'白菜',False
+百合,114276,'百合',False
+皮肤,102010,'皮肤',False
+皱纹,114596,'皱纹',False
+盐,102029,'盐',False
+盔甲,119119,'盔',False
+知识,100032,'知识',False
+祖母,100753,'祖',False
+祖父,117378,'祖父',False
+科学,99891,'科学',False
+科学家,106105,'科学家',False
+秘密,102848,'秘密',False
+章鱼,44928,'章',False
+竹子,102045,'竹',False
+笑声,115042,'笑声',False
+笔记本,110412,'笔记本',False
+笛子,110427,'笛',False
+糖,100443,'糖',False
+糖果,114739,'糖果',False
+经济,99346,'经济',False
+结婚,104388,'结婚',False
+绳子,106491,'绳',False
+考试,103960,'考试',False
+耳环,100229,'耳',False
+肉,99894,'肉',False
+肥皂,99971,'肥',False
+肾脏,115912,'肾脏',False
+胡子,114895,'胡子',False
+胡萝卜,111761,'胡萝卜',False
+脚踝,100037,'脚',False
+脸颊,117746,'脸颊',False
+膝盖,115267,'膝盖',False
+自由,101972,'自由',False
+舌头,116016,'舌头',False
+舞蹈,105808,'舞蹈',False
+芝麻,110701,'芝麻',False
+花生,109378,'花生',False
+草坪,114826,'草坪',False
+菠菜,119402,'菠',False
+葡萄酒,107358,'葡萄酒',False
+蚂蚁,109897,'蚂蚁',False
+蚊子,113936,'蚊',False
+蚯蚓,119407,'蚯',False
+蛇,104821,'蛇',False
+蛾子,119241,'蛾',False
+蜂蜜,109546,'蜂蜜',False
+蜗牛,119459,'蜗',False
+血,99389,'血',False
+行星,113837,'行星',False
+衣服,102214,'衣服',False
+警察,104834,'警察',False
+记者,99606,'记者',False
+诞生,105644,'诞生',False
+语言,102064,'语言',False
+课本,115222,'课本',False
+豆子,99955,'豆',False
+轮子,99620,'轮',False
+邻居,108680,'邻居',False
+醋,106960,'醋',False
+野猪,99924,'野',False
+野餐,99924,'野',False
+针,100179,'针',False
+钱包,110886,'钱包',False
+铲子,110660,'铲',False
+锤子,109428,'锤',False
+长颈鹿,45861,'长',False
+闪电,112182,'闪电',False
+雨伞,100029,'雨',False
+雷,96465,'雷',False
+露水,99760,'露',False
+青蛙,118395,'青蛙',False
+面条,116443,'面条',False
+面粉,112398,'面粉',False
+鞋子,110383,'鞋子',False
+音乐,101941,'音乐',False
+鱼,100655,'鱼',False
+鱿鱼,121004,'鱿',False
+鲨鱼,119494,'鲨',False
+鲸鱼,111712,'鲸',False
+鳄鱼,119516,'鳄',False
+鸡蛋,105703,'鸡蛋',False
+鸵鸟,119387,'鸵',False
+鹦鹉,119505,'鹦',False
+鹿,104818,'鹿',False
+黄瓜,115439,'黄瓜',False
+黄金,104041,'黄金',False
+黑板,56652,'黑',False

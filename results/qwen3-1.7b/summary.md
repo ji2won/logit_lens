@@ -36,6 +36,24 @@
 | B | translate_ctx | 렌즈 S_diff (mean) | 0.981 | O |
 | B | translate_ctx | 렌즈 S (vanilla) | 0.879 | O |
 | B | translate_ctx | 렌즈 S_diff (vanilla) | 0.982 | O |
+| C | repeat | 렌즈 S (affine) | 0.963 | O |
+| C | repeat | 렌즈 S_diff (affine) | nan | X |
+| C | repeat | 렌즈 S (mean) | 0.865 | O |
+| C | repeat | 렌즈 S_diff (mean) | nan | X |
+| C | repeat | 렌즈 S (vanilla) | 0.808 | O |
+| C | repeat | 렌즈 S_diff (vanilla) | nan | X |
+| C | translate | 렌즈 S (affine) | 0.926 | O |
+| C | translate | 렌즈 S_diff (affine) | nan | X |
+| C | translate | 렌즈 S (mean) | 0.970 | O |
+| C | translate | 렌즈 S_diff (mean) | nan | X |
+| C | translate | 렌즈 S (vanilla) | 0.947 | O |
+| C | translate | 렌즈 S_diff (vanilla) | nan | X |
+| C | translate_to_en | 렌즈 S (affine) | 0.962 | O |
+| C | translate_to_en | 렌즈 S_diff (affine) | nan | X |
+| C | translate_to_en | 렌즈 S (mean) | 0.977 | O |
+| C | translate_to_en | 렌즈 S_diff (mean) | nan | X |
+| C | translate_to_en | 렌즈 S (vanilla) | 0.969 | O |
+| C | translate_to_en | 렌즈 S_diff (vanilla) | nan | X |
 
 ## 2. 렌즈 점수 × 간섭 상관 (Spearman, 문항 단위)
 
@@ -153,6 +171,22 @@ B의 간섭은 영어와 무관하므로 r_B ≈ 0이어야 한다. r_B도 크�
 | translate_en | mean | 9.321 | 0.016 | 0.279 [0.077, 0.453] |
 | translate_en | vanilla | 9.321 | 0.007 | 0.141 [-0.053, 0.330] |
 
+## 7. C: 중간층 평균 확률 (정답 영어 vs 무관 영어, 언어별 확률 질량)
+
+가설 1이 맞다면 바닐라에서는 무관한 영어(chair)와 영어 질량 전체가 높고, 평균 제거 렌즈에서 줄어야 한다.
+
+| task | lens | lp_target | lp_unrelated | mass_en | mass_en_word | mass_zh | mass_ko |
+|---|---|---|---|---|---|---|---|
+| repeat | affine | 0.0001 | 0.0001 | 0.0407 | 0.0123 | 0.1099 | 0.2596 |
+| repeat | mean | 0.0022 | 0.0001 | 0.3561 | 0.0584 | 0.4088 | 0.0045 |
+| repeat | vanilla | 0.0004 | 0.0002 | 0.3491 | 0.0237 | 0.1055 | 0.0024 |
+| translate | affine | 0.0001 | 0.0001 | 0.0202 | 0.0059 | 0.3446 | 0.0304 |
+| translate | mean | 0.0045 | 0.0000 | 0.2955 | 0.0455 | 0.5852 | 0.0058 |
+| translate | vanilla | 0.0023 | 0.0003 | 0.2772 | 0.0261 | 0.3421 | 0.0023 |
+| translate_to_en | affine | 0.0071 | 0.0006 | 0.0527 | 0.0072 | 0.0812 | 0.0260 |
+| translate_to_en | mean | 0.0364 | 0.0001 | 0.4597 | 0.0974 | 0.3769 | 0.0016 |
+| translate_to_en | vanilla | 0.0262 | 0.0007 | 0.4445 | 0.0476 | 0.1135 | 0.0016 |
+
 ## 8. 층 구간별 언어 질량 (입력어 프롬프트 평균 확률)
 
 `en`은 라틴 문자 2자 이상 토큰 전부(단어 조각 포함), `en_word`는 단어 시작 토큰이면서 영어 단어 목록에 있는 토큰만 센다. 둘의 차이가 크면 '영어'로 보이던 것의 상당 부분이 단어 조각이다. 구간은 렌즈 점수 구간 설정과 무관하게 전체 층의 1/4, 3/4로 나눈다.
@@ -195,6 +229,33 @@ B의 간섭은 영어와 무관하므로 r_B ≈ 0이어야 한다. r_B도 크�
 | B | translate_ctx | vanilla | 초반 1–6 | 0.619 | 0.008 | 0.051 | 0.002 |
 | B | translate_ctx | vanilla | 중간 7–21 | 0.367 | 0.017 | 0.303 | 0.002 |
 | B | translate_ctx | vanilla | 후반 22–27 | 0.012 | 0.010 | 0.981 | 0.000 |
+| C | repeat | affine | 초반 1–6 | 0.077 | 0.021 | 0.209 | 0.249 |
+| C | repeat | affine | 중간 7–21 | 0.041 | 0.012 | 0.110 | 0.260 |
+| C | repeat | affine | 후반 22–27 | 0.003 | 0.001 | 0.001 | 0.971 |
+| C | repeat | mean | 초반 1–6 | 0.268 | 0.027 | 0.424 | 0.004 |
+| C | repeat | mean | 중간 7–21 | 0.356 | 0.058 | 0.409 | 0.005 |
+| C | repeat | mean | 후반 22–27 | 0.299 | 0.016 | 0.148 | 0.451 |
+| C | repeat | vanilla | 초반 1–6 | 0.560 | 0.011 | 0.059 | 0.003 |
+| C | repeat | vanilla | 중간 7–21 | 0.349 | 0.024 | 0.105 | 0.002 |
+| C | repeat | vanilla | 후반 22–27 | 0.091 | 0.010 | 0.163 | 0.509 |
+| C | translate | affine | 초반 1–6 | 0.068 | 0.017 | 0.265 | 0.223 |
+| C | translate | affine | 중간 7–21 | 0.020 | 0.006 | 0.345 | 0.030 |
+| C | translate | affine | 후반 22–27 | 0.006 | 0.005 | 0.992 | 0.000 |
+| C | translate | mean | 초반 1–6 | 0.244 | 0.021 | 0.482 | 0.005 |
+| C | translate | mean | 중간 7–21 | 0.295 | 0.046 | 0.585 | 0.006 |
+| C | translate | mean | 후반 22–27 | 0.067 | 0.062 | 0.932 | 0.000 |
+| C | translate | vanilla | 초반 1–6 | 0.532 | 0.011 | 0.079 | 0.002 |
+| C | translate | vanilla | 중간 7–21 | 0.277 | 0.026 | 0.342 | 0.002 |
+| C | translate | vanilla | 후반 22–27 | 0.041 | 0.038 | 0.955 | 0.000 |
+| C | translate_to_en | affine | 초반 1–6 | 0.080 | 0.018 | 0.217 | 0.239 |
+| C | translate_to_en | affine | 중간 7–21 | 0.053 | 0.007 | 0.081 | 0.026 |
+| C | translate_to_en | affine | 후반 22–27 | 0.765 | 0.142 | 0.056 | 0.000 |
+| C | translate_to_en | mean | 초반 1–6 | 0.304 | 0.032 | 0.388 | 0.006 |
+| C | translate_to_en | mean | 중간 7–21 | 0.460 | 0.097 | 0.377 | 0.002 |
+| C | translate_to_en | mean | 후반 22–27 | 0.865 | 0.644 | 0.127 | 0.000 |
+| C | translate_to_en | vanilla | 초반 1–6 | 0.610 | 0.008 | 0.040 | 0.002 |
+| C | translate_to_en | vanilla | 중간 7–21 | 0.445 | 0.048 | 0.114 | 0.002 |
+| C | translate_to_en | vanilla | 후반 22–27 | 0.787 | 0.611 | 0.145 | 0.000 |
 
 ## 부록: 렌즈 적합도 (held-out KL(최종 || 렌즈), 중간층 평균)
 

@@ -9,6 +9,8 @@
                   예문은 틀({W} 자리 + 받침에 맞춰 고르는 조사)이라 대조어도 같은 예문에 넣는다
                   (시장에서 배 한 상자를 샀다 → 시장에서 복숭아 한 상자를 샀다). few-shot에도 예문이 붙는다.
     repeat        한국어 → 한국어 반복 (영어가 필요 없는 과제)
+    translate_to_en 한국어 → 영어 (C). 출력 언어가 중국어가 아닐 때 중간층이 어느 언어로 가는지 본다
+                  (Qwen의 중국어 우세가 '출력 언어를 따라감'인지 '중국어 편향'인지 가리기)
 """
 from __future__ import annotations
 
@@ -75,6 +77,13 @@ _TRANSLATE = {
     "v4": ("",
            lambda src, en: (f"「{src}」" + (f"(영어「{en}」)" if en else "") + "의 중국어는「", "」")),
 }
+# 한국어 → 영어. 형식은 _TRANSLATE와 같고 목표 언어만 영어 (v3는 중국어 지시문 그대로)
+_TO_EN = {
+    "v1": ("", lambda src, en: (f"한국어：{src}\nEnglish：", "")),
+    "v2": ("다음 한국어 단어를 영어로 번역하세요.\n", lambda src, en: (f"{src}→", "")),
+    "v3": ("请把韩语词翻译成英语。\n", lambda src, en: (f"韩语：{src}\n英语：", "")),
+    "v4": ("", lambda src, en: (f"「{src}」의 영어는「", "」")),
+}
 _REPEAT = {
     "v1": ("", lambda src, en: (f"한국어：{src}\n한국어：", "")),
     "v2": ("다음 단어를 그대로 따라 쓰세요.\n", lambda src, en: (f"{src}→", "")),
@@ -89,6 +98,11 @@ def build(task: str, version: str, word: str, en_hint: str = "", ctx: str = "") 
         head, fmt = _REPEAT[version]
         shots = [fmt(ko, None) for ko, _, _ in FEWSHOT]
         lines = [pre + ko + post for (pre, post), (ko, _, _) in zip(shots, FEWSHOT)]
+        return head + "\n".join(lines) + "\n" + fmt(word, None)[0]
+    if task == "translate_to_en":
+        head, fmt = _TO_EN[version]
+        lines = [pre + en + post for (pre, post), (_, _, en) in
+                 zip([fmt(ko, None) for ko, _, _ in FEWSHOT], FEWSHOT)]
         return head + "\n".join(lines) + "\n" + fmt(word, None)[0]
     if task == "translate_ctx":
         if not ctx:
