@@ -5,3 +5,11 @@ results/**/lang_masks.pt
 results/**/lens.csv.gz
 etym_cache.json
 logs/
+.DS_Store
+.vscode/
+# 재실행 전 백업 (원본은 git 이력에 있음)
+results/**/pre_*_backup*/
+# 수 MB 넘는 원시 덤프 (요약 csv는 커밋)
+results/**/inflation/size.csv
+results/**/remove_word/topk.csv
+results/**/zh_topk.csv

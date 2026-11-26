@@ -13,6 +13,8 @@
   상관          = 문항별로 4개 프롬프트 평균을 낸 뒤 Spearman. 95% CI는 묶음(group) 단위 bootstrap
   판정(A 번역)  = 보정 렌즈마다 영어 감소율(1 - 평균 확률 비)과 상관 변화(Δr, 같은 bootstrap 표본)로
                   | 크게 줄고 상관 그대로 → 가설 지지 | 거의 안 줆 → 가설에 불리 | 크게 줄고 상관 하락 → 렌즈 신뢰 |
+  충실도 관문   = 과제 프롬프트, 중간층 평균에서 보정 렌즈의 KL(최종 || 렌즈) < 바닐라 KL 이고
+                  언어 질량(영+중+한) ≥ FIDELITY_MASS_RATIO × 바닐라 언어 질량. 미달한 렌즈는 판정하지 않는다.
 """
 from __future__ import annotations
 
@@ -25,7 +27,8 @@ import numpy as np
 import pandas as pd
 from scipy.stats import rankdata
 
-from .config import BIG_REDUCTION, DATASETS, MID_LAYER_RANGE, N_BOOT, RELIABILITY_MIN, RESULTS_DIR, SEED
+from .config import (BIG_REDUCTION, DATASETS, FIDELITY_MASS_RATIO, MID_LAYER_RANGE, N_BOOT, RELIABILITY_MIN,
+                     RESULTS_DIR, SEED)
 
 PRIMARY = {"A": "lp_poly", "B": "lp_distractor", "C": "lp_target"}
 KEYS = ["dataset", "id", "task", "version"]
@@ -121,6 +124,49 @@ def verdict(red: float, dr_hi: float, base_lo: float = 1.0) -> str:
     return "크게 줄고 상관은 그대로 → 지운 영어는 부풀려진 영어였다 (가설 지지)"
 
 
+def fidelity(lens: pd.DataFrame, lo: int, hi: int) -> pd.DataFrame:
+    """과제 프롬프트(입력어)에서 렌즈 충실도, 중간층 평균. 데이터셋×과제×렌즈 한 행.
+    kl 열이 없는 이전 실행 결과면 언어 질량만으로 관문을 본다."""
+    d = lens[(lens.role == "input") & lens.layer.between(lo, hi)]
+    langs = [c for c in ("mass_en", "mass_zh", "mass_ko") if c in d]
+    if not langs:
+        return pd.DataFrame()
+    d = d.assign(lang_mass=sum(np.exp(d[c]) for c in langs))
+    has_kl = "kl" in d and d.kl.notna().any()
+    agg = dict(lang_mass=("lang_mass", "mean"))
+    if has_kl:
+        agg["kl"] = ("kl", "mean")
+    f = d.groupby(["dataset", "task", "lens"]).agg(**agg).reset_index()
+    van = f[f.lens == "vanilla"].set_index(["dataset", "task"])
+    rows = []
+    for r in f.itertuples(index=False):
+        key = (r.dataset, r.task)
+        if key not in van.index:
+            continue
+        v = van.loc[key]
+        ratio = r.lang_mass / v.lang_mass
+        ok_mass = ratio >= FIDELITY_MASS_RATIO
+        ok_kl = (r.kl < v.kl) if has_kl else None
+        if r.lens == "vanilla":
+            gate = "기준"
+        elif has_kl:
+            gate = "O" if ok_mass and ok_kl else "X"
+        else:
+            gate = "O (질량만)" if ok_mass else "X"
+        rows.append({"dataset": r.dataset, "task": r.task, "lens": r.lens,
+                     "KL(최종||렌즈)": r.kl if has_kl else float("nan"),
+                     "바닐라 KL": v.kl if has_kl else float("nan"),
+                     "언어 질량": r.lang_mass, "바닐라 대비": ratio, "관문": gate})
+    return pd.DataFrame(rows)
+
+
+def gate_of(fid: pd.DataFrame, ds: str, task: str, ln: str) -> str:
+    if fid.empty:
+        return "정보 없음"
+    g = fid[(fid.dataset == ds) & (fid.task == task) & (fid.lens == ln)]
+    return g.관문.iloc[0] if len(g) else "정보 없음"
+
+
 # ---------------------------------------------------------------- 표 출력
 def md_table(df: pd.DataFrame, floatfmt="{:.3f}") -> str:
     cols = list(df.columns)
@@ -149,6 +195,17 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
     S = lens_scores(lens, layer_range)
     md, metrics = [f"# 결과 요약 ({out_dir.name})\n",
                    f"층 수 {n_layers}, 렌즈 점수 구간 {lo}–{hi}층, bootstrap {n_boot}회\n"], {}
+
+    # ---- 0. 렌즈 충실도 관문 (과제 프롬프트)
+    fid = fidelity(lens, lo, hi)
+    if len(fid):
+        md += ["## 0. 렌즈 충실도 관문 (과제 프롬프트, 중간층 평균, 입력어)\n",
+               "보정 렌즈는 위키 held-out KL(부록)이 아니라 실제 과제 프롬프트에서도 최종 출력에 더 가까워야 하고, "
+               "판독이 공백·기호로 무너지지 않아야 한다. 관문: KL < 바닐라 KL, 언어 질량(영+중+한) ≥ "
+               f"{FIDELITY_MASS_RATIO} × 바닐라. 'X'인 렌즈는 3절 판정에서 '판정 불가'로 처리한다. "
+               "KL 열이 비어 있으면 KL을 기록하기 전 실행 결과라 언어 질량만 본 것이다.\n",
+               md_table(fid), ""]
+        metrics["fidelity"] = fid.to_dict("records")
 
     # ---- 1. 신뢰도 (프롬프트 4개)
     rel = []
@@ -193,14 +250,19 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
             for ln in sorted(set(a.lens) - {"vanilla"}):
                 new = a[a.lens == ln].set_index("id").loc[ref.index]
                 (dr, dlo, dhi), (rd, rlo, rhi) = paired_delta(ref[x], new[x], ref.I, ref.p, new.p, ref.group, n_boot)
-                rows.append({"x": x, "렌즈": ln, "바닐라 r [CI]": ci(r0, base_lo, base_hi),
+                gate = gate_of(fid, "A", "translate", ln)
+                v = verdict(rd, dhi, base_lo)
+                if gate == "X":
+                    v = "판정 불가: 렌즈 충실도 관문 미달 (0절)"
+                rows.append({"x": x, "렌즈": ln, "충실도 관문": gate, "바닐라 r [CI]": ci(r0, base_lo, base_hi),
                              "영어 확률(바닐라)": ref.p.mean(), "영어 확률(보정)": new.p.mean(),
                              "감소율 [CI]": ci(rd, rlo, rhi), "Δr [CI]": ci(dr, dlo, dhi),
-                             "판정": verdict(rd, dhi, base_lo)})
+                             "판정": v})
         vt = pd.DataFrame(rows)
         md += ["## 3. 판정 (A, 번역 과제)\n",
                f"'크게 줄었음' = 감소율 ≥ {BIG_REDUCTION} (S 기준 확률). '상관 하락' = Δr의 95% CI 상한 < 0. "
-               "바닐라 상관의 CI 하한이 0 이하이면 판정하지 않는다.\n", md_table(vt), ""]
+               "바닐라 상관의 CI 하한이 0 이하이거나, 보정 렌즈가 충실도 관문(0절)을 넘지 못하면 판정하지 않는다.\n",
+               md_table(vt), ""]
         metrics["verdict"] = vt.to_dict("records")
 
     # ---- 4. 음성 대조 (B) vs A. B는 맥락 없음(translate)과 예문(translate_ctx) 두 조건
@@ -313,9 +375,11 @@ def analyze(out_dir: Path, n_boot=N_BOOT, plots=True, layer_range=None, tag="") 
     fit_file = src / "lens_fit.csv"
     if fit_file.exists():
         f = pd.read_csv(fit_file)
-        f = f[f.lens.isin(["vanilla", "mean", "affine"]) & f.layer.between(lo, hi)]
-        md += ["## 부록: 렌즈 적합도 (held-out KL(최종 || 렌즈), 중간층 평균)\n",
-               "아핀 렌즈가 바닐라보다 KL이 작아야 기저 맞춤이 실제로 된 것이다.\n",
+        f = f[f.lens.isin(["vanilla", "mean", "affine", "tuned", "vanilla_tunedeval"]) & f.layer.between(lo, hi)]
+        md += ["## 부록: 렌즈 적합도 (위키 held-out KL(최종 || 렌즈), 중간층 평균)\n",
+               "아핀·tuned 렌즈가 바닐라보다 KL이 작아야 기저 맞춤이 실제로 된 것이다. "
+               "`vanilla_tunedeval`은 --only-tuned로 tuned를 따로 학습했을 때 tuned와 같은 held-out 위치에서 잰 바닐라 KL이다. "
+               "과제 프롬프트에서의 충실도는 0절에 있다.\n",
                md_table(f.groupby("lens", as_index=False).kl.mean()), ""]
 
     (out_dir / "summary.md").write_text("\n".join(md), "utf-8")
@@ -333,7 +397,7 @@ def make_plots(out_dir: Path, items: pd.DataFrame, lens: pd.DataFrame, lo: int, 
 
     # 산점도: 데이터셋×과제마다 렌즈별 패널
     for (ds, task), g in items.dropna(subset=["I"]).groupby(["dataset", "task"]):
-        order = ["vanilla", "mean", "affine"]
+        order = ["vanilla", "mean", "affine", "tuned"]
         lens_names = [n for n in order if n in set(g.lens)] + sorted(set(g.lens) - set(order))
         fig, axes = plt.subplots(1, len(lens_names), figsize=(4.2 * len(lens_names), 4), squeeze=False)
         for ax, ln in zip(axes[0], lens_names):

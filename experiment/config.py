@@ -21,10 +21,10 @@ DATASETS = {
 TASKS = {
     "A": ["translate", "translate_en"],   # translate_en = 양성 대조(영어 중간 단계를 프롬프트에 넣음)
     "B": ["translate", "translate_ctx"],  # 음성 대조. translate_ctx = 예문으로 뜻을 정해 준 조건(B_ctx.csv)
-    "C": ["translate", "repeat"],         # 무관한 영어가 오르는지 + 반복 과제
+    "C": ["translate", "repeat", "translate_to_en"],   # 무관한 영어가 오르는지 + 반복 과제 + 한→영 번역
 }
 VERSIONS = ["v1", "v2", "v3", "v4"]       # 프롬프트 4가지
-LENSES = ["vanilla", "mean", "affine"]
+LENSES = ["vanilla", "mean", "affine", "tuned"]
 
 # 렌즈 점수를 취하는 중간층 구간(전체 층 수 대비 비율, 양 끝 포함)
 MID_LAYER_RANGE = (0.25, 0.75)
@@ -33,4 +33,8 @@ MID_LAYER_RANGE = (0.25, 0.75)
 RELIABILITY_MIN = 0.7          # 프롬프트 4개에 걸친 Cronbach's alpha
 BIG_REDUCTION = 0.5            # 보정 후 영어 확률이 바닐라 대비 50% 이상 줄면 "크게 줄었음"
 N_BOOT = 2000
+# 렌즈 충실도 관문 (과제 프롬프트, 중간층 평균). 둘 다 통과해야 그 렌즈로 판정한다.
+#   KL(최종 || 렌즈) < 바닐라 KL
+#   언어 질량(영어+중국어+한국어) ≥ FIDELITY_MASS_RATIO × 바닐라 언어 질량   (판독이 기호·공백으로 무너지지 않음)
+FIDELITY_MASS_RATIO = 0.8
 SEED = 0
