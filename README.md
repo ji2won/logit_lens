@@ -128,8 +128,7 @@ affine 붕괴의 증거:
 | logit | **0.785** | 0.043 | 0.015 | 0.158 | 'afi', 'anzi', 'onium' (뜻 없는 조각) |
 | tuned | 0.116 | **0.843** | 0.003 | 0.038 | '人', '散', '排' |
 
-<img width="1800" height="1290" alt="image" src="https://github.com/user-attachments/assets/140b13f3-8063-444d-83a2-c9a86447da83" />
-
+![층별 영어 비중](figs/layerwise_english.png)
 
 ### 결론
 - **가설 ① 기각.** 평균을 빼도 E가 그대로거나 오른다. μ의 기여 몫은 −0.01–0.00이고, 판독 1위 토큰도 안 바뀐다.
@@ -188,8 +187,7 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 
 ### 실제 결과
 
-<img width="2000" height="1400" alt="image" src="https://github.com/user-attachments/assets/47c8be9c-72c3-4737-9bc5-a5e8a579d980" />
-
+![층별 영어](figs/layerwise_english.png)
 
 | 층, mean log p (영어 단어 / 중국어 정답) | Llama logit | Llama tuned | EXAONE logit | EXAONE tuned |
 |---|---|---|---|---|
@@ -216,8 +214,7 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 
 ### 실제 결과
 
-<img width="2400" height="780" alt="image" src="https://github.com/user-attachments/assets/62e524b0-4d06-4170-858e-8cf982739a68" />
-
+![간섭 분포](figs/interference_presentation.png)
 
 **(a) A의 간섭** (문항 단위 Wilcoxon)
 
@@ -247,8 +244,8 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 | Llama A (양성: spring 직접 입력) | 0.96 → **6.31** | 95% | 1e−12 |
 | Llama B (음성: ship 직접 입력) | 3.81 → **0.51** | 9% | 2.6e−5 |
 | EXAONE B (음성) | 3.57 → **0.68** | 5% | 5.7e−6 |
-<img width="2250" height="1380" alt="image" src="https://github.com/user-attachments/assets/4da71a2a-3576-4927-a5fa-a865db7abd85" />
 
+![봄 문항 간섭](figs/spring_interference.png)
 
 ### 결론
 - **영어 다의어의 다른 뜻은 실제 출력 확률을 끌어올린다.** 평균 +1.3 nat(약 3.7배)이고, 빈도를 맞춘 무관 단어 대비로도 그대로 남는다. 양성 대조(영어 입력 → 6.3)와 음성 대조(B: 영어로 뜻을 정하면 사라짐)가 모두 기대한 방향이다. 즉 **I는 영어 다의성을 반영하는 행동 지표로 쓸 수 있다.**
@@ -270,8 +267,7 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 
 ### 실제 결과
 
-<img width="2430" height="1380" alt="image" src="https://github.com/user-attachments/assets/a316ecb9-8f28-4dee-bfa7-1c67e75f911d" />
-
+![예측 2, 모든 문항](figs/rL_lenses_A.png)
 
 | r_L (부분 Spearman) | n | logit | tuned | Δ (tuned − logit) [CI] |
 |---|---|---|---|---|
@@ -285,8 +281,7 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 | Llama B 2/4 공통 | 22 | 0.33 | 0.00 | −0.33 [−0.71, **+0.004**] |
 | EXAONE B 3/4 | 20 | −0.31 | −0.43 | −0.13 [−0.59, 0.36] |
 
-<img width="2400" height="750" alt="image" src="https://github.com/user-attachments/assets/6df174da-e40e-492b-bf36-259e75d873bb" />
-
+![A 산점도](figs/scatter_A.png)
 
 ### 결론
 - **A: 판단 불가.** logit 상관부터 유의하지 않고 CI가 넓다. 원인은 문항 수(24–48개)와 I의 문항 간 잡음이다. EXAONE은 logit과 tuned가 반대 방향이라 해석할 수 없다.
@@ -311,8 +306,7 @@ Wendler et al.의 층별 그림(중간 층에서 영어가 목표 언어를 앞�
 
 ### 실제 결과
 
-![Uploading image.png…]()
-
+![인과 개입](figs/ablation_llama.png)
 
 **정합성**: 같은 배치 안 clean 행 차이 0, 재실행 차이 0, 제거 후 남은 spring 성분 최대 0.016 → ok: True.
 
@@ -414,4 +408,3 @@ logit lens가 다국어 모델 중간 층에서 보여 주는 "영어"는 두 �
 | 인과 개입 | `exp_A/run_ablate.py`, `analyze_ablate.py`, `results_ablate/llama/`, 직교화: `run_ablate_orth.sh` |
 | affine 붕괴 확인 | `compare_other/affine_check.py` |
 | 그림 | `exp_A/figs/` (인과 개입 그림 `ablation_llama.png`는 이 문서용으로 `results_ablate/llama/items_ablate.csv`와 `results_placebo/llama/items_placebo.csv`에서 새로 그림) |
-  
