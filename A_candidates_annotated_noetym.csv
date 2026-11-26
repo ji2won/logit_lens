@@ -1,0 +1,214 @@
+﻿id,en,direction,sense_target,ko_input,zh_answer,sense_distractor,zh_distractor,ko_reverse_input,ko_control,draft_flags,note,zh_shared_chars,zipf_en,zipf_ko_input,zipf_ko_reverse,zipf_zh_answer,zipf_zh_distractor,zipf_ko_control,auto_flags
+A001,spring,fwd,season,봄,春天,coil,弹簧,용수철,여름;가을,,,,4.92,4.86,0.0,4.4,3.6,5.03;4.67,
+A002,fall,fwd,season (autumn),가을,秋天,waterfall,瀑布,폭포,겨울;여름,,폭포 의미는 주로 복수형 falls,,5.13,4.67,3.96,4.07,4.06,4.84;5.03,
+A003,bat,fwd,animal,박쥐,蝙蝠,sports club,球棒,방망이,다람쥐;고슴도치,,,,4.3,4.05,3.31,3.84,3.48,3.96;3.34,
+A004,crane,fwd,bird,두루미,鹤,machine,起重机,기중기,참새;까치,,,,3.92,3.06,0.0,3.51,3.34,3.4;3.44,
+A005,seal,fwd,animal,물개,海豹,stamp,印章,도장,돌고래;수달,,,,4.3,3.17,4.14,3.66,3.55,3.89;3.62,
+A006,palm,fwd,hand,손바닥,手掌,tree,棕榈树,야자수,손등;손목,,,,4.23,3.87,0.0,3.68,2.55,3.14;4.15,
+A007,bank,fwd,riverbank,강둑,河岸,finance,银行,은행,언덕;강변,KO_POLY_REV,역방향 입력 은행=은행나무 다의,,5.16,0.0,4.94,3.58,5.34,4.27;3.85,KO_FREQ_ZERO
+A008,bark,fwd,tree skin,나무껍질,树皮,dog sound,狗叫声,개 짖는 소리,나뭇잎;이끼,MULTIWORD_REV,,,3.85,0.0,3.76,3.19,2.82,3.64;3.24,KO_FREQ_ZERO
+A009,bow,fwd,weapon,활,弓,ribbon knot,蝴蝶结,나비매듭,방패;칼,,bow 인사 의미(鞠躬)도 있음,,4.3,4.1,0.0,3.76,3.0,4.0;4.94,
+A010,club,fwd,organization,동아리,俱乐部,weapon,棍棒,곤봉,모임;단체,REL?,,,5.2,4.16,0.0,4.81,3.34,4.61;5.19,CTRL_FREQ_GAP
+A011,date,fwd,fruit,대추야자,椰枣,calendar,日期,날짜,무화과;석류,,date 데이트 의미도 있음,,5.22,0.0,4.42,1.57,4.7,3.16;3.21,KO_FREQ_ZERO
+A012,fan,fwd,appliance,선풍기,电风扇,admirer,粉丝,팬,냉장고;난로,LOAN_REV,부채(扇子)는 부채(負債)와 다의라 선풍기 사용,,4.92,3.54,5.07,2.6,4.52,4.26;3.05,
+A013,iron,fwd,metal,쇠,铁,appliance,熨斗,다리미,구리;아연,REL,,,4.74,3.81,0.0,4.71,1.68,4.3;3.64,RARE_DIST
+A014,key,fwd,lock,열쇠,钥匙,piano,琴键,건반,빗;동전,REL,,,5.12,4.09,3.28,4.22,2.82,4.1;4.11,
+A015,letter,fwd,mail,편지,信件,alphabet,字母,글자,엽서;소포,,,,4.95,4.75,4.53,4.0,4.33,3.61;3.56,CTRL_FREQ_GAP
+A016,match,fwd,stick,성냥,火柴,contest,比赛,시합,양초;라이터,,,,5.13,3.31,3.95,3.53,5.37,3.33;3.69,
+A017,mole,fwd,animal,두더지,鼹鼠,skin spot,痣,점,고슴도치;다람쥐,KO_POLY_REV,"점은 다의(點, 店 등)",,3.67,3.01,5.51,1.14,3.27,3.34;3.96,
+A018,nail,fwd,finger,손톱,指甲,hardware,钉子,못,머리카락;눈썹,KO_POLY_REV,못=연못/부정 부사,,4.21,3.94,6.13,3.79,3.63,4.26;3.92,
+A019,pitcher,fwd,jug,주전자,水壶,baseball,投手,투수,냄비;그릇,ZH_POLY?,水壶는 보온병 뜻도 있음,,3.79,3.36,4.14,3.41,3.26,3.68;4.24,
+A020,plant,fwd,vegetation,식물,植物,factory,工厂,공장,동물;곤충,,,,4.89,4.55,4.82,4.79,4.89,5.07;3.88,
+A021,pupil,fwd,eye,눈동자,瞳孔,student,学生,학생,눈썹;눈꺼풀,,,,3.81,3.81,5.26,3.34,5.72,3.92;3.31,
+A022,ring,fwd,jewelry,반지,戒指,bell sound,铃声,벨소리,목걸이;팔찌,,권투 링 의미도 있음,,4.81,4.41,4.58,3.92,3.78,4.05;3.89,
+A023,rock,fwd,stone,바위,岩石,music,摇滚乐,록 음악,모래;자갈,LOAN_REV,,,5.03,4.34,4.42,4.11,3.56,4.27;3.37,
+A024,ruler,fwd,measuring tool,자,尺子,leader,统治者,통치자,연필;지우개,KO_POLY,자는 한 음절 다의(자/者/字 등),,3.84,6.29,3.6,2.75,4.21,3.85;3.34,CTRL_FREQ_GAP
+A025,scale,fwd,fish,비늘,鳞片,weighing,秤,저울,지느러미;아가미,,scale 규모(规模)·음계 의미도 있음,,4.83,3.25,3.17,3.22,3.34,3.13;0.0,
+A026,star,fwd,celestial,별,星星,celebrity,明星,스타,달;구름,ZH_SHARE;REL,필터 예시(星 공유),星,5.19,5.5,5.19,4.12,4.76,5.7;4.39,ZH_SHARE;CTRL_FREQ_GAP
+A027,trunk,fwd,tree,나무줄기,树干,elephant nose,象鼻,코끼리 코,뿌리;잎사귀,MULTIWORD_REV,자동차 트렁크(后备箱) 의미도 있음,,4.03,0.0,4.02,3.35,2.81,4.55;3.06,KO_FREQ_ZERO
+A028,bass,fwd,fish,농어,鲈鱼,music,低音,베이스,송어;잉어,LOAN_REV,영어 발음 다름(동형이음),,4.28,3.22,4.28,2.05,3.26,3.38;3.24,
+A029,cricket,fwd,insect,귀뚜라미,蟋蟀,sport,板球,크리켓,메뚜기;매미,LOAN_REV,,,4.39,3.28,3.46,3.19,3.42,3.24;3.37,
+A030,squash,fwd,vegetable,호박,南瓜,sport,壁球,스쿼시,오이;당근,KO_POLY;LOAN_REV,호박=琥珀(호박석) 다의,,3.63,3.81,3.01,3.69,2.75,4.04;4.05,
+A031,coach,fwd,trainer,감독,教练,carriage,马车,마차,심판;선수,KO_POLY,감독=영화감독 다의,,4.96,5.14,3.76,4.58,3.78,4.47;5.22,
+A032,cabinet,fwd,furniture,찬장,橱柜,government,内阁,내각,서랍;선반,,,,4.49,0.0,3.76,1.88,4.62,3.62;3.7,KO_FREQ_ZERO
+A033,chest,fwd,body,가슴,胸部,box,箱子,상자,어깨;허리,,,,4.52,4.99,4.53,4.14,3.78,4.51;4.36,
+A034,cell,fwd,biology,세포,细胞,prison,牢房,감방,혈액;근육,,,,4.87,4.64,3.35,4.64,3.72,4.38;4.45,
+A035,current,fwd,water,해류,水流,electric,电流,전류,파도;조수,ZH_SHARE;REL,필터 예시(流 공유),流,5.27,3.16,4.0,3.89,4.11,4.17;3.81,ZH_SHARE;CTRL_FREQ_GAP
+A036,mint,fwd,herb,박하,薄荷,coin factory,造币厂,조폐국,계피;생강,RARE_DIST?,,,3.92,3.27,0.0,3.46,2.23,3.12;3.34,RARE_DIST
+A037,mouse,fwd,animal,쥐,老鼠,computer,鼠标,마우스,토끼;햄스터,ZH_SHARE;REL;LOAN_REV,필터 예시(鼠 공유),鼠,4.31,4.9,4.18,4.11,3.67,4.42;3.39,ZH_SHARE;CTRL_FREQ_GAP
+A038,pit,fwd,hole,구덩이,坑,fruit stone,果核,과일 씨,동굴;웅덩이,MULTIWORD_REV,,,4.27,3.38,4.35,4.49,3.17,4.23;3.26,
+A039,post,fwd,pillar,기둥,柱子,mail,邮件,우편,벽;지붕,,post 직위 의미도 있음,,5.43,4.07,4.51,3.65,4.36,4.76;4.33,
+A040,race,fwd,competition,경주,赛跑,ethnicity,种族,인종,씨름;수영,KO_POLY,경주=慶州 다의,,5.08,4.63,4.3,3.46,4.63,3.61;4.43,CTRL_FREQ_GAP
+A041,stamp,fwd,postage,우표,邮票,seal,图章,도장,엽서;봉투,REL,,,4.11,3.75,4.14,3.81,3.62,3.61;4.05,
+A042,suit,fwd,clothing,정장,西装,lawsuit,诉讼,소송,외투;치마,,,,4.7,3.97,4.56,3.85,4.55,3.43;3.97,
+A043,temple,fwd,building,사원,寺庙,head,太阳穴,관자놀이,교회;성당,KO_POLY,사원=社員 다의,,4.45,4.39,0.0,4.03,3.06,5.1;4.26,
+A044,yard,fwd,garden,마당,院子,unit,码,야드,정원;울타리,ZH_POLY;LOAN_REV,码=코드 다의,,4.57,4.15,4.07,3.93,4.61,4.57;3.77,
+A045,arms,fwd,limbs,팔,手臂,weapons,武器,무기,어깨;손목,KO_POLY,"팔=八 다의, 복수형",,4.82,5.27,4.9,4.17,5.1,4.51;4.15,CTRL_FREQ_GAP
+A046,bill,fwd,beak,부리,鸟嘴,invoice,账单,계산서,날개;깃털,,bill 법안(法案) 의미도 있음,,5.15,4.36,3.35,3.4,3.6,4.58;3.74,
+A047,bolt,fwd,lightning,번개,闪电,screw,螺栓,볼트,천둥;무지개,LOAN_REV,,,4.04,4.16,3.98,4.07,1.91,3.72;3.93,RARE_DIST
+A048,bug,fwd,insect,벌레,虫子,software,漏洞,버그,개미;거미,REL;LOAN_REV,,,4.2,4.21,4.11,3.55,4.2,3.94;3.96,
+A049,capital,fwd,city,수도,首都,money,资本,자본,도시;마을,KO_POLY,수도=水道 다의,,5.01,4.7,4.3,4.82,5.11,5.42;5.19,
+A050,case,fwd,legal,사건,案件,container,箱子,상자,범죄;재판,,,,5.55,5.42,4.53,4.96,3.78,4.91;4.67,
+A051,deck,fwd,ship,갑판,甲板,cards,一副牌,카드 한 벌,돛;닻,MULTIWORD_REV,,,4.41,3.49,4.73,3.78,3.01,3.2;3.16,
+A052,digit,fwd,finger,손가락,手指,number,数字,숫자,발가락;손목,REL,,,3.77,4.67,4.69,4.4,5.1,3.82;4.15,
+A053,engagement,fwd,marriage,약혼,订婚,battle,交战,교전,결혼;이혼,REL?,,,4.31,3.6,3.73,3.49,3.98,5.23;4.5,CTRL_FREQ_GAP
+A054,file,fwd,document,서류,文件,tool,锉刀,줄,공책;봉투,KO_POLY_REV,줄 다의,,4.75,4.57,5.81,5.08,1.89,3.14;4.05,RARE_DIST;CTRL_FREQ_GAP
+A055,foot,fwd,body,발,脚,unit,英尺,피트,손;무릎,REL;LOAN_REV,,,4.87,5.14,4.42,4.86,4.11,5.61;4.59,
+A056,game,fwd,hunting prey,사냥감,猎物,play,游戏,게임,미끼;먹이,LOAN_REV,,,5.72,3.04,5.82,3.83,5.66,3.73;4.48,CTRL_FREQ_GAP
+A057,glasses,fwd,eyewear,안경,眼镜,cups,玻璃杯,유리잔,모자;장갑,REL,,,4.34,4.31,0.0,4.35,3.28,4.6;4.15,
+A058,lap,fwd,body,무릎,大腿,round,一圈,한 바퀴,허리;엉덩이,WEAK,무릎은 knee에 더 가까움,,4.18,4.59,4.24,3.97,3.95,4.36;4.53,
+A059,lock,fwd,security,자물쇠,锁,hair,一绺头发,머리 타래,경첩;사슬,RARE_DIST,,,4.51,3.51,0.0,4.39,0.33,0.0;3.82,RARE_DIST
+A060,log,fwd,wood,통나무,原木,record,日志,기록,장작;판자,REL,,,4.37,3.18,5.37,3.32,4.14,3.25;3.21,
+A061,mine,fwd,excavation,광산,矿山,explosive,地雷,지뢰,동굴;채석장,REL,,,5.04,4.2,3.82,3.9,3.81,4.23;0.0,
+A062,note,fwd,memo,쪽지,便条,music,音符,음표,엽서;영수증,,,,5.04,3.82,3.15,4.13,3.4,3.61;3.77,
+A063,orange,fwd,fruit,오렌지,橙子,color,橙色,주황색,귤;포도,ZH_SHARE;REL;LOAN,필터 예시(橙 공유),橙,4.62,4.26,3.52,2.66,3.6,3.69;4.07,ZH_SHARE
+A064,page,fwd,book,쪽,页,servant,侍从,시동,장;권,KO_POLY;RARE_DIST,,,5.12,5.27,3.87,4.98,3.12,5.6;5.69,
+A065,pole,fwd,stick,막대기,杆子,geographic,极地,극,기둥;밧줄,,,,4.23,3.5,4.75,3.04,3.57,4.07;3.45,
+A066,pool,fwd,swimming,수영장,游泳池,billiards,台球,당구,체육관;운동장,,,,4.67,4.18,3.55,3.9,3.17,4.45;4.08,
+A067,punch,fwd,blow,주먹질,拳打,drink,潘趣酒,펀치,발차기;박치기,RARE_DIST;LOAN_REV,,,4.32,0.0,3.87,2.96,1.38,3.35;3.1,RARE_DIST;KO_FREQ_ZERO
+A068,racket,fwd,sports,라켓,球拍,noise,喧闹声,소음,그물;장갑,LOAN,,,3.33,3.12,3.98,3.68,2.38,3.65;4.15,RARE_DIST;CTRL_FREQ_GAP
+A069,row,fwd,line,줄,行,quarrel,争吵,말다툼,열;칸,KO_POLY;ZH_POLY,行=가다/은행 다의,,4.6,5.81,3.2,5.43,3.97,5.53;4.77,CTRL_FREQ_GAP
+A070,sentence,fwd,grammar,문장,句子,punishment,判决,형벌,단어;문단,REL?,,,4.58,4.56,3.75,4.05,4.62,4.9;3.8,
+A071,spade,fwd,tool,삽,铁锹,cards,黑桃,스페이드,괭이;호미,LOAN_REV,,,3.33,3.82,0.0,1.84,2.61,0.0;3.11,
+A072,story,fwd,tale,이야기,故事,floor,楼层,층,소설;동화,,,,5.45,5.54,5.22,5.46,3.47,4.88;4.3,CTRL_FREQ_GAP
+A073,tip,fwd,gratuity,팁,小费,end,尖端,끝,요금;월급,LOAN,,,4.55,4.4,5.69,3.34,3.64,4.28;4.19,
+A074,top,fwd,toy,팽이,陀螺,summit,顶部,꼭대기,인형;구슬,,,,5.57,3.01,3.91,3.22,3.86,4.55;3.88,CTRL_FREQ_GAP
+A075,train,fwd,vehicle,기차,火车,dress,裙裾,옷자락,버스;자동차,RARE_DIST,,,4.96,4.33,3.08,4.67,1.24,5.07;4.99,RARE_DIST
+A076,volume,fwd,sound,음량,音量,book,卷,권,소음;속도,ZH_POLY,,,4.76,0.0,5.69,3.47,4.95,3.98;4.91,KO_FREQ_ZERO
+A077,band,fwd,music,악단,乐队,strip,带子,띠,합창단;관현악단,KO_POLY_REV,,,4.92,3.27,4.55,4.36,3.33,3.93;3.04,
+A078,bar,fwd,pub,술집,酒吧,rod,棒,막대,식당;카페,REL,,,4.94,4.3,4.24,4.4,4.73,4.56;4.84,
+A079,court,fwd,law,법정,法庭,sports,球场,코트,교도소;경찰서,REL;LOAN_REV,,,5.41,4.49,4.36,4.76,4.13,4.02;4.41,
+A080,degree,fwd,academic,학위,学位,temperature,度,도,졸업장;자격증,KO_POLY_REV;ZH_POLY,,,4.94,4.38,6.91,4.52,4.99,3.26;3.89,CTRL_FREQ_GAP
+A081,diamond,fwd,gem,다이아몬드,钻石,shape,菱形,마름모,진주;루비,LOAN,,,4.42,4.18,0.0,4.24,3.23,4.31;3.89,
+A082,fork,fwd,utensil,포크,叉子,road,岔路,갈림길,숟가락;젓가락,REL;LOAN,,,4.03,3.95,3.27,2.92,1.6,3.58;3.39,RARE_DIST
+A083,horn,fwd,animal,뿔,角,car,喇叭,경적,발굽;꼬리,REL;ZH_POLY,角=모서리/각도,,4.14,4.03,3.01,4.44,3.87,0.0;4.41,
+A084,interest,fwd,finance,이자,利息,curiosity,兴趣,관심,세금;월세,,,,5.17,4.3,5.19,4.16,5.0,4.35;3.63,
+A085,lime,fwd,fruit,라임,青柠,chemical,石灰,석회,레몬;자몽,LOAN,,,3.86,3.81,3.1,1.33,3.17,3.96;3.29,
+A086,litter,fwd,trash,쓰레기,垃圾,offspring,一窝幼崽,한배 새끼,먼지;오물,RARE_DIST,,,3.71,4.68,4.82,4.74,0.0,4.32;3.3,RARE_DIST;CTRL_FREQ_GAP
+A087,march,fwd,month,삼월,三月,parade,游行,행진,사월;오월,,,,5.26,0.0,4.1,4.38,4.9,3.2;3.25,KO_FREQ_ZERO
+A088,pitch,fwd,music,음높이,音高,field,球场,경기장,박자;음색,,,,4.43,0.0,4.34,3.39,4.13,3.77;3.73,KO_FREQ_ZERO
+A089,plot,fwd,story,줄거리,情节,land,地块,땅 한 구획,결말;주제,MULTIWORD_REV,,,4.58,3.79,3.44,4.48,3.33,4.0;4.92,CTRL_FREQ_GAP
+A090,present,fwd,gift,선물,礼物,time,现在,현재,편지;꽃다발,,,,5.18,5.18,5.52,4.67,6.1,4.75;3.51,CTRL_FREQ_GAP
+A091,sage,fwd,herb,세이지,鼠尾草,wise man,圣人,현자,바질;로즈마리,LOAN,,,3.83,3.05,3.51,1.63,4.06,3.13;3.11,
+A092,staff,fwd,personnel,직원,员工,stick,拐杖,지팡이,사장;손님,,,,5.08,4.84,3.81,4.98,3.48,4.87;4.17,
+A093,stool,fwd,seat,걸상,凳子,feces,粪便,대변,의자;소파,KO_POLY_REV,,,3.52,0.0,3.97,3.26,3.46,4.49;4.06,KO_FREQ_ZERO
+A094,table,fwd,furniture,탁자,桌子,chart,表格,표,의자;침대,REL;KO_POLY_REV,,,5.05,3.38,4.99,4.1,4.05,4.49;4.74,CTRL_FREQ_GAP
+A095,term,fwd,semester,학기,学期,word,术语,용어,방학;학년,REL,,,5.23,4.43,4.52,3.99,4.06,4.25;4.94,
+A096,vessel,fwd,ship,선박,船只,blood,血管,혈관,비행기;잠수함,REL,,,4.27,4.29,4.27,4.21,4.03,4.52;4.03,
+A097,boxer,fwd,athlete,권투선수,拳击手,dog,拳师犬,복서,레슬러;씨름꾼,ZH_SHARE;REL,,拳,3.74,3.66,3.2,3.28,1.7,3.33;3.58,ZH_SHARE;RARE_DIST
+A098,calf,fwd,animal,송아지,小牛,body,小腿,종아리,망아지;병아리,ZH_SHARE,필터 예시(小 공유),小,3.71,3.37,3.37,3.49,3.39,0.0;3.42,ZH_SHARE
+A099,ear,fwd,body,귀,耳朵,grain,穗,이삭,코;입,,,,4.43,4.82,3.55,4.29,3.4,5.29;6.31,CTRL_FREQ_GAP
+A100,kiwi,fwd,bird,키위새,几维鸟,fruit,猕猴桃,키위,타조;펭귄,REL;LOAN,,,3.33,0.0,3.35,2.29,3.13,3.14;4.0,KO_FREQ_ZERO
+A101,mercury,fwd,element,수은,水银,planet,水星,수성,구리;아연,ZH_SHARE;REL,,水,4.02,3.38,3.73,3.25,3.32,4.3;3.64,ZH_SHARE
+A102,ray,fwd,light,광선,光线,fish,鳐鱼,가오리,그림자;햇빛,,,,4.69,3.62,3.11,4.07,1.63,4.29;4.06,RARE_DIST
+A103,bulb,fwd,light,전구,灯泡,plant,球茎,구근,촛불;등불,REL,,,3.66,3.72,0.0,3.5,2.67,4.27;3.25,
+A104,cape,fwd,clothing,망토,斗篷,land,海角,곶,외투;조끼,,,,4.3,3.83,3.55,3.41,3.3,3.43;3.59,
+A105,gum,fwd,mouth,잇몸,牙龈,candy,口香糖,껌,혀;입술,,,,3.94,3.32,3.82,3.15,3.24,4.42;4.18,CTRL_FREQ_GAP
+A106,kite,fwd,toy,연,风筝,bird,鸢,솔개,인형;구슬,KO_POLY;ZH_POLY,"연=蓮/年 다의, 纸鸢=연",,3.55,4.76,0.0,3.76,2.77,4.55;3.88,
+A107,lark,fwd,bird,종달새,云雀,prank,玩笑,장난,참새;까치,,,,3.14,0.0,4.87,2.5,4.13,3.4;3.44,KO_FREQ_ZERO
+A108,nut,fwd,food,견과,坚果,hardware,螺母,너트,씨앗;열매,LOAN_REV,,,4.04,3.55,3.13,3.55,2.51,3.93;4.33,
+A109,pike,fwd,fish,창꼬치,狗鱼,weapon,长矛,창,송어;잉어,RARE;KO_POLY_REV,,,3.68,0.0,4.81,3.65,2.63,3.38;3.24,KO_FREQ_ZERO
+A110,rook,fwd,bird,떼까마귀,秃鼻乌鸦,chess,车,룩,까치;참새,RARE,,,3.1,0.0,4.32,1.24,5.27,3.44;3.4,KO_FREQ_ZERO
+A111,skate,fwd,fish,홍어,鳐鱼,sport,冰鞋,스케이트,넙치;오징어,LOAN_REV,,,3.74,3.08,3.63,1.63,2.98,0.0;3.92,
+A112,sole,fwd,foot,발바닥,脚底,fish,鳎鱼,서대기,발등;발뒤꿈치,RARE_DIST,,,4.29,3.47,0.0,3.39,2.0,3.17;0.0,RARE_DIST
+A113,tablet,fwd,medicine,알약,药片,computer,平板电脑,태블릿,물약;주사,LOAN_REV,,,4.05,3.43,3.75,3.16,2.82,3.18;4.31,
+A114,tick,fwd,insect,진드기,蜱虫,mark,对勾,체크 표시,모기;벼룩,,,,3.8,3.3,4.31,1.5,2.68,3.82;3.05,
+A115,turkey,fwd,bird,칠면조,火鸡,country,土耳其,튀르키예,오리;거위,,고유명사 의미,,4.56,3.12,0.0,3.52,4.62,4.3;3.35,CTRL_FREQ_GAP
+A116,plane,fwd,aircraft,비행기,飞机,tool,刨子,대패,헬리콥터;자동차,,plane 평면(平面) 의미도 있음,,4.72,4.52,3.21,5.18,2.48,3.87;4.99,RARE_DIST
+A117,poker,fwd,game,포커,扑克,tool,拨火棍,부지깽이,체스;바둑,LOAN;RARE_DIST,,,3.97,4.26,0.0,3.7,1.56,4.0;4.72,RARE_DIST
+A118,iris,fwd,eye,홍채,虹膜,flower,鸢尾花,붓꽃,망막;각막,,,,3.76,3.09,0.0,2.29,0.76,3.48;3.32,RARE_DIST
+A119,lash,fwd,eye,속눈썹,睫毛,whip,鞭打,채찍질,눈썹;눈꺼풀,,,,3.38,3.43,0.0,3.36,3.39,3.92;3.31,
+A120,ward,fwd,hospital,병동,病房,person,被监护人,피후견인,응급실;수술실,RARE_DIST,,,4.37,3.59,0.0,3.99,2.78,3.85;3.2,
+A121,tissue,fwd,paper,화장지,纸巾,biology,组织,조직,수건;걸레,,,,4.32,0.0,5.14,3.39,5.84,4.01;3.79,KO_FREQ_ZERO
+A122,mold,fwd,fungus,곰팡이,霉菌,form,模具,틀,이끼;버섯,,,,3.77,3.33,4.75,3.17,3.54,3.24;4.03,
+A123,pile,fwd,heap,더미,堆,stake,桩,말뚝,상자;바구니,KO_POLY,더미=dummy,,4.14,3.58,3.24,4.17,3.85,4.53;3.63,
+A124,tap,fwd,faucet,수도꼭지,水龙头,knock,轻敲,두드림,세면대;욕조,,,,4.28,0.0,4.51,3.3,3.0,3.25;3.83,KO_FREQ_ZERO
+A125,bay,fwd,sea,만,海湾,tree,月桂树,월계수,해협;반도,KO_POLY,만=萬 다의,,4.73,6.49,0.0,4.22,1.46,3.53;3.71,RARE_DIST;CTRL_FREQ_GAP
+A126,cardinal,fwd,church,추기경,枢机主教,bird,北美红雀,홍관조,주교;수녀,RARE_DIST,,,3.9,3.83,0.0,0.87,1.43,3.82;3.96,RARE_DIST
+A127,rocket,fwd,vehicle,로켓,火箭,plant,芝麻菜,루콜라,비행기;우주선,LOAN,,,4.31,4.1,4.03,4.52,2.57,4.52;4.09,
+A128,boot,fwd,footwear,장화,靴子,car,后备箱,트렁크,운동화;구두,,,,4.19,3.13,3.67,3.47,2.66,5.22;4.22,CTRL_FREQ_GAP
+A129,ball,fwd,dance party,무도회,舞会,sphere,球,공,잔치;결혼식,,공은 다의라 역방향 입력 주의,,5.04,3.38,5.11,3.76,4.83,3.87;4.27,
+A130,jam,fwd,food,잼,果酱,traffic,堵车,교통 체증,버터;꿀,LOAN,,,4.17,3.92,3.32,3.14,3.19,3.99;4.22,
+A131,tie,fwd,clothing,넥타이,领带,draw,平局,무승부,허리띠;목도리,LOAN,,,4.51,3.85,3.4,3.57,3.25,3.18;3.18,
+A132,chip,fwd,computer,반도체,芯片,food,薯片,감자칩,컴퓨터;배터리,ZH_SHARE;REL,,片,4.31,3.96,0.0,4.16,3.07,5.05;4.42,ZH_SHARE;CTRL_FREQ_GAP
+A133,pen,fwd,writing,펜,钢笔,enclosure,围栏,우리,연필;붓,LOAN;KO_POLY_REV,우리=1인칭 복수 다의,,4.38,4.6,6.24,3.43,3.52,3.85;4.23,
+A134,organ,fwd,body,장기,器官,music,管风琴,오르간,근육;뼈,KO_POLY;REL,장기=將棋/長期,,4.14,4.76,3.2,4.31,3.0,4.45;4.39,
+A135,tank,fwd,military,탱크,坦克,container,水箱,물탱크,대포;장갑차,LOAN;REL,,,4.57,4.18,0.0,4.55,3.14,3.88;3.2,
+A136,buck,fwd,deer,수사슴,雄鹿,money,美元,달러,암사슴;노루,SLANG,,,4.01,0.0,5.16,2.73,5.24,0.0;3.22,KO_FREQ_ZERO
+A137,quarry,fwd,mine,채석장,采石场,prey,猎物,사냥감,광산;동굴,,,,3.6,0.0,3.04,3.11,3.83,4.2;4.23,KO_FREQ_ZERO
+A138,slug,fwd,animal,민달팽이,蛞蝓,bullet,子弹,총알,달팽이;지렁이,SLANG?,,,3.31,0.0,3.88,0.0,4.4,3.65;3.2,KO_FREQ_ZERO
+A139,wave,fwd,water,파도,波浪,gesture,挥手,손 흔들기,바람;구름,REL,,,4.62,4.17,4.34,3.55,3.56,5.08;4.39,
+A140,box,fwd,container,상자,箱子,sport,拳击,권투,가방;바구니,WEAK,명사 boxing이 일반적,,5.04,4.53,3.67,3.78,3.85,4.59;3.63,
+A141,kid,fwd,child,아이,孩子,goat,小山羊,새끼 염소,소년;소녀,REL,,,4.99,5.72,3.89,5.61,2.71,4.82;4.9,
+A142,spell,fwd,magic,주문,咒语,period,一段时间,한동안,마법;저주,KO_POLY,주문=注文 다의,,4.37,4.88,5.6,3.5,4.38,4.71;4.23,
+A143,fly,fwd,insect,파리,苍蝇,zipper,裤子拉链,바지 지퍼,모기;개미,KO_POLY,파리=Paris,,4.75,4.71,3.71,3.88,2.31,3.82;3.94,RARE_DIST
+A144,toast,fwd,bread,토스트,吐司,drink,干杯,건배,샌드위치;팬케이크,LOAN,,,3.96,3.67,3.29,3.18,3.06,4.09;3.54,
+A145,second,fwd,time,초,秒,ordinal,第二,두 번째,분;시간,KO_POLY;WEAK,"초=양초/식초, 서수는 명사 아님",,5.63,5.41,5.35,4.85,5.1,5.98;6.03,
+A146,watch,fwd,clock,손목시계,手表,guard duty,看守,보초,안경;팔찌,,,,5.34,3.06,0.0,4.08,3.85,4.31;3.89,CTRL_FREQ_GAP
+A147,mass,fwd,church,미사,弥撒,physics,质量,질량,예배;기도,LOAN?,,,4.87,3.97,3.78,3.52,5.11,3.97;4.78,
+A148,vault,fwd,bank,금고,保险库,jump,撑竿跳,장대높이뛰기,지갑;서랍,RARE_DIST,,,3.9,3.9,0.0,3.39,0.94,4.29;3.62,RARE_DIST
+A149,ram,fwd,animal,숫양,公羊,computer,内存,램,염소;황소,LOAN_REV,,,4.19,0.0,4.11,3.09,4.06,3.93;3.57,KO_FREQ_ZERO
+A150,monitor,fwd,screen,모니터,显示器,lizard,巨蜥,왕도마뱀,키보드;스피커,LOAN;RARE_DIST,,,4.37,4.28,3.53,3.96,1.88,4.25;3.85,RARE_DIST
+A151,bishop,fwd,church,주교,主教,chess,象,비숍,신부;목사,ZH_POLY;KO_POLY_CTRL,"象=코끼리, 신부=新婦 다의",,4.38,3.82,3.4,4.07,4.82,4.62;4.59,
+A152,knight,fwd,warrior,기사,骑士,chess,马,나이트,병사;장군,KO_POLY;ZH_POLY,"기사=記事/技士, 马=말",,4.28,5.15,4.46,4.49,5.44,4.44;4.64,
+A153,stock,fwd,finance,주식,股票,soup,高汤,육수,채권;예금,KO_POLY,주식=主食 다의,,4.93,4.56,3.33,4.72,3.38,4.01;3.61,
+A154,will,fwd,document,유언장,遗嘱,volition,意志,의지,계약서;증명서,REL,,,6.45,3.12,4.59,3.8,4.44,3.94;3.77,
+A155,character,fwd,person,등장인물,角色,letter,字符,문자,주인공;악당,REL,,,5.11,3.67,4.9,5.07,3.76,4.81;3.99,CTRL_FREQ_GAP
+A156,operation,fwd,surgery,수술,手术,military,作战,작전,치료;진찰,REL,,,4.92,4.91,4.81,4.72,4.76,5.13;3.34,CTRL_FREQ_GAP
+A157,lid,fwd,pot,뚜껑,盖子,eye,眼睑,눈꺼풀,손잡이;마개,REL,,,3.81,3.9,3.31,3.26,1.44,3.88;3.09,RARE_DIST
+A158,crown,fwd,king,왕관,王冠,tooth,牙冠,치아 크라운,반지;목걸이,ZH_SHARE;REL,필터 예시(冠 공유),冠,4.56,3.83,3.66,3.53,2.83,4.41;4.05,ZH_SHARE
+A159,spine,fwd,body,척추,脊椎,book,书脊,책등,갈비뼈;골반,ZH_SHARE;REL,필터 예시(脊 공유),脊,3.93,4.07,5.24,3.45,2.45,3.39;3.86,ZH_SHARE;RARE_DIST
+A160,perch,fwd,fish,농어류,河鲈,roost,栖木,횃대,송어;잉어,RARE,,,3.29,3.21,0.0,2.05,2.14,3.38;3.24,RARE_DIST
+A161,ash,fwd,tree,물푸레나무,白蜡树,fire,灰烬,재,소나무;참나무,KO_POLY_REV,재 다의,,4.16,0.0,5.45,1.4,3.39,4.1;3.25,KO_FREQ_ZERO
+A162,elder,fwd,tree,딱총나무,接骨木,person,长者,어르신,소나무;버드나무,RARE,,,4.06,0.0,3.95,1.89,3.78,4.1;3.07,KO_FREQ_ZERO
+A163,corn,fwd,grain,옥수수,玉米,foot,鸡眼,티눈,보리;밀,KO_POLY_CTRL,밀=밀다 등 다의,,4.19,4.06,0.0,4.3,3.26,3.9;4.8,
+A164,port,fwd,harbor,항구,港口,wine,波特酒,포트와인,공항;역,RARE_DIST;LOAN_REV,,,4.73,4.19,0.0,4.43,2.89,5.1;4.97,
+A165,sound,fwd,noise,소리,声音,strait,海峡,해협,냄새;빛,RARE_DIST,,,5.15,5.52,3.53,5.24,4.32,4.81;5.0,
+A166,tin,fwd,metal,주석,锡,can,罐头,깡통,구리;아연,KO_POLY;REL,주석=註釋/主席 다의,,4.03,4.17,3.29,4.22,3.76,4.3;3.64,
+A167,square,fwd,shape,정사각형,正方形,plaza,广场,광장,원;삼각형,REL,,,4.84,3.09,4.57,3.04,5.09,5.95;3.55,CTRL_FREQ_GAP
+A168,record,fwd,music,음반,唱片,data,记录,기록,악보;테이프,REL,,,5.21,4.35,5.37,4.2,5.31,3.72;4.23,
+A169,article,fwd,newspaper,기사,文章,grammar,冠词,관사,사설;잡지,KO_POLY,기사=騎士/技士,,5.09,5.15,3.15,5.23,2.97,4.38;4.38,
+A170,magazine,fwd,publication,잡지,杂志,weapon,弹匣,탄창,신문;책,REL?,,,4.74,4.38,3.3,4.99,3.23,4.87;5.3,
+A171,period,fwd,time,기간,时期,punctuation,句号,마침표,시기;세월,REL,,,5.21,5.18,3.18,5.47,3.32,4.97;4.68,
+A172,colon,fwd,punctuation,쌍점,冒号,body,结肠,결장,쉼표;마침표,RARE,,,3.6,0.0,3.58,3.37,2.49,3.14;3.18,RARE_DIST;KO_FREQ_ZERO
+A173,stroke,fwd,medical,뇌졸중,中风,swimming,划水,팔 젓기,심장마비;두통,REL?,,,4.27,3.64,3.29,3.65,3.39,4.13;3.89,
+A174,pointer,fwd,dog,포인터,指示犬,indicator,指针,바늘,푸들;불독,ZH_SHARE;LOAN,,指,3.62,3.48,3.92,2.96,3.68,3.11;0.0,ZH_SHARE
+A175,mule,fwd,animal,노새,骡子,shoe,拖鞋,뮬,당나귀;조랑말,RARE_DIST,,,3.44,0.0,3.51,3.13,3.62,3.36;0.0,KO_FREQ_ZERO
+A176,straw,fwd,drinking,빨대,吸管,hay,稻草,짚,컵;숟가락,REL,,,3.99,3.5,4.2,3.32,3.51,4.71;3.58,CTRL_FREQ_GAP
+A177,pump,fwd,device,펌프,泵,shoe,浅口鞋,펌프스,모터;밸브,LOAN;RARE_DIST,,,4.28,3.97,0.0,3.51,1.87,3.84;3.74,RARE_DIST
+A178,washer,fwd,machine,세탁기,洗衣机,hardware,垫圈,와셔,냉장고;청소기,LOAN_REV,,,3.34,3.72,0.0,3.69,2.94,4.26;3.77,
+A179,stake,fwd,bet,판돈,赌注,stick,木桩,말뚝,상금;복권,REL?,,,4.15,0.0,3.24,3.45,2.74,4.1;4.1,KO_FREQ_ZERO
+A180,staple,fwd,food,주식,主食,stationery,订书钉,스테이플러 심,반찬;간식,KO_POLY,주식=株式 다의,,3.68,4.56,0.0,3.46,1.9,3.78;4.08,RARE_DIST
+A181,drone,fwd,aircraft,드론,无人机,bee,雄蜂,수벌,헬리콥터;비행기,LOAN,,,4.0,4.01,0.0,4.22,2.5,3.87;4.52,
+A182,shingles,fwd,disease,대상포진,带状疱疹,roof,木瓦,지붕널,수두;홍역,RARE_DIST,,,3.08,0.0,0.0,1.74,3.08,3.09;3.12,KO_FREQ_ZERO
+A183,minister,fwd,politics,장관,部长,church,牧师,목사,대통령;국회의원,KO_POLY,장관=壯觀 다의,,5.04,4.97,4.59,5.13,4.27,5.43;4.53,
+A184,bowl,fwd,dish,그릇,碗,sport,保龄球,볼링,접시;숟가락,WEAK,명사 bowling이 일반적,,4.63,4.24,3.57,4.1,3.22,3.96;3.58,
+A185,pound,fwd,currency,파운드,英镑,shelter,收容所,보호소,달러;유로,LOAN,,,4.32,4.2,4.99,3.99,3.43,5.16;4.3,
+A186,cast,fwd,medical,깁스,石膏,actors,演员阵容,출연진,붕대;반창고,REL;LOAN,,,4.79,3.35,3.69,3.44,2.96,3.67;3.2,
+A187,jet,fwd,aircraft,제트기,喷气式飞机,gemstone,煤玉,흑옥,비행기;헬리콥터,RARE_DIST;LOAN,,,4.29,3.24,4.03,1.33,2.85,4.52;3.87,CTRL_FREQ_GAP
+A188,hide,fwd,skin,가죽,兽皮,verb only,躲藏,숨기,털;뼈,WEAK,명사 의미 하나뿐(제외 후보),,4.54,4.16,4.16,3.2,3.52,4.75;4.39,
+A189,swallow,fwd,bird,제비,燕子,gulp,一口,한 모금,참새;까치,KO_POLY;WEAK,제비=제비뽑기,,3.87,3.65,4.11,3.62,4.31,3.4;3.44,
+A190,duck,fwd,bird,오리,鸭子,cotton fabric,帆布,범포,거위;닭,RARE_DIST,,,4.21,4.3,0.0,3.82,3.22,3.35;4.42,
+A191,seal,alt,animal,바다표범,海豹,wax seal,封蜡,봉랍,돌고래;수달,RARE_DIST,seal의 다른 방해어 버전(대조 실험용),,4.3,0.0,0.0,3.66,2.41,3.89;3.62,RARE_DIST;KO_FREQ_ZERO
+A192,bridge,fwd,structure,교량,桥梁,card game,桥牌,브리지,터널;도로,ZH_SHARE;LOAN_REV,필터 예시(桥 공유),桥,4.77,3.52,3.69,4.48,3.18,4.33;4.93,ZH_SHARE;CTRL_FREQ_GAP
+A193,fan,alt,hand fan,부채,扇子,admirer,粉丝,팬,우산;양산,KO_POLY,부채=負債 다의,,4.92,4.32,5.07,3.41,4.52,4.05;4.27,
+A194,club,alt,golf,골프채,球杆,organization,俱乐部,클럽,공;장갑,LOAN,,,5.2,3.07,4.95,2.91,4.81,5.11;4.15,CTRL_FREQ_GAP
+A195,bat,rev,sports club,방망이,球棒,animal,蝙蝠,박쥐,글러브;공,,bat 역방향 예시,,4.3,3.31,4.05,3.48,3.84,3.46;5.11,CTRL_FREQ_GAP
+A196,spring,rev,coil,용수철,弹簧,season,春天,봄,나사;못,,spring 역방향 예시(프로젝트 문서의 용수철→春),,4.92,0.0,4.86,3.6,4.4,3.78;6.13,KO_FREQ_ZERO
+A197,crane,rev,machine,기중기,起重机,bird,鹤,두루미,굴착기;지게차,,역방향 예시,,3.92,0.0,3.06,3.34,3.51,0.0;0.0,KO_FREQ_ZERO
+A198,seal,rev,stamp,도장,印章,animal,海豹,물개,볼펜;공책,,역방향 예시,,4.3,4.14,3.17,3.55,3.66,3.48;3.14,
+A199,palm,rev,tree,야자수,棕榈树,hand,手掌,손바닥,소나무;대나무,,역방향 예시,,4.23,0.0,3.87,2.55,3.68,4.1;3.81,KO_FREQ_ZERO
+A200,mole,rev,skin spot,점,痣,animal,鼹鼠,두더지,주근깨;여드름,KO_POLY,역방향 예시,,3.67,5.51,3.01,3.27,1.14,0.0;3.7,RARE_DIST;CTRL_FREQ_GAP
+A201,nail,rev,hardware,못,钉子,finger,指甲,손톱,나사;망치,KO_POLY,역방향 예시,,4.21,6.13,3.94,3.63,3.79,3.78;4.13,CTRL_FREQ_GAP
+A202,scale,rev,weighing,저울,秤,fish,鳞片,비늘,자;시계,KO_POLY_CTRL,역방향 예시,,4.83,3.17,3.25,3.34,3.22,6.29;4.53,CTRL_FREQ_GAP
+A203,pupil,rev,student,학생,学生,eye,瞳孔,눈동자,교사;선배,,역방향 예시,,3.81,5.26,3.81,5.72,3.34,4.76;4.54,
+A204,plant,rev,factory,공장,工厂,vegetation,植物,식물,창고;사무실,,역방향 예시,,4.89,4.82,4.55,4.89,4.79,4.25;4.61,
+A205,match,rev,contest,시합,比赛,stick,火柴,성냥,경기;대회,KO_POLY_CTRL,"역방향 예시, 경기=景氣",,5.13,3.95,3.31,5.37,3.53,5.41;5.25,CTRL_FREQ_GAP
+A206,letter,rev,alphabet,글자,字母,mail,信件,편지,단어;숫자,,역방향 예시,,4.95,4.53,4.75,4.33,4.0,4.9;4.69,
+A207,cell,rev,prison,감방,牢房,biology,细胞,세포,교도소;법정,,역방향 예시,,4.87,3.35,4.64,3.72,4.64,4.02;4.49,CTRL_FREQ_GAP
+A208,key,rev,piano,건반,琴键,lock,钥匙,열쇠,현;페달,,역방향 예시,,5.12,3.28,4.09,2.82,4.22,5.05;3.55,CTRL_FREQ_GAP
+A209,iris,rev,flower,붓꽃,鸢尾花,eye,虹膜,홍채,튤립;장미,,역방향 예시,,3.76,0.0,3.09,0.76,2.29,3.32;4.28,RARE_DIST;KO_FREQ_ZERO
+A210,present,rev,time,현재,现在,gift,礼物,선물,과거;미래,,역방향 예시,,5.18,5.52,5.18,6.1,4.67,5.08;5.04,
+A211,story,rev,floor,층,楼层,tale,故事,이야기,계단;지붕,,역방향 예시,,5.45,5.22,5.54,3.47,5.46,4.39;4.33,
+A212,cabinet,rev,government,내각,内阁,furniture,橱柜,찬장,국회;정부,,역방향 예시,,4.49,3.76,0.0,4.62,1.88,4.9;5.47,RARE_DIST;CTRL_FREQ_GAP
+A213,interest,rev,curiosity,관심,兴趣,finance,利息,이자,호기심;열정,,역방향 예시,,5.17,5.19,4.3,5.0,4.16,3.94;4.42,CTRL_FREQ_GAP

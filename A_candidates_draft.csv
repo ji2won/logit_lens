@@ -1,0 +1,214 @@
+﻿id,en,direction,sense_target,ko_input,zh_answer,sense_distractor,zh_distractor,ko_reverse_input,ko_control,draft_flags,note
+A001,spring,fwd,season,봄,春天,coil,弹簧,용수철,여름;가을,,
+A002,fall,fwd,season (autumn),가을,秋天,waterfall,瀑布,폭포,겨울;여름,,폭포 의미는 주로 복수형 falls
+A003,bat,fwd,animal,박쥐,蝙蝠,sports club,球棒,방망이,다람쥐;고슴도치,,
+A004,crane,fwd,bird,두루미,鹤,machine,起重机,기중기,참새;까치,,
+A005,seal,fwd,animal,물개,海豹,stamp,印章,도장,돌고래;수달,,
+A006,palm,fwd,hand,손바닥,手掌,tree,棕榈树,야자수,손등;손목,,
+A007,bank,fwd,riverbank,강둑,河岸,finance,银行,은행,언덕;강변,KO_POLY_REV,역방향 입력 은행=은행나무 다의
+A008,bark,fwd,tree skin,나무껍질,树皮,dog sound,狗叫声,개 짖는 소리,나뭇잎;이끼,MULTIWORD_REV,
+A009,bow,fwd,weapon,활,弓,ribbon knot,蝴蝶结,나비매듭,방패;칼,,bow 인사 의미(鞠躬)도 있음
+A010,club,fwd,organization,동아리,俱乐部,weapon,棍棒,곤봉,모임;단체,REL?,
+A011,date,fwd,fruit,대추야자,椰枣,calendar,日期,날짜,무화과;석류,,date 데이트 의미도 있음
+A012,fan,fwd,appliance,선풍기,电风扇,admirer,粉丝,팬,냉장고;난로,LOAN_REV,부채(扇子)는 부채(負債)와 다의라 선풍기 사용
+A013,iron,fwd,metal,쇠,铁,appliance,熨斗,다리미,구리;아연,REL,
+A014,key,fwd,lock,열쇠,钥匙,piano,琴键,건반,빗;동전,REL,
+A015,letter,fwd,mail,편지,信件,alphabet,字母,글자,엽서;소포,,
+A016,match,fwd,stick,성냥,火柴,contest,比赛,시합,양초;라이터,,
+A017,mole,fwd,animal,두더지,鼹鼠,skin spot,痣,점,고슴도치;다람쥐,KO_POLY_REV,"점은 다의(點, 店 등)"
+A018,nail,fwd,finger,손톱,指甲,hardware,钉子,못,머리카락;눈썹,KO_POLY_REV,못=연못/부정 부사
+A019,pitcher,fwd,jug,주전자,水壶,baseball,投手,투수,냄비;그릇,ZH_POLY?,水壶는 보온병 뜻도 있음
+A020,plant,fwd,vegetation,식물,植物,factory,工厂,공장,동물;곤충,,
+A021,pupil,fwd,eye,눈동자,瞳孔,student,学生,학생,눈썹;눈꺼풀,,
+A022,ring,fwd,jewelry,반지,戒指,bell sound,铃声,벨소리,목걸이;팔찌,,권투 링 의미도 있음
+A023,rock,fwd,stone,바위,岩石,music,摇滚乐,록 음악,모래;자갈,LOAN_REV,
+A024,ruler,fwd,measuring tool,자,尺子,leader,统治者,통치자,연필;지우개,KO_POLY,자는 한 음절 다의(자/者/字 등)
+A025,scale,fwd,fish,비늘,鳞片,weighing,秤,저울,지느러미;아가미,,scale 규모(规模)·음계 의미도 있음
+A026,star,fwd,celestial,별,星星,celebrity,明星,스타,달;구름,ZH_SHARE;REL,필터 예시(星 공유)
+A027,trunk,fwd,tree,나무줄기,树干,elephant nose,象鼻,코끼리 코,뿌리;잎사귀,MULTIWORD_REV,자동차 트렁크(后备箱) 의미도 있음
+A028,bass,fwd,fish,농어,鲈鱼,music,低音,베이스,송어;잉어,LOAN_REV,영어 발음 다름(동형이음)
+A029,cricket,fwd,insect,귀뚜라미,蟋蟀,sport,板球,크리켓,메뚜기;매미,LOAN_REV,
+A030,squash,fwd,vegetable,호박,南瓜,sport,壁球,스쿼시,오이;당근,KO_POLY;LOAN_REV,호박=琥珀(호박석) 다의
+A031,coach,fwd,trainer,감독,教练,carriage,马车,마차,심판;선수,KO_POLY,감독=영화감독 다의
+A032,cabinet,fwd,furniture,찬장,橱柜,government,内阁,내각,서랍;선반,,
+A033,chest,fwd,body,가슴,胸部,box,箱子,상자,어깨;허리,,
+A034,cell,fwd,biology,세포,细胞,prison,牢房,감방,혈액;근육,,
+A035,current,fwd,water,해류,水流,electric,电流,전류,파도;조수,ZH_SHARE;REL,필터 예시(流 공유)
+A036,mint,fwd,herb,박하,薄荷,coin factory,造币厂,조폐국,계피;생강,RARE_DIST?,
+A037,mouse,fwd,animal,쥐,老鼠,computer,鼠标,마우스,토끼;햄스터,ZH_SHARE;REL;LOAN_REV,필터 예시(鼠 공유)
+A038,pit,fwd,hole,구덩이,坑,fruit stone,果核,과일 씨,동굴;웅덩이,MULTIWORD_REV,
+A039,post,fwd,pillar,기둥,柱子,mail,邮件,우편,벽;지붕,,post 직위 의미도 있음
+A040,race,fwd,competition,경주,赛跑,ethnicity,种族,인종,씨름;수영,KO_POLY,경주=慶州 다의
+A041,stamp,fwd,postage,우표,邮票,seal,图章,도장,엽서;봉투,REL,
+A042,suit,fwd,clothing,정장,西装,lawsuit,诉讼,소송,외투;치마,,
+A043,temple,fwd,building,사원,寺庙,head,太阳穴,관자놀이,교회;성당,KO_POLY,사원=社員 다의
+A044,yard,fwd,garden,마당,院子,unit,码,야드,정원;울타리,ZH_POLY;LOAN_REV,码=코드 다의
+A045,arms,fwd,limbs,팔,手臂,weapons,武器,무기,어깨;손목,KO_POLY,"팔=八 다의, 복수형"
+A046,bill,fwd,beak,부리,鸟嘴,invoice,账单,계산서,날개;깃털,,bill 법안(法案) 의미도 있음
+A047,bolt,fwd,lightning,번개,闪电,screw,螺栓,볼트,천둥;무지개,LOAN_REV,
+A048,bug,fwd,insect,벌레,虫子,software,漏洞,버그,개미;거미,REL;LOAN_REV,
+A049,capital,fwd,city,수도,首都,money,资本,자본,도시;마을,KO_POLY,수도=水道 다의
+A050,case,fwd,legal,사건,案件,container,箱子,상자,범죄;재판,,
+A051,deck,fwd,ship,갑판,甲板,cards,一副牌,카드 한 벌,돛;닻,MULTIWORD_REV,
+A052,digit,fwd,finger,손가락,手指,number,数字,숫자,발가락;손목,REL,
+A053,engagement,fwd,marriage,약혼,订婚,battle,交战,교전,결혼;이혼,REL?,
+A054,file,fwd,document,서류,文件,tool,锉刀,줄,공책;봉투,KO_POLY_REV,줄 다의
+A055,foot,fwd,body,발,脚,unit,英尺,피트,손;무릎,REL;LOAN_REV,
+A056,game,fwd,hunting prey,사냥감,猎物,play,游戏,게임,미끼;먹이,LOAN_REV,
+A057,glasses,fwd,eyewear,안경,眼镜,cups,玻璃杯,유리잔,모자;장갑,REL,
+A058,lap,fwd,body,무릎,大腿,round,一圈,한 바퀴,허리;엉덩이,WEAK,무릎은 knee에 더 가까움
+A059,lock,fwd,security,자물쇠,锁,hair,一绺头发,머리 타래,경첩;사슬,RARE_DIST,
+A060,log,fwd,wood,통나무,原木,record,日志,기록,장작;판자,REL,
+A061,mine,fwd,excavation,광산,矿山,explosive,地雷,지뢰,동굴;채석장,REL,
+A062,note,fwd,memo,쪽지,便条,music,音符,음표,엽서;영수증,,
+A063,orange,fwd,fruit,오렌지,橙子,color,橙色,주황색,귤;포도,ZH_SHARE;REL;LOAN,필터 예시(橙 공유)
+A064,page,fwd,book,쪽,页,servant,侍从,시동,장;권,KO_POLY;RARE_DIST,
+A065,pole,fwd,stick,막대기,杆子,geographic,极地,극,기둥;밧줄,,
+A066,pool,fwd,swimming,수영장,游泳池,billiards,台球,당구,체육관;운동장,,
+A067,punch,fwd,blow,주먹질,拳打,drink,潘趣酒,펀치,발차기;박치기,RARE_DIST;LOAN_REV,
+A068,racket,fwd,sports,라켓,球拍,noise,喧闹声,소음,그물;장갑,LOAN,
+A069,row,fwd,line,줄,行,quarrel,争吵,말다툼,열;칸,KO_POLY;ZH_POLY,行=가다/은행 다의
+A070,sentence,fwd,grammar,문장,句子,punishment,判决,형벌,단어;문단,REL?,
+A071,spade,fwd,tool,삽,铁锹,cards,黑桃,스페이드,괭이;호미,LOAN_REV,
+A072,story,fwd,tale,이야기,故事,floor,楼层,층,소설;동화,,
+A073,tip,fwd,gratuity,팁,小费,end,尖端,끝,요금;월급,LOAN,
+A074,top,fwd,toy,팽이,陀螺,summit,顶部,꼭대기,인형;구슬,,
+A075,train,fwd,vehicle,기차,火车,dress,裙裾,옷자락,버스;자동차,RARE_DIST,
+A076,volume,fwd,sound,음량,音量,book,卷,권,소음;속도,ZH_POLY,
+A077,band,fwd,music,악단,乐队,strip,带子,띠,합창단;관현악단,KO_POLY_REV,
+A078,bar,fwd,pub,술집,酒吧,rod,棒,막대,식당;카페,REL,
+A079,court,fwd,law,법정,法庭,sports,球场,코트,교도소;경찰서,REL;LOAN_REV,
+A080,degree,fwd,academic,학위,学位,temperature,度,도,졸업장;자격증,KO_POLY_REV;ZH_POLY,
+A081,diamond,fwd,gem,다이아몬드,钻石,shape,菱形,마름모,진주;루비,LOAN,
+A082,fork,fwd,utensil,포크,叉子,road,岔路,갈림길,숟가락;젓가락,REL;LOAN,
+A083,horn,fwd,animal,뿔,角,car,喇叭,경적,발굽;꼬리,REL;ZH_POLY,角=모서리/각도
+A084,interest,fwd,finance,이자,利息,curiosity,兴趣,관심,세금;월세,,
+A085,lime,fwd,fruit,라임,青柠,chemical,石灰,석회,레몬;자몽,LOAN,
+A086,litter,fwd,trash,쓰레기,垃圾,offspring,一窝幼崽,한배 새끼,먼지;오물,RARE_DIST,
+A087,march,fwd,month,삼월,三月,parade,游行,행진,사월;오월,,
+A088,pitch,fwd,music,음높이,音高,field,球场,경기장,박자;음색,,
+A089,plot,fwd,story,줄거리,情节,land,地块,땅 한 구획,결말;주제,MULTIWORD_REV,
+A090,present,fwd,gift,선물,礼物,time,现在,현재,편지;꽃다발,,
+A091,sage,fwd,herb,세이지,鼠尾草,wise man,圣人,현자,바질;로즈마리,LOAN,
+A092,staff,fwd,personnel,직원,员工,stick,拐杖,지팡이,사장;손님,,
+A093,stool,fwd,seat,걸상,凳子,feces,粪便,대변,의자;소파,KO_POLY_REV,
+A094,table,fwd,furniture,탁자,桌子,chart,表格,표,의자;침대,REL;KO_POLY_REV,
+A095,term,fwd,semester,학기,学期,word,术语,용어,방학;학년,REL,
+A096,vessel,fwd,ship,선박,船只,blood,血管,혈관,비행기;잠수함,REL,
+A097,boxer,fwd,athlete,권투선수,拳击手,dog,拳师犬,복서,레슬러;씨름꾼,ZH_SHARE;REL,
+A098,calf,fwd,animal,송아지,小牛,body,小腿,종아리,망아지;병아리,ZH_SHARE,필터 예시(小 공유)
+A099,ear,fwd,body,귀,耳朵,grain,穗,이삭,코;입,,
+A100,kiwi,fwd,bird,키위새,几维鸟,fruit,猕猴桃,키위,타조;펭귄,REL;LOAN,
+A101,mercury,fwd,element,수은,水银,planet,水星,수성,구리;아연,ZH_SHARE;REL,
+A102,ray,fwd,light,광선,光线,fish,鳐鱼,가오리,그림자;햇빛,,
+A103,bulb,fwd,light,전구,灯泡,plant,球茎,구근,촛불;등불,REL,
+A104,cape,fwd,clothing,망토,斗篷,land,海角,곶,외투;조끼,,
+A105,gum,fwd,mouth,잇몸,牙龈,candy,口香糖,껌,혀;입술,,
+A106,kite,fwd,toy,연,风筝,bird,鸢,솔개,인형;구슬,KO_POLY;ZH_POLY,"연=蓮/年 다의, 纸鸢=연"
+A107,lark,fwd,bird,종달새,云雀,prank,玩笑,장난,참새;까치,,
+A108,nut,fwd,food,견과,坚果,hardware,螺母,너트,씨앗;열매,LOAN_REV,
+A109,pike,fwd,fish,창꼬치,狗鱼,weapon,长矛,창,송어;잉어,RARE;KO_POLY_REV,
+A110,rook,fwd,bird,떼까마귀,秃鼻乌鸦,chess,车,룩,까치;참새,RARE,
+A111,skate,fwd,fish,홍어,鳐鱼,sport,冰鞋,스케이트,넙치;오징어,LOAN_REV,
+A112,sole,fwd,foot,발바닥,脚底,fish,鳎鱼,서대기,발등;발뒤꿈치,RARE_DIST,
+A113,tablet,fwd,medicine,알약,药片,computer,平板电脑,태블릿,물약;주사,LOAN_REV,
+A114,tick,fwd,insect,진드기,蜱虫,mark,对勾,체크 표시,모기;벼룩,,
+A115,turkey,fwd,bird,칠면조,火鸡,country,土耳其,튀르키예,오리;거위,,고유명사 의미
+A116,plane,fwd,aircraft,비행기,飞机,tool,刨子,대패,헬리콥터;자동차,,plane 평면(平面) 의미도 있음
+A117,poker,fwd,game,포커,扑克,tool,拨火棍,부지깽이,체스;바둑,LOAN;RARE_DIST,
+A118,iris,fwd,eye,홍채,虹膜,flower,鸢尾花,붓꽃,망막;각막,,
+A119,lash,fwd,eye,속눈썹,睫毛,whip,鞭打,채찍질,눈썹;눈꺼풀,,
+A120,ward,fwd,hospital,병동,病房,person,被监护人,피후견인,응급실;수술실,RARE_DIST,
+A121,tissue,fwd,paper,화장지,纸巾,biology,组织,조직,수건;걸레,,
+A122,mold,fwd,fungus,곰팡이,霉菌,form,模具,틀,이끼;버섯,,
+A123,pile,fwd,heap,더미,堆,stake,桩,말뚝,상자;바구니,KO_POLY,더미=dummy
+A124,tap,fwd,faucet,수도꼭지,水龙头,knock,轻敲,두드림,세면대;욕조,,
+A125,bay,fwd,sea,만,海湾,tree,月桂树,월계수,해협;반도,KO_POLY,만=萬 다의
+A126,cardinal,fwd,church,추기경,枢机主教,bird,北美红雀,홍관조,주교;수녀,RARE_DIST,
+A127,rocket,fwd,vehicle,로켓,火箭,plant,芝麻菜,루콜라,비행기;우주선,LOAN,
+A128,boot,fwd,footwear,장화,靴子,car,后备箱,트렁크,운동화;구두,,
+A129,ball,fwd,dance party,무도회,舞会,sphere,球,공,잔치;결혼식,,공은 다의라 역방향 입력 주의
+A130,jam,fwd,food,잼,果酱,traffic,堵车,교통 체증,버터;꿀,LOAN,
+A131,tie,fwd,clothing,넥타이,领带,draw,平局,무승부,허리띠;목도리,LOAN,
+A132,chip,fwd,computer,반도체,芯片,food,薯片,감자칩,컴퓨터;배터리,ZH_SHARE;REL,
+A133,pen,fwd,writing,펜,钢笔,enclosure,围栏,우리,연필;붓,LOAN;KO_POLY_REV,우리=1인칭 복수 다의
+A134,organ,fwd,body,장기,器官,music,管风琴,오르간,근육;뼈,KO_POLY;REL,장기=將棋/長期
+A135,tank,fwd,military,탱크,坦克,container,水箱,물탱크,대포;장갑차,LOAN;REL,
+A136,buck,fwd,deer,수사슴,雄鹿,money,美元,달러,암사슴;노루,SLANG,
+A137,quarry,fwd,mine,채석장,采石场,prey,猎物,사냥감,광산;동굴,,
+A138,slug,fwd,animal,민달팽이,蛞蝓,bullet,子弹,총알,달팽이;지렁이,SLANG?,
+A139,wave,fwd,water,파도,波浪,gesture,挥手,손 흔들기,바람;구름,REL,
+A140,box,fwd,container,상자,箱子,sport,拳击,권투,가방;바구니,WEAK,명사 boxing이 일반적
+A141,kid,fwd,child,아이,孩子,goat,小山羊,새끼 염소,소년;소녀,REL,
+A142,spell,fwd,magic,주문,咒语,period,一段时间,한동안,마법;저주,KO_POLY,주문=注文 다의
+A143,fly,fwd,insect,파리,苍蝇,zipper,裤子拉链,바지 지퍼,모기;개미,KO_POLY,파리=Paris
+A144,toast,fwd,bread,토스트,吐司,drink,干杯,건배,샌드위치;팬케이크,LOAN,
+A145,second,fwd,time,초,秒,ordinal,第二,두 번째,분;시간,KO_POLY;WEAK,"초=양초/식초, 서수는 명사 아님"
+A146,watch,fwd,clock,손목시계,手表,guard duty,看守,보초,안경;팔찌,,
+A147,mass,fwd,church,미사,弥撒,physics,质量,질량,예배;기도,LOAN?,
+A148,vault,fwd,bank,금고,保险库,jump,撑竿跳,장대높이뛰기,지갑;서랍,RARE_DIST,
+A149,ram,fwd,animal,숫양,公羊,computer,内存,램,염소;황소,LOAN_REV,
+A150,monitor,fwd,screen,모니터,显示器,lizard,巨蜥,왕도마뱀,키보드;스피커,LOAN;RARE_DIST,
+A151,bishop,fwd,church,주교,主教,chess,象,비숍,신부;목사,ZH_POLY;KO_POLY_CTRL,"象=코끼리, 신부=新婦 다의"
+A152,knight,fwd,warrior,기사,骑士,chess,马,나이트,병사;장군,KO_POLY;ZH_POLY,"기사=記事/技士, 马=말"
+A153,stock,fwd,finance,주식,股票,soup,高汤,육수,채권;예금,KO_POLY,주식=主食 다의
+A154,will,fwd,document,유언장,遗嘱,volition,意志,의지,계약서;증명서,REL,
+A155,character,fwd,person,등장인물,角色,letter,字符,문자,주인공;악당,REL,
+A156,operation,fwd,surgery,수술,手术,military,作战,작전,치료;진찰,REL,
+A157,lid,fwd,pot,뚜껑,盖子,eye,眼睑,눈꺼풀,손잡이;마개,REL,
+A158,crown,fwd,king,왕관,王冠,tooth,牙冠,치아 크라운,반지;목걸이,ZH_SHARE;REL,필터 예시(冠 공유)
+A159,spine,fwd,body,척추,脊椎,book,书脊,책등,갈비뼈;골반,ZH_SHARE;REL,필터 예시(脊 공유)
+A160,perch,fwd,fish,농어류,河鲈,roost,栖木,횃대,송어;잉어,RARE,
+A161,ash,fwd,tree,물푸레나무,白蜡树,fire,灰烬,재,소나무;참나무,KO_POLY_REV,재 다의
+A162,elder,fwd,tree,딱총나무,接骨木,person,长者,어르신,소나무;버드나무,RARE,
+A163,corn,fwd,grain,옥수수,玉米,foot,鸡眼,티눈,보리;밀,KO_POLY_CTRL,밀=밀다 등 다의
+A164,port,fwd,harbor,항구,港口,wine,波特酒,포트와인,공항;역,RARE_DIST;LOAN_REV,
+A165,sound,fwd,noise,소리,声音,strait,海峡,해협,냄새;빛,RARE_DIST,
+A166,tin,fwd,metal,주석,锡,can,罐头,깡통,구리;아연,KO_POLY;REL,주석=註釋/主席 다의
+A167,square,fwd,shape,정사각형,正方形,plaza,广场,광장,원;삼각형,REL,
+A168,record,fwd,music,음반,唱片,data,记录,기록,악보;테이프,REL,
+A169,article,fwd,newspaper,기사,文章,grammar,冠词,관사,사설;잡지,KO_POLY,기사=騎士/技士
+A170,magazine,fwd,publication,잡지,杂志,weapon,弹匣,탄창,신문;책,REL?,
+A171,period,fwd,time,기간,时期,punctuation,句号,마침표,시기;세월,REL,
+A172,colon,fwd,punctuation,쌍점,冒号,body,结肠,결장,쉼표;마침표,RARE,
+A173,stroke,fwd,medical,뇌졸중,中风,swimming,划水,팔 젓기,심장마비;두통,REL?,
+A174,pointer,fwd,dog,포인터,指示犬,indicator,指针,바늘,푸들;불독,ZH_SHARE;LOAN,
+A175,mule,fwd,animal,노새,骡子,shoe,拖鞋,뮬,당나귀;조랑말,RARE_DIST,
+A176,straw,fwd,drinking,빨대,吸管,hay,稻草,짚,컵;숟가락,REL,
+A177,pump,fwd,device,펌프,泵,shoe,浅口鞋,펌프스,모터;밸브,LOAN;RARE_DIST,
+A178,washer,fwd,machine,세탁기,洗衣机,hardware,垫圈,와셔,냉장고;청소기,LOAN_REV,
+A179,stake,fwd,bet,판돈,赌注,stick,木桩,말뚝,상금;복권,REL?,
+A180,staple,fwd,food,주식,主食,stationery,订书钉,스테이플러 심,반찬;간식,KO_POLY,주식=株式 다의
+A181,drone,fwd,aircraft,드론,无人机,bee,雄蜂,수벌,헬리콥터;비행기,LOAN,
+A182,shingles,fwd,disease,대상포진,带状疱疹,roof,木瓦,지붕널,수두;홍역,RARE_DIST,
+A183,minister,fwd,politics,장관,部长,church,牧师,목사,대통령;국회의원,KO_POLY,장관=壯觀 다의
+A184,bowl,fwd,dish,그릇,碗,sport,保龄球,볼링,접시;숟가락,WEAK,명사 bowling이 일반적
+A185,pound,fwd,currency,파운드,英镑,shelter,收容所,보호소,달러;유로,LOAN,
+A186,cast,fwd,medical,깁스,石膏,actors,演员阵容,출연진,붕대;반창고,REL;LOAN,
+A187,jet,fwd,aircraft,제트기,喷气式飞机,gemstone,煤玉,흑옥,비행기;헬리콥터,RARE_DIST;LOAN,
+A188,hide,fwd,skin,가죽,兽皮,verb only,躲藏,숨기,털;뼈,WEAK,명사 의미 하나뿐(제외 후보)
+A189,swallow,fwd,bird,제비,燕子,gulp,一口,한 모금,참새;까치,KO_POLY;WEAK,제비=제비뽑기
+A190,duck,fwd,bird,오리,鸭子,cotton fabric,帆布,범포,거위;닭,RARE_DIST,
+A191,seal,alt,animal,바다표범,海豹,wax seal,封蜡,봉랍,돌고래;수달,RARE_DIST,seal의 다른 방해어 버전(대조 실험용)
+A192,bridge,fwd,structure,교량,桥梁,card game,桥牌,브리지,터널;도로,ZH_SHARE;LOAN_REV,필터 예시(桥 공유)
+A193,fan,alt,hand fan,부채,扇子,admirer,粉丝,팬,우산;양산,KO_POLY,부채=負債 다의
+A194,club,alt,golf,골프채,球杆,organization,俱乐部,클럽,공;장갑,LOAN,
+A195,bat,rev,sports club,방망이,球棒,animal,蝙蝠,박쥐,글러브;공,,bat 역방향 예시
+A196,spring,rev,coil,용수철,弹簧,season,春天,봄,나사;못,,spring 역방향 예시(프로젝트 문서의 용수철→春)
+A197,crane,rev,machine,기중기,起重机,bird,鹤,두루미,굴착기;지게차,,역방향 예시
+A198,seal,rev,stamp,도장,印章,animal,海豹,물개,볼펜;공책,,역방향 예시
+A199,palm,rev,tree,야자수,棕榈树,hand,手掌,손바닥,소나무;대나무,,역방향 예시
+A200,mole,rev,skin spot,점,痣,animal,鼹鼠,두더지,주근깨;여드름,KO_POLY,역방향 예시
+A201,nail,rev,hardware,못,钉子,finger,指甲,손톱,나사;망치,KO_POLY,역방향 예시
+A202,scale,rev,weighing,저울,秤,fish,鳞片,비늘,자;시계,KO_POLY_CTRL,역방향 예시
+A203,pupil,rev,student,학생,学生,eye,瞳孔,눈동자,교사;선배,,역방향 예시
+A204,plant,rev,factory,공장,工厂,vegetation,植物,식물,창고;사무실,,역방향 예시
+A205,match,rev,contest,시합,比赛,stick,火柴,성냥,경기;대회,KO_POLY_CTRL,"역방향 예시, 경기=景氣"
+A206,letter,rev,alphabet,글자,字母,mail,信件,편지,단어;숫자,,역방향 예시
+A207,cell,rev,prison,감방,牢房,biology,细胞,세포,교도소;법정,,역방향 예시
+A208,key,rev,piano,건반,琴键,lock,钥匙,열쇠,현;페달,,역방향 예시
+A209,iris,rev,flower,붓꽃,鸢尾花,eye,虹膜,홍채,튤립;장미,,역방향 예시
+A210,present,rev,time,현재,现在,gift,礼物,선물,과거;미래,,역방향 예시
+A211,story,rev,floor,층,楼层,tale,故事,이야기,계단;지붕,,역방향 예시
+A212,cabinet,rev,government,내각,内阁,furniture,橱柜,찬장,국회;정부,,역방향 예시
+A213,interest,rev,curiosity,관심,兴趣,finance,利息,이자,호기심;열정,,역방향 예시

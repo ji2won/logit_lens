@@ -1,0 +1,12 @@
+# SFTP
+sftp.json
+.vscode/sftp.json
+sftp-config.json
+
+# 개인정보 / 비밀값
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
