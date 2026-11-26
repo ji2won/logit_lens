@@ -131,7 +131,8 @@ KL(최종 ‖ lens), ℳ 평균:
 
 ### **4.4 층별: Wendler et al.의 그림은 logit lens에서 재현되고, tuned lens에서는 순서가 약해진다**
 
-![층별 영어](figs/layerwise_english.png)
+<img width="1800" height="1290" alt="image" src="https://github.com/user-attachments/assets/57f2a1e4-7ac6-456a-91b4-59ca31c33b68" />
+
 
 그림 `figs/layerwise_english.png`. 왼쪽은 영어 글자 비중 E(실선 logit, 점선 tuned, 회색 띠 ℳ), 오른쪽은 영어 단어(파랑)와 중국어 정답 첫 토큰(주황)의 평균 log p다.
 
@@ -200,6 +201,9 @@ KL(최종 ‖ lens), ℳ 평균:
 - EXAONE은 logit lens부터 음의 상관이라 해석할 수 없다.
 - 주의(p값): logit의 r = 0.40 **하나만 보면** 유의하지 않다(19문항, p = 0.12). 근거는 "logit → tuned 하락"의 Δ CI가 0을 넘지 않는다는 것 하나다. 그래서 약한 증거로 표현한다.
 
+<img width="2000" height="1400" alt="image" src="https://github.com/user-attachments/assets/502fb239-b427-436c-9abb-1279e6c20d8f" />
+
+
 ### **4.7 예측 2 (A): 판단 불가**
 
 | **r_L** | **logit** | **tuned** | **Δ [95% CI]** |
@@ -222,7 +226,8 @@ KL(최종 ‖ lens), ℳ 평균:
 
 ### **4.9 문항별 산점도 (A): 확률 차이·간섭과 lens 영어 점수**
 
-![A 산점도](figs/scatter_A.png)
+<img width="2250" height="1380" alt="image" src="https://github.com/user-attachments/assets/efcd0e6a-4888-4910-a8d1-8757f46ed44a" />
+
 
 그림 `figs/scatter_A.png`. 3/4 정답 문항(Llama 43, EXAONE 31)이고, 점 하나가 한 문항(템플릿 4개 평균)이다. 파랑 동그라미는 logit, 주황 세모는 tuned이다.
 
