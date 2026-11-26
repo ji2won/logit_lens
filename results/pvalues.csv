@@ -1,0 +1,319 @@
+model,range,analysis,dataset,task,lens,x,n,r,ci_lo,ci_hi,p_spearman,p_boot
+qwen3-1.7b,mid,상관,A,translate,affine,S,99,-0.111688,-0.295851,0.0848427,0.271063,0.2468
+qwen3-1.7b,mid,상관,A,translate,affine,S_diff,99,0.314657,0.121282,0.483484,0.00151386,0.0012
+qwen3-1.7b,mid,상관,A,translate,mean,S,99,0.0978108,-0.119405,0.306879,0.335469,0.3852
+qwen3-1.7b,mid,상관,A,translate,mean,S_diff,99,0.33149,0.148606,0.493332,0.000803185,0.0004
+qwen3-1.7b,mid,상관,A,translate,vanilla,S,99,-0.0327644,-0.225777,0.163944,0.747492,0.7278
+qwen3-1.7b,mid,상관,A,translate,vanilla,S_diff,99,0.297168,0.109313,0.465846,0.00281716,0.004
+qwen3-1.7b,mid,Δr (보정 − 바닐라),A,translate,mean,S,,0.130575,-0.00944523,0.270954,,0.0688
+qwen3-1.7b,mid,Δr (보정 − 바닐라),A,translate,mean,S_diff,,0.0343228,-0.0378322,0.105926,,0.3524
+qwen3-1.7b,mid,Δr (보정 − 바닐라),A,translate,affine,S,,-0.0789239,-0.303662,0.147659,,0.4986
+qwen3-1.7b,mid,Δr (보정 − 바닐라),A,translate,affine,S_diff,,0.0174892,-0.110832,0.144726,,0.8044
+qwen3-1.7b,mid,상관,A,translate_en,affine,S,99,0.0244032,-0.150713,0.201349,0.810516,0.7846
+qwen3-1.7b,mid,상관,A,translate_en,affine,S_diff,99,0.505516,0.337674,0.640116,9.45898e-08,0.0001
+qwen3-1.7b,mid,상관,A,translate_en,mean,S,99,0.279468,0.0812528,0.459644,0.00508805,0.006
+qwen3-1.7b,mid,상관,A,translate_en,mean,S_diff,99,0.570959,0.415877,0.70044,6.79806e-10,0.0001
+qwen3-1.7b,mid,상관,A,translate_en,vanilla,S,99,0.141175,-0.0509646,0.319009,0.16337,0.146
+qwen3-1.7b,mid,상관,A,translate_en,vanilla,S_diff,99,0.514533,0.353716,0.653068,5.09145e-08,0.0001
+qwen3-1.7b,mid,상관,B,translate,affine,S,60,0.193887,-0.0430197,0.421353,0.137709,0.104
+qwen3-1.7b,mid,상관,B,translate,affine,S_diff,60,0.720089,0.594569,0.81122,8.89283e-11,0.0001
+qwen3-1.7b,mid,상관,B,translate,mean,S,60,0.635288,0.475307,0.750714,4.96655e-08,0.0001
+qwen3-1.7b,mid,상관,B,translate,mean,S_diff,60,0.835121,0.739933,0.903154,1.09043e-16,0.0001
+qwen3-1.7b,mid,상관,B,translate,vanilla,S,60,0.405946,0.178077,0.599265,0.00129052,0.002
+qwen3-1.7b,mid,상관,B,translate,vanilla,S_diff,60,0.804168,0.700313,0.875039,1.01346e-14,0.0001
+qwen3-1.7b,mid,상관,B,translate_ctx,affine,S,60,0.128425,-0.121115,0.37052,0.328122,0.3186
+qwen3-1.7b,mid,상관,B,translate_ctx,affine,S_diff,60,0.722645,0.54457,0.838026,7.09168e-11,0.0001
+qwen3-1.7b,mid,상관,B,translate_ctx,mean,S,60,0.554987,0.333184,0.714924,4.18738e-06,0.0001
+qwen3-1.7b,mid,상관,B,translate_ctx,mean,S_diff,60,0.80828,0.67915,0.88824,5.82217e-15,0.0001
+qwen3-1.7b,mid,상관,B,translate_ctx,vanilla,S,60,0.371603,0.14315,0.571795,0.00346296,0.002
+qwen3-1.7b,mid,상관,B,translate_ctx,vanilla,S_diff,60,0.741373,0.573538,0.851726,1.24736e-11,0.0001
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,vanilla,S,,-0.43871,-0.712358,-0.138352,,0.0058
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.507,-0.70724,-0.306541,,0.0001
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,mean,S,,-0.537477,-0.780927,-0.276904,,0.0004
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,mean,S_diff,,-0.50363,-0.700573,-0.311893,,0.0001
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,affine,S,,-0.305576,-0.600491,-0.00559644,,0.046
+qwen3-1.7b,mid,r_A − r_B,A−B,translate,affine,S_diff,,-0.405432,-0.620072,-0.200552,,0.0002
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S,,-0.404368,-0.684786,-0.101051,,0.0104
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.444205,-0.661237,-0.207675,,0.0004
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,mean,S,,-0.457177,-0.733403,-0.153922,,0.0048
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.47679,-0.676665,-0.271663,,0.0001
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,affine,S,,-0.240113,-0.547899,0.073137,,0.143
+qwen3-1.7b,mid,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.407988,-0.634423,-0.165283,,0.002
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.243234,-0.443912,-0.00646038,0.0611122,0.0452
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.560767,-0.685583,-0.396518,3.16186e-06,0.0001
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.546096,-0.676409,-0.377042,6.38609e-06,0.0001
+qwen3-1.7b,mid,B 방해 뜻 우세도 × I,B,translate,-,dominance,38,0.259466,-0.0876023,0.536978,0.115695,0.1262
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,-0.0730759,-0.293854,0.146407,0.578978,0.4934
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,-0.155432,-0.450191,0.138729,0.235674,0.2884
+qwen3-1.7b,mid,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,-0.137649,-0.39604,0.1171,0.29427,0.2764
+qwen3-1.7b,mid,B 방해 뜻 우세도 × I,B,translate_ctx,-,dominance,38,0.381046,-0.00648721,0.672321,0.018261,0.0564
+qwen3-1.7b,late,상관,A,translate,affine,S,99,0.179864,-0.0225643,0.368045,0.0748384,0.08
+qwen3-1.7b,late,상관,A,translate,affine,S_diff,99,0.265529,0.0711543,0.448615,0.00790065,0.0094
+qwen3-1.7b,late,상관,A,translate,mean,S,99,0.119184,-0.0769938,0.306753,0.239997,0.2444
+qwen3-1.7b,late,상관,A,translate,mean,S_diff,99,0.266024,0.0673417,0.448301,0.00778114,0.0086
+qwen3-1.7b,late,상관,A,translate,vanilla,S,99,0.0357576,-0.169191,0.229459,0.725305,0.7286
+qwen3-1.7b,late,상관,A,translate,vanilla,S_diff,99,0.221373,0.0267607,0.405352,0.0276613,0.0284
+qwen3-1.7b,late,Δr (보정 − 바닐라),A,translate,mean,S,,0.0834261,-0.0114968,0.187712,,0.091
+qwen3-1.7b,late,Δr (보정 − 바닐라),A,translate,mean,S_diff,,0.0446506,-0.0232603,0.114717,,0.2028
+qwen3-1.7b,late,Δr (보정 − 바닐라),A,translate,affine,S,,0.144106,0.0102771,0.283174,,0.0346
+qwen3-1.7b,late,Δr (보정 − 바닐라),A,translate,affine,S_diff,,0.0441558,-0.0320597,0.126357,,0.2712
+qwen3-1.7b,late,상관,A,translate_en,affine,S,99,0.328064,0.161542,0.480457,0.000916464,0.0001
+qwen3-1.7b,late,상관,A,translate_en,affine,S_diff,99,0.449845,0.273375,0.604415,2.9931e-06,0.0001
+qwen3-1.7b,late,상관,A,translate_en,mean,S,99,0.255152,0.0787036,0.423944,0.0108088,0.0046
+qwen3-1.7b,late,상관,A,translate_en,mean,S_diff,99,0.450625,0.277119,0.600646,2.86349e-06,0.0001
+qwen3-1.7b,late,상관,A,translate_en,vanilla,S,99,0.226988,0.0464144,0.398182,0.0238586,0.0154
+qwen3-1.7b,late,상관,A,translate_en,vanilla,S_diff,99,0.457464,0.286412,0.602411,1.93238e-06,0.0001
+qwen3-1.7b,late,상관,B,translate,affine,S,60,0.603334,0.452563,0.717912,3.35698e-07,0.0001
+qwen3-1.7b,late,상관,B,translate,affine,S_diff,60,0.848569,0.74197,0.914667,1.12553e-17,0.0001
+qwen3-1.7b,late,상관,B,translate,mean,S,60,0.769825,0.673971,0.846784,6.55821e-13,0.0001
+qwen3-1.7b,late,상관,B,translate,mean,S_diff,60,0.882523,0.801365,0.930346,1.16602e-20,0.0001
+qwen3-1.7b,late,상관,B,translate,vanilla,S,60,0.751209,0.647252,0.828529,4.71183e-12,0.0001
+qwen3-1.7b,late,상관,B,translate,vanilla,S_diff,60,0.848736,0.752217,0.913986,1.09279e-17,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,affine,S,60,0.640345,0.483167,0.762325,3.59666e-08,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,affine,S_diff,60,0.880634,0.771362,0.935367,1.8026e-20,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,mean,S,60,0.727647,0.553537,0.836661,4.52127e-11,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,mean,S_diff,60,0.8783,0.775754,0.930149,3.05666e-20,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,vanilla,S,60,0.719978,0.569358,0.823702,8.98026e-11,0.0001
+qwen3-1.7b,late,상관,B,translate_ctx,vanilla,S_diff,60,0.827785,0.69543,0.899951,3.45959e-16,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate,vanilla,S,,-0.715451,-0.932358,-0.496737,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.627363,-0.831084,-0.419714,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate,mean,S,,-0.650641,-0.864878,-0.437972,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate,mean,S_diff,,-0.616499,-0.81597,-0.420136,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate,affine,S,,-0.42347,-0.662581,-0.182862,,0.0012
+qwen3-1.7b,late,r_A − r_B,A−B,translate,affine,S_diff,,-0.58304,-0.791133,-0.372772,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,vanilla,S,,-0.68422,-0.913038,-0.443886,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.606413,-0.814975,-0.386868,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,mean,S,,-0.608463,-0.833501,-0.355225,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.612276,-0.81212,-0.401661,,0.0001
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,affine,S,,-0.460481,-0.699467,-0.215535,,0.0004
+qwen3-1.7b,late,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.615105,-0.815575,-0.404117,,0.0001
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.648124,-0.730691,-0.558386,2.1637e-08,0.0001
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.686079,-0.770748,-0.571923,1.45015e-09,0.0001
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.744262,-0.807266,-0.663841,9.41384e-12,0.0001
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,-0.489469,-0.66348,-0.292864,7.22084e-05,0.0001
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,-0.519755,-0.719606,-0.269493,2.08267e-05,0.0006
+qwen3-1.7b,late,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,-0.420228,-0.635152,-0.178633,0.000829335,0.002
+exaone3.5-2.4b,mid,상관,A,translate,affine,S,99,0.0700309,-0.144299,0.276398,0.490952,0.5382
+exaone3.5-2.4b,mid,상관,A,translate,affine,S_diff,99,0.0271861,-0.169858,0.229792,0.789382,0.7812
+exaone3.5-2.4b,mid,상관,A,translate,mean,S,99,0.114731,-0.0923243,0.311984,0.258139,0.2848
+exaone3.5-2.4b,mid,상관,A,translate,mean,S_diff,99,-0.0915646,-0.291645,0.111705,0.367386,0.3902
+exaone3.5-2.4b,mid,상관,A,translate,vanilla,S,99,0.105343,-0.103429,0.293594,0.299395,0.316
+exaone3.5-2.4b,mid,상관,A,translate,vanilla,S_diff,99,-0.117452,-0.325203,0.0923427,0.246944,0.2724
+exaone3.5-2.4b,mid,Δr (보정 − 바닐라),A,translate,mean,S,,0.00938776,-0.125984,0.146791,,0.9002
+exaone3.5-2.4b,mid,Δr (보정 − 바닐라),A,translate,mean,S_diff,,0.0258874,-0.0273597,0.0872535,,0.374
+exaone3.5-2.4b,mid,Δr (보정 − 바닐라),A,translate,affine,S,,-0.0353123,-0.294685,0.222348,,0.772
+exaone3.5-2.4b,mid,Δr (보정 − 바닐라),A,translate,affine,S_diff,,0.144638,-0.0897855,0.388309,,0.2304
+exaone3.5-2.4b,mid,상관,A,translate_en,affine,S,99,-0.0453061,-0.25465,0.168584,0.656107,0.6526
+exaone3.5-2.4b,mid,상관,A,translate_en,affine,S_diff,99,0.00810142,-0.198319,0.198569,0.936567,0.9386
+exaone3.5-2.4b,mid,상관,A,translate_en,mean,S,99,0.178256,-0.0448789,0.380056,0.0775189,0.113
+exaone3.5-2.4b,mid,상관,A,translate_en,mean,S_diff,99,0.0693135,-0.134175,0.258827,0.495414,0.5028
+exaone3.5-2.4b,mid,상관,A,translate_en,vanilla,S,99,0.102053,-0.111577,0.301374,0.314826,0.336
+exaone3.5-2.4b,mid,상관,A,translate_en,vanilla,S_diff,99,0.0820161,-0.121891,0.275346,0.41964,0.4366
+exaone3.5-2.4b,mid,상관,B,translate,affine,S,60,-0.142317,-0.40829,0.147781,0.278042,0.3452
+exaone3.5-2.4b,mid,상관,B,translate,affine,S_diff,60,0.570325,0.398827,0.716289,1.96363e-06,0.0001
+exaone3.5-2.4b,mid,상관,B,translate,mean,S,60,0.157266,-0.111688,0.413583,0.230126,0.2532
+exaone3.5-2.4b,mid,상관,B,translate,mean,S_diff,60,0.579772,0.400654,0.722791,1.20806e-06,0.0001
+exaone3.5-2.4b,mid,상관,B,translate,vanilla,S,60,0.180828,-0.106422,0.45959,0.166772,0.2082
+exaone3.5-2.4b,mid,상관,B,translate,vanilla,S_diff,60,0.583051,0.388211,0.729149,1.01698e-06,0.0001
+exaone3.5-2.4b,mid,상관,B,translate_ctx,affine,S,60,-0.0342873,-0.321588,0.254165,0.794804,0.811
+exaone3.5-2.4b,mid,상관,B,translate_ctx,affine,S_diff,60,0.50903,0.314279,0.669023,3.27876e-05,0.0001
+exaone3.5-2.4b,mid,상관,B,translate_ctx,mean,S,60,0.125813,-0.118437,0.352356,0.338136,0.3132
+exaone3.5-2.4b,mid,상관,B,translate_ctx,mean,S_diff,60,0.521923,0.326169,0.67696,1.89662e-05,0.0001
+exaone3.5-2.4b,mid,상관,B,translate_ctx,vanilla,S,60,0.0924146,-0.140379,0.303436,0.4825,0.4496
+exaone3.5-2.4b,mid,상관,B,translate_ctx,vanilla,S_diff,60,0.560211,0.358236,0.712692,3.24918e-06,0.0001
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,vanilla,S,,-0.0754848,-0.422406,0.264947,,0.6558
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.700503,-0.960765,-0.421989,,0.0001
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,mean,S,,-0.0425349,-0.374639,0.290759,,0.7714
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,mean,S_diff,,-0.671337,-0.922248,-0.408745,,0.0001
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,affine,S,,0.212348,-0.148363,0.551018,,0.2646
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate,affine,S_diff,,-0.543139,-0.788483,-0.277358,,0.0002
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S,,0.0129287,-0.282792,0.317199,,0.9234
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.677663,-0.938194,-0.385335,,0.0001
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,mean,S,,-0.0110817,-0.31365,0.303094,,0.9682
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.613487,-0.873555,-0.329075,,0.0001
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,affine,S,,0.104318,-0.261085,0.458486,,0.5702
+exaone3.5-2.4b,mid,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.481844,-0.734079,-0.202227,,0.0008
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.113809,-0.402543,0.197271,0.386579,0.4812
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.280967,-0.528048,-0.010227,0.0296608,0.0418
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.26474,-0.512994,0.00557588,0.0409376,0.0538
+exaone3.5-2.4b,mid,B 방해 뜻 우세도 × I,B,translate,-,dominance,38,0.443642,0.0713088,0.727443,0.00527269,0.0264
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,0.127647,-0.154726,0.390193,0.331085,0.3772
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,0.0745207,-0.204524,0.353505,0.571475,0.6084
+exaone3.5-2.4b,mid,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,0.0859128,-0.176942,0.339963,0.513958,0.5286
+exaone3.5-2.4b,mid,B 방해 뜻 우세도 × I,B,translate_ctx,-,dominance,38,0.317247,-0.0291084,0.614449,0.0522855,0.0706
+exaone3.5-2.4b,late,상관,A,translate,affine,S,99,0.0115646,-0.198357,0.213288,0.909548,0.9112
+exaone3.5-2.4b,late,상관,A,translate,affine,S_diff,99,0.0250588,-0.186823,0.23767,0.805525,0.8114
+exaone3.5-2.4b,late,상관,A,translate,mean,S,99,0.0472356,-0.152548,0.23995,0.642448,0.6248
+exaone3.5-2.4b,late,상관,A,translate,mean,S_diff,99,-0.0330365,-0.235379,0.17602,0.745467,0.7658
+exaone3.5-2.4b,late,상관,A,translate,vanilla,S,99,0.0466296,-0.157331,0.243587,0.646726,0.6344
+exaone3.5-2.4b,late,상관,A,translate,vanilla,S_diff,99,-0.0452938,-0.244857,0.162481,0.656195,0.6746
+exaone3.5-2.4b,late,Δr (보정 − 바닐라),A,translate,mean,S,,0.000606061,-0.0383699,0.0399868,,0.967
+exaone3.5-2.4b,late,Δr (보정 − 바닐라),A,translate,mean,S_diff,,0.0122573,-0.0151038,0.0411483,,0.3796
+exaone3.5-2.4b,late,Δr (보정 − 바닐라),A,translate,affine,S,,-0.0350649,-0.127646,0.0616454,,0.4488
+exaone3.5-2.4b,late,Δr (보정 − 바닐라),A,translate,affine,S_diff,,0.0703525,-0.0370843,0.193631,,0.2366
+exaone3.5-2.4b,late,상관,A,translate_en,affine,S,99,-0.094162,-0.291793,0.109111,0.353894,0.3612
+exaone3.5-2.4b,late,상관,A,translate_en,affine,S_diff,99,0.0826592,-0.122434,0.282974,0.41599,0.4352
+exaone3.5-2.4b,late,상관,A,translate_en,mean,S,99,-0.00314162,-0.202219,0.197976,0.97538,0.9932
+exaone3.5-2.4b,late,상관,A,translate_en,mean,S_diff,99,0.0194558,-0.168704,0.208691,0.848414,0.8424
+exaone3.5-2.4b,late,상관,A,translate_en,vanilla,S,99,-0.0070872,-0.209989,0.203726,0.944495,0.9518
+exaone3.5-2.4b,late,상관,A,translate_en,vanilla,S_diff,99,0.000853432,-0.18501,0.190587,0.993311,0.9976
+exaone3.5-2.4b,late,상관,B,translate,affine,S,60,0.676799,0.520029,0.810958,2.91311e-09,0.0001
+exaone3.5-2.4b,late,상관,B,translate,affine,S_diff,60,0.770325,0.643011,0.865296,6.20413e-13,0.0001
+exaone3.5-2.4b,late,상관,B,translate,mean,S,60,0.734649,0.644886,0.814729,2.36732e-11,0.0001
+exaone3.5-2.4b,late,상관,B,translate,mean,S_diff,60,0.804668,0.742639,0.857215,9.48052e-15,0.0001
+exaone3.5-2.4b,late,상관,B,translate,vanilla,S,60,0.733704,0.637282,0.81922,2.58632e-11,0.0001
+exaone3.5-2.4b,late,상관,B,translate,vanilla,S_diff,60,0.804835,0.744866,0.855046,9.27163e-15,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,affine,S,60,0.595499,0.432329,0.72078,5.19783e-07,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,affine,S_diff,60,0.742095,0.629569,0.830833,1.16302e-11,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,mean,S,60,0.65446,0.492902,0.77805,1.41506e-08,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,mean,S_diff,60,0.742484,0.61502,0.837963,1.11988e-11,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,vanilla,S,60,0.604668,0.41512,0.75597,3.11259e-07,0.0001
+exaone3.5-2.4b,late,상관,B,translate_ctx,vanilla,S_diff,60,0.72848,0.584721,0.834216,4.19046e-11,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,vanilla,S,,-0.687074,-0.909306,-0.470487,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.850128,-1.05749,-0.632266,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,mean,S,,-0.687413,-0.90466,-0.475666,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,mean,S_diff,,-0.837704,-1.04779,-0.619418,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,affine,S,,-0.665234,-0.917619,-0.412869,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate,affine,S_diff,,-0.745266,-0.982704,-0.501122,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,vanilla,S,,-0.558038,-0.8105,-0.287468,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.773774,-1.00566,-0.521011,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,mean,S,,-0.607224,-0.843731,-0.359076,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.775521,-1.00245,-0.529233,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,affine,S,,-0.583934,-0.828788,-0.329178,,0.0001
+exaone3.5-2.4b,late,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.717036,-0.946015,-0.476887,,0.0001
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.638955,-0.770093,-0.490955,3.93241e-08,0.0001
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.652959,-0.774218,-0.510787,1.56619e-08,0.0001
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.639455,-0.760232,-0.498802,3.80827e-08,0.0001
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,-0.174159,-0.420553,0.078941,0.183238,0.1708
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,-0.21367,-0.461196,0.0414419,0.101159,0.0942
+exaone3.5-2.4b,late,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,-0.202556,-0.467236,0.06939,0.120632,0.1314
+llama3.2-3b,mid,상관,A,translate,affine,S,99,-0.152134,-0.341186,0.0487865,0.132774,0.133
+llama3.2-3b,mid,상관,A,translate,affine,S_diff,99,0.128312,-0.0789395,0.314035,0.205617,0.2122
+llama3.2-3b,mid,상관,A,translate,mean,S,99,-0.0770192,-0.279453,0.130032,0.448616,0.4868
+llama3.2-3b,mid,상관,A,translate,mean,S_diff,99,0.195164,-0.00369526,0.377347,0.0528858,0.0538
+llama3.2-3b,mid,상관,A,translate,vanilla,S,99,-0.0958565,-0.300288,0.113877,0.34526,0.3902
+llama3.2-3b,mid,상관,A,translate,vanilla,S_diff,99,0.210847,0.0149519,0.393102,0.0361824,0.0364
+llama3.2-3b,mid,Δr (보정 − 바닐라),A,translate,mean,S,,0.0188374,-0.0177345,0.0576645,,0.3126
+llama3.2-3b,mid,Δr (보정 − 바닐라),A,translate,mean,S_diff,,-0.0156834,-0.0493445,0.0135067,,0.3016
+llama3.2-3b,mid,Δr (보정 − 바닐라),A,translate,affine,S,,-0.0562771,-0.214293,0.0944436,,0.4682
+llama3.2-3b,mid,Δr (보정 − 바닐라),A,translate,affine,S_diff,,-0.0825356,-0.248731,0.0729243,,0.3118
+llama3.2-3b,mid,상관,A,translate_en,affine,S,99,-0.141101,-0.327979,0.0602485,0.163594,0.1694
+llama3.2-3b,mid,상관,A,translate_en,affine,S_diff,99,0.262387,0.0825357,0.431987,0.00869799,0.005
+llama3.2-3b,mid,상관,A,translate_en,mean,S,99,-0.0861348,-0.289216,0.12647,0.396592,0.4344
+llama3.2-3b,mid,상관,A,translate_en,mean,S_diff,99,0.271367,0.0923878,0.431943,0.00658856,0.0034
+llama3.2-3b,mid,상관,A,translate_en,vanilla,S,99,-0.0912554,-0.293308,0.119984,0.369013,0.3976
+llama3.2-3b,mid,상관,A,translate_en,vanilla,S_diff,99,0.289289,0.108643,0.449111,0.00368193,0.0014
+llama3.2-3b,mid,상관,B,translate,affine,S,60,0.484246,0.311537,0.64703,8.84465e-05,0.0001
+llama3.2-3b,mid,상관,B,translate,affine,S_diff,60,0.736816,0.600817,0.840113,1.92969e-11,0.0001
+llama3.2-3b,mid,상관,B,translate,mean,S,60,0.704918,0.587526,0.797544,3.24267e-10,0.0001
+llama3.2-3b,mid,상관,B,translate,mean,S_diff,60,0.788941,0.718529,0.852946,7.07943e-14,0.0001
+llama3.2-3b,mid,상관,B,translate,vanilla,S,60,0.699305,0.571805,0.796753,5.12784e-10,0.0001
+llama3.2-3b,mid,상관,B,translate,vanilla,S_diff,60,0.779994,0.701065,0.846886,2.06269e-13,0.0001
+llama3.2-3b,mid,상관,B,translate_ctx,affine,S,60,0.151042,-0.109808,0.400352,0.24933,0.268
+llama3.2-3b,mid,상관,B,translate_ctx,affine,S_diff,60,0.695082,0.517747,0.819375,7.1899e-10,0.0001
+llama3.2-3b,mid,상관,B,translate_ctx,mean,S,60,0.626007,0.469124,0.758378,8.84615e-08,0.0001
+llama3.2-3b,mid,상관,B,translate_ctx,mean,S_diff,60,0.701028,0.538855,0.815024,4.45997e-10,0.0001
+llama3.2-3b,mid,상관,B,translate_ctx,vanilla,S,60,0.559489,0.386133,0.711392,3.36605e-06,0.0001
+llama3.2-3b,mid,상관,B,translate_ctx,vanilla,S_diff,60,0.712754,0.561807,0.821023,1.67956e-10,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,vanilla,S,,-0.795162,-1.02833,-0.552075,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.569147,-0.776993,-0.369012,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,mean,S,,-0.781937,-1.00738,-0.547471,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,mean,S_diff,,-0.593777,-0.800835,-0.395312,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,affine,S,,-0.636379,-0.890391,-0.377456,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate,affine,S_diff,,-0.608504,-0.837885,-0.37783,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S,,-0.655345,-0.913839,-0.379718,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.501906,-0.731154,-0.27048,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,mean,S,,-0.703026,-0.953008,-0.439847,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.505864,-0.740657,-0.266589,,0.0001
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,affine,S,,-0.303176,-0.62223,0.0294375,,0.0764
+llama3.2-3b,mid,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.56677,-0.808179,-0.312649,,0.0001
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.565713,-0.707009,-0.409034,2.47571e-06,0.0001
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.701973,-0.783919,-0.600331,4.12968e-10,0.0001
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.73037,-0.810951,-0.633127,3.52383e-11,0.0001
+llama3.2-3b,mid,B 방해 뜻 우세도 × I,B,translate,-,dominance,38,0.522653,0.185872,0.743827,0.000761879,0.0044
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,-0.0811892,-0.304756,0.147566,0.537446,0.4802
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,-0.345207,-0.560097,-0.127102,0.00690691,0.0038
+llama3.2-3b,mid,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,-0.311086,-0.531463,-0.0938992,0.0155488,0.0066
+llama3.2-3b,mid,B 방해 뜻 우세도 × I,B,translate_ctx,-,dominance,38,0.419786,0.041324,0.71624,0.00869717,0.0306
+llama3.2-3b,late,상관,A,translate,affine,S,99,0.0271738,-0.182149,0.233749,0.789476,0.7946
+llama3.2-3b,late,상관,A,translate,affine,S_diff,99,0.186741,-0.018593,0.373188,0.0642031,0.0712
+llama3.2-3b,late,상관,A,translate,mean,S,99,-0.0200495,-0.232021,0.193693,0.843846,0.8636
+llama3.2-3b,late,상관,A,translate,mean,S_diff,99,0.203129,0.00430297,0.385048,0.0437459,0.0446
+llama3.2-3b,late,상관,A,translate,vanilla,S,99,-0.0204453,-0.230056,0.192862,0.840804,0.864
+llama3.2-3b,late,상관,A,translate,vanilla,S_diff,99,0.212121,0.0177248,0.391709,0.0350462,0.0316
+llama3.2-3b,late,Δr (보정 − 바닐라),A,translate,mean,S,,0.000395795,-0.0325194,0.0314254,,0.9568
+llama3.2-3b,late,Δr (보정 − 바닐라),A,translate,mean,S_diff,,-0.00899196,-0.0402467,0.0204729,,0.501
+llama3.2-3b,late,Δr (보정 − 바닐라),A,translate,affine,S,,0.047619,-0.0741218,0.172189,,0.462
+llama3.2-3b,late,Δr (보정 − 바닐라),A,translate,affine,S_diff,,-0.0253803,-0.14512,0.0880369,,0.6682
+llama3.2-3b,late,상관,A,translate_en,affine,S,99,0.131132,-0.0580334,0.314942,0.195746,0.1752
+llama3.2-3b,late,상관,A,translate_en,affine,S_diff,99,0.203723,0.0141911,0.378959,0.0431209,0.0352
+llama3.2-3b,late,상관,A,translate_en,mean,S,99,-0.0233148,-0.215058,0.175223,0.818819,0.8342
+llama3.2-3b,late,상관,A,translate_en,mean,S_diff,99,0.1906,0.00932775,0.35743,0.0587951,0.0402
+llama3.2-3b,late,상관,A,translate_en,vanilla,S,99,-0.0338899,-0.228502,0.16673,0.739124,0.7528
+llama3.2-3b,late,상관,A,translate_en,vanilla,S_diff,99,0.223228,0.0479536,0.382325,0.0263517,0.0168
+llama3.2-3b,late,상관,B,translate,affine,S,60,0.736427,0.628301,0.825111,2.0021e-11,0.0001
+llama3.2-3b,late,상관,B,translate,affine,S_diff,60,0.805168,0.70559,0.880341,8.86699e-15,0.0001
+llama3.2-3b,late,상관,B,translate,mean,S,60,0.756599,0.676052,0.827699,2.71074e-12,0.0001
+llama3.2-3b,late,상관,B,translate,mean,S_diff,60,0.798833,0.719096,0.860623,2.04062e-14,0.0001
+llama3.2-3b,late,상관,B,translate,vanilla,S,60,0.750208,0.662306,0.826804,5.21285e-12,0.0001
+llama3.2-3b,late,상관,B,translate,vanilla,S_diff,60,0.782884,0.701962,0.846092,1.46832e-13,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,affine,S,60,0.538261,0.337039,0.703771,9.17225e-06,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,affine,S_diff,60,0.68958,0.537109,0.811671,1.10719e-09,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,mean,S,60,0.681745,0.540385,0.802681,2.01502e-09,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,mean,S_diff,60,0.75571,0.6194,0.854417,2.97247e-12,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,vanilla,S,60,0.648847,0.493115,0.78349,2.06245e-08,0.0001
+llama3.2-3b,late,상관,B,translate_ctx,vanilla,S_diff,60,0.760267,0.62553,0.853695,1.84564e-12,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,vanilla,S,,-0.770654,-0.996358,-0.542326,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,vanilla,S_diff,,-0.570763,-0.771245,-0.37082,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,mean,S,,-0.776649,-1.00106,-0.548416,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,mean,S_diff,,-0.595704,-0.800699,-0.395244,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,affine,S,,-0.709253,-0.937996,-0.47762,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate,affine,S_diff,,-0.618427,-0.834122,-0.407332,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,vanilla,S,,-0.669292,-0.926931,-0.405601,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,vanilla,S_diff,,-0.548146,-0.767023,-0.327197,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,mean,S,,-0.701794,-0.953694,-0.448212,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,mean,S_diff,,-0.552581,-0.777136,-0.333079,,0.0001
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,affine,S,,-0.511087,-0.7848,-0.224187,,0.0012
+llama3.2-3b,late,r_A − r_B,A−B,translate_ctx,affine,S_diff,,-0.50284,-0.744642,-0.268118,,0.0002
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate,affine,S_ans,60,-0.72459,-0.804305,-0.637427,5.95979e-11,0.0001
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate,mean,S_ans,60,-0.716032,-0.799677,-0.627169,1.26715e-10,0.0001
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate,vanilla,S_ans,60,-0.729647,-0.817789,-0.631734,3.76583e-11,0.0001
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate_ctx,affine,S_ans,60,-0.443068,-0.619165,-0.246857,0.000392298,0.0002
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate_ctx,mean,S_ans,60,-0.499917,-0.686301,-0.300853,4.76497e-05,0.0001
+llama3.2-3b,late,B 정답 뜻 영어 × I,B,translate_ctx,vanilla,S_ans,60,-0.482856,-0.671435,-0.285229,9.32977e-05,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,affine,S_d,99,-0.0111688,-0.210822,0.186453,0.912631,0.9112
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,affine,S_rel,99,-0.0116512,-0.204801,0.180458,0.908873,0.9016
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,affine,S_d_diff,99,0.389672,0.206957,0.55052,6.69891e-05,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,mean,S_d,99,0.17786,-0.0357784,0.374294,0.0781904,0.1056
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,mean,S_rel,99,0.0892022,-0.122098,0.289413,0.379927,0.405
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,mean,S_d_diff,99,0.357885,0.162867,0.53164,0.000275915,0.0004
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,vanilla,S_d,99,0.216487,0.00253509,0.409027,0.0313771,0.0476
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,vanilla,S_rel,99,0.0265553,-0.177504,0.217267,0.79416,0.7974
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate,vanilla,S_d_diff,99,0.366865,0.171874,0.540718,0.000187711,0.0002
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,affine,S_d,99,-0.0506741,-0.251924,0.147898,0.618401,0.6114
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,affine,S_rel,99,-0.0183797,-0.236301,0.193243,0.856706,0.8362
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,affine,S_d_diff,99,0.505591,0.326851,0.654841,9.41156e-08,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,mean,S_d,99,0.425479,0.236537,0.585791,1.13236e-05,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,mean,S_rel,99,0.257365,0.0322291,0.457196,0.0101198,0.0248
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,mean,S_d_diff,99,0.457687,0.286896,0.598649,1.90752e-06,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,vanilla,S_d,99,0.454595,0.268926,0.606179,2.28139e-06,0.0001
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,vanilla,S_rel,99,0.2541,0.0327836,0.454007,0.0111502,0.0254
+llama3.2-3b,mid (25–75%),A 뜻별 probe,A,translate_en,vanilla,S_d_diff,99,0.444947,0.269525,0.594759,3.94354e-06,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,affine,S_d,99,0.184725,-0.0159669,0.375016,0.0671853,0.0746
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,affine,S_rel,99,0.234249,0.00979562,0.438116,0.0196108,0.0424
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,affine,S_d_diff,99,0.418367,0.229563,0.584421,1.63835e-05,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,mean,S_d,99,0.265962,0.0546044,0.460253,0.00779599,0.0156
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,mean,S_rel,99,0.171948,-0.0460413,0.381258,0.0887866,0.119
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,mean,S_d_diff,99,0.45415,0.271792,0.604162,2.34062e-06,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,vanilla,S_d,99,0.230872,0.00403034,0.441751,0.0214977,0.0464
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,vanilla,S_rel,99,0.20684,-0.0181501,0.421644,0.0399599,0.0724
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate,vanilla,S_d_diff,99,0.473729,0.300816,0.618797,7.32439e-07,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,affine,S_d,99,0.392604,0.196028,0.557063,5.83537e-05,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,affine,S_rel,99,0.443154,0.246742,0.608338,4.35791e-06,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,affine,S_d_diff,99,0.435572,0.247244,0.585234,6.60726e-06,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,mean,S_d,99,0.53316,0.351316,0.677363,1.33593e-08,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,mean,S_rel,99,0.504811,0.32023,0.659707,9.92091e-08,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,mean,S_d_diff,99,0.512282,0.340527,0.653798,5.95292e-08,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,vanilla,S_d,99,0.461361,0.260203,0.623981,1.53863e-06,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,vanilla,S_rel,99,0.509647,0.320507,0.665671,7.13776e-08,0.0001
+llama3.2-3b,late (75–97%),A 뜻별 probe,A,translate_en,vanilla,S_d_diff,99,0.485059,0.308434,0.630737,3.6157e-07,0.0001

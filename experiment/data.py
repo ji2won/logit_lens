@@ -10,6 +10,7 @@ Item 필드
   group        bootstrap 묶음 단위 (A: 영어 단어, B: 한국어 입력어)
   etym         고유어/한자어/외래어/... (B는 고유어쌍/한자어쌍/혼합)
   en_hint      양성 대조 프롬프트에 넣을 영어 중간 단계
+  ctx          translate_ctx(B)에서 입력어·대조어를 넣는 예문 틀 (B_ctx.csv, {W} 자리). 없으면 그 과제를 돌리지 않는다
   en_controls  양성 대조에서 대조어 프롬프트에 넣을 대조어의 영어 (A_control_en.csv 매핑).
                없으면 translate_en에서는 대조어 프롬프트를 만들지 않는다. 대조어 프롬프트에 문항의 영어를
                넣으면(여름 + spring) 대조어 쪽 방해어 확률이 부풀어 간섭이 왜곡되기 때문이다.
@@ -35,6 +36,7 @@ class Item:
     group: str
     etym: str
     en_hint: str = ""
+    ctx: str = ""                                          # translate_ctx용 예문 틀 (B만)
     en_controls: list[str] = field(default_factory=list)   # 양성 대조용 대조어의 영어 (없으면 간섭 계산 안 함)
     meta: dict = field(default_factory=dict)
 
@@ -55,29 +57,40 @@ def load_A(path: Path, control_en: Path | None = None) -> list[Item]:
     d = pd.read_csv(path, keep_default_na=False)
     control_en = Path(control_en or Path(path).with_name("A_control_en.csv"))
     en_map = dict(pd.read_csv(control_en, keep_default_na=False)[["ko", "en"]].values) if control_en.exists() else {}
+    # 뜻별 영어 probe 묶음(A_sense_probes.csv): spring은 두 뜻이 같은 토큰이라 어느 뜻이 켜졌는지 못 가린다.
+    # 정답 뜻(season summer winter)과 방해 뜻(coil bounce mattress) 묶음을 따로 읽는다. 값은 공백으로 구분한 단어들.
+    sense_file = Path(path).with_name("A_sense_probes.csv")
+    sense = {}
+    if sense_file.exists():
+        sd = pd.read_csv(sense_file, keep_default_na=False)
+        if {"en_target_set", "en_distractor_set"} <= set(sd.columns):
+            sense = {r.id: {"sense_t": r.en_target_set, "sense_d": r.en_distractor_set} for r in sd.itertuples()}
     items = []
     for r in d.itertuples():
         ctrl = _split(r.ko_control_final)
         en_ctrl = [en_map.get(c, "") for c in ctrl]
         items.append(Item(id=r.id, dataset="A", ko=r.ko_input, controls=ctrl,
                           zh_answer=r.zh_answer, zh_distractor=r.zh_distractor,
-                          probes={"poly": r.en}, primary="poly", group=r.en,
+                          probes={"poly": r.en, **sense.get(r.id, {})}, primary="poly", group=r.en,
                           etym=_etym_A(r.etym_ko_input), en_hint=r.en,
                           en_controls=en_ctrl if all(en_ctrl) else [],
                           meta={"direction": r.direction}))
     return items
 
 
-def load_B(path: Path) -> list[Item]:
+def load_B(path: Path, ctx_file: Path | None = None) -> list[Item]:
     """B의 영어 probe: 방해어 뜻의 영어(배→선박 행이면 pear)를 주 지표로 쓴다.
-    A에서 spring이 방해어 뜻(용수철)을 실어 나르는 통로였던 것과 같은 자리다."""
+    A에서 spring이 방해어 뜻(용수철)을 실어 나르는 통로였던 것과 같은 자리다.
+    ctx_file: 문항별 예문 틀 CSV(id,ctx). 기본은 B 파일 옆의 B_ctx.csv."""
     d = pd.read_csv(path, keep_default_na=False)
     ctrl = "ko_control_final" if "ko_control_final" in d.columns else "ko_control"
+    ctx_file = Path(ctx_file or Path(path).with_name("B_ctx.csv"))
+    ctx = dict(pd.read_csv(ctx_file, keep_default_na=False)[["id", "ctx"]].values) if ctx_file.exists() else {}
     return [Item(id=r.id, dataset="B", ko=r.ko_input, controls=_split(getattr(r, ctrl)),
                  zh_answer=r.zh_answer, zh_distractor=r.zh_distractor,
                  probes={"distractor": r.en_distractor, "target": r.en_target}, primary="distractor",
                  group=r.ko_input, etym=r.word_etym if "word_etym" in d.columns else "",
-                 en_hint=r.en_target)
+                 en_hint=r.en_target, ctx=ctx.get(r.id, ""))
             for r in d.itertuples()]
 
 
@@ -87,7 +100,9 @@ def load_C(path: Path) -> list[Item]:
     d = pd.read_csv(path, keep_default_na=False)
     return [Item(id=r.id, dataset="C", ko=r.ko, controls=[],
                  zh_answer=r.zh, zh_distractor=r.zh_unrelated,
-                 probes={"target": r.en, "unrelated": r.en_unrelated}, primary="target",
+                 probes={"target": r.en, "unrelated": r.en_unrelated,
+                         "zh_target": r.zh, "zh_unrelated": r.zh_unrelated},   # 중국어는 첫 토큰
+                 primary="target",
                  group=r.ko, etym=getattr(r, "etym", ""), en_hint=r.en)
             for r in d.itertuples()]
 

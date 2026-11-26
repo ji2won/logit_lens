@@ -87,7 +87,13 @@ def main():
         bdraft = bdraft.merge(sf[["id", "nikl_dom_target", "nikl_dom_ok"]], on="id")
         bdraft["nikl_dom_ok"] = True
     bdraft.head(12).to_csv(tmp / "B.csv", index=False)
+    # 예문 틀: 앞 10행만 붙여 ctx가 없는 문항은 translate_ctx를 건너뛰는지도 본다
+    pd.DataFrame({"id": bdraft.id.head(10), "ctx": "어제 {W}{을/를} 보았다."}).to_csv(tmp / "B_ctx.csv", index=False)
     B = load_B(tmp / "B.csv")
+    assert sum(bool(it.ctx) for it in B) == 10
+    assert prompts.build("translate_ctx", "v4", "배", ctx="{W}{을/를} 샀다.").endswith("「배를 샀다.」에서 「배」의 중국어는「")
+    assert prompts.fill("{W}{으로/로} {W}{와/과}", "연필") == "연필로 연필과"
+    assert prompts.fill("{W}{으로/로} {W}{이/가}", "부인") == "부인으로 부인이"
     pd.DataFrame([dict(id="C001", ko="바다", zh="海", en="sea", en_unrelated="chair", zh_unrelated="椅子", etym="고유어"),
                   dict(id="C002", ko="산", zh="山", en="mountain", en_unrelated="spoon", zh_unrelated="勺子", etym="고유어")]
                  ).to_csv(tmp / "C.csv", index=False)
@@ -96,29 +102,51 @@ def main():
     corpus = ["봄이 오면 꽃이 핀다.", "春天来了，花开了。", "한국어 문장입니다.", "这是中文句子。"] * 10
     texts = corpus + [prompts.build(t, v, it.ko, it.en_hint) + it.zh_answer + it.zh_distractor
                       for it in A + B + C for t in ("translate", "translate_en", "repeat") for v in ("v1", "v2", "v3", "v4")]
+    texts += [prompts.build("translate_ctx", v, it.ko, ctx="어제 {W}{을/를} 보았다.") + "을를" for it in B for v in ("v1", "v2", "v3", "v4")]
     texts += [c for it in A + B + C for c in it.controls] + [w for it in A + B + C for w in it.probes.values()]
     tok = CharTokenizer(texts)
     lm = LM(FakeLM(len(tok.itos)), tok, "cpu")
     lm.sanity_check()
 
     args = SimpleNamespace(holdout=0.2, max_tokens=64, max_pos=8, eval_max=200,
-                           lambdas="1e-3,1e-1", stats_device="cpu")
+                           lambdas="1e-3,1e-1", stats_device="cpu",
+                           tuned_epochs=5, tuned_lr=1e-2, tuned_batch=32, tuned_patience=2, tuned_val=0.2,
+                           tuned_max_vectors=400)
     fit(lm, corpus, tmp, args)
-    lenses = load_lenses(["vanilla", "mean", "affine"], tmp / "lenses.pt")
-    # 아핀 렌즈의 마지막 층은 항등이어야 한다
+    LENS_NAMES = ["vanilla", "mean", "affine", "tuned"]
+    lenses = load_lenses(LENS_NAMES, tmp / "lenses.pt")
+    # 아핀 렌즈의 마지막 층은 항등, tuned의 마지막 층은 0(항등)이어야 한다
     p = torch.load(tmp / "lenses.pt")
     assert torch.allclose(p["W"][-1], torch.eye(p["W"].shape[-1]))
+    assert float(p["tuned_A"][-1].abs().max()) == 0 and float(p["tuned_b"][-1].abs().max()) == 0
+    # tuned는 바닐라에서 시작해 검증 KL이 가장 낮은 값을 고르므로 held-out KL도 바닐라보다 크게 나빠지지 않아야 한다
+    f = pd.read_csv(tmp / "lens_fit.csv")
+    kv = f[f.lens == "vanilla"].set_index("layer").kl
+    kt = f[f.lens == "tuned"].set_index("layer").kl
+    assert len(kt) == lm.n_layers and (kt <= kv * 1.05 + 1e-3).all(), pd.concat([kv, kt], axis=1)
+    print(f"[test] held-out KL 평균: vanilla {kv.mean():.3f}, tuned {kt.mean():.3f}")
+    # --only-tuned: 평균·아핀은 그대로 두고 tuned만 다시 학습
+    W_before = p["W"].clone()
+    from experiment.fit_lenses import fit_only_tuned
+    fit_only_tuned(lm, corpus, tmp, args)
+    p2 = torch.load(tmp / "lenses.pt")
+    assert torch.equal(p2["W"], W_before) and "tuned_A" in p2
+    f2 = pd.read_csv(tmp / "lens_fit.csv")
+    assert (f2.lens == "tuned").sum() == lm.n_layers and (f2.lens == "vanilla_tunedeval").sum() == lm.n_layers
 
-    run_all(lm, {"A": A, "B": B, "C": C}, {"A": ["translate", "translate_en"], "B": ["translate"], "C": ["translate", "repeat"]},
+    run_all(lm, {"A": A, "B": B, "C": C}, {"A": ["translate", "translate_en"], "B": ["translate", "translate_ctx"], "C": ["translate", "repeat"]},
             ["v1", "v2", "v3", "v4"], lenses, tmp)
     out = pd.read_csv(tmp / "outputs.csv")
     lens = pd.read_csv(tmp / "lens.csv.gz")
     # A translate/translate_en: 입력+대조어(대조어 영어는 A_control_en.csv), B: 입력+대조어, C translate/repeat: 입력만
     n_a = sum((1 + len(it.controls)) * 4 + (1 + len(it.controls) if it.en_controls else 1) * 4 for it in A)
-    n_prompts = (n_a + sum((1 + len(it.controls)) * 4 for it in B)
+    n_prompts = (n_a + sum((1 + len(it.controls)) * 4 * (2 if it.ctx else 1) for it in B)
                  + len(C) * 4 * 2)
     assert len(out) == n_prompts, (len(out), n_prompts)
-    assert len(lens) == n_prompts * 3 * (lm.n_layers + 1)
+    assert len(lens) == n_prompts * len(LENS_NAMES) * (lm.n_layers + 1)
+    # 마지막 층에서 바닐라·tuned 렌즈 = 모델 최종 출력이므로 과제 프롬프트 KL이 0이어야 한다
+    last = lens[(lens.layer == lm.n_layers) & lens.lens.isin(["vanilla", "tuned"])]
+    assert last.kl.abs().max() < 1e-3, last.kl.abs().max()
     # 바닐라 렌즈의 마지막 층 = 모델 최종 출력
     it = A[0]
     pr = prompts.build("translate", "v1", it.ko)
@@ -136,6 +164,11 @@ def main():
     if "nikl_dom_target" in bdraft.columns:
         assert "negative_control_dom" in m
     assert "C" in m and "verdict" in m and "negative_control" in m and "positive_control" in m
+    assert "fidelity" in m and {"tuned", "affine"} <= {r["lens"] for r in m["fidelity"]}
+    assert all("충실도 관문" in r for r in m["verdict"])
+    for r in m["verdict"]:   # 관문 미달 렌즈는 판정하지 않는다
+        if r["충실도 관문"] == "X":
+            assert r["판정"].startswith("판정 불가")
     print("\n" + (tmp / "summary.md").read_text("utf-8")[:3000])
     print("\n[OK] 파일:", sorted(p.name for p in tmp.iterdir()))
     shutil.rmtree(tmp)

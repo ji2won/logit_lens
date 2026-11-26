@@ -3,8 +3,9 @@
 모두 읽을 때만 적용하고 모델 계산은 건드리지 않는다. 읽기 = unembed(final_norm(T_l(h)))
   vanilla  T_l(h) = h                          (바닐라 로짓 렌즈)
   mean     T_l(h) = h - mu_l                   (가설 1: 입력과 무관한 평균 성분 제거)
-  affine   T_l(h) = h W_l + b_l                (가설 2: 중간층 기저를 최종층 기저로 맞춤)
-mu_l, W_l, b_l은 fit_lenses.py가 한·중 위키 문장으로 구한다.
+  affine   T_l(h) = h W_l + b_l                (가설 2: 중간층 기저를 최종층 기저로 맞춤, 벡터 MSE 리지)
+  tuned    T_l(h) = h + h A_l + b_l            (가설 2: 출력 분포 KL로 학습, 바닐라에서 시작)
+mu_l, W_l, b_l, A_l은 fit_lenses.py가 한·중 위키 문장으로 구한다.
 """
 from __future__ import annotations
 
@@ -52,6 +53,16 @@ class AffineLens(Lens):
         return h @ self.W[layer].to(h) + self.b[layer].to(h)
 
 
+class TunedLens(Lens):
+    name = "tuned"
+
+    def __init__(self, A: torch.Tensor, b: torch.Tensor):
+        self.A, self.b = A, b             # [L+1, d, d], [L+1, d]; 마지막 층은 0(항등)
+
+    def transform(self, layer, h):
+        return h + h @ self.A[layer].to(h) + self.b[layer].to(h)
+
+
 def load_lenses(names, lens_file: Path | None, device="cpu") -> list[Lens]:
     params = torch.load(lens_file, map_location=device) if lens_file and Path(lens_file).exists() else None
     out = []
@@ -68,6 +79,10 @@ def load_lenses(names, lens_file: Path | None, device="cpu") -> list[Lens]:
             out.append(m)
         elif n == "affine":
             out.append(AffineLens(params["W"], params["b"]))
+        elif n == "tuned":
+            if "tuned_A" not in params:
+                raise KeyError(f"{lens_file}에 tuned 렌즈가 없음. fit_lenses.py --only-tuned로 먼저 학습하세요")
+            out.append(TunedLens(params["tuned_A"], params["tuned_b"]))
         else:
             raise ValueError(n)
     return out
@@ -86,7 +101,8 @@ def probe_token_ids(lm, word: str) -> tuple[list[int], bool]:
     → (토큰 id 목록, ' word'가 1토큰인지)"""
     ids, single = set(), False
     for w in {word, word.lower(), word.capitalize()}:
-        for s in (w, " " + w):
+        # 중국어 등 비ASCII 단어는 앞 공백 변형을 쓰지 않는다(' 海'가 공백·바이트 조각 토큰으로 시작함)
+        for s in ((w, " " + w) if word.isascii() else (w,)):
             t = lm.encode(s, special=False)
             if t:
                 ids.add(t[0])

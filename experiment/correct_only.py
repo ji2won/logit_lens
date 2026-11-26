@@ -5,7 +5,8 @@
   → results/correct_only.md
 
 입력: results/<model>/item_scores.csv (analyze.py), results/<model>/generations.csv (generate.py)
-맞음 판정(프롬프트 하나): A = 생성 답이 정답과 정확히 일치, B = 두 뜻(정답·방해어) 중 하나와 일치
+맞음 판정(프롬프트 하나): A = 생성 답이 정답과 정확히 일치, B translate = 두 뜻(정답·방해어) 중 하나와 일치,
+  B translate_ctx = 정답과 정확히 일치(예문으로 뜻을 정해 줬으므로). B translate_ctx는 데이터셋 이름 'B_ctx'로 표시한다.
 문항을 남기는 기준: 프롬프트 4개 중 맞은 수 ≥ k (k = 1, 3, 4). 기본 결과는 k=3.
 상관·CI는 analyze.py와 같은 방식(문항 단위 Spearman, 묶음 bootstrap).
 """
@@ -22,9 +23,16 @@ from .config import N_BOOT, RESULTS_DIR, SEED
 THRESHOLDS = {"전체": 0, "≥1/4 맞음": 1, "≥3/4 맞음": 3, "4/4 맞음": 4}
 
 
+def _label(df: pd.DataFrame) -> pd.DataFrame:
+    """B translate_ctx를 데이터셋 'B_ctx'로 바꿔 translate 행만 남긴다."""
+    df = df[df.task.isin(["translate", "translate_ctx"])].copy()
+    df.loc[df.task == "translate_ctx", "dataset"] = "B_ctx"
+    return df[df.dataset.isin(["A", "B", "B_ctx"])]
+
+
 def n_correct(gen: pd.DataFrame) -> pd.DataFrame:
-    g = gen[gen.task == "translate"].copy()
-    g["ok"] = np.where(g.dataset == "A", g.exact, g.exact | g.distractor)
+    g = _label(gen)
+    g["ok"] = np.where(g.dataset == "B", g.exact | g.distractor, g.exact)
     return g.groupby(["dataset", "id"], as_index=False).ok.sum().rename(columns={"ok": "n_ok"})
 
 
@@ -43,7 +51,7 @@ def main():
         for c in ("exact", "distractor"):
             gen[c] = gen[c].astype(str) == "True"
         items = pd.read_csv(d / "item_scores.csv").dropna(subset=["I"])
-        items = items[items.task == "translate"].merge(n_correct(gen), on=["dataset", "id"], how="left")
+        items = _label(items).merge(n_correct(gen), on=["dataset", "id"], how="left")
 
         cor, neg = [], []
         for name, k in THRESHOLDS.items():
@@ -52,18 +60,19 @@ def main():
                 for x in ("S", "S_diff"):
                     r, lo, hi = corr_ci(g[x], g.I, g.group, args.n_boot)
                     cor.append({"dataset": ds, "lens": ln, "x": x, "문항": name, "n": len(g), "r [CI]": ci(r, lo, hi)})
-            for ln in sorted(set(sub.lens)):
-                ra = sub[(sub.dataset == "A") & (sub.lens == ln)]
-                rb = sub[(sub.dataset == "B") & (sub.lens == ln)]
-                if len(ra) < 3 or len(rb) < 3:
-                    continue
-                rng = np.random.default_rng(SEED)
-                da = [_spearman(ra.S.values[i], ra.I.values[i]) for i in _boot_index(ra.group.values, rng, args.n_boot)]
-                db = [_spearman(rb.S.values[i], rb.I.values[i]) for i in _boot_index(rb.group.values, rng, args.n_boot)]
-                diff = np.array(da) - np.array(db)
-                rA, rB = _spearman(ra.S, ra.I), _spearman(rb.S, rb.I)
-                neg.append({"문항": name, "lens": ln, "n_A": len(ra), "n_B": len(rb), "r_A": rA, "r_B": rB,
-                            "r_A - r_B [CI]": ci(rA - rB, *np.nanpercentile(diff, [2.5, 97.5]))})
+            for bset in ("B", "B_ctx"):
+                for ln in sorted(set(sub.lens)):
+                    ra = sub[(sub.dataset == "A") & (sub.lens == ln)]
+                    rb = sub[(sub.dataset == bset) & (sub.lens == ln)]
+                    if len(ra) < 3 or len(rb) < 3:
+                        continue
+                    rng = np.random.default_rng(SEED)
+                    da = [_spearman(ra.S.values[i], ra.I.values[i]) for i in _boot_index(ra.group.values, rng, args.n_boot)]
+                    db = [_spearman(rb.S.values[i], rb.I.values[i]) for i in _boot_index(rb.group.values, rng, args.n_boot)]
+                    diff = np.array(da) - np.array(db)
+                    rA, rB = _spearman(ra.S, ra.I), _spearman(rb.S, rb.I)
+                    neg.append({"문항": name, "B": bset, "lens": ln, "n_A": len(ra), "n_B": len(rb), "r_A": rA, "r_B": rB,
+                                "r_A - r_B [CI]": ci(rA - rB, *np.nanpercentile(diff, [2.5, 97.5]))})
 
         cor = pd.DataFrame(cor)
         wide = cor.pivot_table(index=["dataset", "lens", "x"], columns="문항", values="r [CI]", aggfunc="first")

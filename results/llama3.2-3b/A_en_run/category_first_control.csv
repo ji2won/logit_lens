@@ -1,0 +1,89 @@
+id,input,control,own_en,onset,pre_top,input_probe_max,input_pre_words_seen
+A001,봄(spring),여름,summer,20.0,season2.5 sunshine2.0 seasons0.9 temperatures0.8,0.43,season1.8 autumn0.2 seasons0.6 summer24.1 summers7.2
+A001,봄(spring),가을,autumn,17.0,season1.4 seasons0.7 harvest0.2 fall0.1,0.45,season2.2 autumn44.4 seasons0.9
+A003,박쥐(bat),다람쥐,squirrel,20.0,rodents0.5 rabbits0.3 rat0.3 adorable0.3,0.02,squirrel13.3
+A003,박쥐(bat),고슴도치,hedgehog,,frogs4.3 frog1.8 rat1.1 rabbit1.0,0.2,squirrel0.5
+A006,손바닥(palm),손등,knuckles,,hand6.7 palm6.0 hands5.8 fingertips3.1,27.01,fingers1.8 hands5.8 fingertips3.1 hand6.7 finger0.6
+A006,손바닥(palm),손목,wrist,19.0,neck0.4 cuff0.4 arm0.3 palm0.2,1.16,
+A010,동아리(club),모임,gathering,24.0,meeting19.4 meetings5.7 group1.0 meet0.8,0.55,group1.2 groups0.1 groupe0.1
+A010,동아리(club),동호회,society,,club23.0 clubs6.0 group2.8 hobby1.2,85.61,group2.8 groups1.1 groupe0.2 hobby1.2 hobbies0.2
+A014,열쇠(key),빗,comb,,rain27.1 weather10.1 precipitation4.4 rainfall1.0,0.01,
+A014,열쇠(key),동전,coin,18.0,currency2.1 money1.3 dinero0.2 nun0.1,0.01,
+A015,편지(letter),메일,email,,mail32.4 mailbox3.8 mails3.4 mailing1.3,6.91,mail32.4 telegram0.2 mailbox3.8
+A015,편지(letter),택배,parcel,22.0,delivery13.7 postage3.3 postal1.9 mail1.4,0.31,postage3.3 mail1.4 mailbox0.2
+A022,반지(ring),목걸이,necklace,17.0,wearable0.4 jewelry0.4 accessory0.4 earrings0.2,1.43,jewelry1.8 bracelet1.6 wear2.2 necklace49.1 wearable0.5
+A022,반지(ring),팔찌,bracelet,18.0,wrist1.1 necklace1.0 jewelry0.9 wearable0.7,3.39,jewelry1.2 bracelet30.8 wear2.0 necklace1.9 wearable1.1
+A023,바위(rock),모래,sand,19.0,peb0.2 igar0.1 beach0.1 aer0.1,0.04,
+A023,바위(rock),자갈,gravel,,stone15.9 stones14.1 pavement1.9 sand1.7,1.23,stone15.9 stones14.1
+A034,세포(cell),혈액,blood,20.0,plasma0.2 nun0.0 fluids0.0 circulation0.0,0.01,
+A034,세포(cell),근육,muscle,17.0,muscular8.3 rub0.4 stri0.1 body0.1,0.01,
+A038,구덩이(pit),동굴,cave,20.0,underground3.5 tunnels0.6 tunnel0.4 foss0.1,0.1,
+A038,구덩이(pit),웅덩이,puddle,21.0,mud0.9 lump0.3 bul0.3 giant0.1,15.31,excav0.1
+A042,정장(suit),외투,overcoat,,coat11.8 waterproof2.7 protective2.6 jacket2.4,0.49,
+A042,정장(suit),치마,skirt,,pants10.8 trousers6.8 dresses4.7 underwear2.0,0.25,dress0.8 dresses4.7
+A044,마당(yard),정원,garden,19.0,greenhouse0.7 landscaping0.6 lawn0.5 outdoors0.4,0.41,garden22.7 outdoors0.3 outdoor0.2
+A044,마당(yard),울타리,fence,17.0,protective0.6 protection0.1 confinement0.1 protections0.1,0.1,
+A051,갑판(deck),돛,sail,20.0,waterproof0.3 shelter0.3 inflatable0.2 weather0.1,0.17,
+A051,갑판(deck),닻,anchor,,door0.5 doors0.1 extractor0.1 windows0.1,0.04,
+A057,안경(glasses),모자,hat,21.0,protective9.3 sunglasses1.2 wear0.9 wearing0.9,0.1,sunglasses1.4 protective9.9
+A057,안경(glasses),장갑,gloves,20.0,protective11.4 wearing1.6 wear0.6 wears0.6,0.04,protective8.1
+A063,오렌지(orange),귤,tangerine,,oranges16.8 fruit11.5 citrus7.8 cit4.0,38.64,apple2.2 fruit11.5 cit4.0 citrus7.8 tomatoes0.1
+A063,오렌지(orange),포도,grape,21.0,fruit18.0 fruits3.2 apple1.6 pear0.4,0.74,apple1.4 fruit22.6 tomatoes0.2
+A068,라켓(racket),그물,net,21.0,mesh4.7 trap0.6 wire0.6 sieve0.5,0.01,
+A068,라켓(racket),헬멧,helmet,18.0,protective6.1 lightweight0.4 wearing0.4 protection0.3,0.01,
+A072,이야기(story),소설,novel,19.0,fiction5.3 literature0.9 poems0.8 ebook0.3,6.54,narrative0.4
+A072,이야기(story),노래,song,21.0,music4.3 singing3.6 singers1.1 muz0.7,0.01,
+A073,팁(tip),요금,fee,18.0,cost1.3 charges0.7 paying0.4 tarif0.3,0.01,
+A073,팁(tip),월급,salary,20.0,monthly32.8 paycheck11.6 wages9.3 weekly1.1,0.0,
+A081,다이아몬드(diamond),진주,pearl,23.0,necklace14.7 jewelry6.5 beads2.6 jewel1.6,1.27,
+A081,다이아몬드(diamond),루비,ruby,20.0,kun0.3 rh0.2 alus0.2 pear0.2,0.51,
+A092,직원(staff),사장,boss,20.0,ceo3.6 chairman2.4 owner1.1 chief0.7,0.02,
+A092,직원(staff),손님,customer,,guest33.8 guests19.6 visitor11.2 visitors4.3,0.01,
+A113,알약(tablet),물약,potion,,medicine50.1 medicines11.4 medic2.5 medication1.4,0.3,medicine50.1 medication1.4 medicines11.4
+A113,알약(tablet),주사,injection,,medicine3.9 doctor0.6 medic0.4 medicines0.3,0.32,medicine3.9 medication0.2 medicines0.3
+A117,포커(poker),체스,chess,19.0,playing1.1 juego0.6 playable0.6 jeux0.2,0.06,juego0.4
+A117,포커(poker),바둑,baduk,,chess32.0 playing1.2 board0.7 game0.5,0.09,juego0.2
+A120,병동(ward),응급실,emergency room,17.0,medical1.3 hospital1.1 doctors0.5 clinic0.4,0.16,hospital1.6
+A120,병동(ward),수술실,operating room,25.0,surgery23.5 surgical9.8 clinic6.5 surgeries1.4,0.18,room0.5 rooms0.4 hospital1.4
+A127,로켓(rocket),비행기,airplane,17.0,aer1.5 aircraft1.4 aviation0.8 ircraft0.2,0.04,
+A127,로켓(rocket),우주선,spaceship,18.0,astronaut0.5 astr0.4 astronauts0.4 airplanes0.3,0.82,spacecraft39.4 spaceship10.9 astronaut1.7 astronauts2.2
+A131,넥타이(tie),허리띠,belt,20.0,waist3.0 adjustable1.0 wear0.9 ties0.7,10.41,neck0.9 collar0.2 wear0.6
+A131,넥타이(tie),목도리,scarf,,hat4.2 protective2.1 hats0.8 head0.8,0.49,wear0.3
+A132,반도체(chip),회로,circuit,19.0,wiring0.7 electrical0.3 backstage0.2 ircuit0.2,0.01,
+A132,반도체(chip),배터리,battery,18.0,electricity1.0 power0.2 elektr0.1 supplying0.1,0.0,
+A135,탱크(tank),대포,cannon,21.0,artillery9.4 gun2.4 guns1.2 firearm0.3,0.04,
+A135,탱크(tank),장갑차,armored car,22.0,protective5.8 ambulance2.0 emergency1.1 automobile0.7,0.17,
+A139,파도(wave),바람,wind,19.0,weather1.1 blowing0.6 airflow0.3 aer0.3,0.01,
+A139,파도(wave),구름,cloud,16.0,weather0.4 visible0.1 nun0.1 aer0.1,0.01,
+A140,상자(box),가방,bag,20.0,luggage5.3 backpack2.7 suitcase1.2 carrying0.8,0.62,suitcase1.2
+A140,상자(box),바구니,basket,20.0,bag1.0 box0.6 shopping0.6 plastic0.5,2.14,container0.4 containers0.2
+A144,토스트(toast),샌드위치,sandwich,20.0,salad0.2 hamburger0.2 famous0.2 schn0.1,2.37,sandwich20.2 sandwiches14.1
+A144,토스트(toast),팬케이크,pancake,,cake25.1 cakes1.2 pie0.3 cupcakes0.2,0.17,
+A150,모니터(monitor),키보드,keyboard,16.0,embr0.2 emens0.1 istle0.1 istema0.1,0.02,computer0.6
+A150,모니터(monitor),스피커,speaker,18.0,sounding0.2 extractor0.1 equipments0.1 playback0.1,0.01,
+A157,뚜껑(lid),손잡이,handle,20.0,attachment0.4 gri0.3 adjustable0.2 ovable0.2,0.01,
+A157,뚜껑(lid),마개,stopper,,curtains7.4 curtain4.5 protective0.9 door0.6,0.01,removable0.1 cover0.1
+A158,왕관(crown),반지,ring,19.0,jewelry2.8 bracelet1.9 wear1.8 necklace1.1,0.02,
+A158,왕관(crown),목걸이,,,necklace49.1 wear2.2 jewelry1.8 bracelet1.6,0.02,
+A159,척추(spine),갈비뼈,rib,21.0,bone4.1 bones2.1 slaughtered1.8 sacr0.2,0.05,
+A159,척추(spine),골반,pelvis,25.0,legs9.4 thigh5.1 leg4.5 hip4.3,0.04,joints0.2
+A163,옥수수(corn),보리,barley,,wheat9.4 grains8.3 rice6.0 millet4.1,8.8,wheat9.4 rice6.0 grains8.3
+A163,옥수수(corn),밀,wheat,,grains1.3 grain0.9 seeds0.6 flour0.5,7.18,wheat1.6 grains1.3
+A164,항구(port),공항,airport,16.0,aer0.6 airplanes0.3 aviation0.3 airplane0.2,0.04,
+A164,항구(port),역,station,,railway14.2 train3.7 transit1.7 trains1.5,0.03,
+A165,소리(sound),냄새,smell,17.0,aroma0.5 scent0.1 odor0.1 traces0.1,0.01,
+A165,소리(sound),빛,light,25.0,sunlight26.3 sunshine11.2 brightness2.0 illumination0.7,0.01,
+A167,정사각형(square),동그라미,circle,20.0,round1.0 circular0.4 shapes0.3 oval0.3,0.79,rectangle0.1 shapes0.2
+A167,정사각형(square),삼각형,triangle,20.0,rectangle2.9 square1.4 rectangles0.8 shapes0.5,4.19,rectangular0.4 rectangle3.4 shape0.1 shapes0.4
+A170,잡지(magazine),신문,newspaper,17.0,weekly0.9 digest0.1 lient0.1 magazines0.1,1.36,weekly0.3 newspaper27.1 newspapers20.5
+A170,잡지(magazine),책,book,18.0,ebook0.3 libro0.3 ebooks0.3 nun0.1,0.01,
+A178,세탁기(washer),냉장고,refrigerator,16.0,cool0.4 temper0.2 temperatures0.1 temperatura0.1,0.02,
+A178,세탁기(washer),청소기,vacuum,22.0,cleaning49.8 cleaner7.1 cleaners2.5 clean1.0,0.23,washing0.2 cleaning49.8
+A181,드론(drone),헬리콥터,helicopter,17.0,airplanes0.4 uav0.3 aircraft0.2 aer0.2,0.03,uav0.1 airplanes0.7
+A181,드론(drone),비행기,,,airplane33.3 airplanes22.1 aircraft2.7 aer1.1,0.01,airplanes22.1
+A190,오리(duck),거위,goose,,bird3.7 turkey3.7 chicken3.1 chickens2.7,29.65,goose0.4 turkey3.7 chickens2.7 poultry1.4 ostr0.4
+A190,오리(duck),닭,chicken,20.0,poultry12.6 oultry2.7 turkey2.1 hen1.0,8.43,turkey1.8 chickens21.1 poultry12.3
+A192,교량(bridge),터널,tunnel,18.0,passages0.5 unnel0.4 passage0.4 transit0.3,0.04,transit0.2
+A192,교량(bridge),운하,canal,21.0,river7.8 rivers0.8 irrigation0.6 water0.6,0.26,connecting0.2
+A213,관심(interest),흥미,fascination,,interesting25.3 interest3.1 curiosity1.4 exciting0.8,26.99,intrig0.7
+A213,관심(interest),열정,passion,,enthusiasm22.2 enthus8.4 zeal1.8 zest1.5,0.02,

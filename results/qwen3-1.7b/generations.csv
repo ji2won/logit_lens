@@ -3140,3 +3140,489 @@ B,B120,수면,한자어쌍,translate,v3,수면,水面,睡眠,"睡眠
 ",睡眠,False,True,False,True
 B,B120,수면,한자어쌍,translate,v4,수면,水面,睡眠,"睡眠」
 「사랑」의 중국어는「",睡眠,False,True,False,True
+B,B001,배,고유어쌍,translate_ctx,v1,배,船,梨,"船
+문장：서로 다른 사람들을 만나는",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v2,배,船,梨,"船
+우리가 집에 가는 길에",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v3,배,船,梨,"船
+句子：아이가 떨어져",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v4,배,船,梨,"船」
+「그는 빨리 움",船,True,False,True,False
+B,B002,배,고유어쌍,translate_ctx,v1,배,梨,船,"船
+문장：서로 다른 사람들을 만나는",船,False,True,False,True
+B,B002,배,고유어쌍,translate_ctx,v2,배,梨,船,"鱼
+이렇게 되었어요. / 이렇게 되",鱼,False,False,False,False
+B,B002,배,고유어쌍,translate_ctx,v3,배,梨,船,"船
+句子：아이가 떨어져",船,False,True,False,True
+B,B002,배,고유어쌍,translate_ctx,v4,배,梨,船,"鱼」
+「우리가 놀이를",鱼,False,False,False,False
+B,B003,눈,고유어쌍,translate_ctx,v1,눈,眼睛,雪,"眼睛
+문장：서류를 정리하고 나",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v2,눈,眼睛,雪,"眼睛
+이렇게 되었어. / 이→",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v3,눈,眼睛,雪,"眼睛
+句子：서로 다른 사람들을 보니 �",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v4,눈,眼睛,雪,"眼睛」
+「그는 빨래를 �",眼睛,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v1,눈,雪,眼睛,"眼睛
+문장：서로 다른 사람들을 보는",眼睛,False,True,False,True
+B,B004,눈,고유어쌍,translate_ctx,v2,눈,雪,眼睛,"雪
+이렇게 되었으면 좋겠어.",雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v3,눈,雪,眼睛,"眼睛
+句子：그는 그녀의 손을",眼睛,False,True,False,True
+B,B004,눈,고유어쌍,translate_ctx,v4,눈,雪,眼睛,"眼睛」
+「그는 빨래를 �",眼睛,False,True,False,True
+B,B005,밤,고유어쌍,translate_ctx,v1,밤,夜晚,栗子,"夜晚
+문장：서로 다른 사람들을 만나는",夜晚,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v2,밤,夜晚,栗子,"夜晚
+그러나 그는 그녀를 �",夜晚,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v3,밤,夜晚,栗子,"夜晚
+句子：서로 다른 사람들을 만나는 것",夜晚,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v4,밤,夜晚,栗子,"夜晚」
+「우리가 놀아요",夜晚,True,False,True,False
+B,B006,밤,고유어쌍,translate_ctx,v1,밤,栗子,夜晚,"夜晚
+문장：서로 다른 사람을 보았다",夜晚,False,True,False,True
+B,B006,밤,고유어쌍,translate_ctx,v2,밤,栗子,夜晚,"夜晚
+우리가 떠난 후에 그",夜晚,False,True,False,True
+B,B006,밤,고유어쌍,translate_ctx,v3,밤,栗子,夜晚,"夜晚
+句子：서로 다른 사람들을 만나다.
+",夜晚,False,True,False,True
+B,B006,밤,고유어쌍,translate_ctx,v4,밤,栗子,夜晚,"夜晚」
+「우리가 놀아요",夜晚,False,True,False,True
+B,B009,말,고유어쌍,translate_ctx,v1,말,马,话,"马
+문장：서로 다른 사람들을 만나는",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v2,말,马,话,"马
+이름을 쓰는 것을 잊",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v3,말,马,话,"马
+句子：아이가 놀기 위해",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v4,말,马,话,"马」
+「우리가 농장에서",马,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v1,말,话,马,"话
+문장：그는 책을 읽었다",话,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v2,말,话,马,"话语
+그의 말은 길고 어려워",话语,False,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v3,말,话,马,"话
+句子：그는 그녀를 사랑했다.
+",话,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v4,말,话,马,"话」
+「그는 빨리 움",话,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v1,차,车,茶,"车
+문장：서로 다른 사람들을 만나게",车,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v2,차,车,茶,"车
+이렇게 되었어. / 되었",车,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v3,차,车,茶,"车
+句子：서로 다른 사람들을 만나는 것",车,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v4,차,车,茶,"车」
+「그는 빨리 움",车,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v1,차,茶,车,"茶
+문장：서로 다른 사람들을 만나는",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v2,차,茶,车,"茶
+그러나 그는 그녀를 �",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v3,차,茶,车,"茶
+句子：아이가 떠오르",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v4,차,茶,车,"茶」
+「그는 빨리 웃",茶,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v1,병,瓶子,病,"瓶子
+문장：서로 다른 사람들을 만나는",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v2,병,瓶子,病,"瓶子
+내가 쓴 글을 보니 �",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v3,병,瓶子,病,"瓶子
+句子：서로 다른 사람들을 보았다.
+",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v4,병,瓶子,病,"瓶子」
+「그는 빨리 움",瓶子,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v1,병,病,瓶子,"病
+문장：서로 다른 사람들을 보았다",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v2,병,病,瓶子,"病
+그러나 그는 학교에 다시",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v3,병,病,瓶子,"病
+句子：아이가 죽었다.
+",病,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v4,병,病,瓶子,"病」
+「그는 빨리 웃",病,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v1,사과,苹果,道歉,"苹果
+문장：서로 다른 사람들을 만나는",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v2,사과,苹果,道歉,"苹果
+그러나 그는 그녀를 �",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v3,사과,苹果,道歉,"苹果
+句子：서로 다른 사람들을 만나는 것",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v4,사과,苹果,道歉,"苹果」
+「우리가 놀이를",苹果,True,False,True,False
+B,B016,사과,한자어쌍,translate_ctx,v1,사과,道歉,苹果,"苹果
+문장：서로 다른 사람들을 만나는",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v2,사과,道歉,苹果,"苹果
+그러나 그는 그녀를 �",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v3,사과,道歉,苹果,"苹果
+句子：서로 다른 사람들을 만나는 것",苹果,False,True,False,True
+B,B016,사과,한자어쌍,translate_ctx,v4,사과,道歉,苹果,"苹果」
+「우리가 놀이를",苹果,False,True,False,True
+B,B017,굴,혼합,translate_ctx,v1,굴,牡蛎,洞穴,"螺蛳粉
+문장：서로 다른 사람들을",螺蛳粉,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v2,굴,牡蛎,洞穴,"蛤蜊
+아이가 놀아서 �",蛤蜊,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v3,굴,牡蛎,洞穴,"螺蛳粉
+句子：아이가 떠",螺蛳粉,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v4,굴,牡蛎,洞穴,"蛤蜊」
+「우리가 놀이",蛤蜊,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v1,굴,洞穴,牡蛎,"洞穴
+문장：서로 다른 사람들을 만나",洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v2,굴,洞穴,牡蛎,"蜗牛
+이렇게 되었어. / 이렇게",蜗牛,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v3,굴,洞穴,牡蛎,"洞
+句子：서로 다른 사람들을 만나는 �",洞,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v4,굴,洞穴,牡蛎,"洞」
+「그는 빨래를 �",洞,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v1,벌,蜜蜂,惩罚,"虫
+문장：서로 다른 사람들을 보았다",虫,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v2,벌,蜜蜂,惩罚,"蜜蜂
+이렇게 되었어. / 이렇게 되",蜜蜂,True,False,True,False
+B,B019,벌,혼합,translate_ctx,v3,벌,蜜蜂,惩罚,"蜂
+句子：서로 다른 사람들을 만나는 것",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v4,벌,蜜蜂,惩罚,"蜜蜂」
+「우리가 놀이를",蜜蜂,True,False,True,False
+B,B020,벌,혼합,translate_ctx,v1,벌,惩罚,蜜蜂,"罚
+문장：그는 책을 읽었다",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v2,벌,惩罚,蜜蜂,"罚
+그 학생은 선생님에게서",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v3,벌,惩罚,蜜蜂,"罚
+句子：그는 그날 밤에 집",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v4,벌,惩罚,蜜蜂,"罚」
+「그는 빨리 움",罚,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v1,사기,诈骗,士气,"诈骗
+문장：그는 빨래를",诈骗,True,False,True,False
+B,B025,사기,한자어쌍,translate_ctx,v2,사기,诈骗,士气,"诈骗
+그는 죽은 채 발견",诈骗,True,False,True,False
+B,B025,사기,한자어쌍,translate_ctx,v3,사기,诈骗,士气,"诈骗
+句子：그는 그녀의 아버지를",诈骗,True,False,True,False
+B,B025,사기,한자어쌍,translate_ctx,v4,사기,诈骗,士气,"诈骗」
+「그는 죽은 자의",诈骗,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v1,사기,士气,诈骗,"士气
+문장：서로 다른 사람들을 보",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v2,사기,士气,诈骗,"士气
+이렇게 되었어요. / 이",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v3,사기,士气,诈骗,"士气
+句子：아이가 쓰레",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v4,사기,士气,诈骗,"士气」
+「우리가 놀이",士气,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v1,의사,医生,意图,"医生
+문장：그는 빨래를",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v2,의사,医生,意图,"医生
+그는 졸업하고 의사가 되",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v3,의사,医生,意图,"医生
+句子：그는 빨래를 �",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v4,의사,医生,意图,"医生」
+「그는 빙글이 되",医生,True,False,True,False
+B,B040,의사,한자어쌍,translate_ctx,v1,의사,意图,医生,"医生
+문장：그는 빨래를",医生,False,True,False,True
+B,B040,의사,한자어쌍,translate_ctx,v2,의사,意图,医生,"意见
+그는 자신의 의사를 분명히 밝",意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v3,의사,意图,医生,"医生
+句子：그는 그의 아버지를 사랑",医生,False,True,False,True
+B,B040,의사,한자어쌍,translate_ctx,v4,의사,意图,医生,"心」
+「그는 빨리 움",心,False,False,False,False
+B,B041,전기,한자어쌍,translate_ctx,v1,전기,电,传记,"电
+문장：서로 다른 사람들을 만나는",电,True,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v2,전기,电,传记,"电力
+우리가 놀이를 �",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v3,전기,电,传记,"电力
+句子：아이가 떠오르",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v4,전기,电,传记,"电」
+「우리가 놀이를",电,True,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v1,전기,传记,电,"电
+문장：서로 다른 사람들을 만나는",电,False,True,False,True
+B,B042,전기,한자어쌍,translate_ctx,v2,전기,传记,电,"电
+이렇게 되었어요. / 이렇게 되",电,False,True,False,True
+B,B042,전기,한자어쌍,translate_ctx,v3,전기,传记,电,"电
+句子：서로 다른 사람들을 만나는 것",电,False,True,False,True
+B,B042,전기,한자어쌍,translate_ctx,v4,전기,传记,电,"书」
+「그는 빨리 웃",书,False,False,False,False
+B,B045,가구,한자어쌍,translate_ctx,v1,가구,家具,住户,"家具
+문장：서로 다른 사람의 손",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v2,가구,家具,住户,"家具
+이렇게 되었어요. / 되었",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v3,가구,家具,住户,"家具
+句子：아이가 놀기 위해",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v4,가구,家具,住户,"家具」
+「그는 빨래를 �",家具,True,False,True,False
+B,B046,가구,한자어쌍,translate_ctx,v1,가구,住户,家具,"家具
+문장：이번 주는 수업이",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v2,가구,住户,家具,"家具
+이 책은 2000년에",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v3,가구,住户,家具,"家具
+句子：이번 주말에 친구",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v4,가구,住户,家具,"家具」
+「그는 빨래를 �",家具,False,True,False,True
+B,B047,풀,고유어쌍,translate_ctx,v1,풀,草,胶水,"蒲公英
+문장：서로 다른 사람들을",蒲公英,False,False,False,False
+B,B047,풀,고유어쌍,translate_ctx,v2,풀,草,胶水,"蒲公英
+이렇게 되었어. /",蒲公英,False,False,False,False
+B,B047,풀,고유어쌍,translate_ctx,v3,풀,草,胶水,"草
+句子：서로 다른 사람들을 만나는 것",草,True,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v4,풀,草,胶水,"草」
+「그는 빨리 움",草,True,False,True,False
+B,B048,풀,고유어쌍,translate_ctx,v1,풀,胶水,草,"胶水
+문장：서류를 정리했다",胶水,True,False,True,False
+B,B048,풀,고유어쌍,translate_ctx,v2,풀,胶水,草,"草
+이렇게 되었어. / 이→",草,False,True,False,True
+B,B048,풀,고유어쌍,translate_ctx,v3,풀,胶水,草,"松散的
+句子：서로 다른 사람들을 만나",松散的,False,False,False,False
+B,B048,풀,고유어쌍,translate_ctx,v4,풀,胶水,草,"草」
+「그는 빨래를 �",草,False,True,False,True
+B,B051,바람,고유어쌍,translate_ctx,v1,바람,风,愿望,"风
+문장：서로 다른 사람들을 만나는",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v2,바람,风,愿望,"风
+우리가 놀다 힘",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v3,바람,风,愿望,"风
+句子：서로 다른 사람들을 만나는 것",风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v4,바람,风,愿望,"风」
+「우리가 놀다 �",风,True,False,True,False
+B,B052,바람,고유어쌍,translate_ctx,v1,바람,愿望,风,"风
+문장：오늘은 햇빛",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v2,바람,愿望,风,"风
+이렇게 하면 학교에서 �",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v3,바람,愿望,风,"风
+句子：아이가 떠오르",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v4,바람,愿望,风,"风」
+「우리가 놀아주",风,False,True,False,True
+B,B053,거리,혼합,translate_ctx,v1,거리,街道,距离,"街道
+문장：서로 다른 사람들을 만나는",街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v2,거리,街道,距离,"街道
+이렇게 되면 끝이 �",街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v3,거리,街道,距离,"街道
+句子：그는 빨래를 �",街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v4,거리,街道,距离,"街道」
+「그는 빨리 움",街道,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v1,거리,距离,街道,"距离
+문장：서로 다른 두 점 사이",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v2,거리,距离,街道,"距离
+이름을 쓰는 것을 잊",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v3,거리,距离,街道,"距离
+句子：지금은 오후 3시",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v4,거리,距离,街道,"距离」
+「그는 빨리 움",距离,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v1,정원,花园,名额,"花园
+문장：서로 다른 사람들을 만나는",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v2,정원,花园,名额,"花园
+그는 책을 읽었다. / 책",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v3,정원,花园,名额,"花园
+句子：아이가 놀기 위해",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v4,정원,花园,名额,"花园」
+「그는 빨래를 �",花园,True,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v1,정원,名额,花园,"招生人数
+문장：오늘은 수업이",招生人数,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v2,정원,名额,花园,"招生名额
+학교에 가는 길에 비가",招生名额,False,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v3,정원,名额,花园,"招生名额
+句子：오늘은 토요",招生名额,False,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v4,정원,名额,花园,"招生」
+「오늘은 휴일이다",招生,False,False,False,False
+B,B059,사고,한자어쌍,translate_ctx,v1,사고,事故,思考,"事故
+문장：서로 다른 사람들을 보았다",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v2,사고,事故,思考,"事故
+이렇게 되었으면 좋겠어.",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v3,사고,事故,思考,"事故
+句子：그는 그녀를 사랑한다.
+",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v4,사고,事故,思考,"事故」
+「오늘은 햇빛이",事故,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v1,사고,思考,事故,"思考
+문장：이 영화는 한국의 역사에",思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v2,사고,思考,事故,"思考
+이 수업은 학생들의 창",思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v3,사고,思考,事故,"思考
+句子：이 수업은 학생들의",思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v4,사고,思考,事故,"思考」
+「그는 빨리 움",思考,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v1,회의,会议,怀疑,"会议
+문장：서로 다른 사람들을 만나는",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v2,회의,会议,怀疑,"会议
+이렇게 되었어요. / 이렇게→",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v3,회의,会议,怀疑,"会议
+句子：서로 다른 사람들을 만나는 것",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v4,회의,会议,怀疑,"会议」
+「우리가 놀이를",会议,True,False,True,False
+B,B064,회의,한자어쌍,translate_ctx,v1,회의,怀疑,会议,"会议
+문장：그는 그녀를 사랑한다",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v2,회의,怀疑,会议,"会议
+그러나 그는 그 계획을 포",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v3,회의,怀疑,会议,"会议
+句子：그녀는 그녀의 아버",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v4,회의,怀疑,会议,"会议」
+「그는 빨리 움",会议,False,True,False,True
+B,B065,신부,한자어쌍,translate_ctx,v1,신부,新娘,神父,"新娘
+문장：서로 다른 사람들을 보는",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v2,신부,新娘,神父,"新娘
+이렇게 되었어요. / 이→",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v3,신부,新娘,神父,"新娘
+句子：서로 다른 사람들을 만나는 것",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v4,신부,新娘,神父,"新娘」
+「그는 빨강색을",新娘,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v1,신부,神父,新娘,"新娘
+문장：그는 흰색 �",新娘,False,True,False,True
+B,B066,신부,한자어쌍,translate_ctx,v2,신부,神父,新娘,"先生
+그는 흰색 옷을 입",先生,False,False,False,False
+B,B066,신부,한자어쌍,translate_ctx,v3,신부,神父,新娘,"新娘
+句子：그는 그녀의 아들에",新娘,False,True,False,True
+B,B066,신부,한자어쌍,translate_ctx,v4,신부,神父,新娘,"新娘」
+「그는 빨리 웃",新娘,False,True,False,True
+B,B069,화장,한자어쌍,translate_ctx,v1,화장,化妆,火葬,"化妆品
+문장：그는 책을 읽으며",化妆品,False,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v2,화장,化妆,火葬,"化妆品
+그녀는 화장품을 사러",化妆品,False,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v3,화장,化妆,火葬,"化妆品
+句子：그녀는 화장품을",化妆品,False,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v4,화장,化妆,火葬,"化妆」
+「그는 빨래를 �",化妆,True,False,True,False
+B,B070,화장,한자어쌍,translate_ctx,v1,화장,火葬,化妆,"化妆
+문장：오늘은 빨강",化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v2,화장,火葬,化妆,"化妆
+이렇게 되었을까? / 이",化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v3,화장,火葬,化妆,"化妆
+句子：아이가 떨어지",化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v4,화장,火葬,化妆,"葬礼」
+「그는 빨리 �",葬礼,False,False,False,False
+B,B081,대가,한자어쌍,translate_ctx,v1,대가,代价,大师,"代价
+문장：그는 빨래를",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v2,대가,代价,大师,"价格
+이번 주에 뭐를 할지 결정",价格,False,False,False,False
+B,B081,대가,한자어쌍,translate_ctx,v3,대가,代价,大师,"代价
+句子：이번 주에 떠나",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v4,대가,代价,大师,"价格」
+「그는 빨리 �",价格,False,False,False,False
+B,B082,대가,한자어쌍,translate_ctx,v1,대가,大师,代价,"大师
+문장：그는 빙글 �",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v2,대가,大师,代价,"名人
+그는 빈도가 높",名人,False,False,False,False
+B,B082,대가,한자어쌍,translate_ctx,v3,대가,大师,代价,"大师
+句子：그는 그의 아버지의",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v4,대가,大师,代价,"大师」
+「그는 빙글 �",大师,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v1,고장,故障,家乡,"故障
+문장：서로 다른 사람들을 만나게",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v2,고장,故障,家乡,"故障
+이렇게 되었어. / 되었",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v3,고장,故障,家乡,"故障
+句子：서로 다른 사람들을 만나는 것",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v4,고장,故障,家乡,"故障」
+「우리가 놀이를",故障,True,False,True,False
+B,B084,고장,혼합,translate_ctx,v1,고장,家乡,故障,"故障
+문장：그는 빨래를",故障,False,True,False,True
+B,B084,고장,혼합,translate_ctx,v2,고장,家乡,故障,"地方
+그는 학교에서 졸업",地方,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v3,고장,家乡,故障,"高长
+句子：그는 그녀의 아내",高长,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v4,고장,家乡,故障,"地方」
+「그는 학교에서 학",地方,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v1,감사,感谢,审计,"感激
+문장：서로를 사랑하는 마음을",感激,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v2,감사,感谢,审计,"感激
+이렇게 되었어요. / 이렇게→",感激,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v3,감사,感谢,审计,"感激
+句子：지금은 봄이 되",感激,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v4,감사,感谢,审计,"感谢」
+「우리가 놀이를",感谢,True,False,True,False
+B,B094,감사,한자어쌍,translate_ctx,v1,감사,审计,感谢,"检查
+문장：서로 다른 사람들을 만나는",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v2,감사,审计,感谢,"检查
+이 책은 오래된 책이다. /",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v3,감사,审计,感谢,"检查
+句子：지금은 여름이다.
+韩",检查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v4,감사,审计,感谢,"检查」
+「우리가 만든 제품은 고객",检查,False,False,False,False
+B,B097,사자,한자어쌍,translate_ctx,v1,사자,狮子,使者,"狮子
+문장：서로 다른 사람들을 만나는",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v2,사자,狮子,使者,"老虎
+이렇게 되었어요. / 이렇게 되",老虎,False,False,False,False
+B,B097,사자,한자어쌍,translate_ctx,v3,사자,狮子,使者,"狮子
+句子：서로 다른 사람들을 만나는 것",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v4,사자,狮子,使者,"狮子」
+「우리가 놀이를",狮子,True,False,True,False
+B,B098,사자,한자어쌍,translate_ctx,v1,사자,使者,狮子,"狮子
+문장：서로 다른 사람들을 만나는",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v2,사자,使者,狮子,"狮子
+이렇게 되었어요. / 이렇게 되",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v3,사자,使者,狮子,"狮子
+句子：그는 빨강을 좋아",狮子,False,True,False,True
+B,B098,사자,한자어쌍,translate_ctx,v4,사자,使者,狮子,"狮子」
+「우리가 놀이를",狮子,False,True,False,True
+B,B105,지도,한자어쌍,translate_ctx,v1,지도,地图,指导,"地图
+문장：서로 다른 사람들을 만나게",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v2,지도,地图,指导,"地图
+이렇게 되었어. / 이→",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v3,지도,地图,指导,"地图
+句子：서로 다른 사람들을 만나는 것",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v4,지도,地图,指导,"地图」
+「그는 빨래를 �",地图,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v1,지도,指导,地图,"指导
+문장：서로 다른 사람들을 지도",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v2,지도,指导,地图,"指导
+이름을 쓰는 것을 잊",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v3,지도,指导,地图,"指导
+句子：그는 그녀의 아버지를",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v4,지도,指导,地图,"指导」
+「그는 빨리 움",指导,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v1,소화,消化,灭火,"消化
+문장：서로 다른 사람과 함께 시간",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v2,소화,消化,灭火,"消化
+아이가 놀아서 집에",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v3,소화,消化,灭火,"消化
+句子：아이가 놀이를",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v4,소화,消化,灭火,"消化」
+「우리가 놀이를",消化,True,False,True,False
+B,B112,소화,한자어쌍,translate_ctx,v1,소화,灭火,消化,"灭火
+문장：서로 다른 사람들을 만나는",灭火,True,False,True,False
+B,B112,소화,한자어쌍,translate_ctx,v2,소화,灭火,消化,"消防
+이렇게 되었을까? / 이",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v3,소화,灭火,消化,"消防
+句子：지하철에서 타고 가",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v4,소화,灭火,消化,"消防」
+「우리가 놀던 시간",消防,False,False,False,False
+B,B115,가사,한자어쌍,translate_ctx,v1,가사,歌词,家务,"歌词
+문장：이 책은 오래된 책",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v2,가사,歌词,家务,"歌词
+이 노래는 가사가 아름다",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v3,가사,歌词,家务,"歌词
+句子：이 영화는 인물이 많아",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v4,가사,歌词,家务,"歌词」
+「그는 빨래를 �",歌词,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v1,가사,家务,歌词,"歌词
+문장：서로 다른 사람의 마음을",歌词,False,True,False,True
+B,B116,가사,한자어쌍,translate_ctx,v2,가사,家务,歌词,"歌词
+이렇게 되었어요. / 이→",歌词,False,True,False,True
+B,B116,가사,한자어쌍,translate_ctx,v3,가사,家务,歌词,"歌词
+句子：아이가 떠오르",歌词,False,True,False,True
+B,B116,가사,한자어쌍,translate_ctx,v4,가사,家务,歌词,"歌」
+「우리가 놀이를",歌,False,False,False,False
+B,B117,부인,한자어쌍,translate_ctx,v1,부인,妻子,否认,"妻子
+문장：서로 다른 사람을 좋아한다",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v2,부인,妻子,否认,"妻子
+학교에 가는 길에 비가 내",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v3,부인,妻子,否认,"妻子
+句子：학교에 가는 길에 비",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v4,부인,妻子,否认,"夫人」
+「그는 빨리 웃",夫人,False,False,False,False
+B,B118,부인,한자어쌍,translate_ctx,v1,부인,否认,妻子,"女士
+문장：그는 흰색 �",女士,False,False,False,False
+B,B118,부인,한자어쌍,translate_ctx,v2,부인,否认,妻子,"妻子
+그는 흥미로운 질문을",妻子,False,True,False,True
+B,B118,부인,한자어쌍,translate_ctx,v3,부인,否认,妻子,"妻子
+句子：그는 그녀의 아들로",妻子,False,True,False,True
+B,B118,부인,한자어쌍,translate_ctx,v4,부인,否认,妻子,"夫人」
+「그는 빨리 움",夫人,False,False,False,False
+B,B119,수면,한자어쌍,translate_ctx,v1,수면,睡眠,水面,"睡眠
+문장：오늘은 햇빛",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v2,수면,睡眠,水面,"睡眠
+어떤 사람에게도 한 번은 �",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v3,수면,睡眠,水面,"睡眠
+句子：아이가 놀기 위해",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v4,수면,睡眠,水面,"睡眠」
+「우리가 놀아요",睡眠,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v1,수면,水面,睡眠,"水面
+문장：서로 다른 사람들을 만나는",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v2,수면,水面,睡眠,"水面
+이름을 쓰는 것을 잊",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v3,수면,水面,睡眠,"水面
+句子：그는 그녀의 손을",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v4,수면,水面,睡眠,"水面」
+「우리가 놀이를",水面,True,False,True,False

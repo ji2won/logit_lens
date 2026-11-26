@@ -2321,3 +2321,494 @@ B,B120,수면,한자어쌍,translate,v2,수면,水面,睡眠,"睡眠
 B,B120,수면,한자어쌍,translate,v3,수면,水面,睡眠,睡眠[|endofturn|],睡眠,False,True,False,True
 B,B120,수면,한자어쌍,translate,v4,수면,水面,睡眠,"睡觉」
 「책」의 중국어",睡觉,False,False,False,False
+B,B001,배,고유어쌍,translate_ctx,v1,배,船,梨,"船
+문장:책을 읽으며 잠이 들었",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v2,배,船,梨,"船
+
+
+
+다음 문장에 쓰인 한국어 단어를",船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v3,배,船,梨,船,船,True,False,True,False
+B,B001,배,고유어쌍,translate_ctx,v4,배,船,梨,"船」
+「저녁에 TV를 보았다.",船,True,False,True,False
+B,B002,배,고유어쌍,translate_ctx,v1,배,梨,船,桂枝,桂枝,False,False,False,False
+B,B002,배,고유어쌍,translate_ctx,v2,배,梨,船,"桑果
+
+
+한국어 단어를 중국어로 번역",桑果,False,False,False,False
+B,B002,배,고유어쌍,translate_ctx,v3,배,梨,船,桑果,桑果,False,False,False,False
+B,B002,배,고유어쌍,translate_ctx,v4,배,梨,船,"桑果」
+「집에 가는 길에",桑果,False,False,False,False
+B,B003,눈,고유어쌍,translate_ctx,v1,눈,眼睛,雪,"眼睛
+문장:비가 와서 우산",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v2,눈,眼睛,雪,"眼睛
+
+
+
+다음 문장에",眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v3,눈,眼睛,雪,眼睛,眼睛,True,False,True,False
+B,B003,눈,고유어쌍,translate_ctx,v4,눈,眼睛,雪,"眼睛」
+「책을 읽으며",眼睛,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v1,눈,雪,眼睛,雪,雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v2,눈,雪,眼睛,"雪
+저녁에 TV를 보았다. /",雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v3,눈,雪,眼睛,雪,雪,True,False,True,False
+B,B004,눈,고유어쌍,translate_ctx,v4,눈,雪,眼睛,"雪」
+「저녁에 TV를 보았다",雪,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v1,밤,夜晚,栗子,"晚上
+문장:책을 읽으며 잠이",晚上,False,False,False,False
+B,B005,밤,고유어쌍,translate_ctx,v2,밤,夜晚,栗子,"晚上
+
+
+한국어 단어를 중국어로 번역",晚上,False,False,False,False
+B,B005,밤,고유어쌍,translate_ctx,v3,밤,夜晚,栗子,夜晚,夜晚,True,False,True,False
+B,B005,밤,고유어쌍,translate_ctx,v4,밤,夜晚,栗子,"夜」
+「아침에 일어나서 커피를 마셨다",夜,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v1,밤,栗子,夜晚,树莓,树莓,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v2,밤,栗子,夜晚,"夜晚
+
+
+
+다음 문장에 쓰인 한국어",夜晚,False,True,False,True
+B,B006,밤,고유어쌍,translate_ctx,v3,밤,栗子,夜晚,树叶,树叶,False,False,False,False
+B,B006,밤,고유어쌍,translate_ctx,v4,밤,栗子,夜晚,"树莓」
+「책을 읽으며",树莓,False,False,False,False
+B,B009,말,고유어쌍,translate_ctx,v1,말,马,话,"马
+문장:책을 읽으며 잠이 들",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v2,말,马,话,"马
+
+
+
+다음 문장에 쓰인 한국어 단어",马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v3,말,马,话,马,马,True,False,True,False
+B,B009,말,고유어쌍,translate_ctx,v4,말,马,话,"马」
+「책을 읽으며 잠이 들",马,True,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v1,말,话,马,"话语
+문장:그녀는 책을 읽",话语,False,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v2,말,话,马,"话语
+그는 책을 읽고 있",话语,False,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v3,말,话,马,话语,话语,False,False,True,False
+B,B010,말,고유어쌍,translate_ctx,v4,말,话,马,"话」
+「그녀는 책을 읽으며 잠",话,True,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v1,차,车,茶,"车辆
+문장:책을 읽으며 잠",车辆,False,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v2,차,车,茶,"车辆
+
+
+한국어 단어를 중국어로",车辆,False,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v3,차,车,茶,车辆,车辆,False,False,True,False
+B,B011,차,한자어쌍,translate_ctx,v4,차,车,茶,"车」
+「저녁에 TV를 보았다",车,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v1,차,茶,车,茶,茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v2,차,茶,车,"茶
+
+
+**정답:**
+
+",茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v3,차,茶,车,茶,茶,True,False,True,False
+B,B012,차,한자어쌍,translate_ctx,v4,차,茶,车,"茶」
+「맛있는 음식을 먹었",茶,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v1,병,瓶子,病,瓶子,瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v2,병,瓶子,病,"瓶子
+
+
+한국어 단어를 중국어로",瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v3,병,瓶子,病,瓶子,瓶子,True,False,True,False
+B,B013,병,한자어쌍,translate_ctx,v4,병,瓶子,病,"瓶子」
+「맛있는 음식을 먹",瓶子,True,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v1,병,病,瓶子,"病气
+문장:책을 읽으며 잠이",病气,False,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v2,병,病,瓶子,"病气
+
+
+다음 문장에 쓰인 한국어 단어",病气,False,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v3,병,病,瓶子,病痛,病痛,False,False,True,False
+B,B014,병,한자어쌍,translate_ctx,v4,병,病,瓶子,"病痛」
+「책을 읽으며 잠이",病痛,False,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v1,사과,苹果,道歉,苹果,苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v2,사과,苹果,道歉,"苹果
+옷을 입고 밖으로 나갔다",苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v3,사과,苹果,道歉,苹果,苹果,True,False,True,False
+B,B015,사과,한자어쌍,translate_ctx,v4,사과,苹果,道歉,"苹果」
+「책을 읽으며 잠이",苹果,True,False,True,False
+B,B016,사과,한자어쌍,translate_ctx,v1,사과,道歉,苹果,罪恶劳不若,罪恶劳不若,False,False,False,False
+B,B016,사과,한자어쌍,translate_ctx,v2,사과,道歉,苹果,苦衷的道歉,苦衷的道歉,False,False,True,False
+B,B016,사과,한자어쌍,translate_ctx,v3,사과,道歉,苹果,道歉,道歉,True,False,True,False
+B,B016,사과,한자어쌍,translate_ctx,v4,사과,道歉,苹果,"谅解」
+「책을 읽으며 잠이",谅解,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v1,굴,牡蛎,洞穴,"蛋黄
+문장:책을 읽으며",蛋黄,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v2,굴,牡蛎,洞穴,"蛮鱼
+
+
+
+다음 문장",蛮鱼,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v3,굴,牡蛎,洞穴,蛋黄,蛋黄,False,False,False,False
+B,B017,굴,혼합,translate_ctx,v4,굴,牡蛎,洞穴,"蛋黄」
+「책을 읽으며",蛋黄,False,False,False,False
+B,B018,굴,혼합,translate_ctx,v1,굴,洞穴,牡蛎,洞穴,洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v2,굴,洞穴,牡蛎,"洞穴
+저녁에 가족과 함께 식사를",洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v3,굴,洞穴,牡蛎,洞穴,洞穴,True,False,True,False
+B,B018,굴,혼합,translate_ctx,v4,굴,洞穴,牡蛎,"洞」
+「저녁에 TV를 보았다",洞,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v1,벌,蜜蜂,惩罚,"蜂
+문장:책을 읽으며 잠이",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v2,벌,蜜蜂,惩罚,"蜂
+
+
+
+다음 문장에 쓰인 한국어",蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v3,벌,蜜蜂,惩罚,蜂,蜂,False,False,False,False
+B,B019,벌,혼합,translate_ctx,v4,벌,蜜蜂,惩罚,"蜂」
+「책을 읽으며 잠이",蜂,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v1,벌,惩罚,蜜蜂,罚,罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v2,벌,惩罚,蜜蜂,"罚
+
+답변:
+학교에 가는 길",罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v3,벌,惩罚,蜜蜂,罚,罚,False,False,False,False
+B,B020,벌,혼합,translate_ctx,v4,벌,惩罚,蜜蜂,"罚单」
+「저녁에 TV를 보",罚单,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v1,사기,诈骗,士气,"骗局
+문장:그녀는 책을 읽으며",骗局,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v2,사기,诈骗,士气,"骗局
+그는 책을 읽으며 잠이",骗局,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v3,사기,诈骗,士气,欺骗,欺骗,False,False,False,False
+B,B025,사기,한자어쌍,translate_ctx,v4,사기,诈骗,士气,"骗局」
+「그녀는 아름다운 꽃을 샀",骗局,False,False,False,False
+B,B026,사기,한자어쌍,translate_ctx,v1,사기,士气,诈骗,"士气
+문장:책을 읽으며 잠이",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v2,사기,士气,诈骗,"士气
+옷을 입고 밖으로 나갔다",士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v3,사기,士气,诈骗,士气,士气,True,False,True,False
+B,B026,사기,한자어쌍,translate_ctx,v4,사기,士气,诈骗,"士气」
+「책을 읽으며 잠이",士气,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v1,의사,医生,意图,医生,医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v2,의사,医生,意图,"医生
+그는 매일 아침 일찍 일어나서 운동",医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v3,의사,医生,意图,医生,医生,True,False,True,False
+B,B039,의사,한자어쌍,translate_ctx,v4,의사,医生,意图,"医生」
+「그녀는 그림을 그리는",医生,True,False,True,False
+B,B040,의사,한자어쌍,translate_ctx,v1,의사,意图,医生,意志,意志,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v2,의사,意图,医生,"意见
+그는 책을 읽고 있었",意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v3,의사,意图,医生,意见,意见,False,False,False,False
+B,B040,의사,한자어쌍,translate_ctx,v4,의사,意图,医生,"意见」
+「그녀는 책을 읽으며",意见,False,False,False,False
+B,B041,전기,한자어쌍,translate_ctx,v1,전기,电,传记,"电力
+문장:학교에 가는 길에",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v2,전기,电,传记,"电力
+
+
+한국어 단어를 중국어로 번역",电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v3,전기,电,传记,电力,电力,False,False,True,False
+B,B041,전기,한자어쌍,translate_ctx,v4,전기,电,传记,"电力」
+「책을 읽으며 잠이",电力,False,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v1,전기,传记,电,"书籍
+문장:집에 가는 길에",书籍,False,False,False,False
+B,B042,전기,한자어쌍,translate_ctx,v2,전기,传记,电,"传记
+
+
+
+다음 문장에 쓰인",传记,True,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v3,전기,传记,电,传记,传记,True,False,True,False
+B,B042,전기,한자어쌍,translate_ctx,v4,전기,传记,电,"传记」
+「집에 가는 길",传记,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v1,가구,家具,住户,家具,家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v2,가구,家具,住户,"家具
+
+
+한국어 단어를 중국어로 번역해",家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v3,가구,家具,住户,家具,家具,True,False,True,False
+B,B045,가구,한자어쌍,translate_ctx,v4,가구,家具,住户,"家具」
+「책을 읽으며 잠이 들",家具,True,False,True,False
+B,B046,가구,한자어쌍,translate_ctx,v1,가구,住户,家具,"家具
+문장:그는 책을 읽으며 휴식",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v2,가구,住户,家具,"家具
+그는 매일 아침 일찍 일어나서 운동을",家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v3,가구,住户,家具,家具,家具,False,True,False,True
+B,B046,가구,한자어쌍,translate_ctx,v4,가구,住户,家具,"房屋」
+「그는 책을 읽으며",房屋,False,False,False,False
+B,B047,풀,고유어쌍,translate_ctx,v1,풀,草,胶水,草木,草木,False,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v2,풀,草,胶水,"草
+
+
+
+다음 문장에 쓰인 한국어 단어를",草,True,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v3,풀,草,胶水,草木,草木,False,False,True,False
+B,B047,풀,고유어쌍,translate_ctx,v4,풀,草,胶水,"草」
+「저녁에 TV를 보았다.",草,True,False,True,False
+B,B048,풀,고유어쌍,translate_ctx,v1,풀,胶水,草,粘粉,粘粉,False,False,False,False
+B,B048,풀,고유어쌍,translate_ctx,v2,풀,胶水,草,"粘粘质
+
+
+
+다음 문장",粘粘质,False,False,False,False
+B,B048,풀,고유어쌍,translate_ctx,v3,풀,胶水,草,粘粘贴,粘粘贴,False,False,False,False
+B,B048,풀,고유어쌍,translate_ctx,v4,풀,胶水,草,"粘粘贴」
+「책을 읽",粘粘贴,False,False,False,False
+B,B051,바람,고유어쌍,translate_ctx,v1,바람,风,愿望,风,风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v2,바람,风,愿望,风,风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v3,바람,风,愿望,风,风,True,False,True,False
+B,B051,바람,고유어쌍,translate_ctx,v4,바람,风,愿望,"风」
+「저녁에 TV를 보았다",风,True,False,True,False
+B,B052,바람,고유어쌍,translate_ctx,v1,바람,愿望,风,风,风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v2,바람,愿望,风,"风
+
+
+한국어 단어를 중국어로 번역해",风,False,True,False,True
+B,B052,바람,고유어쌍,translate_ctx,v3,바람,愿望,风,心愿,心愿,False,False,False,False
+B,B052,바람,고유어쌍,translate_ctx,v4,바람,愿望,风,"愿望」
+「저녁 노을이 아름답게 물들",愿望,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v1,거리,街道,距离,街道,街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v2,거리,街道,距离,"路街
+
+
+한국어 단어를 중국어로 번역",路街,False,False,False,False
+B,B053,거리,혼합,translate_ctx,v3,거리,街道,距离,街道,街道,True,False,True,False
+B,B053,거리,혼합,translate_ctx,v4,거리,街道,距离,"街道」
+「저녁에 TV를 보았",街道,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v1,거리,距离,街道,"距离
+문장:책을 읽으며 재미있",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v2,거리,距离,街道,"距离
+
+
+
+**정답:**",距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v3,거리,距离,街道,距离,距离,True,False,True,False
+B,B054,거리,혼합,translate_ctx,v4,거리,距离,街道,"距离」
+「책을 읽으며 잠",距离,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v1,정원,花园,名额,"花园
+문장:책을 읽으며 잠이",花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v2,정원,花园,名额,"园子
+저녁에 TV를 보았다.",园子,False,False,False,False
+B,B055,정원,한자어쌍,translate_ctx,v3,정원,花园,名额,花园,花园,True,False,True,False
+B,B055,정원,한자어쌍,translate_ctx,v4,정원,花园,名额,"花园」
+「저녁에 TV를 보았",花园,True,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v1,정원,名额,花园,"容量
+문장:책을 읽으며 잠이 들",容量,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v2,정원,名额,花园,"名额
+
+
+
+**정답:**
+",名额,True,False,True,False
+B,B056,정원,한자어쌍,translate_ctx,v3,정원,名额,花园,人数,人数,False,False,False,False
+B,B056,정원,한자어쌍,translate_ctx,v4,정원,名额,花园,"院生」
+「저녁에 TV를 보았다",院生,False,False,False,False
+B,B059,사고,한자어쌍,translate_ctx,v1,사고,事故,思考,"事故
+문장:학교에 가는 길에 비",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v2,사고,事故,思考,"事故
+
+
+한국어 단어를 중국어로 번역해",事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v3,사고,事故,思考,事故,事故,True,False,True,False
+B,B059,사고,한자어쌍,translate_ctx,v4,사고,事故,思考,"事故」
+「오늘 아침에 일찍 일어났다.",事故,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v1,사고,思考,事故,"思考
+문장:그는 책을 읽으며 잠",思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v2,사고,思考,事故,"思考
+이 책은 재미있어서 읽었다.",思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v3,사고,思考,事故,思考,思考,True,False,True,False
+B,B060,사고,한자어쌍,translate_ctx,v4,사고,思考,事故,"思考」
+「그녀는 책을 읽으며 잠",思考,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v1,회의,会议,怀疑,"会议
+문장:책을 읽으며 잠이",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v2,회의,会议,怀疑,"会议
+
+답변:
+학교에 가는",会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v3,회의,会议,怀疑,会议,会议,True,False,True,False
+B,B063,회의,한자어쌍,translate_ctx,v4,회의,会议,怀疑,"会议」
+「저녁에 TV를 보았",会议,True,False,True,False
+B,B064,회의,한자어쌍,translate_ctx,v1,회의,怀疑,会议,会议,会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v2,회의,怀疑,会议,"会议
+
+
+한국어 단어를 중국어로 번역",会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v3,회의,怀疑,会议,会议,会议,False,True,False,True
+B,B064,회의,한자어쌍,translate_ctx,v4,회의,怀疑,会议,"会议」
+「그는 책을 읽으며",会议,False,True,False,True
+B,B065,신부,한자어쌍,translate_ctx,v1,신부,新娘,神父,"新娘
+문장:책을 읽으며 잠이",新娘,True,False,True,False
+B,B065,신부,한자어쌍,translate_ctx,v2,신부,新娘,神父,"新嫩女人
+
+
+한국어 단어를",新嫩女人,False,False,False,False
+B,B065,신부,한자어쌍,translate_ctx,v3,신부,新娘,神父,新嫩女人,新嫩女人,False,False,False,False
+B,B065,신부,한자어쌍,translate_ctx,v4,신부,新娘,神父,"新娘」
+「책을 읽으며 잠이",新娘,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v1,신부,神父,新娘,"神父
+문장:그녀는 책을 읽으며 하루",神父,True,False,True,False
+B,B066,신부,한자어쌍,translate_ctx,v2,신부,神父,新娘,"新嫩
+
+
+
+다음 문장에 쓰인",新嫩,False,False,False,False
+B,B066,신부,한자어쌍,translate_ctx,v3,신부,神父,新娘,神母,神母,False,False,False,False
+B,B066,신부,한자어쌍,translate_ctx,v4,신부,神父,新娘,"神父」
+「그는 매일 아침 일찍 일어나서",神父,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v1,화장,化妆,火葬,"化妆
+문장:그는 책을 읽으며",化妆,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v2,화장,化妆,火葬,"化妆
+
+
+
+다음 문장에 쓰인 한국어",化妆,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v3,화장,化妆,火葬,化妆,化妆,True,False,True,False
+B,B069,화장,한자어쌍,translate_ctx,v4,화장,化妆,火葬,"化妆」
+「그는 책을 읽으며",化妆,True,False,True,False
+B,B070,화장,한자어쌍,translate_ctx,v1,화장,火葬,化妆,"化妆
+문장:학교에 가는 길에",化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v2,화장,火葬,化妆,"化妆
+
+
+다음 문장에 쓰인 한국어 단어",化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v3,화장,火葬,化妆,化妆,化妆,False,True,False,True
+B,B070,화장,한자어쌍,translate_ctx,v4,화장,火葬,化妆,"化妆」
+「저녁에 TV를 보았",化妆,False,True,False,True
+B,B081,대가,한자어쌍,translate_ctx,v1,대가,代价,大师,"代价
+문장:책을 읽으며 잠이",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v2,대가,代价,大师,"代价
+
+
+한국어 단어를 중국어로 번역",代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v3,대가,代价,大师,代价,代价,True,False,True,False
+B,B081,대가,한자어쌍,translate_ctx,v4,대가,代价,大师,"代价」
+「그녀는 책을 읽으며",代价,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v1,대가,大师,代价,"大师
+문장:그녀는 그림을 그리는",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v2,대가,大师,代价,"大师
+그는 그림을 그리는 것을",大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v3,대가,大师,代价,大师,大师,True,False,True,False
+B,B082,대가,한자어쌍,translate_ctx,v4,대가,大师,代价,"大师」
+「그녀는 그림을 그리는",大师,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v1,고장,故障,家乡,"故障
+문장:책을 읽으며 잠이",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v2,고장,故障,家乡,"故障
+옷을 입고 밖으로 나갔다",故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v3,고장,故障,家乡,故障,故障,True,False,True,False
+B,B083,고장,혼합,translate_ctx,v4,고장,故障,家乡,"故障」
+「저녁에 TV를 보았",故障,True,False,True,False
+B,B084,고장,혼합,translate_ctx,v1,고장,家乡,故障,"地方
+문장:그녀는 아름다운 꽃을 보며",地方,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v2,고장,家乡,故障,"地方
+그는 아침에 일어나서 창문을 열",地方,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v3,고장,家乡,故障,地方,地方,False,False,False,False
+B,B084,고장,혼합,translate_ctx,v4,고장,家乡,故障,"地方」
+「그녀는 아름다운 꽃을 그렸다",地方,False,False,False,False
+B,B093,감사,한자어쌍,translate_ctx,v1,감사,感谢,审计,感谢,感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v2,감사,感谢,审计,"感谢
+
+
+**정답:**
+
+",感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v3,감사,感谢,审计,感谢,感谢,True,False,True,False
+B,B093,감사,한자어쌍,translate_ctx,v4,감사,感谢,审计,"感谢」
+「저녁에 TV를 보았",感谢,True,False,True,False
+B,B094,감사,한자어쌍,translate_ctx,v1,감사,审计,感谢,"审计
+문장:그녀는 책을 읽",审计,True,False,True,False
+B,B094,감사,한자어쌍,translate_ctx,v2,감사,审计,感谢,"审查
+
+
+
+**정답:**",审查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v3,감사,审计,感谢,审查,审查,False,False,False,False
+B,B094,감사,한자어쌍,translate_ctx,v4,감사,审计,感谢,"审查」
+「그녀는 책을 읽",审查,False,False,False,False
+B,B097,사자,한자어쌍,translate_ctx,v1,사자,狮子,使者,狮子,狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v2,사자,狮子,使者,"狮子
+꽃밭에서 꽃을 꺾었다",狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v3,사자,狮子,使者,狮子,狮子,True,False,True,False
+B,B097,사자,한자어쌍,translate_ctx,v4,사자,狮子,使者,"狮子」
+「책을 읽으며 잠이",狮子,True,False,True,False
+B,B098,사자,한자어쌍,translate_ctx,v1,사자,使者,狮子,"狼
+문장:그녀는 책을 읽으며 여행",狼,False,False,False,False
+B,B098,사자,한자어쌍,translate_ctx,v2,사자,使者,狮子,狼子,狼子,False,False,False,False
+B,B098,사자,한자어쌍,translate_ctx,v3,사자,使者,狮子,狼,狼,False,False,False,False
+B,B098,사자,한자어쌍,translate_ctx,v4,사자,使者,狮子,"狼」
+「비가 와서 우산을 썼다",狼,False,False,False,False
+B,B105,지도,한자어쌍,translate_ctx,v1,지도,地图,指导,"地图
+문장:책을 읽으며 잠이",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v2,지도,地图,指导,"地图
+옷을 입고 밖으로 나갔다",地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v3,지도,地图,指导,地图,地图,True,False,True,False
+B,B105,지도,한자어쌍,translate_ctx,v4,지도,地图,指导,"地图」
+「저녁에 TV를 보았",地图,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v1,지도,指导,地图,指导,指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v2,지도,指导,地图,"指导
+
+
+
+다음 문장에 쓰인",指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v3,지도,指导,地图,指导,指导,True,False,True,False
+B,B106,지도,한자어쌍,translate_ctx,v4,지도,指导,地图,"指导」
+「책을 읽으며 잠",指导,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v1,소화,消化,灭火,消化,消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v2,소화,消化,灭火,"消化
+
+
+한국어 단어를 중국어로 번역해",消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v3,소화,消化,灭火,消化,消化,True,False,True,False
+B,B111,소화,한자어쌍,translate_ctx,v4,소화,消化,灭火,"消化」
+「책을 읽으며 잠이 들",消化,True,False,True,False
+B,B112,소화,한자어쌍,translate_ctx,v1,소화,灭火,消化,"消火
+문장:비가 와서 우산을 썼다",消火,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v2,소화,灭火,消化,"消防
+
+
+한국어 단어를 중국어로 번역",消防,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v3,소화,灭火,消化,消火作战,消火作战,False,False,False,False
+B,B112,소화,한자어쌍,translate_ctx,v4,소화,灭火,消化,"消火」
+「비가 와서 우산을 썼다",消火,False,False,False,False
+B,B115,가사,한자어쌍,translate_ctx,v1,가사,歌词,家务,"歌词
+문장:그는 책을 읽으며",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v2,가사,歌词,家务,"歌词
+그는 매일 아침 일찍 일어나서 운동",歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v3,가사,歌词,家务,歌词,歌词,True,False,True,False
+B,B115,가사,한자어쌍,translate_ctx,v4,가사,歌词,家务,"歌词」
+「그는 책을 읽으며",歌词,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v1,가사,家务,歌词,"家事
+문장:학교에 가는 길에 비",家事,False,False,False,False
+B,B116,가사,한자어쌍,translate_ctx,v2,가사,家务,歌词,"家务
+
+
+한국어 단어를 중국어로 번역",家务,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v3,가사,家务,歌词,家务,家务,True,False,True,False
+B,B116,가사,한자어쌍,translate_ctx,v4,가사,家务,歌词,"家务」
+「저녁에 TV를 보았",家务,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v1,부인,妻子,否认,妻子,妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v2,부인,妻子,否认,"妻子
+
+
+한국어 단어를 중국어로 번역",妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v3,부인,妻子,否认,妻子,妻子,True,False,True,False
+B,B117,부인,한자어쌍,translate_ctx,v4,부인,妻子,否认,"妻子」
+「저녁에 TV를 보았",妻子,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v1,부인,否认,妻子,妻子,妻子,False,True,False,True
+B,B118,부인,한자어쌍,translate_ctx,v2,부인,否认,妻子,否认,否认,True,False,True,False
+B,B118,부인,한자어쌍,translate_ctx,v3,부인,否认,妻子,妇女,妇女,False,False,False,False
+B,B118,부인,한자어쌍,translate_ctx,v4,부인,否认,妻子,"妻子」
+「그는 책을 읽으며",妻子,False,True,False,True
+B,B119,수면,한자어쌍,translate_ctx,v1,수면,睡眠,水面,睡眠,睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v2,수면,睡眠,水面,"睡眠
+
+
+다음 문장에 쓰인",睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v3,수면,睡眠,水面,睡眠,睡眠,True,False,True,False
+B,B119,수면,한자어쌍,translate_ctx,v4,수면,睡眠,水面,"睡眠」
+「책을 읽으며",睡眠,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v1,수면,水面,睡眠,"水面
+문장:그는 책을 읽으며 휴식",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v2,수면,水面,睡眠,"水面
+
+
+**정답:**
+
+*",水面,True,False,True,False
+B,B120,수면,한자어쌍,translate_ctx,v3,수면,水面,睡眠,表面水域,表面水域,False,False,False,False
+B,B120,수면,한자어쌍,translate_ctx,v4,수면,水面,睡眠,"水面」
+「책을 읽으며 잠이 들",水面,True,False,True,False
